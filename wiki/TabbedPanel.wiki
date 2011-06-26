@@ -1,7 +1,7 @@
 #labels Tabbed
 {{{
-// 此函数会在beezTabs风格的位置按相应模块的数量n反复调用相同的次数，不同于普通的循环输出，它会取消前n-1次输出，而在第n次才整体输出全部内容。
-function modChrome_tudingTabs($module, $params, $attribs)
+// 此函数会在Tabbed风格的位置按相应模块的数量n反复调用相同的次数，不同于普通的循环输出，它会取消前n-1次输出，而在第n次才整体输出全部内容。
+function modChrome_Tabbed($module, $params, $attribs)
 {
 	// 后台无id属性设置，所以$area恒为1
 	$area = isset($attribs['id']) ? (int) $attribs['id'] :'1';
@@ -24,7 +24,7 @@ function modChrome_tudingTabs($module, $params, $attribs)
 		$temp->id=$module->id;
 		$modules[] = $temp;
 		// TabsPanle外套
-		echo "\n<!-- # # # TabsPanle # # # -->";
+		echo "\n<!-- # # # TabbedPanle # # # -->";
 		printf("\n".'<div id="%s" class="tab list jx">',
 			$area
 		);
@@ -47,7 +47,7 @@ function modChrome_tudingTabs($module, $params, $attribs)
 			// 输出正文
 			echo "\n<!-- # # # module # # # -->";
 			echo $rendermodule->content;
-			echo "\n<!-- # # # module # # # -->";
+			echo "\n<!-- # # # /module # # # -->";
 			// Tab外套
 			echo "\n        ".'</li>';
 			echo "\n      ".'</ul>';
@@ -57,7 +57,7 @@ function modChrome_tudingTabs($module, $params, $attribs)
 		echo "\n  ".'</ul>';
 		$modulecount--;;
 		echo "\n".'</div>';
-		echo "\n<!-- # # # /TabsPanle # # # -->";
+		echo "\n<!-- # # # /TabbedPanle # # # -->";
 	} else {
 		// 前第n<n-1次调用本函数不做输出，只将数组赋值给静态变量$modules[]用于最后一次调用时的输出，并计算剩余调用次数
 		$temp = new stdClass();
@@ -72,117 +72,37 @@ function modChrome_tudingTabs($module, $params, $attribs)
 }}}
 输出
 {{{
-<!-- # # # TabsPanle # # # --> 
-<div id="area-1" class="tab list jx"> 
-  <ul> 
-    <li class="active"><a href="#" id="link_16">Polls</a> 
-      <ul> 
+<!-- # # # TabbedPanle # # # -->
+<div id="area-1" class="tab list jx">
+  <ul>
+    <li class="active"><a href="#" id="link_16">Polls</a>
+      <ul>
         <li tabindex="-1" class="" id="module_16"> 
-<!-- # # # module # # # --> 
-<form action="index.php" method="post" name="form2"> 
-  <table width="95%" border="0" cellspacing="0" cellpadding="1" align="center" class="poll"> 
-    <thead> 
-      <tr> 
-        <td style="font-weight:bold;">Joomla! is used for?</td> 
-      </tr> 
-    </thead> 
-    <tr> 
-      <td align="center"> 
-<table class="pollstableborder" cellspacing="0" cellpadding="0" border="0"> 
-  <tr> 
-    <td class="sectiontableentry2" valign="top"><input type="radio" name="voteid" id="voteid1" value="1" alt="1" /></td> 
-    <td class="sectiontableentry2" valign="top"><label for="voteid1">Community Sites</label></td> 
-  </tr> 
-  <tr> 
-    <td class="sectiontableentry1" valign="top"><input type="radio" name="voteid" id="voteid2" value="2" alt="2" /></td> 
-    <td class="sectiontableentry1" valign="top"><label for="voteid2">Public Brand Sites</label></td> 
-  </tr> 
-  <tr> 
-    <td class="sectiontableentry2" valign="top"><input type="radio" name="voteid" id="voteid3" value="3" alt="3" /></td> 
-    <td class="sectiontableentry2" valign="top"><label for="voteid3">eCommerce</label></td> 
-  </tr> 
-  <tr> 
-    <td class="sectiontableentry1" valign="top"><input type="radio" name="voteid" id="voteid4" value="4" alt="4" /></td> 
-    <td class="sectiontableentry1" valign="top"><label for="voteid4">Blogs</label></td> 
-  </tr> 
-  <tr> 
-    <td class="sectiontableentry2" valign="top"><input type="radio" name="voteid" id="voteid5" value="5" alt="5" /></td> 
-    <td class="sectiontableentry2" valign="top"><label for="voteid5">Intranets</label></td> 
-  </tr> 
-  <tr> 
-    <td class="sectiontableentry1" valign="top"><input type="radio" name="voteid" id="voteid6" value="6" alt="6" /></td> 
-    <td class="sectiontableentry1" valign="top"><label for="voteid6">Photo and Media Sites</label></td> 
-  </tr> 
-  <tr> 
-    <td class="sectiontableentry2" valign="top"><input type="radio" name="voteid" id="voteid7" value="7" alt="7" /></td> 
-    <td class="sectiontableentry2" valign="top"><label for="voteid7">All of the Above!</label></td> 
-  </tr> 
-</table> 
-      </td> 
-    </tr> 
-    <tr> 
-      <td> 
-<div align="center"> 
-  <span class="button black"><input type="submit" name="task_button" class="button" value="投票" /></span>&nbsp;
-  <span class="button black"><input type="button" name="option" class="button" value="结果" onclick="document.location.href='/j15/index.php?option=com_poll&amp;id=14:joomla-is-used-for'" /></span> 
-</div> 
-      </td> 
-    </tr> 
-  </table> 
-  <input type="hidden" name="option" value="com_poll" /> 
-  <input type="hidden" name="task" value="vote" /> 
-  <input type="hidden" name="id" value="14" /><input type="hidden" name="4a9c67d28d38db4852700dd06d9b4178" value="1" /> 
-</form> 
-<!-- # # # module # # # --> 
-        </li> 
-      </ul> 
-    </li> 
-    <li><a href="#" id="link_21">Who's Online</a> 
-      <ul> 
+          <!-- # # # module # # # --> 
+          
+          <!-- # # # /module # # # --> 
+        </li>
+      </ul>
+    </li>
+    <li><a href="#" id="link_21">Who's Online</a>
+      <ul>
         <li tabindex="-1" class="" id="module_21"> 
-<!-- # # # module # # # --> 
-当前有&nbsp;1名访客&nbsp;在线
-<!-- # # # module # # # --> 
-        </li> 
-      </ul> 
-    </li> 
-    <li><a href="#" id="link_38">Advertisement</a> 
-      <ul> 
+          <!-- # # # module # # # --> 
+          当前有&nbsp;1名访客&nbsp;在线 
+          <!-- # # # /module # # # --> 
+        </li>
+      </ul>
+    </li>
+    <li><a href="#" id="link_38">Advertisement</a>
+      <ul>
         <li tabindex="-1" class="" id="module_38"> 
-<!-- # # # module # # # --> 
-<div class="bannergroup_text"> 
-  <div class="bannerhead_text">Featured Links:</div> 
-    <div class="banneritem_text ding"><a href="/j15/index.php?option=com_banners&amp;task=click&amp;bid=3" target="_blank">Joomla!</a>
-
-<br/>
-
-Joomla! The most popular and widely used Open Source CMS Project in the world.
-    </div> 
-    <div class="banneritem_text ding"><a href="/j15/index.php?option=com_banners&amp;task=click&amp;bid=4" target="_blank">JoomlaCode</a>
-
-<br/>
-
-JoomlaCode, development and distribution made easy.
-    </div> 
-    <div class="banneritem_text ding"><a href="/j15/index.php?option=com_banners&amp;task=click&amp;bid=5" target="_blank">Joomla! Extensions</a>
-
-<br/>
-
-Joomla! Components, Modules, Plugins and Languages by the bucket load.
-    </div> 
-    <div class="banneritem_text ding"><a href="/j15/index.php?option=com_banners&amp;task=click&amp;bid=6" target="_blank">Joomla! Shop</a>
-
-<br/>
-
-For all your Joomla! merchandise.
-    </div> 
-  <div class="bannerfoot_text"><a href="http://www.joomla.org">Ads by Joomla!</a></div> 
-</div> 
-<!-- # # # module # # # --> 
-        </li> 
-      </ul> 
-    </li> 
-  </ul> 
-</div> 
-<!-- # # # /TabsPanle # # # -->
+          <!-- # # # module # # # --> 
+          
+          <!-- # # # /module # # # --> 
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<!-- # # # /TabbedPanle # # # -->
 }}}
