@@ -42,7 +42,7 @@ $doc->setTitle("图钉实验室");
 	p a, p a:active { color:#ffffff; font-size:14px; }
 	ul { padding:0; margin:0; }
 	#content-box { border:0; }
-	#element-box .m {*zoom:1; border:2px solid #CCCCCC; background:#000000 url(templates/<?php echo  $this->template ?>/images/logo_45.png) 50% 100% no-repeat;}
+	#element-box .m {*zoom:1; border:2px solid #CCCCCC; background:#000000 url(templates/<?php echo  $this->template ?>/images/logo_45.png) -120px 115px no-repeat;}
 	#section-box { border:1px dotted #C3C3C3; padding:5px; background:#FFFFFF; }
 	#section-box .t, #section-box .b { display:none; }
 	#section-box .m { border:1px solid #DEDEDE; background:#FAFAFA; }
