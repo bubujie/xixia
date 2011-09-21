@@ -2,15 +2,15 @@
 
 = 考虑到与SQLite兼容的MySQL设计 =
 
-* 价格类 decimal(10,2)
-* 重量类 decimal(6 ,3)
-* 是否类 tinyint(1)
-* 参数类 varchar(254) 注：SQLite的varchhar最大为254，MySQL的为255
-* 网址类 varchar(254) 注：SQLite的varchhar最大为254，MySQL的为255
+ * 价格类 decimal(10,2)
+ * 重量类 decimal(6 ,3)
+ * 是否类 tinyint(1)
+ * 参数类 varchar(254) 注：SQLite的varchhar最大为254，MySQL的为255
+ * 网址类 varchar(254) 注：SQLite的varchhar最大为254，MySQL的为255
 
-* image 处理过的图
-* thumb 苏略图
-* original 原始图
+ * image 处理过的图
+ * thumb 苏略图
+ * original 原始图
 
 
 
