@@ -2,21 +2,33 @@
 
 = 考虑到与SQLite兼容的MySQL设计 =
 
- * 价格类 decimal(10,2)
- * 重量类 decimal(6 ,3)
- * 是否类 tinyint(1)
- * 参数类 varchar(254) 注：SQLite的varchhar最大为254，MySQL的为255
- * 网址类 varchar(254) 注：SQLite的varchhar最大为254，MySQL的为255
+  * 价格类 decimal(10,2)
+  * 重量类 decimal(6 ,3)
+  * 是否类 tinyint(1)
+  * 参数类 varchar(254) 注：SQLite的varchar最大为254，MySQL的为255
+  * 网址类 varchar(254) 注：SQLite的varchar最大为254，MySQL的为255
 
- * image 处理过的图
- * thumb 苏略图
- * original 原始图
+  * image 处理过的图
+  * thumb 缩略图
+  * original 原始图
 
 
 
-= Details =
+= 一些常用参数的标准英文表达 =
 
 Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+  * quantity 数量
+  * model 型号、规格
+  * price 价格
+  * added 添加
+  * modified 修订、修改
+  * available 可用
+  * status 状态
+  * manufacturers 直译制造商，我的理解是生产商，生产了创意或产品的企业，产品的归宿不一定是生产者
+  * brand 品牌，同一个manufacturers旗下可以有多个品牌，其生产商代码相同
+  * description (desc) 介绍
+  * information (infor）信息
+  * category 分类
+  * count 计数
+  * weight 重量
+  * extension 扩展
