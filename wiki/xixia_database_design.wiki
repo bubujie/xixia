@@ -5,8 +5,8 @@
   * 价格类 decimal(10,2)
   * 重量类 decimal(6 ,3)
   * 是否类 tinyint(1)
-  * 参数类 varchar(254) 注：SQLite的varchar最大为254，MySQL的为255
-  * 网址类 varchar(254) 注：SQLite的varchar最大为254，MySQL的为255
+  * 参数类 varchar(254) 注：SQLite的char最大为254，MySQL的为255
+  * 网址类 varchar(254) 注：SQLite的char最大为254，MySQL的为255
 
   * image 处理过的图
   * thumb 缩略图
