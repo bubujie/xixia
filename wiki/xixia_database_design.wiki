@@ -7,6 +7,7 @@
   * 是否类 tinyint(1)
   * 参数类 varchar(254) 注：SQLite的char最大为254，MySQL的为255
   * 网址类 varchar(254) 注：SQLite的char最大为254，MySQL的为255
+如果表中有如下类型的字段： VARCHAR，TEXT，BLOB。只要你包括了其中一个这些字段，那么这个表就不是“固定长度静态表”了，这样，MySQL 引擎会用另一种方法来处理。所以char(254)不一定具有实际意义，除非一个表的所有字段都是定长字段。
 
   * image 处理过的图
   * thumb 缩略图
