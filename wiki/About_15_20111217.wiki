@@ -1,0 +1,18 @@
+# 本项目对 J15 进行了诸多改造
+
+= 去除尾巴 =
+
+Add your content here.
+
+
+= 引用了公共js库 =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+
+增加
+= 去除了无用 PDF 功能 =
+
+= 修改了管理员默认ID =
