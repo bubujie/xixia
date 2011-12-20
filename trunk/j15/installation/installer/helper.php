@@ -288,7 +288,7 @@ class JInstallationHelper
 		// create the admin user
 		$installdate 	= date('Y-m-d H:i:s');
 		$nullDate 		= $db->getNullDate();
-		$query = "INSERT INTO #__users VALUES (62, 'Administrator', 'admin', ".$db->Quote($adminEmail).", ".$db->Quote($cryptpass).", 'Super Administrator', 0, 1, 25, '$installdate', '$nullDate', '', '')";
+		$query = "INSERT INTO #__users VALUES (1, '佚名', 'admin', ".$db->Quote($adminEmail).", ".$db->Quote($cryptpass).", 'Super Administrator', 0, 1, 25, '$installdate', '$nullDate', '', '')";
 		$db->setQuery($query);
 		if (!$db->query())
 		{
@@ -307,7 +307,7 @@ class JInstallationHelper
 		}
 
 		// add the ARO (Access Request Object)
-		$query = "INSERT INTO #__core_acl_aro VALUES (10,'users','62',0,'Administrator',0)";
+		$query = "INSERT INTO #__core_acl_aro VALUES (10,'users','1',0,'Administrator',0)";
 		$db->setQuery($query);
 		if (!$db->query())
 		{

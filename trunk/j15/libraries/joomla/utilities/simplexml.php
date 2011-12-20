@@ -625,7 +625,12 @@ class JSimpleXMLElement extends JObject
 		if ($whitespace) {
 			$out = "\n".str_repeat("\t", $this->_level).'<'.$this->_name;
 		} else {
-			$out = '<'.$this->_name;
+			//重构部分
+			if ($this->_name == 'li'){
+				$out = "\n    ".'<'.$this->_name;
+			}else{
+				$out = '<'.$this->_name;	
+			}
 		}
 
 		//For each attribute, add attr="value"
