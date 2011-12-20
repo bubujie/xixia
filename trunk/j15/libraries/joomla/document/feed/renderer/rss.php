@@ -58,7 +58,7 @@ class JDocumentRendererRSS extends JDocumentRenderer
 		$feed.= "		<description>".htmlspecialchars($data->description)."</description>\n";
 		$feed.= "		<link>".str_replace(' ','%20',$url.$data->link)."</link>\n";
 		$feed.= "		<lastBuildDate>".htmlspecialchars($now->toRFC822(), ENT_COMPAT, 'UTF-8')."</lastBuildDate>\n";
-//		$feed.= "		<generator>".$data->getGenerator()."</generator>\n";
+		$feed.= "		<generator>".$data->getGenerator()."</generator>\n";
 	
 		if ($data->image!=null)
 		{

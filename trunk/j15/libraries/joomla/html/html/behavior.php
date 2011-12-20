@@ -51,9 +51,9 @@ class JHTMLBehavior
 		$konkcheck = isset($_SERVER['HTTP_USER_AGENT']) ? strpos(strtolower($_SERVER['HTTP_USER_AGENT']), "konqueror") : null;
 
 		if ($debug || $konkcheck) {
-			JHTML::script('mootools.js', 'http://lib.sinaapp.com/js/mootools/1.1.2/', false);
+			JHTML::script('mootools-uncompressed.js', 'media/system/js/', false);
 		} else {
-			JHTML::script('mootools.min.js', 'http://lib.sinaapp.com/js/mootools/1.1.2/', false);
+			JHTML::script('mootools.js', 'media/system/js/', false);
 		}
 		$loaded = true;
 		return;
