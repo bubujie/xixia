@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
+<install version="1.5" type="template">
+  <name>##Template##</name>
+  <creationDate>##date##</creationDate>
+  <author>##author##</author>
+  <authorEmail>##email##</authorEmail>
+  <authorUrl>##website##</authorUrl>
+  <copyright>Copyright (C) ##year## ##author## Open Source Matters. All rights reserved.</copyright>
+  <license>##license##</license>
+  <version>##version##</version>
+  <description>TPL_##TEMPLATE##_XML_DESCRIPTION</description>
+  <files>
+    <folder>images</folder>
+    <folder>html</folder>
+    <folder>lang</folder>
+    <folder>css</folder>
+    <folder>img</folder>
+    <folder>js</folder>
+    <filename>template_thumbnail.png</filename>
+    <filename>templateDetails.xml</filename>
+    <filename>component.php</filename>
+    <filename>favicon.ico</filename>
+    <filename>params.ini</filename>
+    <filename>index.html</filename>
+    <filename>index.php</filename>
+  </files>
+  <positions>
+    <position>debug</position>
+    <position>crumbs</position>
+    <position>search</position>
+    <position>bhead-top</position>
+    <position>bhead-mid</position>
+    <position>bhead-btm</position>
+    <position>bbody-top</position>
+    <position>main-side</position>
+    <position>main-top</position>
+    <position>com-side</position>
+    <position>com-top</position>
+    <position>com-btm</position>
+    <position>com-aside</position>
+    <position>main-btm</position>
+    <position>main-aside</position>
+    <position>bbody-btm</position>
+    <position>bfoot-top</position>
+    <position>bfoot-mid</position>
+    <position>bfoot-btm</position>
+  </positions>
+  <languages>
+    <language tag="en-GB">lang/site/en-GB.tpl_##template##.ini</language>
+    <language tag="zh-CN">lang/site/zh-CN.tpl_##template##.ini</language>
+  </languages>
+  <administration>
+    <languages>
+      <language tag="en-GB">lang/admin/en-GB.tpl_##template##.ini</language>
+      <language tag="zh-CN">lang/admin/zh-CN.tpl_##template##.ini</language>
+    </languages>
+  </administration>
+  <params>
+    <param name="bheadLogo" type="text" default="logo_header.png"    label="TPL_##TEMPLATE##_FIELD_BHEADLOGO_LABEL" description="TPL_##TEMPLATE##_FIELD_BHEADLOGO_DESC" filter="string" />
+    <param name="bfootLogo" type="text" default="logo_footer.png"    label="TPL_##TEMPLATE##_FIELD_BFOOTLOGO_LABEL" description="TPL_##TEMPLATE##_FIELD_BFOOTLOGO_DESC" filter="string" />
+    <param name="siteTitle" type="text" default="步步街网络服务中心" label="TPL_##TEMPLATE##_FIELD_SITETITLE_LABEL" description="TPL_##TEMPLATE##_FIELD_SITETITLE_DESC" filter="string" />
+    <param name="siteDesc"  type="text" default="步步街网络服务中心" label="TPL_##TEMPLATE##_FIELD_SITEDESC_LABEL"  description="TPL_##TEMPLATE##_FIELD_SITEDESC_DESC"  filter="string" />
+  </params>
+</install>
