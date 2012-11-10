@@ -23,7 +23,7 @@
 	.atn { color:#404 }
 	.atv { color:#060 }
 }
-pre.prettyprint { padding:2px; border:1px solid #888; /*add*/ _position:relative; font-family:consolas,monospace; line-height:16px; font-size:12px; overflow-x:auto; overflow-y:hidden; background:url(../img/bg_prettyprint.png) 0 2px }
+pre.prettyprint { padding:2px; border:1px solid #888; /*add*/ _position:relative; font-family:consolas,monospace; line-height:16px; font-size:13px; overflow-x:auto; overflow-y:hidden; background:url(../img/bg_prettyprint.png) 0 2px }
 ol.linenums { margin-top:0; margin-bottom:0; /*add*/ margin-left:0; padding-left:40px; background:url(../img/bg_linenums.png) -3px 0 repeat-y }
 ol.linenums li { /*add*/ margin:0; padding:0 0 0 5px; line-height:16px }
 li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 { /*list-style-type:none*/ }
