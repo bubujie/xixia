@@ -1,0 +1,214 @@
+@charset "utf-8";
+/**
+ * @package   ##website## Template
+ * @author    ##author## ##email##
+ * @version   ##version## ##date##
+ * @copyright Copyright (C) ##author## 2008 - 2012 ##website##. All Rights Reserved.
+ * @license   ##license##
+ */
+
+.clear, .clr {clear:both; display:block; overflow:hidden; visibility:hidden; width:0; height:0; }
+/* ～～～～～～～～～ j15（健壮的） ～～～～～～～～～ */
+.crumbs{ text-align:right; font-weight:bold; }
+.crumbs a.pathway{ font-weight:normal; }
+/* ～～～～～～～～～ j15（tool-tip）/ j25（tip） ～～～～～～～～～ */
+.tool-tip{ border:solid 1px #333; background:#ffffcc; padding:0.4em; }
+/* ～～～～～～～～～ 注释 ～～～～～～～～～ */
+.cols-1{ display:block; float:none !important; margin:0 !important; }
+/* ～～～ 注释 ～～～ */
+.cols-2 .column-1,
+.cols-2 .column-2{position:relative;}
+.cols-2 .column-1{ width:46%; float:left; }
+.cols-2 .column-2{ width:46%; float:right; }
+/* ～～～～～～～～～ 注释 ～～～～～～～～～ */
+.cols-3{margin-right:-3.4%;}
+.cols-3 .column-1,
+.cols-3 .column-2,
+.cols-3 .column-3{ float:left;width:30%;margin-right:3.3%;padding:0; }
+.cols-3 .column-3{margin-right:0;}
+.items-row{ overflow:hidden; margin-bottom:10px !important; }
+.blog-more{ padding:10px 5px }
+/* ～～～～～～～～～ j15注释 ～～～～～～～～～ */
+table.adminform{border-collapse:collapse;border-spacing:0;border-top:8px solid #EEEEEE;width:100%;}
+table.adminform tr{}
+table.adminform tr td{border-bottom:8px solid #EEEEEE;}
+table.adminform tr td label{}
+#editor-xtd-buttons .button2-left{float:left;}
+/* ～～～～～～～～～ 注释 ～～～～～～～～～ */
+/*
+#adminForm{position:relative;font-size:12px;margin:0;padding:0;}
+#adminForm fieldset{border:1px solid #999;padding:10px;margin-top:10px;}
+#adminForm label{display:inline;float:left;width:150px;text-align:right;vertical-align:middle;margin:5px 0;padding-right:10px;}
+#adminForm input.inputbox, #adminForm select,#adminForm textarea.inputbox{border:1px solid #CCC;margin:5px 0;padding:0;vertical-align:middle;}
+#adminForm .formelm-buttons{position:absolute;top:25px;right:10px;text-align:right;}
+#adminForm .formelm-buttons button{}
+#adminForm #editor-xtd-buttons,#adminForm .toggle-editor{float:left;}
+#adminForm .button2-left{float:left; margin:5px 10px 0 0; padding:0.2em;border:1px solid #CCC;background:#F0F0EE;}
+#adminForm #jform_images_image_intro, #adminForm #jform_images_image_fulltext{float:left;}
+*/
+/*  */
+ul.actions{ text-align:right; }
+ul.actions li{ display:inline; }
+/* ～～～～～～～～～ j15注释（健壮的） ～～～～～～～～～ */
+/* System Messages */
+dl#system-message{ margin:10px 0; }
+dl#system-message dt{ font-weight:bold; display:none; }
+dl#system-message dd{ margin:0; font-weight:bold; text-indent:30px; }
+dl#system-message dd ul{
+	_position:relative;
+	margin-left:0; margin-bottom:10px; padding:10px; color:#0055BB;
+	background-position:5px 5px !important; background-repeat:no-repeat !important;
+	border-top:3px solid #84A7DB; border-bottom:3px solid #84A7DB;
+}
+dl#system-message dd ul li{ list-style:none; line-height:1.5em; }
+/* System Standard Messages */
+dl#system-message dd.message ul{ background:#C3D2E5 url(../../system/images/notice-info.png); }
+/* System Error Messages */
+dl#system-message dd.error   ul,
+dl#system-message dd.warning ul,
+dl#system-message dd.notice  ul{ color:#c00; }
+dl#system-message dd.error   ul{ background:#E6C0C0 url(../../system/images/notice-alert.png); border-color:#DE7A7B; }
+/* System Warning Messages */
+dl#system-message dd.warning ul{ background:#E6C8A6 url(../../system/images/notice-note.png);  border-color:#FFBB00; }
+/* System Notice Messages */
+dl#system-message dd.notice  ul{ background:#EFE7B8 url(../../system/images/notice-note.png);  border-color:#F0DC7E; }
+/* Unpublished */
+.system-unpublished, tr.system-unpublished{ background:#e8edf1; border-top:4px solid #c4d3df; border-bottom:4px solid #c4d3df; }
+span.highlight{ background-color:#FFFFCC; font-weight:bold; padding:1px 4px; }
+/* Thumbnail */
+.img-fulltext-float-right{ float:right; margin-left:10px; margin-bottom:10px; }
+.img-fulltext-float-left { float:left; margin-right:10px; margin-bottom:10px; }
+.img-fulltext-float-none{}
+.img-intro-float-right{ float:right; margin-left:5px; margin-bottom:5px; }
+.img-intro-float-left { float:left; margin-right:5px; margin-bottom:5px; }
+.img-intro-float-none{}
+/* ～～～～～～～～～ 单篇文章分页（健壮的） ～～～～～～～～～ */
+div#article-index{border:1px solid #F2E2A1;background:#FFFCF0;font-size:0.875em;}
+div#article-index ul{margin-left:0;padding-left:2.2em;}
+div#article-index ul li{list-style-image:url(../img/li_off.png);}
+div#article-index ul li a{font-weight:normal;color:#585858;}
+div#article-index ul li a.active{font-weight:bold;}
+/* ～～～ 单篇分页计数 ～～～ */
+div.pagenavcounter{text-align:center;}
+/* ～～～ 单篇上下页 ～～～ */
+div.pagination ul{margin-left:0;padding-left:0;text-align:center;}
+div.pagination ul li{display:inline;}
+/* ～～～～～～～～～ 文章列表分页 ～～～～～～～～～ */
+div.pagination p.counter{ text-indent:0; text-align:right; }
+/* ～～～ 整体布局 ～～～ */
+div.pagination ul li { list-style:none; display:inline; }
+div.pagination ul li .pagenav { margin:0 5px; }
+div.pagination ul li a.pagenav {}
+div.pagination ul li span.pagenav { color:#ff8600; }
+/* ～ 全局 ～ */
+div.pagination ul li.pagination-start .pagenav,
+div.pagination ul li.pagination-end   .pagenav,
+div.pagination ul li.pagination-prev  .pagenav,
+div.pagination ul li.pagination-next  .pagenav { color:#313031; }
+/* ～ 到首页 ～ */
+div.pagination ul li.pagination-start .pagenav { background:url(../img/bg_prev_end.gif) 0 50% no-repeat !important; padding-left:10px; }
+div.pagination ul li.pagination-start a.pagenav {}
+div.pagination ul li.pagination-start span.pagenav {}
+/* ～ 到末页 ～ */
+div.pagination ul li.pagination-end .pagenav { background:url(../img/bg_next_end.gif) 100% 50% no-repeat !important; padding-right:10px; }
+div.pagination ul li.pagination-end a.pagenav{}
+div.pagination ul li.pagination-end span.pagenav{}
+/* ～ 上一页 ～ */
+div.pagination ul li.pagination-prev .pagenav { background:url(../img/bg_prev.gif) 0 50% no-repeat !important; padding-left:10px; }
+div.pagination ul li.pagination-prev a.pagenav{}
+div.pagination ul li.pagination-prev span.pagenav{}
+/* ～ 下一页 ～ */
+div.pagination ul li.pagination-next .pagenav { background:url(../img/bg_next.gif) 100% 50% no-repeat !important; padding-right:10px; }
+div.pagination ul li.pagination-next a.pagenav{}
+div.pagination ul li.pagination-next span.pagenav{}
+/* ～～～～～～～～～ 正文 上下页(健壮的) ～～～～～～～～～ */
+ul.pagenav{ margin-left:0; padding-left:0; position:relative; *zoom:1; }
+ul.pagenav:after{ content:""; display:block; clear:both; }
+ul.pagenav li{ display:inline; }
+ul.pagenav li.pagenav-prev{ float:left; }
+ul.pagenav li.pagenav-next{ float:right; }
+/* ～～～～～～～～～ 正文 文章参数 ～～～～～～～～～ */
+dl.article-info{ font-size:12px; line-height:1.2em; }
+.item-page>h2{ font-size:1.5em; padding-top:1em; }
+/* ～～～～～～～～～ 注释 ～～～～～～～～～ */
+.category-list {}
+table.category { border-collapse: collapse; border-spacing: 0; width: 100%; margin: 0 auto; }
+table.category th, table.category td { white-space: nowrap; text-align: center; }
+table.category th { background: url(../img/bg_board.gif) repeat-x; height: 30px;color: #fff;font-weight:bold; padding: 0 6px;font-size: 12px;line-height:30px; }
+table.category th a { color: #fff; font-weight:bold; }
+table.category td { border: 0; border-bottom: 1px solid #E0DFDF; padding: 6px 10px; ; }
+table.category td.list-title { width: 100%; text-align: left; }
+table.category td.list-date { }
+table.category td.list-author { }
+table.category td.list-hits { }
+table.category .thumb { display:block; float:right; height:100px; border:2px solid #ccc; }
+table.category .thumb { width:100px; margin:auto 0; }
+/* ～～～～～～～～～ 注释 ～～～～～～～～～ */
+.blog-featured     table.category{}
+.blog-featured     table.category .item-title{text-align:left;}
+.newsfeed-category table.category{}
+.newsfeed-category table.category .item-title{text-align:left;}
+.newsfeed-category table.category .item-link{text-align:left;}
+.weblink-category  table.category{}
+/* ～～～～～～～～～ 注释 ～～～～～～～～～ */
+.module ol,.module ul{margin-left:0; padding-left:10px;}
+/* ～～～～～～～～～ 注释（健壮的） ～～～～～～～～～ */
+fieldset.filters{position:relative;overflow:hidden;height:30px;margin:10px 0;padding:15px 10px;background:url(../img/bg_filter.png) repeat-x;color:#121212;}
+fieldset.filters legend{display:none;}
+fieldset.filters .filter-search,
+fieldset.filters .display-limit{position:absolute;top:18px;height:22px;line-height:22px;}
+fieldset.filters .filter-search{left:20px;padding-left:20px;background:url(../img/ico_filter.png) 0 50% no-repeat;}
+fieldset.filters .display-limit{right:20px;}
+fieldset.filters input,
+fieldset.filters select{margin:0;padding:0;border:1px solid #DDDDDD;color:#7A7A7A;}
+fieldset.filters input{height:20px;}
+fieldset.filters select{height:22px;}
+/* ～～～～～～～～～ 注释（健壮的） ～～～～～～～～～ */
+dl.article-info{border-top: 1px solid #DDDDDD;margin-bottom: 15px;padding: 5px;background: #ECECEC;}
+dl.article-info dt.article-info-term{display:none;}
+dl.article-info dd{margin-left:0;padding: 3px 3px 3px 20px;display:inline;font-family:Dotum;_font-family:Tahoma, Geneva, sans-serif;}
+dl.article-info dd.category-name{}
+dl.article-info dd.create,dl.article-info dd.modified,dl.article-info dd.published{background:url(../img/ico_date.gif) 0 50% no-repeat;}
+dl.article-info dd.createdby{background:url(../img/ico_user.gif) 0 50% no-repeat;}
+dl.article-info{}
+/* ～～～～～～～～～ 注释（健壮的） ～～～～～～～～～ */
+.item-page .content{padding:20px;border:1px solid #E7E7E7;}
+.item-page dl.article-info{border:0;margin-bottom:0;padding:0;background:transparent;}
+.item-page dl.article-info dt.article-info-term{display:none;}
+.item-page dl.article-info dd{display:block;height:2em;line-height:2em;margin-left:0;padding:0;border:1px solid #E5E5E5;border-bottom:0;color:#989898;}
+.item-page dl.article-info dd a{color:#989898;text-decoration:underline;}
+.item-page dl.article-info dd span{display:block;float:left;width:150px;margin-left:0;margin-right:0.5em;padding:0 0.5em;border-right:1px solid #E5E5E5;background:#F7F7F7;font-weight:bold;color:#818181;text-align:center;}
+.item-page dl.article-info dd.category-name{background:transparent;}
+.item-page dl.article-info dd.create,.item-page dl.article-info dd.modified,.item-page dl.article-info dd.published{background:transparent;}
+.item-page dl.article-info dd.createdby{background:transparent;}
+.item-page dl.article-info{}
+/* ～～～～～～～～～ 注释 ～～～～～～～～～ */
+ul#archive-items{margin-left:0;padding-left:0;}
+/* ～～～～～～～～～ 注释 ～～～～～～～～～ */
+div.cat-children{}
+div.cat-children h3{}
+div.cat-children ul{margin-left:0;padding-left:40px;position:relative;*zoom:1;}
+div.cat-children ul:after{content:"";display:block;clear:both;}
+div.cat-children ul li{list-style-image:url(../img/ico_items.png);}
+div.cat-children ul li span.item-title{font-weight:bold;}
+div.cat-children ul li ul{margin-left:0;padding-left:40px;}
+/* ～～～～～～～～～ 注释 ～～～～～～～～～ */
+div.categories-list{font-size:12px;}
+div.categories-list ul{margin-left:0;padding-left:10px;position:relative;*zoom:1;}
+div.categories-list ul:after{content:"";display:block;clear:both;}
+div.categories-list ul li{}
+div.categories-list ul li span.item-title{font-weight:bold;}
+div.categories-list ul li ul{margin-left:0;padding-left:40px;}
+div.categories-list dl{}
+div.categories-list dl dt,div.categories-list dl dd{margin-left:0;display:inline;}
+/* ～～～～～～～～～ 注释:J15 ～～～～～～～～～ */
+.article-tools{position:relative;
+	line-height:24px;
+	height:24px;
+	border-top: 1px solid #DDDDDD;
+	clear: both;
+	margin-bottom: 15px;
+	display: block;
+	background: #ECECEC;}
+.article-meta{}
+.buttonheading{position:absolute;height:24px;top:0;right:10px;}
