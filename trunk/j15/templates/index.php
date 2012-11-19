@@ -46,8 +46,7 @@ $app = JFactory::getApplication(); //???
 $templateparams = $app->getTemplate(true)->params; //???
 /* ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ isHome ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ */
 $isHome = 0;
-$menu = &JSite::getMenu();
-if ($menu->getActive() == $menu->getDefault()) :
+if (JURI::current() == JURI::root() ) :
 	$isHome = 1;
 endif;
 /* ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ setTitle ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ */
