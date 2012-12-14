@@ -85,8 +85,8 @@ endif;
   </div>
 <?php endif; ?>
   <div id="bh5th">
-    <div class="wrapping nm">
-      <div class="filling">
+    <div class="wrapping">
+      <div class="filling nm">
         <div class="n1">
 <?php
 	$headingTag = $isHome ? 'h1' : 'div';
@@ -113,8 +113,8 @@ endif;
   </div>
 <?php if ($showBheadBtm) : ?>
   <div id="bh9th">
-    <div class="wrapping nm">
-      <div class="filling">
+    <div class="wrapping">
+      <div class="filling nm">
         <div class="n1"></div>
         <div class="ming">
 <jdoc:include type="modules" name="bhead-btm" style="dbl" headerLevel="3" />
@@ -136,8 +136,8 @@ endif;
   </div>
 <?php endif; ?>
   <div id="bb5th">
-    <div class="wrapping <?php if($showSide){ echo 'n'; } ?>m<?php if($showAside){ echo 'n'; } ?>">
-      <div class="filling">
+    <div class="wrapping">
+      <div class="filling <?php if($showSide){ echo 'n'; } ?>m<?php if($showAside){ echo 'n'; } ?>">
         <div id="main" class="ming">
 <jdoc:include type="modules" name="crumbs" style="dbl" headerLevel="3" />
 <?php if ($showMainTop) : ?>
@@ -145,8 +145,8 @@ endif;
 <jdoc:include type="modules" name="main-top" style="dbl" headerLevel="3" />
           </div>
 <?php endif; ?>
-<div class="wrap <?php if($showComSide){ echo 'v'; } ?>w<?php if($showComAside){ echo 'v'; } ?>">
-  <div class="fill">
+<div class="wrap">
+  <div class="fill <?php if($showComSide){ echo 'v'; } ?>w<?php if($showComAside){ echo 'v'; } ?>">
     <div class="wing">
 <?php if ($showComTop) : ?>
       <div id="com-top" class="ding">
@@ -215,8 +215,8 @@ endif;
   </div>
 <?php endif; ?>
   <div id="bf5th">
-  	<div class="wrapping <?php if($bfootLogo){ echo 'n'; } ?>m">
-      <div class="filling">
+  	<div class="wrapping">
+      <div class="filling <?php if($bfootLogo){ echo 'n'; } ?>m">
         <div class="ming">
 <jdoc:include type="modules" name="bfoot-mid" style="dbl" headerLevel="3" />
           <div class="quick">
