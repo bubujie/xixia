@@ -9,47 +9,47 @@
 
 // no direct access
 defined('_JEXEC') or die;
-/* ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ 注释 ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ */
+/* ######### ######### ######### 注释 ######### ######### ######### */
 $showBheadTop = ($this->countModules('bhead-top')  || 0); //bhead-top
 $showBheadMid = ($this->countModules('bhead-mid')  || 0); //bhead-mid
 $showBheadBtm = ($this->countModules('bhead-btm')  || 0); //bhead-btm
-/* ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ 注释 ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ */
+/* ######### ######### 注释 ######### ######### */
 $showBbodyTop = ($this->countModules('bbody-top')  || 0); //bbody-top
-/* ‡‡‡‡‡‡‡‡‡ 注释 ‡‡‡‡‡‡‡‡‡ */
+/* ######### 注释 ######### */
 $showSide     = ($this->countModules('main-side')  || 0); //main-side
-/* ‡‡‡ 注释 ‡‡‡ */
+/* ### 注释 ### */
 $showMainTop  = ($this->countModules('main-top')   || 0); //main-top
 $showComSide  = ($this->countModules('com-side')   || 0); //com-side
 $showComTop   = ($this->countModules('com-top')    || 0); //com-top
 $showComBtm   = ($this->countModules('com-btm')    || 0); //com-btm
 $showComAside = ($this->countModules('com-aside')  || 0); //com-aside
 $showMainBtm  = ($this->countModules('main-btm')   || 0); //main-btm
-/* ‡‡‡ 注释 ‡‡‡ */
+/* ### 注释 ### */
 $showAside    = ($this->countModules('main-aside') || 0); //main-aside
 $showAside   &= JRequest::getCmd('view')   != 'form'; //基于1.5beez，2.5不同
 $showAside   &= JRequest::getCmd('layout') != 'edit'; //基于1.5beez，2.5不同
-/* ‡‡‡‡‡‡‡‡‡ 注释 ‡‡‡‡‡‡‡‡‡ */
+/* ######### 注释 ######### */
 $showBbodyBtm = ($this->countModules('bbody-btm')  || 0); //bbody-btm
-/* ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ 注释 ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ */
+/* ######### ######### 注释 ######### ######### */
 $showBfootTop = ($this->countModules('bfoot-top')  || 0); //bfoot-top
 $showBfootMid = ($this->countModules('bfoot-mid')  || 0); //bfoot-mid
 $showBfootBtm = ($this->countModules('bfoot-btm')  || 0); //bfoot-btm
-/* ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ 注释 ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ */
+/* ######### ######### ######### 注释 ######### ######### ######### */
 JHTML::_('behavior.framework', true);
-/* ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ 注释 ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ */
+/* ######### ######### ######### 注释 ######### ######### ######### */
 $bheadLogo = $this->params->get('bheadLogo'); //bheadLogo
 $bfootLogo = $this->params->get('bfootLogo'); //bfootLogo
 $siteTitle = $this->params->get('siteTitle'); //siteTitle
 $siteDesc  = $this->params->get('siteDesc');  //siteDesc
-/* ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ 注释 ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ */
+/* ######### ######### ######### 注释 ######### ######### ######### */
 $app = JFactory::getApplication(); //???
 $templateparams = $app->getTemplate(true)->params; //???
-/* ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ isHome ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ */
+/* ######### ######### isHome ######### ######### */
 $isHome = 0;
 if (JURI::current() == JURI::root() ) :
 	$isHome = 1;
 endif;
-/* ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ setTitle ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ */
+/* ######### ######### setTitle ######### ######### */
 $doc = JFactory::getDocument();
 $doc->addScript($this->baseurl.'/templates/'.$this->template.'/js/fl.js');
 if($isHome) :
@@ -57,7 +57,7 @@ if($isHome) :
 else :
 	$doc->setTitle($doc->getTitle() . ' | ' . $siteTitle);
 endif;
-/* ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ 注释 ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ */
+/* ######### ######### ######### 注释 ######### ######### ######### */
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>  " dir="<?php echo $this->direction; ?>">
@@ -124,7 +124,7 @@ endif;
   </div>
 <?php endif; ?>
 </div>
-<!-- ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ bbody ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ -->
+<!-- ######### ######### ######### bbody ######### ######### ######### -->
 <div id="bbody">
 <?php if ($showBbodyTop) : ?>
   <div id="bb1st">
@@ -145,35 +145,35 @@ endif;
 <jdoc:include type="modules" name="main-top" style="dbl" headerLevel="3" />
           </div>
 <?php endif; ?>
-<div class="wrap">
-  <div class="fill <?php if($showComSide){ echo 'v'; } ?>w<?php if($showComAside){ echo 'v'; } ?>">
-    <div class="wing">
+<!-- ######### ######### inner ######### ######### -->
+<div class="ding <?php if($showComSide){ echo 'v'; } ?>w<?php if($showComAside){ echo 'v'; } ?>">
+  <div class="wing">
 <?php if ($showComTop) : ?>
-      <div id="com-top" class="ding">
+    <div id="com-top" class="ding">
 <jdoc:include type="modules" name="com-top" style="dbl" headerLevel="3" />
-      </div>
+    </div>
 <?php endif; ?>
 <jdoc:include type="message" />
 <jdoc:include type="component" />
 <div class="blank"></div>
 <?php if ($showComBtm) : ?>
-      <div id="com-btm" class="ding">
+    <div id="com-btm" class="ding">
 <jdoc:include type="modules" name="com-btm" style="dbl" headerLevel="3" />
-      </div>
-<?php endif; ?>
-	</div>
-<?php if ($showComSide) : ?>
-    <div id="com-side" class="v1">
-<jdoc:include type="modules" name="com-side" style="dbl" headerLevel="3" />
-    </div>
-<?php endif; ?>
-<?php if ($showComAside) : ?>
-    <div id="com-aside" class="v2">
-<jdoc:include type="modules" name="com-aside" style="dbl" headerLevel="3" />
     </div>
 <?php endif; ?>
   </div>
+<?php if ($showComSide) : ?>
+  <div id="com-side" class="v1">
+<jdoc:include type="modules" name="com-side" style="dbl" headerLevel="3" />
+  </div>
+<?php endif; ?>
+<?php if ($showComAside) : ?>
+  <div id="com-aside" class="v2">
+<jdoc:include type="modules" name="com-aside" style="dbl" headerLevel="3" />
+  </div>
+<?php endif; ?>
 </div>
+<!-- ######### ######### /inner ######### ######### -->
 <?php if ($showMainBtm) : ?>
           <div id="main-btm" class="ding">
 <jdoc:include type="modules" name="main-btm" style="dbl" headerLevel="3" />
@@ -203,7 +203,7 @@ endif;
   </div>
 <?php endif; ?>
 </div>
-<!-- ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ /bbody ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ ‡‡‡‡‡‡‡‡‡ -->
+<!-- ######### ######### ######### /bbody ######### ######### ######### -->
 <div id="bfoot">
 <?php if ($showBfootTop) : ?>
   <div id="bf1st">
