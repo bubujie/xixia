@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xxx>
+  <positions>
+    <position>debug</position>
+    <position>crumbs</position>
+    <position>search</position>
+    <position>bhead-top</position>
+    <position>bhead-mid</position>
+    <position>bhead-btm</position>
+    <position>bbody-top</position>
+    <position>main-side</position>
+    <position>main-top</position>
+    <position>com-side</position>
+    <position>com-top</position>
+    <position>com-btm</position>
+    <position>com-aside</position>
+    <position>main-btm</position>
+    <position>main-aside</position>
+    <position>bbody-btm</position>
+    <position>bfoot-top</position>
+    <position>bfoot-mid</position>
+    <position>bfoot-btm</position>
+  </positions>
+  <params>
+    <param name="bheadLogo" type="text" default="logo_header.png"    label="_ECR_UPPER_COM_COM_NAME_FIELD_BHEADLOGO_LABEL" description="_ECR_UPPER_COM_COM_NAME_FIELD_BHEADLOGO_DESC" filter="string" />
+    <param name="bfootLogo" type="text" default="logo_footer.png"    label="_ECR_UPPER_COM_COM_NAME_FIELD_BFOOTLOGO_LABEL" description="_ECR_UPPER_COM_COM_NAME_FIELD_BFOOTLOGO_DESC" filter="string" />
+    <param name="siteTitle" type="text" default="步步街网络服务中心" label="_ECR_UPPER_COM_COM_NAME_FIELD_SITETITLE_LABEL" description="_ECR_UPPER_COM_COM_NAME_FIELD_SITETITLE_DESC" filter="string" />
+    <param name="siteDesc"  type="text" default="步步街网络服务中心" label="_ECR_UPPER_COM_COM_NAME_FIELD_SITEDESC_LABEL"  description="_ECR_UPPER_COM_COM_NAME_FIELD_SITEDESC_DESC"  filter="string" />
+  </params>      
+  <config>
+    <fields name="params">
+      <fieldset name="advanced">
+        <field name="bheadLogo" type="text" default="logo_header.png"    label="_ECR_UPPER_COM_COM_NAME__FIELD_BHEADLOGO_LABEL" description="_ECR_UPPER_COM_COM_NAME__FIELD_BHEADLOGO_DESC" filter="string" />
+        <field name="bfootLogo" type="text" default=""                   label="_ECR_UPPER_COM_COM_NAME__FIELD_BFOOTLOGO_LABEL" description="_ECR_UPPER_COM_COM_NAME__FIELD_BFOOTLOGO_DESC" filter="string" />
+        <field name="siteTitle" type="text" default="步步街网络服务中心" label="_ECR_UPPER_COM_COM_NAME__FIELD_SITETITLE_LABEL" description="_ECR_UPPER_COM_COM_NAME__FIELD_SITETITLE_DESC" filter="string" />
+        <field name="siteDesc"  type="text" default=""                   label="_ECR_UPPER_COM_COM_NAME__FIELD_SITEDESC_LABEL"  description="_ECR_UPPER_COM_COM_NAME__FIELD_SITEDESC_DESC"  filter="string" />
+      </fieldset>
+    </fields>
+  </config>
+</xxx>
