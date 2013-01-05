@@ -105,8 +105,8 @@ endif;
 ?>
         </div>
         <div class="ming">
-<jdoc:include type="modules" name="bhead-mid" style="div" headerLevel="3" />
-<jdoc:include type="modules" name="search" style="div" headerLevel="3" />
+<jdoc:include type="modules" name="bhead-mid" style="open" headerLevel="3" />
+<jdoc:include type="modules" name="search" style="open" headerLevel="3" />
 	    </div>
 	  </div>
     </div>
@@ -139,7 +139,7 @@ endif;
     <div class="wrapping">
       <div class="filling <?php if($showSide){ echo 'n'; } ?>m<?php if($showAside){ echo 'n'; } ?>">
         <div id="main" class="ming">
-<jdoc:include type="modules" name="crumbs" style="div" headerLevel="3" />
+<jdoc:include type="modules" name="crumbs" style="open" headerLevel="3" />
 <?php if ($showMainTop) : ?>
           <div id="main-top" class="ding">
 <jdoc:include type="modules" name="main-top" style="div" headerLevel="3" />
