@@ -57,7 +57,7 @@
       <fieldset name="advanced">
         <field name="bheadLogo" type="text" default="logo_header.png"    label="TPL_##TEMPLATE##_FIELD_BHEADLOGO_LABEL" description="TPL_##TEMPLATE##_FIELD_BHEADLOGO_DESC" filter="string" />
         <field name="bfootLogo" type="text" default=""                   label="TPL_##TEMPLATE##_FIELD_BFOOTLOGO_LABEL" description="TPL_##TEMPLATE##_FIELD_BFOOTLOGO_DESC" filter="string" />
-        <field name="siteTitle" type="text" default="步步街网络服务中心" label="TPL_##TEMPLATE##_FIELD_SITETITLE_LABEL" description="TPL_##TEMPLATE##_FIELD_SITETITLE_DESC" filter="string" />
+        <field name="siteTitle" type="text" default="步步街工作室" label="TPL_##TEMPLATE##_FIELD_SITETITLE_LABEL" description="TPL_##TEMPLATE##_FIELD_SITETITLE_DESC" filter="string" />
         <field name="siteDesc"  type="text" default=""                   label="TPL_##TEMPLATE##_FIELD_SITEDESC_LABEL"  description="TPL_##TEMPLATE##_FIELD_SITEDESC_DESC"  filter="string" />
       </fieldset>
     </fields>
