@@ -20,13 +20,7 @@
     <position>bfoot-top</position>
     <position>bfoot-mid</position>
     <position>bfoot-btm</position>
-  </positions>
-  <params>
-    <param name="bheadLogo" type="text" default="logo_header.png"    label="_ECR_UPPER_COM_COM_NAME_FIELD_BHEADLOGO_LABEL" description="_ECR_UPPER_COM_COM_NAME_FIELD_BHEADLOGO_DESC" filter="string" />
-    <param name="bfootLogo" type="text" default="logo_footer.png"    label="_ECR_UPPER_COM_COM_NAME_FIELD_BFOOTLOGO_LABEL" description="_ECR_UPPER_COM_COM_NAME_FIELD_BFOOTLOGO_DESC" filter="string" />
-    <param name="siteTitle" type="text" default="步步街网络服务中心" label="_ECR_UPPER_COM_COM_NAME_FIELD_SITETITLE_LABEL" description="_ECR_UPPER_COM_COM_NAME_FIELD_SITETITLE_DESC" filter="string" />
-    <param name="siteDesc"  type="text" default="步步街网络服务中心" label="_ECR_UPPER_COM_COM_NAME_FIELD_SITEDESC_LABEL"  description="_ECR_UPPER_COM_COM_NAME_FIELD_SITEDESC_DESC"  filter="string" />
-  </params>      
+  </positions>    
   <config>
     <fields name="params">
       <fieldset name="advanced">
