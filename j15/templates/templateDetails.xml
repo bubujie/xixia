@@ -35,10 +35,10 @@
     <position>bbody-top</position>
     <position>main-side</position>
     <position>main-top</position>
-    <position>com-side</position>
+    <!--position>com-side</position>
     <position>com-top</position>
     <position>com-btm</position>
-    <position>com-aside</position>
+    <position>com-aside</position-->
     <position>main-btm</position>
     <position>main-aside</position>
     <position>bbody-btm</position>
