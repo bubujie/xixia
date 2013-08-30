@@ -1,0 +1,9 @@
+.xml
+.html
+.php
+.js
+.gif
+.png
+.jpg
+.sql
+.txt
