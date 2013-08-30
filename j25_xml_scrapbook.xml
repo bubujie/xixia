@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DOC>
+    <TITLE>Joomla! 2.5 XML 笔记本</TITLE>
+    <field name="position" type="sql" default="10" label="Select a position" query="SELECT DISTINCT position FROM #__modules" key_field="position" />
+    <field name="myfield" type="sql" default="10" label="Select an article" query="SELECT id, title FROM #__content" key_field="id" value_field="title" />
+	<field name="myfile" type="filelist" default="" label="Select a file" description="" directory="images/banners" filter="" exclude="" stripext="" />
+</DOC>
