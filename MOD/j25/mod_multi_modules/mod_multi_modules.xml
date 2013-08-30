@@ -13,7 +13,7 @@
                 around several modules when template wraps each module within a position in a separate box.
 	</description>
 	<files>
-		<filename module="mod_multi_modules">mod_multi_module.php</filename>
+		<filename module="mod_multi_modules">mod_multi_modules.php</filename>
 	</files>
 	<params>
 		<param name="moduleDebug" type="radio" default="0" label="Debug" description="Show debug information.">
