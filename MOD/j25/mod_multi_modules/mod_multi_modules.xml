@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" method="upgrade" client="site">
+	<name>Multi Modules</name>
+	<author>步步街工作室</author>
+	<creationDate>April 2011</creationDate>
+	<copyright>Copyright (C) 2008-2013 bubujie.net</copyright>
+	<license>GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<authorEmail>bubujie@gmail.com</authorEmail>
+	<authorUrl>http://www.bubujie.net/</authorUrl>
+	<version>1.0</version>
+	<description>
+		This module allows having several modules within single chrome. Useful when you want to have single border
+                around several modules when template wraps each module within a position in a separate box.
+	</description>
+	<files>
+		<filename module="mod_multi_modules">mod_multi_module.php</filename>
+	</files>
+	<params>
+		<param name="moduleDebug" type="radio" default="0" label="Debug" description="Show debug information.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+                </param>
+		<param name="position" type="text" size="30" default="unified_chrome" label="Module position to provide" description=""/>
+		<param name="@spacer" type="spacer" default="" label="Position" description="" />
+	</params>
+	<params group="advanced">
+		<param name="cssOverride" type="textarea" default="" label="CSS style overrides (will be placed into html HEAD)" description="" rows="16" cols="40"/>
+		<param name="moduleStyle" type="text" default="" label="Module inclusion style (template-dependant)" description=""/>
+		<param name="prelude" type="textarea" default="" label="HTML prelude for modules" description="Additional HTML code that will be rendered before all modules." rows="2" cols="40"/>
+		<param name="finale" type="textarea" default="" label="HTML finale for modules" description="Additional HTML code that will be rendered after all modules." rows="2" cols="40"/>
+		<param name="@spacer" type="spacer" default="" label="Position" description="" />
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		<param name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleDebug" type="radio" default="0" label="Debug" description="Show debug information.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+		                </field>
+				<field name="position" type="text" size="30" default="unified_chrome" label="Module position to provide" description=""/>
+			</fieldset>
+			<fieldset name="advancedstyle" label="Advanced style modificators">
+				<field name="cssOverride" type="textarea" default="" label="CSS style overrides (will be placed into html HEAD)" description="" rows="16" cols="40"/>
+				<field name="moduleStyle" type="text" default="" label="Module inclusion style (template-dependant)" description=""/>
+                                <field name="prelude" type="textarea" default="" label="HTML prelude for modules" description="Additional HTML code that will be rendered before all modules." rows="2" cols="40"/>
+                                <field name="finale" type="textarea" default="" label="HTML finale for modules" description="Additional HTML code that will be rendered after all modules." rows="2" cols="40"/>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option	value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option	value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</install>
