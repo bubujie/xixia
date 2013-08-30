@@ -30,7 +30,8 @@ function modChrome_div($module, &$params, &$attribs)
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
 		echo   "\n".'<!-- ######### module ######### -->';
-		printf("\n".'<div class="module mod%s ding">' ,
+		printf("\n".'<div id="mod-%s" class="module mod%s ding">' ,
+			$module->id ,
 			$params->get('moduleclass_sfx')
 		);
 		if ($module->showtitle) :
@@ -56,7 +57,8 @@ function modChrome_zen($module, &$params, &$attribs)
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
 		echo   "\n".'<!-- ######### module ######### -->';
-		printf("\n".'<div class="module mod%s ding">' ,
+		printf("\n".'<div id="mod-%s" class="module mod%s ding">' ,
+			$module->id ,
 			$params->get('moduleclass_sfx')
 		);
 		if ($module->showtitle) :
@@ -81,7 +83,8 @@ function modChrome_dbl($module, &$params, &$attribs)
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
 		echo   "\n".'<!-- ######### module ######### -->';
-		printf("\n".'<div class="module mod%s ding">' ,
+		printf("\n".'<div id="mod-%s" class="module mod%s ding">' ,
+			$module->id ,
 			$params->get('moduleclass_sfx')
 		);
 		echo   "\n  ".'<div class="mod-inner">';
@@ -112,7 +115,8 @@ function modChrome_cnr($module, &$params, &$attribs)
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
 		echo   "\n".'<!-- ######### module ######### -->';
-		printf("\n".'<div class="module mod%s ding">' ,
+		printf("\n".'<div id="mod-%s" class="module mod%s ding">' ,
+			$module->id ,
 			$params->get('moduleclass_sfx')
 		);
 		echo   "\n  ".'<div class="mod-inner">';
