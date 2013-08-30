@@ -1,0 +1,141 @@
+Joomla! 2.5
+├─administrator
+│  └─templates
+│      ├─bluestork
+│      │  │  cpanel.php //步步街LOGO和链接
+│      │  │  error.php  //步步街LOGO和链接
+│      │  │  index.php  //步步街LOGO和链接
+│      │  │  login.php  //完全重设
+│      │  │  
+│      │  └─images
+│      │          j_login_lock.png //登录锁
+│      │          logo.fw.png      //FW-LOGO
+│      │          logo.png         //步步街LOGO
+│      │          logo_45.png      //步步街斜LOGO
+│      │          
+│      └─hathor
+│          └─images
+│                  j_logo.png  //迷你LOGO
+│                  
+├─components
+│  └─com_content
+│      └─views
+│          └─category
+│              └─tmpl
+│                      default_articles_2.5.0.php //重构的
+│                      faq.php                    //FAQ
+│                      faq.xml                    //FAQ
+│                      gallery.php                //Gallery
+│                      gallery.xml                //Gallery
+│                      list.php                   //List
+│                      list.xml                   //List
+│                      webzine.php                //Webzine
+│                      webzine.xml                //Webzine
+│                      
+├─installation
+│  │  readme.txt //
+│  │  
+│  ├─models
+│  │      configuration.php //配置
+│  │      
+│  └─sql
+│      └─mysql
+│              joomla.sql //管理员ID
+│              
+├─language
+│  ├─en-GB
+│  └─zh-CN
+├─libraries
+│  │  readme.txt
+│  │  
+│  └─joomla
+│      ├─document
+│      │  ├─feed
+│      │  │  │  feed.php //去除尾巴
+│      │  │  │  
+│      │  │  └─renderer
+│      │  │          atom.php //去除尾巴
+│      │  │          rss.php  //去除尾巴
+│      │  │          
+│      │  └─html
+│      │      └─renderer
+│      │              head.php //去除尾巴
+│      │              
+│      └─html
+│          └─html
+│                  behavior.php //JavaScript库链接
+│                  
+├─media
+│  └─editors
+│      └─tinymce
+│          └─jscripts
+│              └─tiny_mce
+│                  └─themes
+│                      └─advanced
+│                          │  source_editor.htm //集成Zen-Coding
+│                          │  
+│                          └─js
+│                                  zen_textarea.min.js //引入Zen-Coding插件
+│                                  
+├─modules
+│  ├─mod_bubujie_latest
+│  │  │  helper.php
+│  │  │  index.html
+│  │  │  mod_bubujie_latest.php
+│  │  │  mod_bubujie_latest.xml
+│  │  │  
+│  │  ├─language
+│  │  │  │  en-GB.mod_bubujie_latest.ini
+│  │  │  │  en-GB.mod_bubujie_latest.sys.ini
+│  │  │  │  index.html
+│  │  │  │  zh-CN.mod_bubujie_latest.ini
+│  │  │  │  zh-CN.mod_bubujie_latest.sys.ini
+│  │  │  │  
+│  │  │  ├─en-GB
+│  │  │  │      en-GB.mod_bubujie_latest.ini
+│  │  │  │      en-GB.mod_bubujie_latest.sys.ini
+│  │  │  │      
+│  │  │  └─zh-CN
+│  │  │          zh-CN.mod_bubujie_latest.ini
+│  │  │          zh-CN.mod_bubujie_latest.sys.ini
+│  │  │          
+│  │  └─tmpl
+│  │          default.php
+│  │          index.html
+│  │          
+│  ├─mod_bubujie_popular
+│  │  │  helper.php
+│  │  │  index.html
+│  │  │  mod_bubujie_popular.php
+│  │  │  mod_bubujie_popular.xml
+│  │  │  this.png
+│  │  │  
+│  │  ├─language
+│  │  │  │  en-GB.mod_bubujie_popular.ini
+│  │  │  │  en-GB.mod_bubujie_popular.sys.ini
+│  │  │  │  index.html
+│  │  │  │  zh-CN.mod_bubujie_popular.ini
+│  │  │  │  zh-CN.mod_bubujie_popular.sys.ini
+│  │  │  │  
+│  │  │  ├─en-GB
+│  │  │  │      en-GB.mod_bubujie_popular.ini
+│  │  │  │      en-GB.mod_bubujie_popular.sys.ini
+│  │  │  │      
+│  │  │  └─zh-CN
+│  │  │          zh-CN.mod_bubujie_popular.ini
+│  │  │          zh-CN.mod_bubujie_popular.sys.ini
+│  │  │          
+│  │  └─tmpl
+│  │          default.php
+│  │          index.html
+│  │          
+│  └─mod_domain_check
+│          mod_domain_check.php
+│          mod_domain_check.xml
+│          
+└─templates
+    │  modules.php //重构
+    │  
+    └─atomic
+            error.php //收集
+            

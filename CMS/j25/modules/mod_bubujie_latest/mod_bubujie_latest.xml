@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+  <name>BuBuJie-Latest</name>
+  <author>步步街</author>
+  <creationDate>2012年02月02日</creationDate>
+  <copyright>Copyright (C) 2008 - 2012 Open Source Matters. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>bubujie@gmail.com</authorEmail>
+  <authorUrl>www.bubujie.net</authorUrl>
+  <version>1.0.0</version>
+  <description>MOD_BUBUJIE_LATEST_XML_DESCRIPTION</description>
+  <files>
+    <filename module="mod_bubujie_latest">mod_bubujie_latest.php</filename>
+    <folder>tmpl</folder>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <filename>mod_bubujie_latest.xml</filename>
+  </files>
+  <media destination="mod_bubujie_latest" folder="media">
+    <folder>css</folder>
+    <folder>js</folder>
+    <folder>images</folder>
+    <filename>index.html</filename>
+  </media>
+  <languages folder="language">
+    <language tag="en-GB">en-GB.mod_bubujie_latest.ini</language>
+    <language tag="en-GB">en-GB.mod_bubujie_latest.sys.ini</language>
+    <language tag="zh-CN">zh-CN.mod_bubujie_latest.ini</language>
+    <language tag="zh-CN">zh-CN.mod_bubujie_latest.sys.ini</language>
+  </languages>
+  <help key="JHELP_EXTENSIONS_MODULE_MANAGER_LATEST" />
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="catid" type="category" extension="com_content" multiple="true" size="10" default="" label="JCATEGORY" description="MOD_BUBUJIE_LATEST_FIELD_CATEGORY_DESC">
+          <option value="">JOPTION_ALL_CATEGORIES</option>
+        </field>
+        <field name="count" type="text" default="5" label="MOD_BUBUJIE_LATEST_FIELD_COUNT_LABEL" description="MOD_BUBUJIE_LATEST_FIELD_COUNT_DESC" />
+        <field name="show_featured" type="list" default="" label="MOD_BUBUJIE_LATEST_FIELD_FEATURED_LABEL" description="MOD_BUBUJIE_LATEST_FIELD_FEATURED_DESC">
+          <option value="">JSHOW</option>
+          <option value="0">JHIDE</option>
+          <option value="1">MOD_BUBUJIE_LATEST_VALUE_ONLY_SHOW_FEATURED</option>
+        </field>
+        <field name="ordering" type="list" default="published" label="MOD_BUBUJIE_LATEST_FIELD_ORDERING_LABEL" description="MOD_BUBUJIE_LATEST_FIELD_ORDERING_DESC">
+          <option value="c_dsc">MOD_BUBUJIE_LATEST_VALUE_RECENT_ADDED</option>
+          <option value="m_dsc">MOD_BUBUJIE_LATEST_VALUE_RECENT_MODIFIED</option>
+          <option value="p_dsc">MOD_BUBUJIE_LATEST_VALUE_RECENT_PUBLISHED</option>
+          <option value="mc_dsc">MOD_BUBUJIE_LATEST_VALUE_RECENT_TOUCHED</option>
+        </field>
+        <field name="user_id" type="list" default="0" label="MOD_BUBUJIE_LATEST_FIELD_USER_LABEL" description="MOD_BUBUJIE_LATEST_FIELD_USER_DESC">
+          <option value="0">MOD_BUBUJIE_LATEST_VALUE_ANYONE</option>
+          <option value="by_me">MOD_BUBUJIE_LATEST_VALUE_ADDED_BY_ME</option>
+          <option value="not_me">MOD_BUBUJIE_LATEST_VALUE_NOTADDED_BY_ME</option>
+        </field>
+        <field name="more_catid" type="category" extension="com_content" default="" label="More's Link" description="MOD_BUBUJIE_LATEST_FIELD_CATEGORY_DESC">
+          <option value="">JOPTION_ALL_CATEGORIES</option>
+        </field>
+      </fieldset>
+      <fieldset name="display">
+        <field name="customimage" type="media" hide_default="1" label="Module's custom image" description="为本模块定制一张图片显示在全体列表上方。" />
+        <field name="customtext" type="textarea" filter="safehtml" cols="30" rows="5" label="Module's custom text" description="CUSTOM_TEXT_DESC" />
+        <field name="show_more" label="Show More" description="MOD_BUBUJIE_POPULAR_SHOW_MORE_DESC" type="radio" default="1">
+          <option value="1">JSHOW
+					</option>
+          <option value="0">JHIDE
+					</option>
+        </field>
+        <field name="show_number" label="Show Number" description="MOD_BUBUJIE_POPULAR_SHOW_NUMBER_DESC" type="radio" default="0">
+          <option value="1">JSHOW
+					</option>
+          <option value="0">JHIDE
+					</option>
+        </field>
+        <field name="show_imageintro" label="Show intro image" description="显示文章缩略图" type="radio" default="1">
+          <option value="1">JSHOW
+					</option>
+          <option value="0">JHIDE
+					</option>
+        </field>
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+        <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+        <field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+          <option value="1">JGLOBAL_USE_GLOBAL</option>
+          <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+        </field>
+        <field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+        <field name="cachemode" type="hidden" default="static">
+          <option value="static" />
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

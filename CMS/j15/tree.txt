@@ -1,0 +1,182 @@
+Joomla! 1.5
+├─administrator
+│  ├─language
+│  │  └─zh-CN
+│  │          install.xml
+│  │          zh-CN.ini
+│  │          ……省略
+│  │          zh-CN.tpl_beez.ini
+│  │          zh-CN.tpl_ja_purity.ini
+│  │          zh-CN.tpl_khepri.ini
+│  │          zh-CN.tpl_rhuk_milkyway.ini
+│  │          zh-CN.xml
+│  │          
+│  └─templates
+│      └─khepri
+│          │  login.php //后台登陆模板
+│          │  
+│          └─images
+│              │  j_header_left.fw.png //步步街LOGO(.fw.png)
+│              │  j_login_lock.png     //后台登陆锁
+│              │  logo_45.png          //后台登陆背景
+│              │  
+│              ├─h_cherry
+│              │      j_header_left.png      //步步街LOGO
+│              │      j_header_right_rtl.png //步步街LOGO
+│              │      
+│              ├─h_green
+│              │      j_header_left.png      //步步街LOGO
+│              │      j_header_right_rtl.png //步步街LOGO
+│              │      
+│              └─h_teal
+│                      j_header_left.png      //步步街LOGO
+│                      j_header_right_rtl.png //步步街LOGO
+│                      
+├─components
+│  └─com_content
+│      └─views
+│          ├─article
+│          │  └─tmpl
+│          │          default.php //注释掉PDF功能
+│          │          
+│          ├─category
+│          │  └─tmpl
+│          │          blog_item.php //注释掉PDF功能
+│          │          
+│          ├─frontpage
+│          │  └─tmpl
+│          │          default_item.php //注释掉PDF功能
+│          │          
+│          └─section
+│              └─tmpl
+│                      blog_item.php //注释掉PDF功能
+│                      
+├─installation
+│  ├─installer
+│  │      helper.php //超级管理员ID和名称（62->1）,行291与行310
+│  │      
+│  ├─language
+│  │  └─zh-CN
+│  │          zh-CN.ini //修改STDMETADESC（Meta）和STDMETAKEYS（Keywords）项
+│  │          
+│  ├─sql
+│  │  └─mysql
+│  │          joomla.sql //TinyMCE插件语言改为简体中文
+│  │          sample_data.sql //修改文章作者与内容发布者ID（62->1）
+│  │          
+│  └─template
+│      └─images
+│              j_header_left.png //步步街LOGO
+│              j_header_right_rtl.png //步步街LOGO
+│              
+├─language
+│  └─zh-CN
+│          install.xml
+│          zh-CN.ini
+│          ……省略
+│          zh-CN.tpl_beez.ini
+│          zh-CN.tpl_ja_purity.ini
+│          zh-CN.tpl_rhuk_milkyway.ini
+│          zh-CN.xml
+│          
+├─libraries
+│  └─joomla
+│      ├─application
+│      │  └─module
+│      │          helper.php //禁用tp=1查看模板位置：注释掉行98、99、100、101，注释掉行200
+│      │          
+│      ├─document
+│      │  ├─feed
+│      │  │  │  feed.php //注释掉generator
+│      │  │  │  
+│      │  │  └─renderer
+│      │  │          atom.php //注释掉generator
+│      │  │          rss.php  //注释掉generator
+│      │  │          
+│      │  └─html
+│      │      └─renderer
+│      │              head.php //注释掉generator
+│      │              
+│      ├─html
+│      │  └─html
+│      │          behavior.php //变更MooTools引用
+│      │          
+│      └─utilities
+│              simplexml.php //为li增加换行与缩进（非必要的的部分）
+│              
+└─plugins
+    └─editors
+        └─tinymce //为TinyMCE添加语言文件和Zen-Coding功能
+            └─jscripts
+                └─tiny_mce
+                    ├─langs
+                    │      cn.js
+                    │      
+                    ├─plugins
+                    │  ├─advhr
+                    │  │  └─langs
+                    │  │          cn_dlg.js
+                    │  │          
+                    │  ├─advimage
+                    │  │  └─langs
+                    │  │          cn_dlg.js
+                    │  │          
+                    │  ├─advlink
+                    │  │  └─langs
+                    │  │          cn_dlg.js
+                    │  │          
+                    │  ├─emotions
+                    │  │  └─langs
+                    │  │          cn_dlg.js
+                    │  │          
+                    │  ├─fullpage
+                    │  │  └─langs
+                    │  │          cn_dlg.js
+                    │  │          
+                    │  ├─media
+                    │  │  └─langs
+                    │  │          cn_dlg.js
+                    │  │          
+                    │  ├─paste
+                    │  │  └─langs
+                    │  │          cn_dlg.js
+                    │  │          
+                    │  ├─searchreplace
+                    │  │  └─langs
+                    │  │          cn_dlg.js
+                    │  │          
+                    │  ├─style
+                    │  │  └─langs
+                    │  │          cn_dlg.js
+                    │  │          
+                    │  ├─table
+                    │  │  └─langs
+                    │  │          cn_dlg.js
+                    │  │          
+                    │  ├─template
+                    │  │  └─langs
+                    │  │          cn_dlg.js
+                    │  │          
+                    │  ├─wordc
+                    │  │  └─langs
+                    │  │          cn_dlg.js
+                    │  │          
+                    │  └─xhtmlxtras
+                    │      └─langs
+                    │              cn_dlg.js
+                    │              
+                    └─themes
+                        ├─advanced
+                        │  │  source_editor.htm //添加对zen_textarea.min.js的引用
+                        │  │  
+                        │  ├─js
+                        │  │      zen_textarea.min.js //Zen-Coding的JS文件
+                        │  │      
+                        │  └─langs
+                        │          cn.js
+                        │          cn_dlg.js
+                        │          
+                        └─simple
+                            └─langs
+                                    cn.js
+                                    
