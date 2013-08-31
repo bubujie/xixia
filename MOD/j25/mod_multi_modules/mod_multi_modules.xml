@@ -42,7 +42,8 @@
 					<option value="0">No</option>
 					<option value="1">Yes</option>
 		                </field>
-				<field name="position" type="text" size="30" default="unified_chrome" label="Module position to provide" description=""/>
+				<!--field name="position" type="text" size="30" default="unified_chrome" label="Module position to provide" description="" /-->
+				<field name="position" type="sql" default="10" label="Select a position" query="SELECT DISTINCT position FROM #__modules" key_field="position" /> 
 			</fieldset>
 			<fieldset name="advancedstyle" label="Advanced style modificators">
 				<field name="cssOverride" type="textarea" default="" label="CSS style overrides (will be placed into html HEAD)" description="" rows="16" cols="40"/>
