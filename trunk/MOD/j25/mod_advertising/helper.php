@@ -1,8 +1,8 @@
 <?php
 /**
- * @package		Joomla.Site
+ * @package		Bubujie.Studio
  * @subpackage	mod_banners
- * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 步步街工作室 2008 - 2012. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
