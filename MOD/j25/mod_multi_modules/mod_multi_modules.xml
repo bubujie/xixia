@@ -15,6 +15,12 @@
 	<files>
 		<filename module="mod_multi_modules">mod_multi_modules.php</filename>
 	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_multi_modules.ini</language>
+		<language tag="en-GB">en-GB.mod_multi_modules.sys.ini</language>
+		<language tag="zh-CN">zh-CN.mod_multi_modules.ini</language>
+		<language tag="zh-CN">zh-CN.mod_multi_modules.sys.ini</language>
+	</languages>
 	<params>
 		<param name="moduleDebug" type="radio" default="0" label="Debug" description="Show debug information.">
 			<option value="0">No</option>
