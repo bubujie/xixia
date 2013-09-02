@@ -1,7 +1,9 @@
 <?php
 /**
- * @copyright	Copyright (C) 2011 bubujie.net.
- * @license     GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
+ * @package		Bubujie.Studio
+ * @subpackage	mod_articles_thumbnail
+ * @copyright	Copyright (C) 步步街工作室 2008 - 2012. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 // no direct access
