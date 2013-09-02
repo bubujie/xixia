@@ -4,7 +4,7 @@
 	version="2.5"
 	client="site"
 	method="upgrade">
-	<name>mod_articles_thumbnail</name>
+	<name>Articles Thumbnail</name>
 	<author>步步街工作室</author>
 	<creationDate>July 2012</creationDate>
 	<copyright>Copyright (C) 步步街工作室 2008 - 2012. All rights reserved.</copyright>
