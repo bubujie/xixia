@@ -20,4 +20,4 @@ BannersHelper::updateReset();
 $list = &modAdvertisementsHelper::getList($params);
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 
-require JModuleHelper::getLayoutPath('mod_advertising', $params->get('layout', 'default'));
+require JModuleHelper::getLayoutPath('mod_advertisements', $params->get('layout', 'default'));
