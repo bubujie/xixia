@@ -8,7 +8,7 @@
 
 defined('_JEXEC') or die;
 
-class modArticlesThumbnailHelper
+class modAdvertisingHelper
 {
 	static function &getList(&$params)
 	{

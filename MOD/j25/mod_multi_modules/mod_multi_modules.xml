@@ -3,10 +3,10 @@
 	<name>Multi Modules</name>
 	<author>步步街工作室</author>
 	<creationDate>April 2011</creationDate>
-	<copyright>Copyright (C) 2008-2013 bubujie.net</copyright>
-	<license>GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<copyright>Copyright © 步步街工作室 2008 - 2012 All Rights Reserved. </copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>bubujie@gmail.com</authorEmail>
-	<authorUrl>http://www.bubujie.net/</authorUrl>
+	<authorUrl>www.bubujie.net</authorUrl>
 	<version>1.0</version>
 	<description>
 		This module allows having several modules within single chrome. Useful when you want to have single border
