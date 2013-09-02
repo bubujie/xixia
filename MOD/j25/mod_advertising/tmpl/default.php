@@ -121,7 +121,7 @@ $baseurl = JURI::base();
 <script type="text/javascript">
     new Switchable('module-<?php echo $module->id; ?>',{
         haslrbtn:false,
-        effect:'scrollx',
+        effect:'scrolly',
         panels:'.banneritem',
         triggers:'.trigger-item',
         autoplay:true
@@ -130,12 +130,22 @@ $baseurl = JURI::base();
 <?php
 $doc = JFactory::getDocument();
 $style = '#module-'.$module->id.' {'
-	. 'height: 100px;'
+	. 'width:253px;'
+	. 'height:200px;'
 	. 'clear:both;'
-	. 'overflow: hidden;'
+	. 'overflow:hidden;'
 	. '}'
-	. '#module-'.$module->id.' .bannergroup {'
-	. 'height: 100px;'
+	. '#module-'.$module->id.' .bannergroup .banneritem {'
+	. 'width:253px;'
+	. 'height:200px;'
+	. 'mrgin:0;'
+	. 'padding:0;'
+	. 'overflow:hidden;'
+	. '}'
+	. '#module-'.$module->id.' .bannergroup img {'
+	. 'width:253px;'
+	. 'height:200px;'
+	. 'max-widht:100%;'
 	. '}'
 	. '#module-'.$module->id.' .triggergroup {'
 	. 'position: absolute;'
