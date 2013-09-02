@@ -9,6 +9,8 @@
 // no direct access
 defined('_JEXEC') or die;
 
+JHTML::script('media/system/js/jstools.js');
+JHTML::script('media/system/js/switchable.js');
 require_once JPATH_ROOT . '/components/com_banners/helpers/banner.php';
 $baseurl = JURI::base();
 ?>
