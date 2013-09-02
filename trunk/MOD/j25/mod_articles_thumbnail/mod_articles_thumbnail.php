@@ -15,4 +15,4 @@ require_once dirname(__FILE__).'/helper.php';
 $list = modArticlesThumbnailHelper::getList($params);
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 
-require JModuleHelper::getLayoutPath('mod_articles_latest', $params->get('layout', 'default'));
+require JModuleHelper::getLayoutPath('mod_articles_thumbnail', $params->get('layout', 'default'));
