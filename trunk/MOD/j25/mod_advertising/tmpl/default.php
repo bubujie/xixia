@@ -107,10 +107,40 @@ $baseurl = JURI::base();
 		<div class="clr"></div>
 	</div>
 <?php endforeach; ?>
-
+</div>
+<ul class="triggergroup">
+<?php foreach($list as $item):?>
+<li class="trigger-item"><?php echo $item->name; ?></li>
+<?php endforeach; ?>
+</ul>
 <?php if ($footerText) : ?>
 	<div class="bannerfooter">
 		<?php echo $footerText; ?>
 	</div>
 <?php endif; ?>
-</div>
+<script type="text/javascript">
+    new Switchable('module-<?php echo $module->id; ?>',{
+        haslrbtn:false,
+        effect:'scrollx',
+        panels:'.banneritem',
+        triggers:'.trigger-item',
+        autoplay:true
+    });
+</script>
+<?php
+$doc = JFactory::getDocument();
+$style = '#module-'.$module->id.' {'
+	. 'height: 100px;'
+	. 'clear:both;'
+	. 'overflow: hidden;'
+	. '}'
+	. '#module-'.$module->id.' .bannergroup {'
+	. 'height: 100px;'
+	. '}'
+	. '#module-'.$module->id.' .triggergroup {'
+	. 'position: absolute;'
+	. 'bottom:10px;'
+	. 'right: 10px;'
+	. '}'; 
+$doc->addStyleDeclaration( $style );
+?>
