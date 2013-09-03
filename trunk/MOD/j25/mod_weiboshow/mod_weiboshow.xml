@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5">
+  <name>weiboshow</name>
+  <creationDate>03-Sep-2013</creationDate>
+  <author>步步街工作室</author>
+  <authorEmail>bubujie@gmail.com</authorEmail>
+  <authorUrl>www.bubujie.net</authorUrl>
+  <copyright>步步街工作室版权所有，违反必究！</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <version>1.0</version>
+  <description>A plain frontend module.</description>
+  <files folder="site">
+    <filename>CHANGELOG.php</filename>
+    <filename module="mod_weiboshow">mod_weiboshow.php</filename>
+  </files>
+  <config>
+  <fields name="params">
+<fieldset name="basic">
+<field name="uid" type="text" default="" label="用户ID" description="" size="10" />
+<field name="verifier" type="text" default="" label="身份验证" description="" size="10" />
+<field type="spacer" hr="true" />
+<field name="width" type="text" default="350" label="宽度（单位px）" description="留空为宽度自动适应" size="10" />
+<field name="height" type="text" default="550" label="高度（单位px）" description="" size="10" />
+<field type="spacer" hr="true" />
+<field name="skin" type="radio" label="外观方案" description="">
+  <option value="1">&lt;span style="display:inline-block;border:1px solid #C6C6C6;"&gt;&lt;apan style="display:inline-block;width:20px;height:20px;border:1px solid #FFF;background:#BCE7ED;"&gt;&lt;/span&gt;&lt;/span&gt;</option>
+  <option value="2">&lt;span style="display:inline-block;border:1px solid #C6C6C6;"&gt;&lt;apan style="display:inline-block;width:20px;height:20px;border:1px solid #FFF;background:#C8C8C8;"&gt;&lt;/span&gt;&lt;/span&gt;</option>
+  <option value="3">&lt;span style="display:inline-block;border:1px solid #C6C6C6;"&gt;&lt;apan style="display:inline-block;width:20px;height:20px;border:1px solid #FFF;background:#BDE493;"&gt;&lt;/span&gt;&lt;/span&gt;</option>
+  <option value="4">&lt;span style="display:inline-block;border:1px solid #C6C6C6;"&gt;&lt;apan style="display:inline-block;width:20px;height:20px;border:1px solid #FFF;background:#FFCBB6;"&gt;&lt;/span&gt;&lt;/span&gt;</option>
+  <option value="5">&lt;span style="display:inline-block;border:1px solid #C6C6C6;"&gt;&lt;apan style="display:inline-block;width:20px;height:20px;border:1px solid #FFF;background:#FFFFFF;"&gt;&lt;/span&gt;&lt;/span&gt;</option>
+  <option value="6">&lt;span style="display:inline-block;border:1px solid #C6C6C6;"&gt;&lt;apan style="display:inline-block;width:20px;height:20px;border:1px solid #FFF;background:#D7C7FF;"&gt;&lt;/span&gt;&lt;/span&gt;</option>
+  <option value="7">&lt;span style="display:inline-block;border:1px solid #C6C6C6;"&gt;&lt;apan style="display:inline-block;width:20px;height:20px;border:1px solid #FFF;background:#FFF498;"&gt;&lt;/span&gt;&lt;/span&gt;</option>
+  <option value="8">&lt;span style="display:inline-block;border:1px solid #C6C6C6;"&gt;&lt;apan style="display:inline-block;width:20px;height:20px;border:1px solid #FFF;background:#D4CFB2;"&gt;&lt;/span&gt;&lt;/span&gt;</option>
+  <option value="9">&lt;span style="display:inline-block;border:1px solid #C6C6C6;"&gt;&lt;apan style="display:inline-block;width:20px;height:20px;border:1px solid #FFF;background:#B1D4F6;"&gt;&lt;/span&gt;&lt;/span&gt;</option>
+  <option value="10">&lt;span style="display:inline-block;border:1px solid #C6C6C6;"&gt;&lt;apan style="display:inline-block;width:20px;height:20px;border:1px solid #FFF;background:#000000;"&gt;&lt;/span&gt;&lt;/span&gt;</option>
+</field>
+<field type="spacer" hr="true" />
+<field name="ptype" type="radio" default="1" label="图片内容" description="">
+  <option value="1">显示为缩略图</option>
+  <option value="0">显示为文字链</option>
+</field>
+<field type="spacer" hr="true" />
+<field name="modParams" type="checkboxes" label="模块设置" description="">
+    <option value="isTitle">显示标题栏</option>
+    <option value="noborder">显示边框</option>
+    <option value="isWeibo">显示微博</option>
+    <option value="isFans">显示粉丝</option>
+</field>
+<field type="spacer" hr="true" />
+<field name="fansRow" type="text" default="2" label="显示粉丝（行数）" description="" size="10" />
+<field type="spacer" hr="true" />
+<field name="myradiova" type="radio" default="0" label="动态设置" description="">
+  <option value="0">微博手动滚动</option>
+  <option value="1">微博自动滚动</option>
+</field>
+<field name="speed" type="list" default="0" label="滚动速度" description="">
+  <option value="0">微博手动滚动</option>
+  <option value="300">慢</option>
+  <option value="100">中</option>
+  <option value="50">快</option>
+</field>
+<field type="spacer" hr="true" />
+<field name="language" type="radio" default="0" label="语言设置" description="">
+  <option value="0">中文简体</option>
+  <option value="1">中文繁体</option>
+</field>
+		</fieldset>
+	</fields>
+  </config>
+</extension>
