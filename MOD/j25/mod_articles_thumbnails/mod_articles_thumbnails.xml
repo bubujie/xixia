@@ -4,7 +4,7 @@
 	version="2.5"
 	client="site"
 	method="upgrade">
-	<name>Articles Thumbnail</name>
+	<name>Articles Thumbnails</name>
 	<author>步步街工作室</author>
 	<creationDate>July 2012</creationDate>
 	<copyright>Copyright (C) 步步街工作室 2008 - 2012. All rights reserved.</copyright>
@@ -14,17 +14,17 @@
 	<version>2.5.0</version>
 	<description>MOD_LATEST_NEWS_XML_DESCRIPTION</description>
 	<files>
-		<filename module="mod_articles_thumbnail">mod_articles_thumbnail.php</filename>
+		<filename module="mod_articles_thumbnails">mod_articles_thumbnails.php</filename>
 		<folder>tmpl</folder>
 		<filename>helper.php</filename>
 		<filename>index.html</filename>
-		<filename>mod_articles_thumbnail.xml</filename>
+		<filename>mod_articles_thumbnails.xml</filename>
 	</files>
 	<languages>
-		<language tag="en-GB">en-GB.mod_articles_thumbnail.ini</language>
-		<language tag="en-GB">en-GB.mod_articles_thumbnail.sys.ini</language>
-		<language tag="zh-CN">zh-CN.mod_articles_thumbnail.ini</language>
-		<language tag="zh-CN">zh-CN.mod_articles_thumbnail.sys.ini</language>
+		<language tag="en-GB">en-GB.mod_articles_thumbnails.ini</language>
+		<language tag="en-GB">en-GB.mod_articles_thumbnails.sys.ini</language>
+		<language tag="zh-CN">zh-CN.mod_articles_thumbnails.ini</language>
+		<language tag="zh-CN">zh-CN.mod_articles_thumbnails.sys.ini</language>
 	</languages>
 	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_LATEST_NEWS" />
 	<config>
