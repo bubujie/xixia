@@ -1,7 +1,7 @@
 <?php
 /**
  * @package		Bubujie.Studio
- * @subpackage	mod_articles_thumbnail
+ * @subpackage	mod_articles_thumbnails
  * @copyright	Copyright (C) 步步街工作室 2008 - 2012. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -12,7 +12,7 @@ require_once JPATH_SITE.'/components/com_content/helpers/route.php';
 
 JModelLegacy::addIncludePath(JPATH_SITE.'/components/com_content/models', 'ContentModel');
 
-abstract class modArticlesThumbnailHelper
+abstract class modArticlesThumbnailsHelper
 {
 	public static function getList(&$params)
 	{
