@@ -10,9 +10,11 @@
 //-- No direct access
 defined('_JEXEC') || die('=;)');
 
-
-$greeting = 'Hello World =;)';
-
+$width		= htmlspecialchars($params->get('width'));
+$height		= htmlspecialchars($params->get('width'));
+$uid		= htmlspecialchars($params->get('uid'));
+$verifier	= htmlspecialchars($params->get('verifier'));
+$skin		= $params->get('skin');
 ?>
 <p>
    <?php
@@ -30,14 +32,14 @@ $greeting = 'Hello World =;)';
 	echo   "".'&fansRow=2';
 	echo   "".'&ptype=1';
 	echo   "".'&speed=0';
-	echo   "".'&skin=1';
+	echo   "".'&skin='.$skin;
 	echo   "".'&isTitle=1';
 	echo   "".'&noborder=1';
 	echo   "".'&isWeibo=1';
 	echo   "".'&isFans=1';
 	echo   "".'&uid=1639102400';
 	echo   "".'&verifier=a7415e95';
-	echo   "".'&colors=d6f3f7,ffffff,666666,0082cb,ecfbfd';
+	//echo   "".'&colors=d6f3f7,ffffff,666666,0082cb,ecfbfd';
 	echo   "".'&dpc=1';
 	echo   "".'"></iframe>';
 ?>
