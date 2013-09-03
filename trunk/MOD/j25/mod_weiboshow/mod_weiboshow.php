@@ -1,14 +1,13 @@
 <?php
 /**
- * @package    weiboshow
- * @subpackage Base
- * @author     步步街工作室 {@link www.bubujie.net}
- * @author     Created on 03-Sep-2013
- * @license    GNU/GPL
+ * @package		Bubujie.Studio
+ * @subpackage	mod_weiboshow
+ * @copyright	Copyright (C) 步步街工作室 2008 - 2012. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-//-- No direct access
-defined('_JEXEC') || die('=;)');
+// no direct access
+defined('_JEXEC') or die('Restricted access');
 
 $width		= htmlspecialchars($params->get('width'));
 $height		= htmlspecialchars($params->get('width'));
