@@ -16,8 +16,8 @@
   <config>
   <fields name="params">
 <fieldset name="basic">
-<field name="uid" type="text" default="" label="用户ID" description="" size="10" />
-<field name="verifier" type="text" default="" label="身份验证" description="" size="10" />
+<field name="uid" type="text" default="1864556907" label="用户ID" description="" size="10" />
+<field name="verifier" type="text" default="adfb3d94" label="身份验证" description="" size="10" />
 <field type="spacer" hr="true" />
 <field name="width" type="text" default="350" label="宽度（单位px）" description="宽度:190-1024px,留空为宽度自动适应" size="10" />
 <field name="height" type="text" default="550" label="高度（单位px）" description="高度:75-800px" size="10" />
@@ -40,11 +40,21 @@
   <option value="0">显示为文字链</option>
 </field>
 <field type="spacer" hr="true" />
-<field name="modParams" type="checkboxes" label="模块设置" description="">
-    <option value="isTitle">显示标题栏</option>
-    <option value="noborder">显示边框</option>
-    <option value="isWeibo">显示微博</option>
-    <option value="isFans">显示粉丝</option>
+<field name="isTitle" type="radio" default="1" label="显示标题栏" description="">
+  <option value="1">JSHOW</option>
+  <option value="0">JHIDE</option>
+</field>
+<field name="noborder" type="radio" default="1" label="显示边框" description="">
+  <option value="1">JSHOW</option>
+  <option value="0">JHIDE</option>
+</field>
+<field name="isWeibo" type="radio" default="1" label="显示微博" description="">
+  <option value="1">JSHOW</option>
+  <option value="0">JHIDE</option>
+</field>
+<field name="isFans" type="radio" default="1" label="显示粉丝" description="">
+  <option value="1">JSHOW</option>
+  <option value="0">JHIDE</option>
 </field>
 <field type="spacer" hr="true" />
 <field name="fansRow" type="text" default="2" label="显示粉丝（行数）" description="" size="10" />
@@ -60,9 +70,9 @@
   <option value="50">快</option>
 </field>
 <field type="spacer" hr="true" />
-<field name="language" type="radio" default="0" label="语言设置" description="">
-  <option value="0">中文简体</option>
-  <option value="1">中文繁体</option>
+<field name="language" type="radio" default="zh_cn" label="语言设置" description="">
+  <option value="zh_cn">中文简体</option>
+  <option value="zh_tw">中文繁体</option>
 </field>
 		</fieldset>
 	</fields>
