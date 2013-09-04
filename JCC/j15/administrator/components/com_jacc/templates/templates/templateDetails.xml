@@ -6,7 +6,7 @@
   <author>##author##</author>
   <authorEmail>##email##</authorEmail>
   <authorUrl>##website##</authorUrl>
-  <copyright>Copyright (C) ##year## ##author## Open Source Matters. All rights reserved.</copyright>
+  <copyright>Copyright (C) ##year## ##author## All rights reserved.</copyright>
   <license>##license##</license>
   <version>##version##</version>
   <description>TPL_##TEMPLATE##_XML_DESCRIPTION</description>
