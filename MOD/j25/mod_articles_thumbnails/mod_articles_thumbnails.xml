@@ -92,6 +92,13 @@
 						value="not_me">MOD_LATEST_NEWS_VALUE_NOTADDED_BY_ME</option>
 				</field>
 
+				<field type="spacer" hr="true" />
+
+				<field name="gridWidth" type="text" default="150" label="栅格宽度(单位px)" description="" size="10" />
+				<field name="gridHeight" type="text" default="200" label="栅格高度(单位px)" description="" size="10" />
+				<field name="imageWidth" type="text" default="130" label="图片宽度(单位px)" description="" size="10" />
+				<field name="imageHeight" type="text" default="130" label="图片高度(单位px)" description="" size="10" />
+
 			</fieldset>
 
 			<fieldset
