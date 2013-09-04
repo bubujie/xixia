@@ -6,7 +6,7 @@
   <author>##author##</author>
   <authorEmail>##email##</authorEmail>
   <authorUrl>##website##</authorUrl>
-  <copyright>Copyright (C) ##year## ##author## Open Source Matters. All rights reserved.</copyright>
+  <copyright>Copyright (C) ##year## ##author## All rights reserved.</copyright>
   <license>##license##</license>
   <version>##version##</version>
   <description>TPL_##TEMPLATE##_XML_DESCRIPTION</description>
@@ -25,6 +25,9 @@
     <filename>index.php</filename>
     <filename>error.php</filename>
   </files>
+  <media folder="media" destination="system">
+    <folder>js</folder>
+  </media>
   <positions>
     <position>debug</position>
     <position>crumbs</position>
@@ -46,7 +49,7 @@
     <position>bfoot-mid</position>
     <position>bfoot-btm</position>
   </positions>
-  <languages folder="lang">
+  <languages folder="language">
     <language tag="en-GB">en-GB/en-GB.tpl_##template##.ini</language>
     <language tag="en-GB">en-GB/en-GB.tpl_##template##.sys.ini</language>
     <language tag="zh-CN">zh-CN/zh-CN.tpl_##template##.ini</language>
