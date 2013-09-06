@@ -43,7 +43,8 @@ if (JURI::current() == JURI::root() ) :
 endif;
 /* ######### ######### setTitle ######### ######### */
 $doc = JFactory::getDocument();
-$doc->addScript($this->baseurl.'/templates/'.$this->template.'/js/fl.js');
+$doc->addScript($this->baseurl.'/templates/'.$this->template.'/js/jstools.js');
+$doc->addScript($this->baseurl.'/templates/'.$this->template.'/js/switchable.js');
 if($isHome) :
 	$doc->setTitle($siteTitle);
 else :
@@ -60,6 +61,9 @@ endif;
   <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/template_rtl.css" type="text/css" />
 <?php endif; ?>
   <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/prettify.css" type="text/css" />
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/respond.min.js"></script>
+  <![endif]-->
   <!--[if IE 6]>
   <script type="text/javascript" src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/belatedPNG.js"></script>
   <script type="text/javascript">belatedPNG.fix('#logo_header,#logo_footer');</script>
@@ -130,6 +134,11 @@ endif;
   <div id="bbody-mid">
     <div class="wrapping">
       <div class="filling <?php if($showSide){ echo 'n'; } ?>m<?php if($showAside){ echo 'n'; } ?>">
+<?php if ($showSide) : ?>
+        <div id="side" class="n1"><a name="side"></a>
+<jdoc:include type="modules" name="main-side" style="div" headerLevel="3" />
+        </div>
+<?php endif; ?>
         <div id="main" class="ming">
 <jdoc:include type="modules" name="crumbs" style="open" headerLevel="3" />
 <?php if ($showMainTop) : ?>
@@ -139,6 +148,11 @@ endif;
 <?php endif; ?>
 <!-- ######### ######### inner ######### ######### -->
 <div class="ding <?php if($showComSide){ echo 'v'; } ?>w<?php if($showComAside){ echo 'v'; } ?>">
+<?php if ($showComSide) : ?>
+  <div id="com-side" class="v1">
+<jdoc:include type="modules" name="com-side" style="div" headerLevel="3" />
+  </div>
+<?php endif; ?>
   <div class="wing">
 <?php if ($showComTop) : ?>
     <div id="com-top" class="ding">
@@ -154,11 +168,6 @@ endif;
     </div>
 <?php endif; ?>
   </div>
-<?php if ($showComSide) : ?>
-  <div id="com-side" class="v1">
-<jdoc:include type="modules" name="com-side" style="div" headerLevel="3" />
-  </div>
-<?php endif; ?>
 <?php if ($showComAside) : ?>
   <div id="com-aside" class="v2">
 <jdoc:include type="modules" name="com-aside" style="div" headerLevel="3" />
@@ -172,11 +181,6 @@ endif;
           </div>
 <?php endif; ?>
         </div>
-<?php if ($showSide) : ?>
-        <div id="side" class="n1"><a name="side"></a>
-<jdoc:include type="modules" name="main-side" style="div" headerLevel="3" />
-        </div>
-<?php endif; ?>
 <?php if ($showAside) : ?>
         <div id="aside" class="n2"><a name="aside"></a>
 <jdoc:include type="modules" name="main-aside" style="div" headerLevel="3" />
@@ -259,6 +263,6 @@ _gaq.push(['_trackPageview']);
 	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
-</script>      
+</script>
 </body>
 </html>

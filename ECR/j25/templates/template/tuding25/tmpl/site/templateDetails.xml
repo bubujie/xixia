@@ -20,7 +20,16 @@
     <position>bfoot-top</position>
     <position>bfoot-mid</position>
     <position>bfoot-btm</position>
-  </positions>    
+  </positions>
+  <media folder="media" destination="system">
+    <folder>js</folder>
+  </media>
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.tpl_##template##.ini</language>
+    <language tag="en-GB">en-GB/en-GB.tpl_##template##.sys.ini</language>
+    <language tag="zh-CN">zh-CN/zh-CN.tpl_##template##.ini</language>
+    <language tag="zh-CN">zh-CN/zh-CN.tpl_##template##.sys.ini</language>
+  </languages>
   <config>
     <fields name="params">
       <fieldset name="advanced">
