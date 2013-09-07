@@ -95,9 +95,17 @@ defined('_JEXEC') or die;
 	<?php endforeach; ?>
 </ul>
 <?php else : ?>
+<?php if ($params->get('show_more_link') == 1) : ?>
+<a href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($params->get('more_catid'))); ?>">More</a>
+<?php endif; ?>
 <ul class="category-module<?php echo $moduleclass_sfx; ?>">
+	<?php $i = 1; ?>
 	<?php foreach ($list as $item) : ?>
 	    <li>
+<?php if ($params->get('show_number') == 1) : ?>
+<span class="ranking"><?php echo $i; ?></span>
+<?php $i++; ?>
+<?php endif; ?>
 	   	<h<?php echo $item_heading; ?>>
 	   	<?php if ($params->get('link_titles') == 1) : ?>
 		<a class="mod-articles-category-title <?php echo $item->active; ?>" href="<?php echo $item->link; ?>">
