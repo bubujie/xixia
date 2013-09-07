@@ -51,8 +51,8 @@ if (JURI::current() == JURI::root() ) :
 endif;
 /* ######### ######### setTitle ######### ######### */
 $doc = JFactory::getDocument();
-$doc->addScript($this->baseurl.'/templates/'.$this->template.'/js/jstools.js');
-$doc->addScript($this->baseurl.'/templates/'.$this->template.'/js/switchable.js');
+$doc->addScript($this->baseurl.'/media/system/js/jstools.js');
+$doc->addScript($this->baseurl.'/media/system/js/switchable.js');
 if($isHome) :
 	$doc->setTitle($siteTitle);
 else :
