@@ -11,9 +11,10 @@
   <version>##version##</version>
   <description>TPL_##TEMPLATE##_XML_DESCRIPTION</description>
   <files>
+    <folder>language</folder>
     <folder>images</folder>
+    <folder>media</folder>
     <folder>html</folder>
-    <folder>lang</folder>
     <folder>css</folder>
     <folder>img</folder>
     <folder>js</folder>
@@ -25,8 +26,9 @@
     <filename>index.php</filename>
     <filename>error.php</filename>
   </files>
-  <media folder="media" destination="system">
-    <folder>js</folder>
+  <media folder="media/js" destination="system/js">
+    <filename>jstools.js</filename>
+    <filename>switchable.js</filename>
   </media>
   <positions>
     <position>debug</position>
