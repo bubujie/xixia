@@ -9,8 +9,9 @@
 // no direct access
 defined('_JEXEC') or die;
 ?>
-<ul class="category-module<?php echo $moduleclass_sfx; ?>">
+
 <?php if ($grouped) : ?>
+<ul class="category-module<?php echo $moduleclass_sfx; ?>">
 	<?php foreach ($list as $group_name => $group) : ?>
 	<li>
 		<h<?php echo $item_heading; ?>><?php echo $group_name; ?></h<?php echo $item_heading; ?>>
@@ -92,7 +93,9 @@ defined('_JEXEC') or die;
 		</ul>
 	</li>
 	<?php endforeach; ?>
+</ul>
 <?php else : ?>
+<ul class="category-module<?php echo $moduleclass_sfx; ?>">
 	<?php foreach ($list as $item) : ?>
 	    <li>
 	   	<h<?php echo $item_heading; ?>>
@@ -161,19 +164,18 @@ defined('_JEXEC') or die;
 		<?php endif; ?>
 	</li>
 	<?php endforeach; ?>
-<?php endif; ?>
 </ul>
 <script type="text/javascript">
-    new Slide('module-<?php echo $module->id; ?>',{
+	new Slide('module-<?php echo $module->id; ?>',{
 		autoplay:true,
-        haslrbtn:true,
-        effect:'scrollx',
-        hasTriggers:false,
-        panels:'.item',
-        prev:'.go-left',
-        next:'.go-right',
-        viewStep:5
-    });
+		haslrbtn:true,
+		effect:'scrollx',
+		hasTriggers:false,
+		panels:'.item',
+		prev:'.go-left',
+		next:'.go-right',
+		viewStep:5
+	});
 </script>
 <?php
 $selector='#module-'.$module->id;
@@ -212,3 +214,4 @@ $style1 .= $selector.' a .thumb{ border:1px solid #eee; }
 '.$selector.' ul{margin-left:0px;}';
 $doc->addStyleDeclaration( $style1 );
 ?>
+<?php endif; ?>
