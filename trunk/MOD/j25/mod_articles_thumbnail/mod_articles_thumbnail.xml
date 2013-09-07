@@ -423,8 +423,8 @@
 				</field>
 				<field
 					name="show_more_link"
-					label="JGLOBAL_SHOW_READMORE_TITLE_LABEL"
-					description="JGLOBAL_SHOW_READMORE_TITLE_DESC"
+					label="MOD_ARTICLES_THUMBNAIL_FIELD_SHOWMORELINK_LABEL"
+					description="MOD_ARTICLES_THUMBNAIL_FIELD_SHOWMORELINK_DESC"
 					type="radio"
 					default="1"
 				>
@@ -434,8 +434,8 @@
 				<field type="spacer" hr="true" />
 				<field
 					name="show_number"
-					label="JGLOBAL_SHOW_READMORE_TITLE_LABEL"
-					description="JGLOBAL_SHOW_READMORE_TITLE_DESC"
+					label="MOD_ARTICLES_THUMBNAIL_FIELD_SHOWNUMBER_LABEL"
+					description="MOD_ARTICLES_THUMBNAIL_FIELD_SHOWNUMBER_DESC"
 					type="radio"
 					default="1"
 				>
@@ -444,9 +444,9 @@
 				</field>
 				<field type="spacer" hr="true" />
 				<field
-					name="show_image_intro"
-					label="JGLOBAL_SHOW_READMORE_TITLE_LABEL"
-					description="JGLOBAL_SHOW_READMORE_TITLE_DESC"
+					name="show_thumbnail"
+					label="MOD_ARTICLES_THUMBNAIL_FIELD_SHOWTHUMBNAIL_LABEL"
+					description="MOD_ARTICLES_THUMBNAIL_FIELD_SHOWTHUMBNAIL_DESC"
 					type="radio"
 					default="1"
 				>

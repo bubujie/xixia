@@ -109,6 +109,7 @@ defined('_JEXEC') or die;
 	   	<h<?php echo $item_heading; ?>>
 	   	<?php if ($params->get('link_titles') == 1) : ?>
 		<a class="mod-articles-category-title <?php echo $item->active; ?>" href="<?php echo $item->link; ?>">
+<?php if ($params->get('show_thumbnail') == 1) : ?>
 <?php $images = json_decode($item->images); ?>
 <?php  if (isset($images->image_intro) and !empty($images->image_intro)) : ?>
 	<?php $imgfloat = (empty($images->float_intro)) ? $params->get('float_intro') : $images->float_intro; ?>
@@ -119,6 +120,7 @@ defined('_JEXEC') or die;
 		endif; ?>
 		src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>"/>
 	</div>
+<?php endif; ?>
 <?php endif; ?>
 		<?php echo $item->title; ?>
         <?php if ($item->displayHits) :?>
