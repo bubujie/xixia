@@ -148,7 +148,7 @@ endif;
         </div>
 <?php endif; ?>
         <div id="main" class="ming">
-<jdoc:include type="modules" name="crumbs" style="open" headerLevel="3" />
+<jdoc:include type="modules" name="breadcrumbs" style="open" headerLevel="3" />
 <?php if ($showMainTop) : ?>
           <div id="main-top" class="ding">
 <jdoc:include type="modules" name="main-top" style="div" headerLevel="3" />
