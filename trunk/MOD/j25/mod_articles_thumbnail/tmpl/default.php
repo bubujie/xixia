@@ -22,7 +22,7 @@ defined('_JEXEC') or die;
 					   	<?php if ($params->get('link_titles') == 1) : ?>
 						<a class="mod-articles-category-title <?php echo $item->active; ?>" href="<?php echo $item->link; ?>">
 <?php $images = json_decode($item->images); ?>
-<?php  if (isset($images->image_intro) and !empty($images->image_intro)) : ?>
+<?php if (isset($images->image_intro) and !empty($images->image_intro)) : ?>
 	<?php $imgfloat = (empty($images->float_intro)) ? $params->get('float_intro') : $images->float_intro; ?>
 	<div class="thumb img-intro-<?php echo htmlspecialchars($imgfloat); ?>">
 	<img
@@ -101,7 +101,7 @@ defined('_JEXEC') or die;
 <ul class="category-module<?php echo $moduleclass_sfx; ?>">
 	<?php $i = 1; ?>
 	<?php foreach ($list as $item) : ?>
-	    <li>
+	    <li class="item">
 <?php if ($params->get('show_number') == 1) : ?>
 <span class="ranking"><?php echo $i; ?></span>
 <?php $i++; ?>
@@ -120,6 +120,10 @@ defined('_JEXEC') or die;
 		endif; ?>
 		src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>"/>
 	</div>
+<?php else : ?>
+<div class="thumb">
+<img src="<?php echo JURI::base().'media/system/images/no-image.gif'; ?>" alt=""/>
+</div>
 <?php endif; ?>
 <?php endif; ?>
 		<?php echo $item->title; ?>
@@ -191,7 +195,7 @@ defined('_JEXEC') or die;
 $selector='#module-'.$module->id;
 $doc = JFactory::getDocument();
 $width='150px';
-$height='200px';
+$height='300px';
 $imgW='100px';
 $imgH='100px'; 
 $style1 ='/* Fixed Image Col List */
@@ -221,7 +225,7 @@ $style1 .= $selector.' a .thumb{ border:1px solid #eee; }
 '.$selector.' a:hover .thumb,
 '.$selector.' a:active .thumb,
 '.$selector.' a:focus .thumb{margin:-2px;}
-'.$selector.' ul{margin-left:0px;}';
+'.$selector.' .mod-content{margin-left:0px;height:200px;overflow:hidden;}';
 $doc->addStyleDeclaration( $style1 );
 ?>
 <?php endif; ?>
