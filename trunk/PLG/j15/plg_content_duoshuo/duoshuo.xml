@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD plugin 1.0//EN" "http://joomla.org/xml/dtd/1.5/plugin-install.dtd">
+<install type="plugin" version="1.5" group="content">
+  <name>Content - Duoshuo</name>
+  <creationDate>10-Sep-2013</creationDate>
+  <author>步步街工作室</author>
+  <authorEmail>bubujie@gmail.com</authorEmail>
+  <authorUrl>http://www.bubujie.net</authorUrl>
+  <copyright>步步街工作室保留所有权利</copyright>
+  <license>商业用户单域名授权</license>
+  <version>1.0</version>
+  <description>多说评论插件</description>
+  <files folder="site">
+    <filename plugin="duoshuo">duoshuo.php</filename>
+  </files>
+</install>
