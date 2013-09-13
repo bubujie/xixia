@@ -87,7 +87,7 @@ function modChrome_dbl($module, &$params, &$attribs)
 			$module->id ,
 			$params->get('moduleclass_sfx')
 		);
-		echo   "\n  ".'<div class="mod-inner">';
+		echo   "\n  ".'<div class="stroke">';
 		if ($module->showtitle) :
 			printf("\n    ".'<h%s class="mod-heading"><span>%s</span></h%s>' ,
 				$headerLevel ,
@@ -101,7 +101,7 @@ function modChrome_dbl($module, &$params, &$attribs)
 		echo   "\n    ".'</div>';
 		//echo   "\n    ".'<div class="tl"></div><div class="tr"></div><div class="bl"></div><div class="br"></div>';
 		echo   "\n  ".'</div>';
-		echo   "\n  ".'<div class="blank"></div>';
+		//echo   "\n  ".'<div class="blank"></div>';
 		echo   "\n".'</div>';
 		echo   "\n".'<!-- ######### /module ######### -->';
 	endif;
