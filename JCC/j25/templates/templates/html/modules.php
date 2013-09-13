@@ -69,7 +69,7 @@ function modChrome_zen($module, &$params, &$attribs)
 			);
 		endif;
 		echo $module->content;
-		echo   "\n  ".'<div class="blank"></div>';
+		//echo   "\n  ".'<div class="blank"></div>';
 		echo   "\n".'</div>';
 		echo   "\n".'<!-- ######### /module ######### -->';
 	endif;
@@ -119,7 +119,7 @@ function modChrome_cnr($module, &$params, &$attribs)
 			$module->id ,
 			$params->get('moduleclass_sfx')
 		);
-		echo   "\n  ".'<div class="mod-inner">';
+		echo   "\n  ".'<div class="stroke">';
 		if ($module->showtitle) :
 			printf("\n    ".'<h%s class="mod-heading"><span>%s</span></h%s>' ,
 				$headerLevel ,
