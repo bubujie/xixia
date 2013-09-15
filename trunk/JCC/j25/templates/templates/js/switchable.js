@@ -38,54 +38,60 @@ var AutoPlay=new Class({
 var LazyLoad=new Class({                    //延时加载基类
     Implements:[Options,Events],
     options:{
-        img:'img-lazyload',       //存图象地址的属性
-        textarea:'textarea-lazyload',   //textarea的class
+        img:'data-src',       //存图象地址的属性
+        textarea:'action-lazyload',   //textarea的class
         lazyDataType:'textarea',            //延时类型
         execScript:true,                   //是否执行脚本
         islazyload:true,                   //是否执行延时操作
         lazyEventType:'beforeSwitch',        //要接触延时的事件
-        after:function(){} //LazyLoad完成后触发
+        onAfter:function(){} //LazyLoad完成后触发
     },
     loadCustomLazyData: function(containers, type) {
         var area, imgs,area_cls=this.options.textarea,img_data=this.options.img;
         if(!this.options.islazyload)return;
         Array.from(containers).each(function(container){
             switch (type) {
-                case 'img':
-                    imgs=container.nodeName === 'IMG'?[container]:container.getElements('img');
-                    imgs.each(function(img){
-                        this.loadImgSrc(img, img_data);
-                    },this);
-                    break;
-                default:
-                    area=container.getElement('textarea');
-                    if(area && area.hasClass(area_cls))
-                    this.loadAreaData(area);
-                    break;
+            case 'img':
+                imgs=container.nodeName === 'IMG'?[container]:container.getElements('img');
+                imgs.each(function(img){
+                    this.loadImgSrc(img, img_data);
+                },this);
+                break;
+            default:
+                area=container.getElement('textarea');
+                if(area && area.hasClass(area_cls))
+                this.loadAreaData(area);
+                break;
             }
         },this);
     },
-    loadImgSrc: function(img, flag ,cb) {
+    loadImgSrc: function(img, flag, cb) {
         flag = flag || this.options.img;
         var dataSrc = img.getProperty(flag);
         img.removeProperty(flag);
         if (dataSrc && img.src != dataSrc) {
-            var pic= new Image();
-            pic.onload = function(){
-                pic.onload = null;
+            // var pic= new Image();
+            // pic.onload = function(){
+            //     this.onload = null;
+            //     img.src = dataSrc;
+            //     cb && cb();
+            // };
+            // pic.src = dataSrc;
+            // img.onload = function(){this.options.after(img);}.bind(this);
+            imageReady(dataSrc, function(){
                 img.src = dataSrc;
                 cb && cb();
-            };
-            pic.src = dataSrc;
-            img.onload = function(){this.options.after(img);}.bind(this);
+            }, function(){
+                this.fireEvent('after', img);
+            }.bind(this));
         }
     },
     loadAreaData: function(area ,cb) {
-            //area.setStyle('display','none').className='';
-            var content = new Element('div').inject(area,'before');
-            this.stripScripts(area.value,content);
-            area.destroy();
-            cb && cb();
+        //area.setStyle('display','none').className='';
+        var content = new Element('div').inject(area,'before');
+        this.stripScripts(area.value,content);
+        area.destroy();
+        cb && cb();
     },
     isAllDone:function(){
         var type=this.options.lazyDataType,flag=this.options[type],
@@ -93,7 +99,7 @@ var LazyLoad=new Class({                    //延时加载基类
         if (type && this.container) {
             elems = this.container.getElements(type);
             for (i = 0, len = elems.length; i < len; i++) {
-                if (isImgSrc ?elems[i].get(flag): elems[i].hasClass(flag)) return false;
+                if (isImgSrc ? elems[i].get(flag) : elems[i].hasClass(flag)) return false;
             }
         }
         return true;
@@ -122,18 +128,21 @@ var LazyLoad=new Class({                    //延时加载基类
 var DataLazyLoad = new Class({
     Extends:LazyLoad,
     options:{
+        containers: document,
         threshold:null,               //获取要延时的窗口距离
         syncEl:null,                  //images ,areas
         config:{
             mod:'manual',             //延时模式
             diff:'default',           //默认取为两屏窗口的延时元素
-            placeholder:'none'         //默认延时图片地址
+            placeholder:''            //默认延时图片地址
         }
     },
     initialize:function(options,containers){
-        this.containers=Array.from($(containers)||document);
-        if(!this.containers)return;
         this.setOptions(options);
+        containers = containers || this.options.containers;
+        this.containers=Array.from(containers);
+        if(!this.containers.length)return;
+        if(window.Shop) this.options.config.placeholder = Shop.url.placeholder;
         this.lazyinit();
     },
     lazyinit:function(){
@@ -158,13 +167,13 @@ var DataLazyLoad = new Class({
         isManualMod=this.options.config.mod==='manual';
         if(isManualMod){
             if(dataSrc){
-                if(placeholder!=='none')img.src=placeholder;
+                if(placeholder)img.src= placeholder;
                 return true;
             }
         }else{
             if($(img).getOffsets().y> threshold && ! dataSrc){
                 img.set(img_data,img.src);
-                placeholder !== 'none'? img.src=placeholder:img.removeAttribute('src');
+                placeholder ? img.src=placeholder:img.removeAttribute('src');
                 return true;
             }
         }
@@ -206,10 +215,13 @@ var DataLazyLoad = new Class({
             fnObj = {'areas':'loadAreaData','images':'loadImgSrc'};
 
         items.each(function(el){
-            var isArea=el.tagName=='TEXTAREA'?'areas':'images',ele =el;
-            if(isArea) el= $(el.getStyle('display')=='none'?el.parentNode:el);
+            var isArea=el.tagName=='TEXTAREA'?'areas':'images',ele = $(el);
+            if(isArea) {
+                if (ele.getStyle('display') == 'none') el = ele.getParent();
+                else el = ele;
+            }
 
-            if (el.getOffsets().y<= threshold) {
+            if (ele.getOffsets().y<= threshold) {
                 this[fnObj[isArea]](ele);
             }else{
                 obj[isArea].push(ele);
@@ -238,7 +250,7 @@ var DataLazyLoad = new Class({
     getThreshold:function(){
         if(this.options.threshold)return this.options.threshold;
         var diff=this.options.config.diff,vh=window.getSize().y;
-        if(diff==='default')return 1 * vh;
+        if(diff==='default') return 1 * vh;
         return vh + diff;
     },
     getItemsLength:function(){
@@ -257,8 +269,8 @@ var Tabs = new Class({
         hasTriggers:true,                  //是否有触点选择
         triggersBox:'.switchable-triggerBox',         //触点的父元素
         triggers:'.switchable-trigger',               //触点class
-        panels:'.switchable-panel',                  //显示面板class
         content:'.switchable-content',              //显示区域class
+        panels:'.switchable-panel',                  //显示面板class
         activeIndex:0,                              //默认显示的元素索引
         activeClass:'active',                       //当前触点元素class
         steps:1,                             //一次显示一个panel
@@ -281,7 +293,9 @@ var Tabs = new Class({
         this.getMarkup();
         this.triggersEvent().extendPlugins();
         if(this.options.hasTriggers&&this.triggers[this.activeIndex])
-        this.triggers[this.activeIndex].addClass(this.options.activeClass);
+            this.triggers[this.activeIndex].addClass(this.options.activeClass);
+        if(this.options.showClass&&this.panels[this.activeIndex])
+            this.panels[this.activeIndex].addClass(this.options.showClass);
         if(this.options.islazyload) this.fireEvent('beforeSwitch',{toIndex:this.activeIndex});
         this.fireEvent('init');
     },
@@ -320,6 +334,7 @@ var Tabs = new Class({
         if(options.hasTriggers)
         triggers.each(function(trigger,index){
             trigger.addEvent('click',function(e){
+                if(this.options.stopEvent) e.stop();
                 if(!this.triggerIsValid(index))return;
                 this.cancelTimer().switchTo(index);
             }.bind(this));
@@ -338,11 +353,12 @@ var Tabs = new Class({
     },
     //前后按钮事件
     lrbtn:function(){
+        var _this = this;
         ['prev','next'].each(function(d){
             this[d+'btn']=this.container.getElements(this.options[d]).addEvent('click',function(e){
-                if(!$(e.target).hasClass(this.options.disableCls))this[d]();
-            }.bind(this));
-        },this);
+                if(!this.hasClass(_this.options.disableCls)) _this[d]();
+            });
+        }, this);
         this.disabledBtn();
     },
     disabledBtn:function(){
@@ -393,10 +409,15 @@ var Tabs = new Class({
     },
     switchTrigger:function(fromTrigger,toTrigger,index){
             var activeClass=this.options.activeClass;
-            if (fromTrigger)fromTrigger.removeClass(activeClass);
-            toTrigger.addClass(activeClass);
+            fromTrigger && fromTrigger.removeClass(activeClass);
+            toTrigger && toTrigger.addClass(activeClass);
     },
     switchView:function(fromPanels,toPanels,index,direction){
+        var cls = this.options.showClass;
+        if(cls) {
+            fromPanels[0].removeClass(cls);
+            toPanels[0].addClass(cls);
+        }
         fromPanels[0].setStyle('display','none');
         toPanels[0].setStyle('display','');
     },
@@ -435,7 +456,7 @@ Tabs.Effects = {
                 this.fireEvent('complete');
             },
             onComplete:function(){
-                toEl.setStyle('zIndex',9);
+                toEl.setStyle('zIndex',2);
                 fromEl.setStyle('zIndex',1);
                 this.anim = undefined;
         }.bind(this)}).start('opacity',1,0);
@@ -530,7 +551,10 @@ var Switchable=new Class({
                 case 'scrolly':
                     if(options.position == 'absolute') {
                         content.setStyle('position','absolute');
-                        content.getParent().setStyle('position','relative');
+                        content.getParent().setStyles({
+                            'position':'relative'
+                            //'height': content.getSize().y - content.getPatch('border', 'padding').y || 'auto'
+                        });
                     }
                     else if (options.position == 'relative') {
                         content.setStyle('position', 'relative');
@@ -548,7 +572,7 @@ var Switchable=new Class({
                         panel.setStyles({
                             opacity: isActivePanel ? 1 : 0,
                             position: options.position || '',
-                            zIndex: isActivePanel ? 9 : 1
+                            zIndex: isActivePanel ? 2 : 1
                         });
                     });
                     break;
@@ -668,18 +692,24 @@ var Slide = new Class({
 });
 
 Switchable.autoRender=function(autoClass,container){
-        var cls=autoClass||'.Auto_Widget',  clt=$(container||document.body).getElements(cls);
-        if(clt.length)
-        clt.each(function(el){
-             var type = el.get('data-widget-type'), config;
-             if (type && ('Tabs Switchable DropMenu Accordion DataLazyLoad'.indexOf(type) > -1)) {
-                try {
-                    config = el.get('data-widget-config')||{};
-                    if(type=='DataLazyLoad')return  new window[type](JSON.decode(config),el);
-                    new window[type](el, JSON.decode(config));
-                } catch(e) {}
-             }
-        });
+    var cls=autoClass||'.auto-bind-widget';
+    var clt=$(container||document.body).getElements(cls);
+    var lazyloadElements = Array.from($$('img[data-src]'), $$('textarea.action-lazyload'));
+    var config;
+    if(lazyloadElements.length){
+        config = $(document.body).get('data-lazyload-config')||'';
+        new DataLazyLoad(JSON.decode(config));
+    }
+    clt.length && clt.each(function(el){
+         var type = el.get('data-widget-type');
+         if (type && ('Tabs Switchable Slide DropMenu Accordion DataLazyLoad'.indexOf(type) > -1)) {
+            try {
+                config = el.get('data-widget-config')||'';
+                if(type === 'DataLazyLoad') return new window[type](JSON.decode(config), el);
+                new window[type](el, JSON.decode(config));
+            } catch(e) {}
+         }
+    });
 };
 
 window.addEvent('domready',Switchable.autoRender.bind(Switchable));
