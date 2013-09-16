@@ -1,5 +1,5 @@
-@import "D:/Colophon/trunk/Sass/layout";
-@import "D:/Colophon/trunk/Sass/table";
+@import "D:/colophon/Sass/layout";
+//@import "D:/colophon/Sass/table";
 $layout:'h';
 $wrapping:96%;
 $n1:200px;
@@ -10,7 +10,19 @@ $v1:160px;
 $v2:160px;
 
 
+/* Element Reset */
+body, input, textarea, select, table, button { font-family:Tahoma, Geneva, sans-serif; font-size:12px;}
+img, fieldset { border:0;}
+form, fieldset { margin:0; padding:0;}
+em, address { font-style:normal;}
+button{ margin:0; padding:0; overflow:visible; cursor:pointer;}
+a { text-decoration:none;}
+a:hover, a:active, a:focus {text-decoration:underline;}
 
+/* Common Class */
+.iText{ border:1px solid #b7b7b7; border-right-color:#e1e1e1; border-bottom-color:#e1e1e1; background:transparent;}
+.iCheck, .iRadio{ width:13px; height:13px; margin:0; padding:0; vertical-align:middle;}
+.hide{ position:absolute; left:0; top:0; width:1px; height:1px; font-size:0; line-height:0; visibility:hidden;}
 @include tuding($layout,$wrapping,$n1,$n2,$space,$incInner,$v1,$v2);
 //@include tuding_by_h_nmn($selectorNMN:'.container',$selectorMING:'.main',$selectorN1:'.sidebar1',$selectorN2:'.sidebar2',$wrapping:NULL,$n1:100px,$n2:100px,$space:20px);
 //IE6 || IE7 || IE8
