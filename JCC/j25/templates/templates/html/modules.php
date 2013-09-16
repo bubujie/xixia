@@ -12,7 +12,7 @@ defined('_JEXEC') or die('Restricted access');
 
 
 
-// 模块的加div结构（特点是content没有外套）
+// 模块的加open结构（特点是没有外套，没有标题，直接输出content部分）
 function modChrome_open($module, &$params, &$attribs)
 {
 	if (!empty ($module->content)) :
@@ -24,7 +24,7 @@ function modChrome_open($module, &$params, &$attribs)
 
 
 
-// 模块的加div结构（特点是content没有外套）
+// 模块的加div结构（特点是最外部仅有单层外套，content有外套）
 function modChrome_division($module, &$params, &$attribs)
 {
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
@@ -52,7 +52,7 @@ function modChrome_division($module, &$params, &$attribs)
 
 
 // 模块的zen garden风格结构（特点是最外部仅有单层外套，content没有外套）
-function modChrome_zen($module, &$params, &$attribs)
+function modChrome_zengarden($module, &$params, &$attribs)
 {
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
@@ -77,8 +77,8 @@ function modChrome_zen($module, &$params, &$attribs)
 
 
 
-// 模块的double风格结构（最新版Tuding布局系统，双边框是必要的）
-function modChrome_dbl($module, &$params, &$attribs)
+// 模块的Stroke风格结构（特点是最外部有双层外套，content部分也有外套）
+function modChrome_stroke($module, &$params, &$attribs)
 {
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
@@ -109,8 +109,8 @@ function modChrome_dbl($module, &$params, &$attribs)
 
 
 
-// 模块的double风格结构（最新版Tuding布局系统，双边框是必要的）
-function modChrome_cnr($module, &$params, &$attribs)
+// 模块的Squared风格结构（九宫格）
+function modChrome_squared($module, &$params, &$attribs)
 {
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
@@ -141,8 +141,8 @@ function modChrome_cnr($module, &$params, &$attribs)
 
 
 
-// 模块的加panel结构（特点是没有完整外套，专为panel准备）
-function modChrome_pnl($module, &$params, &$attribs)
+// 模块的加Panel结构（特点是没有完整外套，专为panel准备）
+function modChrome_panel($module, &$params, &$attribs)
 {
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
