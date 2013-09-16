@@ -77,7 +77,7 @@ endif;
   <script type="text/javascript">belatedPNG.fix('#logo_header,#logo_footer');</script>
   <![endif]-->
 </head>
-<body<?php echo $isHome ? ' id="home"' : ''; ?>>
+<body<?php echo $isHome ? ' id="home"' : ''; ?> class="outer-<?php if($showSide){ echo 'n'; } ?>m<?php if($showAside){ echo 'n'; } ?>">
 <div id="bhead">
 <?php if ($showBheadTop) : ?>
   <div id="bhead-top">
@@ -109,8 +109,8 @@ endif;
 ?>
         </div>
         <div class="ming">
-<jdoc:include type="modules" name="bhead-mid" style="open" headerLevel="3" />
-<jdoc:include type="modules" name="search" style="open" headerLevel="3" />
+<jdoc:include type="modules" name="bhead-mid" style="div" headerLevel="3" />
+<jdoc:include type="modules" name="search" style="div" headerLevel="3" />
 	    </div>
 	  </div>
     </div>
@@ -129,7 +129,7 @@ endif;
 <?php endif; ?>
 </div>
 <!-- ######### ######### ######### bbody ######### ######### ######### -->
-<div id="bbody">
+<div id="bbody" class="inner-<?php if($showComSide){ echo 'v'; } ?>w<?php if($showComAside){ echo 'v'; } ?>">
 <?php if ($showBbodyTop) : ?>
   <div id="bbody-top">
     <div class="wrapping">
@@ -148,7 +148,7 @@ endif;
         </div>
 <?php endif; ?>
         <div id="main" class="ming">
-<jdoc:include type="modules" name="breadcrumbs" style="open" headerLevel="3" />
+<jdoc:include type="modules" name="breadcrumbs" style="div" headerLevel="3" />
 <?php if ($showMainTop) : ?>
           <div id="main-top" class="ding">
 <jdoc:include type="modules" name="main-top" style="div" headerLevel="3" />
