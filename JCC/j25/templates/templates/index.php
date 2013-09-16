@@ -168,8 +168,9 @@ endif;
     </div>
 <?php endif; ?>
 <jdoc:include type="message" />
+<?php if(!$isHome) :
 <jdoc:include type="component" />
-<div class="blank"></div>
+<?php endif; ?>
 <?php if ($showComBtm) : ?>
     <div id="com-btm" class="ding">
 <jdoc:include type="modules" name="com-btm" style="division" headerLevel="3" />
