@@ -25,7 +25,7 @@ function modChrome_open($module, &$params, &$attribs)
 
 
 // 模块的加div结构（特点是content没有外套）
-function modChrome_div($module, &$params, &$attribs)
+function modChrome_division($module, &$params, &$attribs)
 {
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
