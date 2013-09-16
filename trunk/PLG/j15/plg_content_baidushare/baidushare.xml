@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="2.5" group="content">
+  <name>Content - BaiduShare</name>
+  <creationDate>07-Oct-2012</creationDate>
+  <author>步步街</author>
+  <authorEmail>bubujie@gmail.com</authorEmail>
+  <authorUrl>http://www.bubujie.net/</authorUrl>
+  <copyright>商业用户单域名授权</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <version>1.0</version>
+  <description>The content example taken from the Joomla! core</description>
+  <files folder="site">
+    <filename plugin="baidushare">baidushare.php</filename>
+    <filename>baidushare_CHANGELOG.php</filename>
+  </files>
+  <params/>
+  <config/>
+</extension>
