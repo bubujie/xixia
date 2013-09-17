@@ -14,10 +14,14 @@ JHTML::script('media/system/js/switchable.js');
 require_once JPATH_ROOT . '/components/com_banners/helpers/banner.php';
 $baseurl = JURI::base();
 ?>
-<div class="adgroup<?php echo $moduleclass_sfx ?>">
+
 <?php if ($headerText) : ?>
+	<div class="adheader ding">
 	<?php echo $headerText; ?>
+	</div>
 <?php endif; ?>
+<div class="adcontent">
+<div class="adgroup<?php echo $moduleclass_sfx ?>">
 
 <?php foreach($list as $item):?>
 	<div class="aditem">
@@ -108,13 +112,14 @@ $baseurl = JURI::base();
 	</div>
 <?php endforeach; ?>
 </div>
+</div>
 <ul class="triggergroup">
 <?php foreach($list as $item):?>
-<li class="trigger-item"><?php echo $item->name; ?></li>
+  <li class="trigger-item"><?php echo $item->name; ?></li>
 <?php endforeach; ?>
 </ul>
 <?php if ($footerText) : ?>
-	<div class="adfooter">
+	<div class="adfooter ding">
 		<?php echo $footerText; ?>
 	</div>
 <?php endif; ?>
@@ -131,14 +136,24 @@ $baseurl = JURI::base();
 $doc = JFactory::getDocument();
 $style = '#module-'.$module->id.' {'
 	. 'width:200px;'
-	. 'height:100px;'
+	. 'height:auto;'
 	. 'clear:both;'
 	. 'overflow:hidden;'
 	. 'position:relative;'
 	. '}'
+	. '#module-'.$module->id.' .adheader, #module-'.$module->id.' .adfooter {'
+	. 'display:none;'
+	. '}'
+	. '#module-'.$module->id.' .adcontent {'
+	. 'width:200px;'
+	. 'height:100px;'
+	. 'mrgin:0;'
+	. 'padding:0;'
+	. 'overflow:hidden;'
+	. '}'
 	. '#module-'.$module->id.' .adgroup .aditem {'
 	. 'width:200px;'
-	. 'height:200px;'
+	. 'height:100px;'
 	. 'mrgin:0;'
 	. 'padding:0;'
 	. 'overflow:hidden;'
@@ -149,9 +164,28 @@ $style = '#module-'.$module->id.' {'
 	. 'max-widht:100%;'
 	. '}'
 	. '#module-'.$module->id.' .triggergroup {'
+	. 'float:right;'
+	. 'margin:0;'
+	. 'padding:0;'
 	. 'position: absolute;'
 	. 'bottom:10px;'
 	. 'right: 10px;'
+	. '}'
+	. '#module-'.$module->id.' .triggergroup li{'
+	. 'list-style:none;'
+	. 'float:left;'
+	. 'margin:0;'
+	. 'margin-left:5px;'
+	. 'padding:0;'
+	. 'background-color:#FFFFFF;'
+	. 'color:#8B8D8E;'
+	. 'border:1px solid #DEDEDE;'
+	. 'font-family:Dotum;'
+	. '}'
+	. '#module-'.$module->id.' .triggergroup li.active{'
+	. 'background-color:#CADB2B;'
+	. 'color:#343432;'
+	. 'border:1px solid #CADB2B;'
 	. '}'; 
 $doc->addStyleDeclaration( $style );
 ?>
