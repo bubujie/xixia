@@ -112,12 +112,12 @@ $baseurl = JURI::base();
 	</div>
 <?php endforeach; ?>
 </div>
-</div>
 <ul class="triggergroup">
 <?php foreach($list as $item):?>
   <li class="trigger-item"><?php echo $item->name; ?></li>
 <?php endforeach; ?>
 </ul>
+</div>
 <?php if ($footerText) : ?>
 	<div class="adfooter ding">
 		<?php echo $footerText; ?>
@@ -142,7 +142,7 @@ $style = '#module-'.$module->id.' {'
 	. 'position:relative;'
 	. '}'
 	. '#module-'.$module->id.' .adheader, #module-'.$module->id.' .adfooter {'
-	. 'display:none;'
+	. 'display:block !important;'
 	. '}'
 	. '#module-'.$module->id.' .adcontent {'
 	. 'width:200px;'
