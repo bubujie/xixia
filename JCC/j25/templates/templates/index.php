@@ -168,7 +168,7 @@ endif;
     </div>
 <?php endif; ?>
 <jdoc:include type="message" />
-<?php if(!$isHome) :
+<?php if(!$isHome) : ?>
 <jdoc:include type="component" />
 <?php endif; ?>
 <?php if ($showComBtm) : ?>
