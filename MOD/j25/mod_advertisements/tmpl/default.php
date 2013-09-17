@@ -14,13 +14,13 @@ JHTML::script('media/system/js/switchable.js');
 require_once JPATH_ROOT . '/components/com_banners/helpers/banner.php';
 $baseurl = JURI::base();
 ?>
-<div class="bannergroup<?php echo $moduleclass_sfx ?>">
+<div class="adgroup<?php echo $moduleclass_sfx ?>">
 <?php if ($headerText) : ?>
 	<?php echo $headerText; ?>
 <?php endif; ?>
 
 <?php foreach($list as $item):?>
-	<div class="banneritem">
+	<div class="aditem">
 		<?php $link = JRoute::_('index.php?option=com_banners&task=click&id='. $item->id);?>
 		<?php if($item->type==1) :?>
 			<?php // Text based banners ?>
@@ -114,37 +114,38 @@ $baseurl = JURI::base();
 <?php endforeach; ?>
 </ul>
 <?php if ($footerText) : ?>
-	<div class="bannerfooter">
+	<div class="adfooter">
 		<?php echo $footerText; ?>
 	</div>
 <?php endif; ?>
 <script type="text/javascript">
-    new Switchable('module-<?php echo $module->id; ?>',{
-        haslrbtn:false,
-        effect:'scrolly',
-        panels:'.banneritem',
-        triggers:'.trigger-item',
-        autoplay:true
-    });
+	new Switchable('module-<?php echo $module->id; ?>',{
+		haslrbtn:false,
+		effect:'scrollx',
+		panels:'.aditem',
+		triggers:'.trigger-item',
+		autoplay:true,
+	});
 </script>
 <?php
 $doc = JFactory::getDocument();
 $style = '#module-'.$module->id.' {'
-	. 'width:253px;'
-	. 'height:200px;'
+	. 'width:200px;'
+	. 'height:100px;'
 	. 'clear:both;'
 	. 'overflow:hidden;'
+	. 'position:relative;'
 	. '}'
-	. '#module-'.$module->id.' .bannergroup .banneritem {'
-	. 'width:253px;'
+	. '#module-'.$module->id.' .adgroup .aditem {'
+	. 'width:200px;'
 	. 'height:200px;'
 	. 'mrgin:0;'
 	. 'padding:0;'
 	. 'overflow:hidden;'
 	. '}'
-	. '#module-'.$module->id.' .bannergroup img {'
-	. 'width:253px;'
-	. 'height:200px;'
+	. '#module-'.$module->id.' .adgroup img {'
+	. 'width:200px;'
+	. 'height:100px;'
 	. 'max-widht:100%;'
 	. '}'
 	. '#module-'.$module->id.' .triggergroup {'
