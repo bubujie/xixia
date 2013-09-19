@@ -112,6 +112,59 @@
 					label="MOD_BANNERS_FIELD_FOOTER_LABEL"
 					description="MOD_BANNERS_FIELD_FOOTER_DESC" />
 			</fieldset>
+<fieldset name="display" label="MOD_ADVERTISEMENTS_FIELD_GROUP_DISPLAY_LABEL">
+	<field name="trigger" type="list" default="" label="触发器" description="">
+		<option value="title">标题</option>
+		<option value="round">圆点</option>
+		<option value="number">数字</option>
+	</field>
+	<field name="direction" type="list" default="scrollx" label="轮播效果" description="">
+		<option value="scrollx">左右</option>
+		<option value="scrolly">上下</option>
+		<option value="fade">透明</option>
+	</field>
+	<field name="around" type="radio" default="0" label="过渡效果" description="">
+		<option value="0">向后</option>
+		<option value="1">向前</option>
+	</field>
+	<field name="mousetype" type="radio" default="0" label="鼠标触发类型" description="">
+		<option value="click">鼠标点击</option>
+		<option value="mouse">鼠标移过</option>
+	</field>
+	<field name="stayTime" type="list" default="" label="轮播速度" description="">
+		<option value="2000">快</option>
+		<option value="3000">普通</option>
+		<option value="5000">慢</option>
+	</field>
+	<field name="autoplay" type="radio" default="1"
+		label="是否自动播放"
+		description="MOD_ARTICLES_CATEGORY_FIELD_LINKTITLES_DESC"
+		>
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="pauseonhover" type="radio" default="1"
+		label="悬浮是否停止"
+		description="MOD_ARTICLES_CATEGORY_FIELD_LINKTITLES_DESC"
+		>
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="hastriggers" type="radio" default="1"
+		label="是否有触点"
+		description="MOD_ARTICLES_CATEGORY_FIELD_LINKTITLES_DESC"
+		>
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="lazyload" type="radio" default="1"
+		label="是否延迟加载图片"
+		description="MOD_ARTICLES_CATEGORY_FIELD_LINKTITLES_DESC"
+		>
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+</fieldset>
 			<fieldset
 				name="advanced">
 				<field
