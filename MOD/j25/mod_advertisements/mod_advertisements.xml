@@ -164,6 +164,14 @@
 		<option value="1">JYES</option>
 		<option value="0">JNO</option>
 	</field>
+	<field name="triggerspos" type="list" default="" label="触发位置" description="">
+		<option value="top">外面上部</option>
+		<option value="right">外面右部</option>
+		<option value="bottom">外面下部</option>
+		<option value="left">外面左部</option>
+		<option value="insidetop">内部顶端</option>
+		<option value="insidebottom">内部底端</option>
+	</field>
 </fieldset>
 			<fieldset
 				name="advanced">
