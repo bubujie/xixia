@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="2.5" group="content">
+  <name>Content - changyan</name>
+  <creationDate>20-Sep-2013</creationDate>
+  <author>步步街工作室</author>
+  <authorEmail>bubujie@gmail.com</authorEmail>
+  <authorUrl>www.bubujie.net</authorUrl>
+  <copyright>步步街工作室版权所有，违反必究！</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <version>1.0</version>
+  <description>The content example taken from the Joomla! core</description>
+  <files folder="site">
+    <filename plugin="changyan">changyan.php</filename>
+    <filename>changyan_CHANGELOG.php</filename>
+  </files>
+</extension>
