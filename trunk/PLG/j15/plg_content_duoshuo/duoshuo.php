@@ -121,6 +121,9 @@ class plgContentDuoshuo extends JPlugin
             if($view == 'article'){
                 return $duoshuoArea;
             }else{
+        $document = JFactory::getDocument();
+        $document->addScriptDeclaration("var duoshuoQuery = {short_name:\"tuding\"};\n");
+        $document->addScript("http://static.duoshuo.com/embed.js");
                 return $duoshuoCount;
             }
         }
