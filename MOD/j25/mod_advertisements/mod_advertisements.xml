@@ -113,11 +113,18 @@
 					description="MOD_BANNERS_FIELD_FOOTER_DESC" />
 			</fieldset>
 <fieldset name="display" label="MOD_ADVERTISEMENTS_FIELD_GROUP_DISPLAY_LABEL">
-	<field name="trigger" type="list" default="" label="触发器" description="">
+	<field name="trigger" type="list" default="" label="触发器内容" description="">
 		<option value="title">标题</option>
 		<option value="round">圆点</option>
 		<option value="number">数字</option>
 	</field>
+<field name="haslrbtn" type="radio" default="1"
+	label="是否支持前后翻页"
+	description="MOD_ARTICLES_CATEGORY_FIELD_LINKTITLES_DESC"
+	>
+	<option value="1">JYES</option>
+	<option value="0">JNO</option>
+</field>
 	<field name="direction" type="list" default="scrollx" label="轮播效果" description="">
 		<option value="scrollx">左右</option>
 		<option value="scrolly">上下</option>
@@ -172,6 +179,13 @@
 		<option value="insidetop">内部顶端</option>
 		<option value="insidebottom">内部底端</option>
 	</field>
+<field name="oribg" type="color" default="#eee"
+        label="触点文字背景"
+        description="TPL_BEEZ3_FIELD_HEADER_BACKGROUND_COLOR_DESC" />
+<field name="style" type="chromestyle"
+        label="COM_MODULES_FIELD_MODULE_STYLE_LABEL"
+        description="COM_MODULES_FIELD_MODULE_STYLE_DESC" />
+<field name="myintegeralue" type="integer" default="Some integer" label="触点背景透明度" description="" first="0" last="10" step="1" />
 </fieldset>
 			<fieldset
 				name="advanced">

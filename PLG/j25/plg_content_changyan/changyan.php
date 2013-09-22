@@ -21,6 +21,7 @@ jimport('joomla.plugin.plugin');
  */
 class plgContentchangyan extends JPlugin
 {
+
     /**
      * Example after delete method.
      *
@@ -68,13 +69,16 @@ class plgContentchangyan extends JPlugin
 		h.insertBefore(s,h.firstChild);
 		window.SCS_NO_IFRAME = true;
 	})()
-</script>"/*.print_r($context,true)*/.'.'.$article->id;
+</script>"/*.print_r($context,true)*/;
       
             $duoshuoCount="
 <a href=\"#changyan_area\" id=\"changyan_count_unit\" sid=\"".$context.".".$article->id."\"></a>";      
             if($view == 'article'){
                 return $duoshuoArea;
             }else{
+        $document = JFactory::getDocument();
+        $document->addScriptDeclaration("var duoshuoQuery = {short_name:\"tuding\"};\n");
+        $document->addScript("http://assets.changyan.sohu.com/upload/plugins/plugins.count.js");
                 return $duoshuoCount;
             }
         }
@@ -145,7 +149,7 @@ class plgContentchangyan extends JPlugin
         else :
         $duoshuoLink='<a href="'. JRoute::_(ContentHelperRoute::getArticleRoute(@$article->slug, @$article->catid.':'.@$article->category_alias).'#comments').'" class="">留言</a>';
         endif;
-        return $duoshuoLink.'<pre>'.print_r($article,true).'</pre>';
+        return $duoshuoLink/*.'<pre>'.print_r($article,true).'</pre>'*/;
     }//function
 
     /**
