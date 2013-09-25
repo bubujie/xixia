@@ -2,7 +2,7 @@
 /**
  * @package		Bubujie.Studio
  * @subpackage	mod_advertisements
- * @copyright	Copyright (C) ²½²½½Ö¹¤×÷ÊÒ 2008 - 2012. All rights reserved.
+ * @copyright	Copyright (C) æ­¥æ­¥è¡—å·¥ä½œå®¤ 2008 - 2012. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -13,6 +13,31 @@ JHTML::script('media/system/js/jstools.js');
 JHTML::script('media/system/js/switchable.js');
 require_once JPATH_ROOT . '/components/com_banners/helpers/banner.php';
 $baseurl = JURI::base();
+$pannelwidth	= $params->get('pannelwidth');
+$pannelheight	= $params->get('pannelheight');
+$effect			= $params->get('direction');
+$trigger		= $params->get('trigger');
+$haslrbtn		= $params->get('haslrbtn');
+$ptype			= $params->get('ptype');
+$skin			= $params->get('skin');
+$language		= $params->get('language');
+$speed			= $params->get('speed');
+$style			= $params->get('style');
+$isTitle		= $params->get('isTitle');
+$noborder		= $params->get('noborder');
+$isWeibo		= $params->get('isWeibo');
+$isFans			= $params->get('isFans');
+switch ($effect) :
+	case 'scrollx':
+		break;
+	case 'scrolly':
+		$pannelwidth = '100%';
+		break;
+	case 'fade':
+		break;
+	default:
+	break;
+endswitch;
 ?>
 
 <?php if ($headerText) : ?>
@@ -20,9 +45,12 @@ $baseurl = JURI::base();
 	<?php echo $headerText; ?>
 	</div>
 <?php endif; ?>
+<?php if($haslrbtn) : ?>
+<span class="scroller-prev prev disable">&lsaquo; ä¸Šä¸€é¡µ</span>
+<span class="scroller-next next">ä¸‹ä¸€é¡µ &rsaquo;</span>	
+<?php endif; ?>
 <div class="adcontent">
 <div class="adgroup<?php echo $moduleclass_sfx ?>">
-
 <?php foreach($list as $item):?>
 	<div class="aditem">
 		<?php $link = JRoute::_('index.php?option=com_banners&task=click&id='. $item->id);?>
@@ -113,9 +141,29 @@ $baseurl = JURI::base();
 <?php endforeach; ?>
 </div>
 <ul class="triggergroup">
-<?php foreach($list as $item):?>
-  <li class="trigger-item"><?php echo $item->name; ?></li>
-<?php endforeach; ?>
+<?php $i = 1; ?>
+<?php
+	foreach($list as $item):
+		echo   "".'<li class="trigger-item">';
+		switch ($trigger) :
+			case 'title':
+				echo $item->name;
+				break;
+			case 'round':
+				echo '&bull;';
+				break;
+			case 'number':
+				echo $i;
+				$i++;
+				break;
+			default:
+				echo $i;
+				$i++;
+			break;
+		endswitch;
+		echo   "".'</li>';
+	endforeach;
+?>
 </ul>
 </div>
 <?php if ($footerText) : ?>
@@ -125,18 +173,18 @@ $baseurl = JURI::base();
 <?php endif; ?>
 <script type="text/javascript">
 	new Switchable('module-<?php echo $module->id; ?>',{
-		haslrbtn:false,
-		effect:'scrollx',
+		effect:'<?php echo $effect; ?>',
 		panels:'.aditem',
 		triggers:'.trigger-item',
 		autoplay:true,
+		haslrbtn:<?php echo $haslrbtn; ?>
+
 	});
 </script>
 <?php
 $doc = JFactory::getDocument();
 $style = '#module-'.$module->id.' {'
-	. 'width:200px;'
-	. 'height:auto;'
+	. 'width:'.$pannelwidth.';'
 	. 'clear:both;'
 	. 'overflow:hidden;'
 	. 'position:relative;'
@@ -145,23 +193,27 @@ $style = '#module-'.$module->id.' {'
 	. 'display:block !important;'
 	. '}'
 	. '#module-'.$module->id.' .adcontent {'
-	. 'width:200px;'
-	. 'height:100px;'
+	. 'width:'.$pannelwidth.';'
+	. 'height:'.$pannelheight.';'
 	. 'mrgin:0;'
 	. 'padding:0;'
 	. 'overflow:hidden;'
 	. '}'
+	. '#module-'.$module->id.' .adgroup {'
+	. 'width:'.$pannelwidth.';'
+	. '}'
 	. '#module-'.$module->id.' .adgroup .aditem {'
-	. 'width:200px;'
-	. 'height:100px;'
+	. 'width:'.$pannelwidth.';'
+	. 'height:'.$pannelheight.';'
 	. 'mrgin:0;'
 	. 'padding:0;'
 	. 'overflow:hidden;'
 	. '}'
 	. '#module-'.$module->id.' .adgroup img {'
-	. 'width:200px;'
-	. 'height:100px;'
-	. 'max-widht:100%;'
+	. 'width:'.$pannelwidth.';'
+	. 'height:'.$pannelheight.';'
+	. 'max-width:100%;'
+	. 'max-height:100;'
 	. '}'
 	. '#module-'.$module->id.' .triggergroup {'
 	. 'float:right;'

@@ -10,7 +10,7 @@
 defined('_JEXEC') or die('Restricted access');
 
 $width		= htmlspecialchars($params->get('width'));
-$height		= htmlspecialchars($params->get('width'));
+$height		= htmlspecialchars($params->get('height'));
 $uid		= htmlspecialchars($params->get('uid'));
 $verifier	= htmlspecialchars($params->get('verifier'));
 $fansRow	= $params->get('fansRow');
