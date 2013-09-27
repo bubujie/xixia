@@ -53,22 +53,28 @@ endforeach;
         endif;
     ?>
 </div>
-<br/>
 
 <?php
     endif;
 ?>
 <?php
-echo "".'<ul class="label-list ding">';
-foreach ($child_modules as $child_module) :
-	echo "".'<li class="label-item ding w-1-'.(count($child_modules)+1).'"><span>'.$child_module->title.'</span></li>';
-endforeach;
-echo "".'</ul>';
-echo "".'<div class="panel-content ding"><ul class="panel-list ding">';
-foreach ($child_modules as $child_module) :
-	echo "".'<li class="panel-item">'.$child_module->content.'</li>';
-endforeach;
-echo "".'</ul></div>';
+if(!empty($child_modules)) :
+	echo   "".'<div class="VTabbedPanels">';
+	echo   "\n".'  <ul class="TabbedPanelsTabGroup">';
+	foreach ($child_modules as $child_module) :
+		//ºáÏò¿ÉÑ¡ w-1-'.(count($child_modules)+1).'
+		echo   "\n".'    <li class="TabbedPanelsTab" tabindex="0"><span>'.$child_module->title.'</span></li>';
+	endforeach;
+	echo   "\n".'  </ul>';
+	echo   "\n".'  <div class="TabbedPanelsContentGroup">';
+	foreach ($child_modules as $child_module) :
+		echo   "\n".'    <div class="TabbedPanelsContent">';
+		echo   "\n".''.$child_module->content;
+		echo   "\n".'    </div>';
+	endforeach;
+	echo   "\n".'  </div>';
+	echo   "\n".'</div>';
+endif;
 ?>
 <?php 
 /*
@@ -86,8 +92,13 @@ echo "".'</ul></div>';
 	new Switchable('module-<?php echo $module->id; ?>',{
 		eventType:'mouseover',
 		autoplay:true,
-		triggers:'.label-item',
-		panels:'.panel-item',
+		triggers:'.TabbedPanelsTab',
+		panels:'.TabbedPanelsContent',
 		lazyDataType:'img'
 	});
 </script>
+<?php
+$doc = JFactory::getDocument();
+$style ='.TabbedPanels{margin:0px;padding:0px;float:left;clear:none;width:100%}.TabbedPanelsTabGroup{margin:0px;padding:0px}.TabbedPanelsTab{position:relative;top:1px;float:left;padding:4px 10px;margin:0px 1px 0px 0px;font:bold 0.7em sans-serif;background-color:#DDD;list-style:none;border-left:solid 1px #CCC;border-bottom:solid 1px #999;border-top:solid 1px #999;border-right:solid 1px #999;-moz-user-select:none;-khtml-user-select:none;cursor:pointer}.TabbedPanelsTabHover{background-color:#CCC}.TabbedPanelsTabSelected{background-color:#EEE;border-bottom:1px solid #EEE}.TabbedPanelsTab a{color:black;text-decoration:none}.TabbedPanelsContentGroup{clear:both;border-left:solid 1px #CCC;border-bottom:solid 1px #CCC;border-top:solid 1px #999;border-right:solid 1px #999;background-color:#EEE}.TabbedPanelsContent{padding:4px}.VTabbedPanels .TabbedPanelsTabGroup{float:left;width:10em;height:20em;background-color:#EEE;position:relative;border-top:solid 1px #999;border-right:solid 1px #999;border-left:solid 1px #CCC;border-bottom:solid 1px #CCC}.VTabbedPanels .TabbedPanelsTab{float:none;margin:0px;border-top:none;border-left:none;border-right:none}.VTabbedPanels .TabbedPanelsTabSelected{background-color:#EEE;border-bottom:solid 1px #999}.VTabbedPanels .TabbedPanelsContentGroup{clear:none;float:left;padding:0px;width:30em;height:20em}';
+$doc->addStyleDeclaration( $style );
+?>
