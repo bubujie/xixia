@@ -184,6 +184,7 @@ endswitch;
 <?php
 $doc = JFactory::getDocument();
 $style = '.SlidingPanels{position:relative;width:100%;height:400px;padding:0px;border:none}.SlidingPanelsContentGroup{position:relative;width:100%;margin:0px;padding:0px;border:none}.SlidingPanelsContent{width:100%;height:400px;overflow:hidden;margin:0px;padding:0px;border:none}.SlidingPanelsAnimating *{overflow:hidden !important}
+.SlidingPanels{height:200px;}
 .SlidingPanelsTabGroup{position:absolute;bottom:1em;right:1em;}
 .SlidingPanelsTab{list-style:none;float:left;}'; 
 $doc->addStyleDeclaration( $style );
