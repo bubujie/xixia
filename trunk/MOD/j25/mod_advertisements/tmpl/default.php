@@ -49,10 +49,10 @@ endswitch;
 <span class="scroller-prev prev disable">&lsaquo; 上一页</span>
 <span class="scroller-next next">下一页 &rsaquo;</span>	
 <?php endif; ?>
-<div class="adcontent">
-<div class="adgroup<?php echo $moduleclass_sfx ?>">
+<div class="SlidingPanels">
+<div class="SlidingPanelsContentGroup<?php echo $moduleclass_sfx ?>">
 <?php foreach($list as $item):?>
-	<div class="aditem">
+	<div class="SlidingPanelsContent">
 		<?php $link = JRoute::_('index.php?option=com_banners&task=click&id='. $item->id);?>
 		<?php if($item->type==1) :?>
 			<?php // Text based banners ?>
@@ -140,11 +140,11 @@ endswitch;
 	</div>
 <?php endforeach; ?>
 </div>
-<ul class="triggergroup">
+<ul class="SlidingPanelsTabGroup">
 <?php $i = 1; ?>
 <?php
 	foreach($list as $item):
-		echo   "".'<li class="trigger-item">';
+		echo   "".'<li class="SlidingPanelsTab">';
 		switch ($trigger) :
 			case 'title':
 				echo $item->name;
@@ -174,8 +174,8 @@ endswitch;
 <script type="text/javascript">
 	new Switchable('module-<?php echo $module->id; ?>',{
 		effect:'<?php echo $effect; ?>',
-		panels:'.aditem',
-		triggers:'.trigger-item',
+		panels:'.SlidingPanelsContent',
+		triggers:'.SlidingPanelsTab',
 		autoplay:true,
 		haslrbtn:<?php echo $haslrbtn; ?>
 
@@ -183,61 +183,8 @@ endswitch;
 </script>
 <?php
 $doc = JFactory::getDocument();
-$style = '#module-'.$module->id.' {'
-	. 'width:'.$pannelwidth.';'
-	. 'clear:both;'
-	. 'overflow:hidden;'
-	. 'position:relative;'
-	. '}'
-	. '#module-'.$module->id.' .adheader, #module-'.$module->id.' .adfooter {'
-	. 'display:block !important;'
-	. '}'
-	. '#module-'.$module->id.' .adcontent {'
-	. 'width:'.$pannelwidth.';'
-	. 'height:'.$pannelheight.';'
-	. 'mrgin:0;'
-	. 'padding:0;'
-	. 'overflow:hidden;'
-	. '}'
-	. '#module-'.$module->id.' .adgroup {'
-	. 'width:'.$pannelwidth.';'
-	. '}'
-	. '#module-'.$module->id.' .adgroup .aditem {'
-	. 'width:'.$pannelwidth.';'
-	. 'height:'.$pannelheight.';'
-	. 'mrgin:0;'
-	. 'padding:0;'
-	. 'overflow:hidden;'
-	. '}'
-	. '#module-'.$module->id.' .adgroup img {'
-	. 'width:'.$pannelwidth.';'
-	. 'height:'.$pannelheight.';'
-	. 'max-width:100%;'
-	. 'max-height:100;'
-	. '}'
-	. '#module-'.$module->id.' .triggergroup {'
-	. 'float:right;'
-	. 'margin:0;'
-	. 'padding:0;'
-	. 'position: absolute;'
-	. 'bottom:10px;'
-	. 'right: 10px;'
-	. '}'
-	. '#module-'.$module->id.' .triggergroup li{'
-	. 'list-style:none;'
-	. 'float:left;'
-	. 'margin:0;'
-	. 'margin-left:5px;'
-	. 'padding:0;'
-	. 'background-color:#FFFFFF;'
-	. 'color:#8B8D8E;'
-	. 'border:1px solid #DEDEDE;'
-	. 'font-family:Dotum;'
-	. '}'
-	. '#module-'.$module->id.' .triggergroup li.active{'
-	. 'background-color:#CADB2B;'
-	. 'color:#343432;'
-	. 'border:1px solid #CADB2B;'
-	. '}'; 
+$style = '.SlidingPanels{position:relative;width:100%;height:400px;padding:0px;border:none}.SlidingPanelsContentGroup{position:relative;width:100%;margin:0px;padding:0px;border:none}.SlidingPanelsContent{width:100%;height:400px;overflow:hidden;margin:0px;padding:0px;border:none}.SlidingPanelsAnimating *{overflow:hidden !important}
+.SlidingPanelsTabGroup{position:absolute;bottom:1em;right:1em;}
+.SlidingPanelsTab{list-style:none;float:left;}'; 
 $doc->addStyleDeclaration( $style );
 ?>
