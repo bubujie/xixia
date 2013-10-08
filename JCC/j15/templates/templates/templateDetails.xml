@@ -11,9 +11,9 @@
   <version>##version##</version>
   <description>TPL_##TEMPLATE##_XML_DESCRIPTION</description>
   <files>
+    <folder>language</folder>
     <folder>images</folder>
     <folder>html</folder>
-    <folder>lang</folder>
     <folder>css</folder>
     <folder>img</folder>
     <folder>js</folder>
@@ -47,13 +47,13 @@
     <position>bfoot-btm</position>
   </positions>
   <languages>
-    <language tag="en-GB">lang/site/en-GB.tpl_##template##.ini</language>
-    <language tag="zh-CN">lang/site/zh-CN.tpl_##template##.ini</language>
+    <language tag="en-GB">language/site/en-GB.tpl_##template##.ini</language>
+    <language tag="zh-CN">language/site/zh-CN.tpl_##template##.ini</language>
   </languages>
   <administration>
     <languages>
-      <language tag="en-GB">lang/admin/en-GB.tpl_##template##.ini</language>
-      <language tag="zh-CN">lang/admin/zh-CN.tpl_##template##.ini</language>
+      <language tag="en-GB">language/admin/en-GB.tpl_##template##.ini</language>
+      <language tag="zh-CN">language/admin/zh-CN.tpl_##template##.ini</language>
     </languages>
   </administration>
   <params>

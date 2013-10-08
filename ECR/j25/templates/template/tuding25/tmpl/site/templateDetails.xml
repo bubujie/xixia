@@ -2,7 +2,7 @@
 <xxx>
   <positions>
     <position>debug</position>
-    <position>crumbs</position>
+    <position>breadcrumbs</position>
     <position>search</position>
     <position>bhead-top</position>
     <position>bhead-mid</position>
