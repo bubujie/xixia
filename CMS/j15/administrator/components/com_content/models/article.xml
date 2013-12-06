@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<name>Article Edit Form</name>
+	<params addpath="/administrator/components/com_content/elements">
+		<param name="created_by" type="author" default="" label="Author" description="DETAILAUTHOR" />
+		<param name="created_by_alias" type="text" size="20" default="" label="Author Alias" description="DETAILAUTHORALIAS" />
+		<param name="access" type="list" size="20" default="0" label="Access Level" description="DETAILACCESS">
+			<option value="0">Public</option>
+			<option value="1">Registered</option>
+			<option value="2">Special</option>
+		</param>
+		<param name="created" type="calendar" default="" label="Created Date" description="DETAILCREATED" />
+		<param name="publish_up" type="calendar" default="" label="Start Publishing" description="DETAILSTART" />
+		<param name="publish_down" type="calendar" default="" label="Finish Publishing" description="DETAILFINISH" />
+	</params>
+	<params group="advanced">
+		<param
+			name="image_intro"
+			type="imagelist"
+			label="COM_CONTENT_FIELD_INTRO_LABEL"
+			description="COM_CONTENT_FIELD_INTRO_DESC"
+			directory="/images/M_images" />
+		<param
+			name="float_intro"
+			type="list"
+			label="COM_CONTENT_FLOAT_LABEL"
+			description="COM_CONTENT_FLOAT_DESC">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="right">COM_CONTENT_RIGHT</option>
+				<option value="left">COM_CONTENT_LEFT</option>
+				<option value="none">COM_CONTENT_NONE</option>
+		</param>
+		<param name="image_intro_alt"
+			type="text"
+			label="COM_CONTENT_FIELD_IMAGE_ALT_LABEL"
+			description="COM_CONTENT_FIELD_IMAGE_ALT_DESC"
+			class="inputbox"
+			size="20" />
+		<param name="image_intro_caption"
+			type="text"
+			label="COM_CONTENT_FIELD_IMAGE_CAPTION_LABEL"
+			description="COM_CONTENT_FIELD_IMAGE_CAPTION_DESC"
+			class="inputbox"
+			size="20" />
+		<param
+			name="spacer1"
+			type="spacer"
+			hr="true"
+			/>
+		<param
+			name="image_fulltext"
+			type="imagelist"
+			label="COM_CONTENT_FIELD_FULL_LABEL"
+			description="COM_CONTENT_FIELD_FULL_DESC"
+			directory="/images/M_images" />
+		<param
+			name="float_fulltext"
+			type="list"
+			label="COM_CONTENT_FLOAT_LABEL"
+			description="COM_CONTENT_FLOAT_DESC">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="right">COM_CONTENT_RIGHT</option>
+				<option value="left">COM_CONTENT_LEFT</option>
+				<option value="none">COM_CONTENT_NONE</option>
+		</param>
+		<param name="image_fulltext_alt"
+			type="text"
+			label="COM_CONTENT_FIELD_IMAGE_ALT_LABEL"
+			description="COM_CONTENT_FIELD_IMAGE_ALT_DESC"
+			class="inputbox"
+			size="20" />
+		<param name="image_fulltext_caption"
+			type="text"
+			label="COM_CONTENT_FIELD_IMAGE_CAPTION_LABEL"
+			description="COM_CONTENT_FIELD_IMAGE_CAPTION_DESC"
+			class="inputbox"
+			size="20" />
+		<param
+			name="spacer3"
+			type="spacer"
+			hr="true"
+			/>
+		<param
+			name="urla"
+			type="text"
+			validate="url"
+			filter="url"
+			label="COM_CONTENT_FIELD_URLA_LABEL"
+			description="COM_CONTENT_FIELD_URL_DESC" />
+		<param name="urlatext"
+			type="text"
+			label="COM_CONTENT_FIELD_URLA_LINK_TEXT_LABEL"
+			description="COM_CONTENT_FIELD_URL_LINK_TEXT_DESC"
+			class="inputbox"
+			size="20" />
+		<param
+			name="targeta"
+			type="list"
+			label="COM_CONTENT_URL_FIELD_BROWSERNAV_LABEL"
+			description="COM_CONTENT_URL_FIELD_BROWSERNAV_DESC"
+			default=""
+			filter="options"
+			class="inputbox">
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JBROWSERTARGET_PARENT</option>
+			<option value="1">JBROWSERTARGET_NEW</option>
+			<option value="2">JBROWSERTARGET_POPUP</option>
+			<option value="3">JBROWSERTARGET_MODAL</option>
+		</param>
+		<param
+			name="spacer4"
+			type="spacer"
+			hr="true"
+			/>
+		<param
+			name="urlb"
+			type="text"
+			validate="url"
+			filter="url"
+			label="COM_CONTENT_FIELD_URLB_LABEL"
+			description="COM_CONTENT_FIELD_URL_DESC" />
+		<param name="urlbtext"
+			type="text"
+			label="COM_CONTENT_FIELD_URLB_LINK_TEXT_LABEL"
+			description="COM_CONTENT_FIELD_URL_LINK_TEXT_DESC"
+			class="inputbox"
+			size="20" />
+		<param
+			name="targetb"
+			type="list"
+			label="COM_CONTENT_URL_FIELD_BROWSERNAV_LABEL"
+			description="COM_CONTENT_URL_FIELD_BROWSERNAV_DESC"
+			default=""
+			filter="options"
+			class="inputbox">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JBROWSERTARGET_PARENT</option>
+				<option value="1">JBROWSERTARGET_NEW</option>
+				<option value="2">JBROWSERTARGET_POPUP</option>
+				<option value="3">JBROWSERTARGET_MODAL</option>
+		</param>
+		<param
+			name="spacer5"
+			type="spacer"
+			hr="true"
+			/>
+		<param
+			name="urlc"
+			type="text"
+			validate="url"
+			filter="url"
+			label="COM_CONTENT_FIELD_URLC_LABEL"
+			description="COM_CONTENT_FIELD_URL_DESC" />
+		<param
+			name="urlctext"
+			type="text"
+			label="COM_CONTENT_FIELD_URLC_LINK_TEXT_LABEL"
+			description="COM_CONTENT_FIELD_URL_LINK_TEXT_DESC"
+			class="inputbox"
+			size="20" />
+		<param
+			name="targetc"
+			type="list"
+			label="COM_CONTENT_URL_FIELD_BROWSERNAV_LABEL"
+			description="COM_CONTENT_URL_FIELD_BROWSERNAV_DESC"
+			default=""
+			filter="options"
+			class="inputbox">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JBROWSERTARGET_PARENT</option>
+				<option value="1">JBROWSERTARGET_NEW</option>
+				<option value="2">JBROWSERTARGET_POPUP</option>
+				<option value="3">JBROWSERTARGET_MODAL</option>
+		</param>
+
+
+
+		<param type="spacer" hr="true" />
+		<param name="show_title" type="list" default="" label="Show Title" description="Show/Hide the items title">
+			<option value="">Use Global</option>
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="link_titles" type="list" default="" label="Linked Titles" description="Make your Item titles linkable">
+			<option value="">Use Global</option>
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="show_intro" type="list" default="" label="Intro Text" description="Show/Hide the intro text">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_section" type="list" default="" label="Section Name" description="PARAMSECTION">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="link_section" type="list" default="" label="Section Name Linkable" description="PARAMSECTIONLINK">
+			<option value="">Use Global</option>
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="show_category" type="list" default="" label="Category Name" description="PARAMCATEG">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="link_category" type="list" default="" label="Category Name Linkable" description="PARAMCATEGLINK">
+			<option value="">Use Global</option>
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="show_vote" type="list" default="" label="Item Rating" description="PARAMRATING">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_author" type="list" default="" label="Author Names" description="PARAMAUTHOR">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_create_date" type="list" default="" label="Created Date and Time" description="PARAMCREATEDATE">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_modify_date" type="list" default="" label="Modified Date and Time" description="PARAMMODIFYDATE">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_pdf_icon" type="list" default="" label="PDF Icon" description="PARAMPDF">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_print_icon" type="list" default="" label="Print Icon" description="PARAMPRINT">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_email_icon" type="list" default="" label="Email Icon" description="PARAMEMAIL">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="language" type="languages" client="site" label="Content language" description="PARAMCONTENTLANGUAGE" />
+		<param name="keyref" type="text" size="25" default="" label="Key Reference" description="PARAMKEYREF" />
+		<param name="readmore" type="text" size="25" default="" label="Alternative Read more text" description="PARAMALTREADMORE" />
+	</params>
+	<params group="metadata">
+		<param name="description" type="textarea" rows="5" cols="30" default="" label="Description" description="METADESC" />
+		<param name="keywords" type="textarea" rows="5" cols="30" default="" label="Keywords" description="METAKEYS" />
+		<param name="robots" type="text" size="20" default="" label="Robots" description="METAROBOTS" />
+		<param name="author" type="text" size="20" default="" label="Author" description="METAAUTHOR" />
+	</params>
+</form>

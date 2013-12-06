@@ -94,11 +94,11 @@ class JModuleHelper
 			}
 		}
 		if(count($result) == 0) {
-			if(JRequest::getBool('tp')) {
-				//×¢ÊÍµô $result[0] = JModuleHelper::getModule( 'mod_'.$position );
-				//×¢ÊÍµô $result[0]->title = $position;
-				//×¢ÊÍµô $result[0]->content = $position;
-				//×¢ÊÍµô $result[0]->position = $position;
+			if(JRequest::getBool('tplpos')) {
+				$result[0] = JModuleHelper::getModule( 'mod_'.$position );
+				$result[0]->title = $position;
+				$result[0]->content = $position;
+				$result[0]->position = $position;
 			}
 		}
 
