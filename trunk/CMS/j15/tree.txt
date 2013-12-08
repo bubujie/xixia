@@ -110,60 +110,60 @@ Joomla! 1.5
             ©¸©¤jscripts
                 ©¸©¤tiny_mce
                     ©À©¤langs
-                    ©¦      cn.js
+                    ©¦      zh-cn.js
                     ©¦      
                     ©À©¤plugins
                     ©¦  ©À©¤advhr
                     ©¦  ©¦  ©¸©¤langs
-                    ©¦  ©¦          cn_dlg.js
+                    ©¦  ©¦          zh-cn_dlg.js
                     ©¦  ©¦          
                     ©¦  ©À©¤advimage
                     ©¦  ©¦  ©¸©¤langs
-                    ©¦  ©¦          cn_dlg.js
+                    ©¦  ©¦          zh-cn_dlg.js
                     ©¦  ©¦          
                     ©¦  ©À©¤advlink
                     ©¦  ©¦  ©¸©¤langs
-                    ©¦  ©¦          cn_dlg.js
+                    ©¦  ©¦          zh-cn_dlg.js
                     ©¦  ©¦          
                     ©¦  ©À©¤emotions
                     ©¦  ©¦  ©¸©¤langs
-                    ©¦  ©¦          cn_dlg.js
+                    ©¦  ©¦          zh-cn_dlg.js
                     ©¦  ©¦          
                     ©¦  ©À©¤fullpage
                     ©¦  ©¦  ©¸©¤langs
-                    ©¦  ©¦          cn_dlg.js
+                    ©¦  ©¦          zh-cn_dlg.js
                     ©¦  ©¦          
                     ©¦  ©À©¤media
                     ©¦  ©¦  ©¸©¤langs
-                    ©¦  ©¦          cn_dlg.js
+                    ©¦  ©¦          zh-cn_dlg.js
                     ©¦  ©¦          
                     ©¦  ©À©¤paste
                     ©¦  ©¦  ©¸©¤langs
-                    ©¦  ©¦          cn_dlg.js
+                    ©¦  ©¦          zh-cn_dlg.js
                     ©¦  ©¦          
                     ©¦  ©À©¤searchreplace
                     ©¦  ©¦  ©¸©¤langs
-                    ©¦  ©¦          cn_dlg.js
+                    ©¦  ©¦          zh-cn_dlg.js
                     ©¦  ©¦          
                     ©¦  ©À©¤style
                     ©¦  ©¦  ©¸©¤langs
-                    ©¦  ©¦          cn_dlg.js
+                    ©¦  ©¦          zh-cn_dlg.js
                     ©¦  ©¦          
                     ©¦  ©À©¤table
                     ©¦  ©¦  ©¸©¤langs
-                    ©¦  ©¦          cn_dlg.js
+                    ©¦  ©¦          zh-cn_dlg.js
                     ©¦  ©¦          
                     ©¦  ©À©¤template
                     ©¦  ©¦  ©¸©¤langs
-                    ©¦  ©¦          cn_dlg.js
+                    ©¦  ©¦          zh-cn_dlg.js
                     ©¦  ©¦          
                     ©¦  ©À©¤wordc
                     ©¦  ©¦  ©¸©¤langs
-                    ©¦  ©¦          cn_dlg.js
+                    ©¦  ©¦          zh-cn_dlg.js
                     ©¦  ©¦          
                     ©¦  ©¸©¤xhtmlxtras
                     ©¦      ©¸©¤langs
-                    ©¦              cn_dlg.js
+                    ©¦              zh-cn_dlg.js
                     ©¦              
                     ©¸©¤themes
                         ©À©¤advanced
@@ -173,10 +173,10 @@ Joomla! 1.5
                         ©¦  ©¦      zen_textarea.min.js //Zen-CodingµÄJSÎÄ¼þ
                         ©¦  ©¦      
                         ©¦  ©¸©¤langs
-                        ©¦          cn.js
-                        ©¦          cn_dlg.js
+                        ©¦          zh-cn.js
+                        ©¦          zh-cn_dlg.js
                         ©¦          
                         ©¸©¤simple
                             ©¸©¤langs
-                                    cn.js
+                                    zh-cn.js
                                     
