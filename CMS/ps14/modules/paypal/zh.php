@@ -1,0 +1,35 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{paypal}prestashop>confirmation_2e2117b7c81aa9ea6931641ea2c6499f'] = '您的订单在';
+$_MODULE['<{paypal}prestashop>confirmation_75fbf512d744977d62599cc3f0ae2bb4'] = '已完成。';
+$_MODULE['<{paypal}prestashop>confirmation_15b0f8e55c6bdfc3d5fd0b6b3b6cb3ee'] = '您已经选择了贝宝的付款方法。';
+$_MODULE['<{paypal}prestashop>confirmation_e6dc7945b557a1cd949bea92dd58963e'] = '您的订单将被尽快发送';
+$_MODULE['<{paypal}prestashop>confirmation_0db71da7150c27142eef9d22b843b4a9'] = '如有任何疑问或想了解更多信息，请联系我们';
+$_MODULE['<{paypal}prestashop>confirmation_64430ad2835be8ad60c59e7d44e4b0b1'] = '客户服务';
+$_MODULE['<{paypal}prestashop>paypal_ad69e733ebae8d264bccaa38d68830e8'] = 'PayPal';
+$_MODULE['<{paypal}prestashop>paypal_bd0e34e5be6447844e6f262d51f1a9dc'] = '付款：';
+$_MODULE['<{paypal}prestashop>paypal_760c3c2ccfadeee26c80c7b39462cf1d'] = 'Paypal的关键项\'txn_id\' 没有具体规定，交易未知';
+$_MODULE['<{paypal}prestashop>paypal_7faa8448e059fb97d60d4a4b15634d98'] = 'Paypal的关键项\'mc_currency\' 没有具体规定，货币未知';
+$_MODULE['<{paypal}prestashop>paypal_e61f52d02b9f52fbe1fd41ed320e29c3'] = '购物车未发现';
+$_MODULE['<{paypal}prestashop>paypal_0617900b1aff826081d07f5a3e2e7cd0'] = '订单已经生成';
+$_MODULE['<{paypal}prestashop>paypal_f5209b3301a46f3057ffbf34d903e205'] = 'Paypal交易编号：';
+$_MODULE['<{paypal}prestashop>paypal_7b19e875ff64b09d80ee05dcc84b9975'] = 'Paypal交易无法被核实。';
+$_MODULE['<{paypal}prestashop>paypal_20dfea1a472e5be3f15f6b5f36ca335c'] = '连接Paypa服务器出错。';
+$_MODULE['<{paypal}prestashop>paypal_76ee8dc73701e846f7bccdf98dae079b'] = '无可用数据传输。';
+$_MODULE['<{paypal}prestashop>paypal_8358ec19f397d4cdd632688d4f79e535'] = '核查失败（使用fsockopen ） 。返回：';
+$_MODULE['<{paypal}prestashop>paypal_eca77e208634d52703b07672abbf16ec'] = '核查失败（使用cURL） 。返回：';
+$_MODULE['<{paypal}prestashop>paypal_f7799c2ded739cf3c3e9babffc5f315b'] = '使用cURL连接失败';
+$_MODULE['<{paypal}prestashop>paypal_c640d8a3c2c34f79061a0bbe50e8420c'] = '正在转向PayPal，请稍候。谢谢。';
+$_MODULE['<{paypal}prestashop>paypal_ea4788705e6873b424c65e91c2846b19'] = '取消';
+$_MODULE['<{paypal}prestashop>paypal_dae3b417a0fc4a49e851ce55d6d49551'] = '我的购物车';
+$_MODULE['<{paypal}prestashop>paypal_9bfa2332c9c7198ac9774c6710bf76c4'] = '返回店铺';
+$_MODULE['<{paypal}prestashop>paypal_e7ac6f09a936201890de4094b1ee4e50'] = 'Paypal错误：(无效的地址或者用户）';
+$_MODULE['<{paypal}prestashop>paypal_f4f70727dc34561dfde1a3c529b6205c'] = '设置';
+$_MODULE['<{paypal}prestashop>paypal_ee0174ba1fc039128d0a38074a7af945'] = '横幅图片URL';
+$_MODULE['<{paypal}prestashop>paypal_9518e6d551f7dc752b24af3629e849f9'] = '打开您的PayPal账户';
+$_MODULE['<{paypal}prestashop>paypal_1569f6a31ff61f45c5ba13d7cab7e042'] = '此模块允许您接受PayPal支付';
+$_MODULE['<{paypal}prestashop>paypal_3c4cb777e8df15388c680354569636b6'] = '如果客户选择此付款方式，您的PayPal账户将被自动记入。';
+$_MODULE['<{paypal}prestashop>paypal_c888438d14855d7d96a2724ee9c306bd'] = '设置已更新';
+$_MODULE['<{paypal}prestashop>paypal_dac2693baa5c5c9a5318609ed81c4f2a'] = '使用Paypal付款';

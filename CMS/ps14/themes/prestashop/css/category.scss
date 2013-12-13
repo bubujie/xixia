@@ -1,0 +1,67 @@
+/* category.tpl */
+/*body#category #subcategories li { height: 136px; width: 108px; margin-right: 3px }
+div.cat_desc { margin: 0 1em }
+body#category div#subcategories .inline_list a img { display: inline }
+#category img#categoryImage { margin-top: 1em }*/
+//list-di
+@import "D:/Colophon/compass/sass/tuding";
+@include clearfix();
+ul.inline_list{
+	margin:0;
+	padding:0;
+	//@extend .clearfix;//当li浮动时此项为必需
+}
+ul.inline_list li{
+	display:inline;
+	margin-right:1em;
+}
+ul.block_list{
+	margin:0;
+	padding:0;
+	@extend .clearfix;//当li浮动时此项为必需
+}
+ul.block_list li{
+	display:inline;
+	margin-right:1em;
+}
+#subcategories {border:1px solid #E2E1E1;}
+#subcategories img{display:none;}
+
+@mixin box_qi($bdW:1px,$bdC:#E2E1E1,$bgC:#F5F5F5,$cnrW:6px,$cnrH:6px,$wrap:'.wrap'){
+#subcategories{border:$bdW solid $bdC;}
+#subcategories h3{
+	margin:0;
+	padding:0.5em 0 0.5em 20px;
+	background:$bgC url(../img/ico_subcat.gif) 0.5em center no-repeat;
+}
+/* 分割线必须在content区域中定义 */
+#subcategories ul{padding:1em;}
+#subcategories .refer{ position:relative; }
+#subcategories .lt,
+#subcategories .rt,
+#subcategories .lb,
+#subcategories .rb{
+	display:block; position:absolute; font-size:0;
+	width:$cnrW;
+	height:$cnrH;
+
+}
+#subcategories .refer{ position:relative; width:100%; }
+#subcategories .lt{
+	top:- $bdW;left:- $bdW;width:$cnrW;height:$cnrH;
+	background:url(../img/bg_subcat.fw.png) no-repeat;
+}
+#subcategories .rt{
+	top:- $bdW; left:- $cnrW + $bdW; width:$cnrW; height:$cnrH; margin-left:100%;
+	background:url(../img/bg_subcat.fw.png) 100% 0 no-repeat;
+}
+#subcategories .lb{
+	top:- $cnrH + $bdW; left:- $bdW; width:$cnrW; height:$cnrH;
+	background:url(../img/bg_subcat.fw.png) 0 100% no-repeat;
+}
+#subcategories .rb{
+	top:- $cnrH + $bdW; left:- $cnrW + $bdW; width:$cnrW; height:$cnrH; margin-left:100%;
+	background:url(../img/bg_subcat.fw.png) 100% 100% no-repeat;
+}
+}
+@include box_qi();
