@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<localizationPack name="中国" version="1.0">
+	<currencies>
+		<currency name="人民币" iso_code="CNY" iso_code_num="156" sign="¥" blank="1" conversion_rate="1" format="1" decimals="1" />
+	</currencies>
+	<languages>
+		<language iso_code="zh" />
+	</languages>
+	<taxes>
+		<tax id="1" name="增值税 CN 17%" rate="17" />
+		<tax id="2" name="增值税 CN 6%" rate="6" />
+		<tax id="3" name="增值税 CN 3%" rate="3" />
+		
+		<taxRulesGroup name="CN Standard Rate (17%)">
+			<taxRule iso_code_country="cn" id_tax="1" />
+		</taxRulesGroup>
+		
+		<taxRulesGroup name="CN Reduced Rate (6%)">
+			<taxRule iso_code_country="cn" id_tax="2" />
+		</taxRulesGroup>
+		
+		<taxRulesGroup name="CN Super Reduced Rate (3%)">
+			<taxRule iso_code_country="cn" id_tax="3" />
+		</taxRulesGroup>
+	</taxes>
+	<states>
+		<state name="北京市" iso_code="11" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="天津市" iso_code="12" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="河北省" iso_code="13" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="山西省" iso_code="14" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="内蒙古自治区" iso_code="15" country="CN" zone="亚洲" tax_behavior="0" />
+
+		<state name="辽宁省" iso_code="21" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="吉林省" iso_code="22" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="黑龙江省" iso_code="23" country="CN" zone="亚洲" tax_behavior="0" />
+
+		<state name="上海市" iso_code="31" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="江苏省" iso_code="32" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="浙江省" iso_code="33" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="安徽省" iso_code="34" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="福建省" iso_code="35" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="江西省" iso_code="36" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="山东省" iso_code="37" country="CN" zone="亚洲" tax_behavior="0" />
+
+		<state name="河南省" iso_code="41" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="湖北省" iso_code="42" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="湖南省" iso_code="43" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="广东省" iso_code="44" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="广西壮族自治区" iso_code="45" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="海南省" iso_code="46" country="CN" zone="亚洲" tax_behavior="0" />
+
+		<state name="陕西省" iso_code="61" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="甘肃省" iso_code="62" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="青海省" iso_code="63" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="宁夏回族自治区" iso_code="64" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="新疆维吾尔自治区" iso_code="65" country="CN" zone="亚洲" tax_behavior="0" />
+
+		<state name="重庆市" iso_code="50" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="四川省" iso_code="51" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="贵州省" iso_code="52" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="云南省" iso_code="53" country="CN" zone="亚洲" tax_behavior="0" />
+		<state name="西藏自治区" iso_code="54" country="CN" zone="亚洲" tax_behavior="0" />
+
+		<state name="台湾" iso_code="71" country="CN" zone="亚洲" tax_behavior="0" active="0" />
+		<state name="香港特别行政区" iso_code="91" country="CN" zone="亚洲" tax_behavior="0" active="0" />
+		<state name="澳门特别行政区" iso_code="92" country="CN" zone="亚洲" tax_behavior="0" active="0" />
+	</states>
+	<units>
+		<unit type="weight" value="公斤(kg)" />
+		<unit type="volume" value="升(L)" />
+		<unit type="short_distance" value="厘米(cm)" />
+		<unit type="base_distance" value="里(m)" />
+		<unit type="long_distance" value="公里(km)" />
+	</units>
+</localizationPack>

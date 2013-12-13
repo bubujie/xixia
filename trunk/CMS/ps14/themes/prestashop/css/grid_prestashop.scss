@@ -1,0 +1,18 @@
+﻿@import "D:/colophon/Sass/layout";
+// defined the layout
+$layout:'h';
+$wrapping:92%;
+$n1:191px;
+$n2:191px;
+$space:50px;
+$incInner:false;
+$v1:200px;
+$v2:200px;
+@include tuding($layout,$wrapping,$n1,$n2,$space,$incInner,$v1,$v2);
+#side .box{margin-right:0px;}
+#aside .box{margin-left:0px;}
+
+@include clearfix();
+.box, .box-heading, .box-content{
+	@extend .clearfix;
+}
