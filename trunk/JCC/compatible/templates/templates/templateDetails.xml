@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="template" client="site">
+  <name>##Template##</name>
+  <creationDate>##date##</creationDate>
+  <author>##author##</author>
+  <authorEmail>##email##</authorEmail>
+  <authorUrl>##website##</authorUrl>
+  <copyright>Copyright (C) ##year## ##author## All rights reserved.</copyright>
+  <license>##license##</license>
+  <version>##version##</version>
+  <description>TPL_##TEMPLATE##_XML_DESCRIPTION</description>
+  <files>
+    <folder>language</folder>
+    <folder>images</folder>
+    <folder>media</folder>
+    <folder>html</folder>
+    <folder>css</folder>
+    <folder>img</folder>
+    <folder>js</folder>
+    <filename>template_thumbnail.png</filename>
+    <filename>templateDetails.xml</filename>
+    <filename>component.php</filename>
+    <filename>favicon.ico</filename>
+    <filename>index.html</filename>
+    <filename>index.php</filename>
+    <filename>params.ini</filename>
+  </files>
+  <positions>
+    <position>debug</position>
+    <position>breadcrumbs</position>
+    <position>search</position>
+    <position>bhead-top</position>
+    <position>bhead-mid</position>
+    <position>bhead-btm</position>
+    <position>bbody-top</position>
+    <position>main-side</position>
+    <position>main-top</position>
+    <!--position>com-side</position>
+    <position>com-top</position>
+    <position>com-btm</position>
+    <position>com-aside</position-->
+    <position>main-btm</position>
+    <position>main-aside</position>
+    <position>bbody-btm</position>
+    <position>bfoot-top</position>
+    <position>bfoot-mid</position>
+    <position>bfoot-btm</position>
+  </positions>
+  <languages>
+    <language tag="en-GB">language/site/en-GB.tpl_##template##.ini</language>
+    <language tag="zh-CN">language/site/zh-CN.tpl_##template##.ini</language>
+  </languages>
+  <administration>
+    <languages>
+      <language tag="en-GB">language/admin/en-GB.tpl_##template##.ini</language>
+      <language tag="zh-CN">language/admin/zh-CN.tpl_##template##.ini</language>
+    </languages>
+  </administration>
+  <params>
+    <param name="bheadLogo" type="text" default="logo_header.png"    label="TPL_##TEMPLATE##_FIELD_BHEADLOGO_LABEL" description="TPL_##TEMPLATE##_FIELD_BHEADLOGO_DESC" filter="string" />
+    <param name="bfootLogo" type="text" default="logo_footer.png"    label="TPL_##TEMPLATE##_FIELD_BFOOTLOGO_LABEL" description="TPL_##TEMPLATE##_FIELD_BFOOTLOGO_DESC" filter="string" />
+    <param name="siteTitle" type="text" default="步步街工作室" label="TPL_##TEMPLATE##_FIELD_SITETITLE_LABEL" description="TPL_##TEMPLATE##_FIELD_SITETITLE_DESC" filter="string" />
+    <param name="siteDesc"  type="text" default="步步街工作室" label="TPL_##TEMPLATE##_FIELD_SITEDESC_LABEL"  description="TPL_##TEMPLATE##_FIELD_SITEDESC_DESC"  filter="string" />
+  </params>
+  <config>
+    <fields name="params">
+      <fieldset name="advanced">
+        <field name="bheadLogo" type="text" default="logo_header.png"    label="TPL_##TEMPLATE##_FIELD_BHEADLOGO_LABEL" description="TPL_##TEMPLATE##_FIELD_BHEADLOGO_DESC" filter="string" />
+        <field name="bfootLogo" type="text" default=""                   label="TPL_##TEMPLATE##_FIELD_BFOOTLOGO_LABEL" description="TPL_##TEMPLATE##_FIELD_BFOOTLOGO_DESC" filter="string" />
+        <field name="siteTitle" type="text" default="步步街工作室" label="TPL_##TEMPLATE##_FIELD_SITETITLE_LABEL" description="TPL_##TEMPLATE##_FIELD_SITETITLE_DESC" filter="string" />
+        <field name="siteDesc"  type="text" default=""                   label="TPL_##TEMPLATE##_FIELD_SITEDESC_LABEL"  description="TPL_##TEMPLATE##_FIELD_SITEDESC_DESC"  filter="string" />
+      </fieldset>
+    </fields>
+  </config>
+</install>
