@@ -64,8 +64,8 @@ class plgSystemtuding extends JPlugin
       if ($doc->getType() != "html") return;
       
       // Add jquery to the scripts
-      $doc->addScript(JURI::base(true).'/plugins/system/tuding/js/jquery-1.7.2.min.js');
-      $doc->addScript(JURI::base(true).'/plugins/system/tuding/js/jquery-noconflict.js');
+      $doc->addScript(JURI::root(true).'/plugins/system/tuding/js/jquery-1.7.2.min.js');
+      $doc->addScript(JURI::root(true).'/plugins/system/tuding/js/jquery-noconflict.js');
     }//function
 
     /**
