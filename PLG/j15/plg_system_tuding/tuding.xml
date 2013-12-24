@@ -10,7 +10,7 @@
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
 	<version>beta</version>
 	<description></description>
-	<files folder="site">
+	<files folder="">
 		<filename plugin="tuding">tuding.php</filename>
 		<filename plugin="tuding">tuding_CHANGELOG.php</filename>
 		<folder plugin="tuding">tuding</folder>
