@@ -78,7 +78,7 @@ endif;
   <script type="text/javascript">belatedPNG.fix('#logo_header,#logo_footer');</script>
   <![endif]-->
 </head>
-<body<?php echo $isHome ? ' id="home"' : ''; ?> class="outer-<?php if($showSide){ echo 'n'; } ?>m<?php if($showAside){ echo 'n'; } ?>">
+<body<?php echo $isHome ? ' id="home"' : ''; ?> class="bg-<?php if($showSide){ echo 'n'; } ?>m<?php if($showAside){ echo 'n'; } ?>">
 <div id="bhead">
 <?php if ($showBheadTop) : ?>
   <div id="bhead-top">
@@ -130,7 +130,7 @@ endif;
 <?php endif; ?>
 </div>
 <!-- ######### ######### ######### bbody ######### ######### ######### -->
-<div id="bbody" class="inner-<?php if($showComSide){ echo 'v'; } ?>w<?php if($showComAside){ echo 'v'; } ?>">
+<div id="bbody" class="bg-<?php if($showComSide){ echo 'v'; } ?>w<?php if($showComAside){ echo 'v'; } ?>">
 <?php if ($showBbodyTop) : ?>
   <div id="bbody-top">
     <div class="rowo">
