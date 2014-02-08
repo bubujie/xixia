@@ -155,33 +155,35 @@ endif;
           </div>
 <?php endif; ?>
 <!-- ######### ######### inner ######### ######### -->
-<div class="filli <?php if($showComSide){ echo 'v'; } ?>w<?php if($showComAside){ echo 'v'; } ?>">
+<div class="rowi">
+  <div class="filli <?php if($showComSide){ echo 'v'; } ?>w<?php if($showComAside){ echo 'v'; } ?>">
 <?php if ($showComSide) : ?>
-  <div id="com-side" class="v1">
+    <div id="com-side" class="v1">
 <jdoc:include type="modules" name="com-side" style="division" headerLevel="3" />
-  </div>
-<?php endif; ?>
-  <div class="wing">
-<?php if ($showComTop) : ?>
-    <div id="com-top" class="ding">
-<jdoc:include type="modules" name="com-top" style="division" headerLevel="3" />
     </div>
+<?php endif; ?>
+    <div class="wing">
+<?php if ($showComTop) : ?>
+      <div id="com-top" class="ding">
+<jdoc:include type="modules" name="com-top" style="division" headerLevel="3" />
+      </div>
 <?php endif; ?>
 <jdoc:include type="message" />
 <?php if(!$isHome) : ?>
 <jdoc:include type="component" />
 <?php endif; ?>
 <?php if ($showComBtm) : ?>
-    <div id="com-btm" class="ding">
+      <div id="com-btm" class="ding">
 <jdoc:include type="modules" name="com-btm" style="division" headerLevel="3" />
+      </div>
+<?php endif; ?>
+    </div>
+<?php if ($showComAside) : ?>
+    <div id="com-aside" class="v2">
+<jdoc:include type="modules" name="com-aside" style="division" headerLevel="3" />
     </div>
 <?php endif; ?>
   </div>
-<?php if ($showComAside) : ?>
-  <div id="com-aside" class="v2">
-<jdoc:include type="modules" name="com-aside" style="division" headerLevel="3" />
-  </div>
-<?php endif; ?>
 </div>
 <!-- ######### ######### /inner ######### ######### -->
 <?php if ($showMainBtm) : ?>
