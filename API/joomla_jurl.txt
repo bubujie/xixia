@@ -1,15 +1,15 @@
 JURI::root();
-前台输出http://localhost/
-后台输出http://localhost/
+鍓嶅彴杈撳嚭http://localhost/
+鍚庡彴杈撳嚭http://localhost/
 JURI::root(true);
-前台输出/
-后台输出/
+鍓嶅彴杈撳嚭/
+鍚庡彴杈撳嚭/
 
 
 
 JURI::base();
-前台输出http://localhost/
-后台输出http://localhost/administrator/
+鍓嶅彴杈撳嚭http://localhost/
+鍚庡彴杈撳嚭http://localhost/administrator/
 JURI::base(true);
-前台输出/
-后台输出/administrator/
+鍓嶅彴杈撳嚭/
+鍚庡彴杈撳嚭/administrator/
