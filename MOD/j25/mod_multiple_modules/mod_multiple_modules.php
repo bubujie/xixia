@@ -2,7 +2,7 @@
 /**
  * @package		Bubujie.Studio
  * @subpackage	mod_multiple_modules
- * @copyright	Copyright (C) ²½²½½Ö¹¤×÷ÊÒ 2008 - 2012. All rights reserved.
+ * @copyright	Copyright (C) æ­¥æ­¥è¡—å·¥ä½œå®¤ 2008 - 2012. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -62,7 +62,7 @@ if(!empty($child_modules)) :
 	echo   "".'<div class="VTabbedPanels">';
 	echo   "\n".'  <ul class="TabbedPanelsTabGroup">';
 	foreach ($child_modules as $child_module) :
-		//ºáÏò¿ÉÑ¡ w-1-'.(count($child_modules)+1).'
+		//æ¨ªå‘å¯é€‰ w-1-'.(count($child_modules)+1).'
 		echo   "\n".'    <li class="TabbedPanelsTab" tabindex="0"><span>'.$child_module->title.'</span></li>';
 	endforeach;
 	echo   "\n".'  </ul>';
