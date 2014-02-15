@@ -31,6 +31,7 @@ class NestedRebuildController extends JController
             $this->a_link= $a_link;
         }
 
+        //包含自调用
         public function traverse($i_id) 
         {
             $i_lft = $this->i_count;
@@ -88,7 +89,7 @@ class NestedRebuildController extends JController
                     '".mysql_real_escape_string(@$a_source['category'])."'
                 )
             ";
-            //原始代码：若可执行，则输出
+            //原始代码：若已执行，则输出
             //if (！$i_result = mysql_query($s_query))
             if ($i_result = mysql_query($s_query))
             {
