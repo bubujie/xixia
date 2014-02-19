@@ -24,6 +24,19 @@ a:hover, a:active, a:focus {text-decoration:underline;}
 .iCheck, .iRadio{ width:13px; height:13px; margin:0; padding:0; vertical-align:middle;}
 .hide{ position:absolute; left:0; top:0; width:1px; height:1px; font-size:0; line-height:0; visibility:hidden;}
 @include tuding($layout,$wrapping,$n1,$n2,$space,$incInner,$v1,$v2);
+/* ######### ######### ######### Pagination ######### ######### ######### */
+@include btnArea('.pagenav, .pagination .counter, .pagination ul');
+.pagenavcounter, .pagenav, .pagination ul{margin:1em 0;padding:0;list-style:none;}
+.pagenav .pagenav-prev{float:left;}
+.pagenav .pagenav-next{float:right;}
+.pagination .counter{float:right;}
+.pagination ul li{display:inline-block;}
+/* ######### ######### ######### Article index ######### ######### ######### */
+#article-index { float:right; margin-left:1em; padding:1em 2em;border:1px solid #F2E2A1; background:#FFFCF0; font-size:1em; }/* 深橙色线条，浅橙色背景， 字号*/
+#article-index ul { margin-left:0; padding-left:1em; } /* 去除列表左侧重排 */
+#article-index ul li { list-style-image:url(../img/li_off.png); } /* 列表项图标 */
+#article-index ul li a { font-weight:normal; color:#585858; } /*列表项字号颜色*/
+#article-index ul li a.active { font-weight:bold; } /* 列表项当前项高亮 */
 //@include tuding_by_h_nmn($selectorNMN:'.container',$selectorMING:'.main',$selectorN1:'.sidebar1',$selectorN2:'.sidebar2',$wrapping:NULL,$n1:100px,$n2:100px,$space:20px);
 //IE6 || IE7 || IE8
 //@include tuding_h_2cols($wrapping,$v1,$v2,-1,$space,1);
@@ -61,4 +74,5 @@ a:hover, a:active, a:focus {text-decoration:underline;}
 	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,'',0,-1);
 	//@include tuding_1col('',1);
 	@include tuding_1col('',0);
+	@include tuding_width_1col();
 }
