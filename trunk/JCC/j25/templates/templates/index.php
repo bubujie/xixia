@@ -123,11 +123,8 @@ endif;
 <?php if ($showBheadBtm) : ?>
   <div id="bhead-btm">
     <div class="rowo">
-      <div class="fillo nm">
-        <div class="n1"></div>
-        <div class="ming">
+      <div class="fillo">
 <jdoc:include type="modules" name="bhead-btm" style="division" headerLevel="3" />
-        </div>
       </div>
     </div>
   </div>
