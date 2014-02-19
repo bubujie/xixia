@@ -172,7 +172,7 @@ endif;
 <!-- ######### ######### inner ######### ######### -->
 <div class="rowi">
   <div class="filli <?php if($showContentSide1){ echo 'v'; } ?>w<?php if($showContentSide2){ echo 'v'; } ?>">
-<?php if ($showContentSide) : ?>
+<?php if ($showContentSide1) : ?>
     <div id="content-side1" class="v1">
 <jdoc:include type="modules" name="content-side1" style="division" headerLevel="3" />
     </div>
