@@ -34,7 +34,9 @@
     <position>bhead-mid</position>
     <position>bhead-btm</position>
     <position>bbody-top</position>
+    <!--position>side1-top</position-->
     <position>side1</position>
+    <!--position>side1-btm</position-->
     <position>main-top</position>
     <!--position>content-side1</position-->
     <!--position>content-top</position-->
@@ -42,7 +44,9 @@
     <!--position>content-btm</position-->
     <!--position>content-side2</position-->
     <position>main-btm</position>
+    <!--position>side2-top</position-->
     <position>side2</position>
+    <!--position>side2-btm</position-->
     <position>bbody-btm</position>
     <position>bfoot-top</position>
     <position>bfoot-mid</position>

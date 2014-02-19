@@ -16,19 +16,23 @@ $showBheadBtm = ($this->countModules('bhead-btm')  || 0); //bhead-btm
 /* ######### ######### 注释 ######### ######### */
 $showBbodyTop = ($this->countModules('bbody-top')  || 0); //bbody-top
 /* ######### 注释 ######### */
-$showSide     = ($this->countModules('side1')  || 0); //side1
+$showSide1Top = ($this->countModules('side1-top') || 0); //side1-top
+$showSide1Btm = ($this->countModules('side1-btm') || 0); //side1-btm
+$showSide1    = ($this->countModules('side1') || $showSide1Top || $showSide1Btm || 0); //side1
 /* ### 注释 ### */
 $showMainTop  = ($this->countModules('main-top')   || 0); //main-top
-$showContentSide  = ($this->countModules('content-side1')   || 0); //content-side1
+$showContentSide1 = ($this->countModules('content-side1')   || 0); //content-side1
 $showContentTop   = ($this->countModules('content-top')    || 0); //content-top
 $showContentHome  = ($this->countModules('content-home')   || 0); //content-home
 $showContentBtm   = ($this->countModules('content-btm')    || 0); //content-btm
-$showContentAside = ($this->countModules('content-side2')  || 0); //content-side2
+$showContentSide2 = ($this->countModules('content-side2')  || 0); //content-side2
 $showMainBtm  = ($this->countModules('main-btm')   || 0); //main-btm
 /* ### 注释 ### */
-$showAside    = ($this->countModules('side2') || 0); //side2
-$showAside   &= JRequest::getCmd('layout') != 'form'; //基于1.5beez
-$showAside   &= JRequest::getCmd('task')   != 'edit'; //基于1.5beez
+$showSide2Top = ($this->countModules('side2-top') || 0); //side2-top
+$showSide2Btm = ($this->countModules('side2-btm') || 0); //side2-btm
+$showSide2    = ($this->countModules('side2') || $showSide2Top || $showSide2Btm || 0); //side2
+$showSide2   &= JRequest::getCmd('layout') != 'form'; //基于1.5beez
+$showSide2   &= JRequest::getCmd('task')   != 'edit'; //基于1.5beez
 /* ######### 注释 ######### */
 $showBbodyBtm = ($this->countModules('bbody-btm')  || 0); //bbody-btm
 /* ######### ######### 注释 ######### ######### */
@@ -79,7 +83,7 @@ endif;
   <script type="text/javascript">belatedPNG.fix('#logo_header,#logo_footer');</script>
   <![endif]-->
 </head>
-<body<?php echo $isHome ? ' id="home"' : ''; ?> class="bg-<?php if($showSide){ echo 'n'; } ?>m<?php if($showAside){ echo 'n'; } ?>">
+<body<?php echo $isHome ? ' id="home"' : ''; ?> class="bg-<?php if($showSide1){ echo 'n'; } ?>m<?php if($showSide2){ echo 'n'; } ?>">
 <div id="bhead">
 <?php if ($showBheadTop) : ?>
   <div id="bhead-top">
@@ -131,7 +135,7 @@ endif;
 <?php endif; ?>
 </div>
 <!-- ######### ######### ######### bbody ######### ######### ######### -->
-<div id="bbody" class="bg-<?php if($showContentSide){ echo 'v'; } ?>w<?php if($showContentAside){ echo 'v'; } ?>">
+<div id="bbody" class="bg-<?php if($showContentSide1){ echo 'v'; } ?>w<?php if($showContentSide2){ echo 'v'; } ?>">
 <?php if ($showBbodyTop) : ?>
   <div id="bbody-top">
     <div class="rowo">
@@ -143,10 +147,20 @@ endif;
 <?php endif; ?>
   <div id="bbody-mid">
     <div class="rowo">
-      <div class="fillo <?php if($showSide){ echo 'n'; } ?>m<?php if($showAside){ echo 'n'; } ?>">
-<?php if ($showSide) : ?>
+      <div class="fillo <?php if($showSide1){ echo 'n'; } ?>m<?php if($showSide2){ echo 'n'; } ?>">
+<?php if ($showSide1) : ?>
         <div id="side1" class="n1"><a name="side1"></a>
+<?php if ($showSide1Top) : ?>
+          <div id="side1-top" class="ding">
+<jdoc:include type="modules" name="side1-top" style="division" headerLevel="3" />
+          </div>
+<?php endif; ?>
 <jdoc:include type="modules" name="side1" style="division" headerLevel="3" />
+<?php if ($showSide1Btm) : ?>
+          <div id="side1-btm" class="ding">
+<jdoc:include type="modules" name="side1-btm" style="division" headerLevel="3" />
+          </div>
+<?php endif; ?>
         </div>
 <?php endif; ?>
         <div id="main" class="ming"><a name="main"></a>
@@ -158,7 +172,7 @@ endif;
 <?php endif; ?>
 <!-- ######### ######### inner ######### ######### -->
 <div class="rowi">
-  <div class="filli <?php if($showContentSide){ echo 'v'; } ?>w<?php if($showContentAside){ echo 'v'; } ?>">
+  <div class="filli <?php if($showContentSide1){ echo 'v'; } ?>w<?php if($showContentSide2){ echo 'v'; } ?>">
 <?php if ($showContentSide) : ?>
     <div id="content-side1" class="v1">
 <jdoc:include type="modules" name="content-side1" style="division" headerLevel="3" />
@@ -182,7 +196,7 @@ endif;
       </div>
 <?php endif; ?>
     </div>
-<?php if ($showContentAside) : ?>
+<?php if ($showContentSide2) : ?>
     <div id="content-side2" class="v2">
 <jdoc:include type="modules" name="content-side2" style="division" headerLevel="3" />
     </div>
@@ -196,9 +210,19 @@ endif;
           </div>
 <?php endif; ?>
         </div>
-<?php if ($showAside) : ?>
+<?php if ($showSide2) : ?>
         <div id="side2" class="n2"><a name="side2"></a>
+<?php if ($showSide2Top) : ?>
+          <div id="side2-top" class="ding">
+<jdoc:include type="modules" name="side2-top" style="division" headerLevel="3" />
+          </div>
+<?php endif; ?>
 <jdoc:include type="modules" name="side2" style="division" headerLevel="3" />
+<?php if ($showSide2Btm) : ?>
+          <div id="side2-btm" class="ding">
+<jdoc:include type="modules" name="side2-btm" style="division" headerLevel="3" />
+          </div>
+<?php endif; ?>
         </div>
 <?php endif; ?>
       </div>
