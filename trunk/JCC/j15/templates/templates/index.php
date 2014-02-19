@@ -16,17 +16,17 @@ $showBheadBtm = ($this->countModules('bhead-btm')  || 0); //bhead-btm
 /* ######### ######### 注释 ######### ######### */
 $showBbodyTop = ($this->countModules('bbody-top')  || 0); //bbody-top
 /* ######### 注释 ######### */
-$showSide     = ($this->countModules('main-side')  || 0); //main-side
+$showSide     = ($this->countModules('side1')  || 0); //side1
 /* ### 注释 ### */
 $showMainTop  = ($this->countModules('main-top')   || 0); //main-top
-$showContentSide  = ($this->countModules('content-side')   || 0); //content-side
+$showContentSide  = ($this->countModules('content-side1')   || 0); //content-side1
 $showContentTop   = ($this->countModules('content-top')    || 0); //content-top
 $showContentHome  = ($this->countModules('content-home')   || 0); //content-home
 $showContentBtm   = ($this->countModules('content-btm')    || 0); //content-btm
-$showContentAside = ($this->countModules('content-aside')  || 0); //content-aside
+$showContentAside = ($this->countModules('content-side2')  || 0); //content-side2
 $showMainBtm  = ($this->countModules('main-btm')   || 0); //main-btm
 /* ### 注释 ### */
-$showAside    = ($this->countModules('main-aside') || 0); //main-aside
+$showAside    = ($this->countModules('side2') || 0); //side2
 $showAside   &= JRequest::getCmd('layout') != 'form'; //基于1.5beez
 $showAside   &= JRequest::getCmd('task')   != 'edit'; //基于1.5beez
 /* ######### 注释 ######### */
@@ -145,8 +145,8 @@ endif;
     <div class="rowo">
       <div class="fillo <?php if($showSide){ echo 'n'; } ?>m<?php if($showAside){ echo 'n'; } ?>">
 <?php if ($showSide) : ?>
-        <div id="side" class="n1"><a name="side"></a>
-<jdoc:include type="modules" name="main-side" style="division" headerLevel="3" />
+        <div id="side1" class="n1"><a name="side1"></a>
+<jdoc:include type="modules" name="side1" style="division" headerLevel="3" />
         </div>
 <?php endif; ?>
         <div id="main" class="ming"><a name="main"></a>
@@ -160,8 +160,8 @@ endif;
 <div class="rowi">
   <div class="filli <?php if($showContentSide){ echo 'v'; } ?>w<?php if($showContentAside){ echo 'v'; } ?>">
 <?php if ($showContentSide) : ?>
-    <div id="content-side" class="v1">
-<jdoc:include type="modules" name="content-side" style="division" headerLevel="3" />
+    <div id="content-side1" class="v1">
+<jdoc:include type="modules" name="content-side1" style="division" headerLevel="3" />
     </div>
 <?php endif; ?>
     <div class="wing">
@@ -183,8 +183,8 @@ endif;
 <?php endif; ?>
     </div>
 <?php if ($showContentAside) : ?>
-    <div id="content-aside" class="v2">
-<jdoc:include type="modules" name="content-aside" style="division" headerLevel="3" />
+    <div id="content-side2" class="v2">
+<jdoc:include type="modules" name="content-side2" style="division" headerLevel="3" />
     </div>
 <?php endif; ?>
   </div>
@@ -197,8 +197,8 @@ endif;
 <?php endif; ?>
         </div>
 <?php if ($showAside) : ?>
-        <div id="aside" class="n2"><a name="aside"></a>
-<jdoc:include type="modules" name="main-aside" style="division" headerLevel="3" />
+        <div id="side2" class="n2"><a name="side2"></a>
+<jdoc:include type="modules" name="side2" style="division" headerLevel="3" />
         </div>
 <?php endif; ?>
       </div>
