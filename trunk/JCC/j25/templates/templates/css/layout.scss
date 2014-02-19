@@ -38,7 +38,28 @@ a:hover, a:active, a:focus {text-decoration:underline;}
 #article-index ul li a { font-weight:normal; color:#585858; } /*列表项字号颜色*/
 #article-index ul li a.active { font-weight:bold; } /* 列表项当前项高亮 */
 /* ######### ######### ######### 注释 ######### ######### ######### */
-.categories-list li,.category-list li,.cat-children li{overflow:hidden;}
+.categories-list li,.category-list li{overflow:hidden;}
+#main ul.actions {
+text-align: right;
+padding: 0;
+width: 100%;
+margin: 0;
+}
+/* ######### ######### ######### BEGIN::Blog Featured ######### ######### ######### */
+.items-leading, .items-row, .items-row .item { position:relative; *zoom:1; } /* 每个独立区块的ding */
+.items-leading, .items-row:after, .items-row .item:after { content:""; display:block; clear:both; }/* ding:after */
+.items-leading { margin-right:10px; } /* blog上部单列项目 */
+.items-row{  }
+.items-row .item{ float:left; overflow:hidden; }
+.items-row.cols-1 .item{ width:100%; }
+.items-row.cols-2 .item{ width:50%}
+.items-row.cols-3 .item{ width:33.3333%; }
+.items-row.cols-4 .item{ width:25%; *width:24.9999%; }
+.items-row.cols-5 .item{ width:20%; }
+.items-row ul.actions, .items-row dl.article-info{ margin-right:10px; } /* 内部没有外套，只能对每个项目设置右margin */
+.items-row .item h2, .items-row .item p{ margin-right:10px; } /* 同上 */
+.items-leading p.readmore a, .items-row p.readmore a{ display:inline-block; padding:0.2em 0.3em; border:3px double #CCC; background:url(../../img/bg_input.gif); } /* blog布局readmore，需另外定义module中的readmore */
+/* ######### ######### ######### END::Blog Featured ######### ######### ######### */
 //@include tuding_by_h_nmn($selectorNMN:'.container',$selectorMING:'.main',$selectorN1:'.sidebar1',$selectorN2:'.sidebar2',$wrapping:NULL,$n1:100px,$n2:100px,$space:20px);
 //IE6 || IE7 || IE8
 //@include tuding_h_2cols($wrapping,$v1,$v2,-1,$space,1);
