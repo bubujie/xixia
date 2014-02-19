@@ -37,6 +37,8 @@ a:hover, a:active, a:focus {text-decoration:underline;}
 #article-index ul li { list-style-image:url(../img/li_off.png); } /* 列表项图标 */
 #article-index ul li a { font-weight:normal; color:#585858; } /*列表项字号颜色*/
 #article-index ul li a.active { font-weight:bold; } /* 列表项当前项高亮 */
+/* ######### ######### ######### 注释 ######### ######### ######### */
+.categories-list li,.category-list li,.cat-children li{overflow:hidden;}
 //@include tuding_by_h_nmn($selectorNMN:'.container',$selectorMING:'.main',$selectorN1:'.sidebar1',$selectorN2:'.sidebar2',$wrapping:NULL,$n1:100px,$n2:100px,$space:20px);
 //IE6 || IE7 || IE8
 //@include tuding_h_2cols($wrapping,$v1,$v2,-1,$space,1);
