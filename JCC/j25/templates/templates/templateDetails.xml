@@ -38,15 +38,15 @@
     <position>bhead-mid</position>
     <position>bhead-btm</position>
     <position>bbody-top</position>
-    <position>main-side</position>
+    <position>side1</position>
     <position>main-top</position>
-    <!--position>content-side</position-->
+    <!--position>content-side1</position-->
     <!--position>content-top</position-->
     <position>content-home</position>
     <!--position>content-btm</position-->
-    <!--position>content-aside</position-->
+    <!--position>content-side2</position-->
     <position>main-btm</position>
-    <position>main-aside</position>
+    <position>side2</position>
     <position>bbody-btm</position>
     <position>bfoot-top</position>
     <position>bfoot-mid</position>
