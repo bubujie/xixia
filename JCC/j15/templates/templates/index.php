@@ -19,10 +19,11 @@ $showBbodyTop = ($this->countModules('bbody-top')  || 0); //bbody-top
 $showSide     = ($this->countModules('main-side')  || 0); //main-side
 /* ### 注释 ### */
 $showMainTop  = ($this->countModules('main-top')   || 0); //main-top
-$showComSide  = ($this->countModules('com-side')   || 0); //com-side
-$showComTop   = ($this->countModules('com-top')    || 0); //com-top
-$showComBtm   = ($this->countModules('com-btm')    || 0); //com-btm
-$showComAside = ($this->countModules('com-aside')  || 0); //com-aside
+$showContentSide  = ($this->countModules('content-side')   || 0); //content-side
+$showContentTop   = ($this->countModules('content-top')    || 0); //content-top
+$showContentHome  = ($this->countModules('content-home')   || 0); //content-home
+$showContentBtm   = ($this->countModules('content-btm')    || 0); //content-btm
+$showContentAside = ($this->countModules('content-aside')  || 0); //content-aside
 $showMainBtm  = ($this->countModules('main-btm')   || 0); //main-btm
 /* ### 注释 ### */
 $showAside    = ($this->countModules('main-aside') || 0); //main-aside
@@ -110,8 +111,8 @@ endif;
 ?>
         </div>
         <div class="ming">
-<jdoc:include type="modules" name="bhead-mid" style="open" headerLevel="3" />
-<jdoc:include type="modules" name="search" style="open" headerLevel="3" />
+<jdoc:include type="modules" name="bhead-mid" style="division" headerLevel="3" />
+<jdoc:include type="modules" name="search" style="division" headerLevel="3" />
 	    </div>
 	  </div>
     </div>
@@ -130,7 +131,7 @@ endif;
 <?php endif; ?>
 </div>
 <!-- ######### ######### ######### bbody ######### ######### ######### -->
-<div id="bbody" class="bg-<?php if($showComSide){ echo 'v'; } ?>w<?php if($showComAside){ echo 'v'; } ?>">
+<div id="bbody" class="bg-<?php if($showContentSide){ echo 'v'; } ?>w<?php if($showContentAside){ echo 'v'; } ?>">
 <?php if ($showBbodyTop) : ?>
   <div id="bbody-top">
     <div class="rowo">
@@ -148,7 +149,7 @@ endif;
 <jdoc:include type="modules" name="main-side" style="division" headerLevel="3" />
         </div>
 <?php endif; ?>
-        <div id="main" class="ming">
+        <div id="main" class="ming"><a name="main"></a>
 <jdoc:include type="modules" name="breadcrumbs" style="division" headerLevel="3" />
 <?php if ($showMainTop) : ?>
           <div id="main-top" class="ding">
@@ -156,33 +157,37 @@ endif;
           </div>
 <?php endif; ?>
 <!-- ######### ######### inner ######### ######### -->
-<div class="filli <?php if($showComSide){ echo 'v'; } ?>w<?php if($showComAside){ echo 'v'; } ?>">
-<?php if ($showComSide) : ?>
-  <div id="com-side" class="v1">
-<jdoc:include type="modules" name="com-side" style="division" headerLevel="3" />
-  </div>
-<?php endif; ?>
-  <div class="wing">
-<?php if ($showComTop) : ?>
-    <div id="com-top" class="ding">
-<jdoc:include type="modules" name="com-top" style="division" headerLevel="3" />
+<div class="rowi">
+  <div class="filli <?php if($showContentSide){ echo 'v'; } ?>w<?php if($showContentAside){ echo 'v'; } ?>">
+<?php if ($showContentSide) : ?>
+    <div id="content-side" class="v1">
+<jdoc:include type="modules" name="content-side" style="division" headerLevel="3" />
     </div>
+<?php endif; ?>
+    <div class="wing">
+<?php if ($showContentTop && !$isHome) : ?>
+      <div id="content-top" class="ding">
+<jdoc:include type="modules" name="content-top" style="division" headerLevel="3" />
+      </div>
 <?php endif; ?>
 <jdoc:include type="message" />
 <?php if(!$isHome) : ?>
 <jdoc:include type="component" />
+<?php else : ?>
+<jdoc:include type="modules" name="content-home" style="division" headerLevel="3" />
 <?php endif; ?>
-<?php if ($showComBtm) : ?>
-    <div id="com-btm" class="ding">
-<jdoc:include type="modules" name="com-btm" style="division" headerLevel="3" />
+<?php if ($showContentBtm && !$isHome) : ?>
+      <div id="content-btm" class="ding">
+<jdoc:include type="modules" name="content-btm" style="division" headerLevel="3" />
+      </div>
+<?php endif; ?>
+    </div>
+<?php if ($showContentAside) : ?>
+    <div id="content-aside" class="v2">
+<jdoc:include type="modules" name="content-aside" style="division" headerLevel="3" />
     </div>
 <?php endif; ?>
   </div>
-<?php if ($showComAside) : ?>
-  <div id="com-aside" class="v2">
-<jdoc:include type="modules" name="com-aside" style="division" headerLevel="3" />
-  </div>
-<?php endif; ?>
 </div>
 <!-- ######### ######### /inner ######### ######### -->
 <?php if ($showMainBtm) : ?>
