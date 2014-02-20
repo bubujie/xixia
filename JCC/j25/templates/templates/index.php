@@ -130,7 +130,6 @@ endif;
   </div>
 <?php endif; ?>
 </div>
-<!-- ######### ######### ######### bbody ######### ######### ######### -->
 <div id="bbody" class="bg-<?php if($showContentSide1){ echo 'v'; } ?>w<?php if($showContentSide2){ echo 'v'; } ?>">
 <?php if ($showBbodyTop) : ?>
   <div id="bbody-top">
@@ -166,7 +165,7 @@ endif;
 <jdoc:include type="modules" name="main-top" style="division" headerLevel="3" />
           </div>
 <?php endif; ?>
-<!-- ######### ######### inner ######### ######### -->
+
 <div class="rowi">
   <div class="filli <?php if($showContentSide1){ echo 'v'; } ?>w<?php if($showContentSide2){ echo 'v'; } ?>">
 <?php if ($showContentSide1) : ?>
@@ -199,7 +198,7 @@ endif;
 <?php endif; ?>
   </div>
 </div>
-<!-- ######### ######### /inner ######### ######### -->
+
 <?php if ($showMainBtm) : ?>
           <div id="main-btm" class="ding">
 <jdoc:include type="modules" name="main-btm" style="division" headerLevel="3" />
@@ -234,7 +233,6 @@ endif;
   </div>
 <?php endif; ?>
 </div>
-<!-- ######### ######### ######### /bbody ######### ######### ######### -->
 <div id="bfoot">
 <?php if ($showBfootTop) : ?>
   <div id="bfoot-top">
