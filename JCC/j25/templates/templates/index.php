@@ -21,7 +21,7 @@ $showSide1Btm = ($this->countModules('side1-btm') || 0); //side1-btm
 $showSide1    = ($this->countModules('side1') || $showSide1Top || $showSide1Btm || 0); //side1
 /* ### 注释 ### */
 $showMainTop  = ($this->countModules('main-top')   || 0); //main-top
-$showContentSide1 = ($this->countModules('content-side1')   || 0); //content-side1
+$showContentSide1 = ($this->countModules('content-side1')  || 0); //content-side1
 $showContentTop   = ($this->countModules('content-top')    || 0); //content-top
 $showContentHome  = ($this->countModules('content-home')   || 0); //content-home
 $showContentBtm   = ($this->countModules('content-btm')    || 0); //content-btm

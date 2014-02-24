@@ -21,7 +21,7 @@ $showSide1Btm = ($this->countModules('side1-btm') || 0); //side1-btm
 $showSide1    = ($this->countModules('side1') || $showSide1Top || $showSide1Btm || 0); //side1
 /* ### 注释 ### */
 $showMainTop  = ($this->countModules('main-top')   || 0); //main-top
-$showContentSide1 = ($this->countModules('content-side1')   || 0); //content-side1
+$showContentSide1 = ($this->countModules('content-side1')  || 0); //content-side1
 $showContentTop   = ($this->countModules('content-top')    || 0); //content-top
 $showContentHome  = ($this->countModules('content-home')   || 0); //content-home
 $showContentBtm   = ($this->countModules('content-btm')    || 0); //content-btm
@@ -68,8 +68,7 @@ endif;
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>  " dir="<?php echo $this->direction; ?>">
 <head>
-<jdoc:include type="head" />
-  <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/layout.css" type="text/css" />
+<jdoc:include type="head" />  <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/layout.css" type="text/css" />
   <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
 <?php if ($this->direction == 'rtl') : ?>
   <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/template_rtl.css" type="text/css" />
@@ -89,7 +88,7 @@ endif;
   <div id="bhead-top">
     <div class="rowo">
       <div class="fillo">
-<jdoc:include type="modules" name="bhead-top" style="division" headerLevel="3" />
+<jdoc:include type="modules" name="bhead-top" style="stroke" headerLevel="3" />
       </div>
     </div>
   </div>
@@ -125,7 +124,7 @@ endif;
   <div id="bhead-btm">
     <div class="rowo">
       <div class="fillo">
-<jdoc:include type="modules" name="bhead-btm" style="division" headerLevel="3" />
+<jdoc:include type="modules" name="bhead-btm" style="stroke" headerLevel="3" />
       </div>
     </div>
   </div>
@@ -136,7 +135,7 @@ endif;
   <div id="bbody-top">
     <div class="rowo">
       <div class="fillo">
-<jdoc:include type="modules" name="bbody-top" style="division" headerLevel="3" />
+<jdoc:include type="modules" name="bbody-top" style="stroke" headerLevel="3" />
       </div>
     </div>
   </div>
@@ -163,7 +162,7 @@ endif;
 <jdoc:include type="modules" name="breadcrumbs" style="division" headerLevel="3" />
 <?php if ($showMainTop) : ?>
           <div id="main-top" class="ding">
-<jdoc:include type="modules" name="main-top" style="division" headerLevel="3" />
+<jdoc:include type="modules" name="main-top" style="stroke" headerLevel="3" />
           </div>
 <?php endif; ?>
 
@@ -177,7 +176,7 @@ endif;
     <div class="wing">
 <?php if ($showContentTop && !$isHome) : ?>
       <div id="content-top" class="ding">
-<jdoc:include type="modules" name="content-top" style="division" headerLevel="3" />
+<jdoc:include type="modules" name="content-top" style="stroke" headerLevel="3" />
       </div>
 <?php endif; ?>
 <jdoc:include type="message" />
@@ -188,7 +187,7 @@ endif;
 <?php endif; ?>
 <?php if ($showContentBtm && !$isHome) : ?>
       <div id="content-btm" class="ding">
-<jdoc:include type="modules" name="content-btm" style="division" headerLevel="3" />
+<jdoc:include type="modules" name="content-btm" style="stroke" headerLevel="3" />
       </div>
 <?php endif; ?>
     </div>
@@ -202,7 +201,7 @@ endif;
 
 <?php if ($showMainBtm) : ?>
           <div id="main-btm" class="ding">
-<jdoc:include type="modules" name="main-btm" style="division" headerLevel="3" />
+<jdoc:include type="modules" name="main-btm" style="stroke" headerLevel="3" />
           </div>
 <?php endif; ?>
         </div>
@@ -228,7 +227,7 @@ endif;
   <div id="bbody-btm">
   	<div class="rowo">
       <div class="fillo">
-<jdoc:include type="modules" name="bbody-btm" style="division" headerLevel="3" />
+<jdoc:include type="modules" name="bbody-btm" style="stroke" headerLevel="3" />
       </div>
     </div>
   </div>
@@ -239,7 +238,7 @@ endif;
   <div id="bfoot-top">
   	<div class="rowo">
       <div class="fillo">
-<jdoc:include type="modules" name="bfoot-top" style="division" headerLevel="3" />
+<jdoc:include type="modules" name="bfoot-top" style="stroke" headerLevel="3" />
       </div>
     </div>
   </div>
@@ -273,7 +272,7 @@ endif; ?>
   <div id="bfoot-btm">
     <div class="rowo">
       <div class="fillo">
-<jdoc:include type="modules" name="bfoot-btm" style="division" headerLevel="3" />
+<jdoc:include type="modules" name="bfoot-btm" style="stroke" headerLevel="3" />
       </div>
     </div>
   </div>
