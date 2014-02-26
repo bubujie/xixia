@@ -69,6 +69,21 @@
         <field name="bfootLogo" type="text" default=""                   label="TPL_##TEMPLATE##_FIELD_BFOOTLOGO_LABEL" description="TPL_##TEMPLATE##_FIELD_BFOOTLOGO_DESC" filter="string" />
         <field name="siteTitle" type="text" default="步步街工作室" label="TPL_##TEMPLATE##_FIELD_SITETITLE_LABEL" description="TPL_##TEMPLATE##_FIELD_SITETITLE_DESC" filter="string" />
         <field name="siteDesc"  type="text" default=""                   label="TPL_##TEMPLATE##_FIELD_SITEDESC_LABEL"  description="TPL_##TEMPLATE##_FIELD_SITEDESC_DESC"  filter="string" />
+
+        <field type="spacer" hr="true" />
+
+        <field name="posClose" type="checkboxes" label="强制关闭的位置" description="强制关闭的位置">
+          <option value="anch">Anchovies</option>
+          <option value="chor">Chorizo</option>
+          <option value="on">Onions</option>
+          <option value="mush">Mushrooms</option>
+        </field>
+        <field name="posOpen" type="checkboxes" label="强制开启的位置" description="强制开启的位置">
+          <option value="anch">Anchovies</option>
+          <option value="chor">Chorizo</option>
+          <option value="on">Onions</option>
+          <option value="mush">Mushrooms</option>
+        </field>
       </fieldset>
     </fields>
   </config>
