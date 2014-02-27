@@ -35,7 +35,7 @@
     <position>breadcrumbs</position>
     <position>search</position>
     <position>bhead-top</position>
-    <position>bhead-mid</position>
+    <position>bhead</position>
     <position>bhead-btm</position>
     <position>bbody-top</position>
     <!--position>side1-top</position-->
@@ -53,7 +53,7 @@
     <!--position>side2-btm</position-->
     <position>bbody-btm</position>
     <position>bfoot-top</position>
-    <position>bfoot-mid</position>
+    <position>bfoot</position>
     <position>bfoot-btm</position>
   </positions>
   <languages folder="language">

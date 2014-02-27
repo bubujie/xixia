@@ -440,9 +440,6 @@ class blocktopmenu extends Module
     return $this->display(__FILE__, 'blocktopmenu.tpl');
   }
 
-  public function hookDisplayBheadBtm($params)
-  {
-    return $this->hooktop($params);
-  }
+  public function hookDisplayBheadBtm($params){ return $this->hooktop($params);  }
 }
 ?>

@@ -2,6 +2,23 @@
 
 class FrontController extends FrontControllerCore
 {
+	public function setMedia()
+	{
+		global $cookie;
+
+		Tools::addCSS(_THEME_CSS_DIR_.'global.css', 'all');
+		Tools::addJS(array(_PS_JS_DIR_.'jquery/jquery.min.js', _PS_JS_DIR_.'jquery/jquery.easing.1.3.js', _PS_JS_DIR_.'tools.js', _PS_JS_DIR_.'cookies.js', _PS_JS_DIR_.'carousel.js'));
+		if (Tools::isSubmit('live_edit') && Tools::getValue('ad') && Tools::getValue('liveToken') == sha1(Tools::getValue('ad')._COOKIE_KEY_))
+		{
+			Tools::addJS(array(_PS_JS_DIR_.'jquery/jquery-ui-1.8.10.custom.min.js', _PS_JS_DIR_.'jquery/jquery.fancybox-1.3.4.js',
+			_PS_JS_DIR_.'hookLiveEdit.js'));
+			Tools::addCSS(_PS_CSS_DIR_.'jquery.fancybox-1.3.4.css');
+		}
+		$language = new Language($cookie->id_lang);
+		if ($language->is_rtl)
+			Tools::addCSS(_THEME_CSS_DIR_.'rtl.css');
+	}
+
 	public function displayHeader()
 	{
 		global $css_files, $js_files;
@@ -30,15 +47,70 @@ class FrontController extends FrontControllerCore
 			'HOOK_TOP' => Module::hookExec('top'),
 			'HOOK_LEFT_COLUMN' => Module::hookExec('leftColumn'),
 			'HOOK_RIGHT_COLUMN' => Module::hookExec('rightColumn'),//此处必须传递，否则在header.tpl中无法获知'HOOK_RIGHT_COLUMN'的真假
-			'HOOK_BHEAD_TOP' => Module::hookExec('displayBheadTop'),
-			'HOOK_BHEAD_BTM' => Module::hookExec('displayBheadBtm'),
-			'HOOK_BBODY_TOP' => Module::hookExec('displayBbodyTop'), 
-			'HOOK_MAIN_TOP' => Module::hookExec('displayMainTop'),
-			'HOOK_COM_SIDE' => Module::hookExec('displayComSide'),
-			'HOOK_COM_TOP' => Module::hookExec('displayComTop'),
-			'HOOK_COM_ASIDE' => Module::hookExec('displayComAside'),//此处必须传递，否则在header.tpl中无法获知'HOOK_COM_ASIDE'的真假
+			'HOOK_BHEAD_TOP'     => Module::hookExec('displayBheadTop'),
+			'HOOK_BHEAD_BTM'     => Module::hookExec('displayBheadBtm'),
+			'HOOK_BBODY_TOP'     => Module::hookExec('displayBbodyTop'), 
+			'HOOK_SIDE1_TOP'     => Module::hookExec('displaySide1Top'),
+			'HOOK_SIDE1_BTM'     => Module::hookExec('displaySide1Btm'),
+			'HOOK_MAIN_TOP'      => Module::hookExec('displayMainTop'),
+			'HOOK_CONTENT_SIDE1' => Module::hookExec('displayContentSide1'),
+			'HOOK_CONTENT_TOP'   => Module::hookExec('displayContentTop'),
+			'HOOK_CONTENT_BTM'   => Module::hookExec('displayContentBtm'),
+			'HOOK_CONTENT_SIDE2' => Module::hookExec('displayContentSide2'),//此处必须传递，否则在header.tpl中无法获知'HOOK_CONTENT_ASIDE'的真假
+			'HOOK_MAIN_BTM'      => Module::hookExec('displayMainBtm'), 
+			'HOOK_SIDE2_TOP'     => Module::hookExec('displaySide2Top'),
+			'HOOK_SIDE2_BTM'     => Module::hookExec('displaySide2Btm')
 		));
-
+		$page_array_left=array(
+			"no-index",
+			"no-search",
+			"no-category",
+			"prices-drop",
+			"new-products",
+			"all-products",
+			"best-sales",
+			"no-product",
+			"order",
+			"authentication",
+			"my-account",
+			"history",
+			"orde//r-slip",
+			"search",
+			"identity",
+			"discount",
+			"sendtoafriend-form",
+			"password",
+			"addresses",
+			"no-cms",
+			"contact-form");
+		self::$smarty->assign(array(
+			'page_array_left'=>$page_array_left
+		));
+		$page_array_right=array(
+			"index",
+			"no-search",
+			"category",
+			"prices-drop",
+			"new-products",
+			"all-products",
+			"best-sales",
+			"product",
+			"order",
+			"authentication",
+			"my-account",
+			"history",
+			"orde//r-slip",
+			"search",
+			"identity",
+			"discount",
+			"sendtoafriend-form",
+			"password",
+			"addresses",
+			"cms",
+			"contact-form");
+		self::$smarty->assign(array(
+			'page_array_right'=>$page_array_right
+		));
 		if ((Configuration::get('PS_CSS_THEME_CACHE') || Configuration::get('PS_JS_THEME_CACHE')) && is_writable(_PS_THEME_DIR_.'cache'))
 		{
 			// CSS compressor management
@@ -67,13 +139,13 @@ class FrontController extends FrontControllerCore
 			'content_only' => (int)Tools::getValue('content_only'),
 			//'hide_left_column' => 1,//1全隐，0全显；此处定义无效
 			//'hide_right_column' => 1,//1全隐，0全显；此处定义仅能在footer.tpl中强制改变已定义的'hide_right_column'的值，不建议在此定义
-			'HOOK_COM_BTM' => Module::hookExec('displayComBtm'),
-			'HOOK_COM_ASIDE' => Module::hookExec('displayComAside'),
-			'HOOK_MAIN_BTM' => Module::hookExec('displayMainBtm'),
-			'HOOK_BBODY_BTM' => Module::hookExec('displayBbodyBtm'),
-			'HOOK_BFOOT_TOP' => Module::hookExec('displayBfootTop'),
-			'HOOK_BFOOT_BTM' => Module::hookExec('displayBfootBtm'),
-			));
+			'HOOK_CONTENT_BTM'   => Module::hookExec('displayContentBtm'),
+			'HOOK_CONTENT_SIDE2' => Module::hookExec('displayContentSide2'),
+			'HOOK_MAIN_BTM'      => Module::hookExec('displayMainBtm'),
+			'HOOK_BBODY_BTM'     => Module::hookExec('displayBbodyBtm'),
+			'HOOK_BFOOT_TOP'     => Module::hookExec('displayBfootTop'),
+			'HOOK_BFOOT_BTM'     => Module::hookExec('displayBfootBtm')
+		));
 		self::$smarty->display(_PS_THEME_DIR_.'footer.tpl');
 		//live edit
 		if (Tools::isSubmit('live_edit') && $ad = Tools::getValue('ad') && Tools::getValue('liveToken') == sha1(Tools::getValue('ad')._COOKIE_KEY_))

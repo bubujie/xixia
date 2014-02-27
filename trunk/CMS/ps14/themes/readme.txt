@@ -1,6 +1,7 @@
 bug修复：
 prestashop
 prestashop_new
+	modules/blocklayered/blocklayered.tpl	此文件有bug，因此需先使用prestashop模板对应的文件替换之，然后添加新的布局控制锚记
 prestashop_mobile
 	identity.tpl
 		名字-姓氏，仅调整为适合中国

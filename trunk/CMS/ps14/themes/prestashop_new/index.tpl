@@ -24,4 +24,32 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
+{if $HOOK_MAIN_TOP}
+<div id="main_top">
+{$HOOK_MAIN_TOP}
+</div>
+{/if}
+
+<div class="rowi">
+  <div class="filli {if $HOOK_CONTENT_SIDE1}v{/if}w{if $HOOK_CONTENT_SIDE2}v{/if}">
+{if $HOOK_CONTENT_SIDE1}
+    <div id="content_side1" class="v1">
+{$HOOK_CONTENT_SIDE1}
+    </div>
+{/if}
+    <div id="content" class="wing">
 {$HOOK_HOME}
+    </div>
+{if $HOOK_CONTENT_SIDE2}
+    <div id="content_side2" class="v2">
+  {$HOOK_CONTENT_SIDE2}
+    </div>
+{/if}
+  </div>
+</div>
+
+{if $HOOK_MAIN_BTM}
+<div id="main_btm">
+{$HOOK_MAIN_BTM}
+</div>
+{/if}

@@ -20,11 +20,14 @@ $_MODULE['<{blocklayered}prestashop>blocklayered_93cba07454f06a4a960172bbd6e2a43
 $_MODULE['<{blocklayered}prestashop>blocklayered_bafd7322c6e97d25b6299b5d6fe8920b'] = '否';
 $_MODULE['<{blocklayered}prestashop>blocklayered_3601146c4e948c32b6424d2c0a7f0118'] = '价格';
 $_MODULE['<{blocklayered}prestashop>blocklayered_8c489d0946f66d17d73f26366a4bf620'] = '重量';
-$_MODULE['<{blocklayered}prestashop>blocklayered_03c2e7e41ffc181a4e84080b4710e81e'] = '新的';
-$_MODULE['<{blocklayered}prestashop>blocklayered_019d1ca7d50cc54b995f60d456435e87'] = '已使用';
+$_MODULE['<{blocklayered}prestashop>blocklayered_03c2e7e41ffc181a4e84080b4710e81e'] = '全新';
+$_MODULE['<{blocklayered}prestashop>blocklayered_019d1ca7d50cc54b995f60d456435e87'] = '二手';
+$_MODULE['<{blocklayered}prestashop>blocklayered_6da03a74721a0554b7143254225cc08a'] = '翻新';
+$_MODULE['<{blocklayered}prestashop>blocklayered_9e2941b3c81256fac10392aaca4ccfde'] = '条件';
+$_MODULE['<{blocklayered}prestashop>blocklayered_fcebe56087b9373f15514831184fa572'] = '有库存';
 $_MODULE['<{blocklayered}prestashop>blocklayered_faeaec9eda6bc4c8cb6e1a9156a858be'] = '可购买：';
 $_MODULE['<{blocklayered}prestashop>blocklayered_c0bd7654d5b278e65f21cf4e9153fdb4'] = '生产厂家';
-$_MODULE['<{blocklayered}prestashop>blocklayered_c32516babc5b6c47eb8ce1bfc223253c'] = '分类';
+$_MODULE['<{blocklayered}prestashop>blocklayered_c32516babc5b6c47eb8ce1bfc223253c'] = '商品筛选';
 $_MODULE['<{blocklayered}prestashop>blocklayered_ea4788705e6873b424c65e91c2846b19'] = '取消';
 $_MODULE['<{blocklayered}prestashop>blocklayered_853ae90f0351324bd73ea615e6487517'] = '：';
 $_MODULE['<{blocklayered}prestashop>blocklayered_5da618e8e4b89c66fe86e32cdafde142'] = '来源于';

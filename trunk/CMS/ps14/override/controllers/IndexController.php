@@ -32,40 +32,22 @@ class IndexController extends IndexControllerCore
 	
 		parent::__construct();
 	}
-
-    public function setMedia()
-    {
-        parent::setMedia();
-        Tools::addCSS(array(
-            _PS_CSS_DIR_.'jquery.cluetip.css' => 'all',
-            _THEME_CSS_DIR_.'scenes.css' => 'all'));
-    }
-
+	
 	public function process()
 	{
 		parent::process();
 		self::$smarty->assign('HOOK_HOME', Module::hookExec('home'));
-
-        self::$smarty->assign('scenes', Scene::getScenes((int)(1), (int)(self::$cookie->id_lang), true, false));
-                        /* Scenes images formats */
-                if ($sceneImageTypes = ImageType::getImagesTypes('scenes'))
-                {
-                    foreach ($sceneImageTypes AS $sceneImageType)
-                    {
-                        if ($sceneImageType['name'] == 'thumb_scene')
-                            $thumbSceneImageType = $sceneImageType;
-                        elseif ($sceneImageType['name'] == 'large_scene')
-                            $largeSceneImageType = $sceneImageType;
-                    }
-                    self::$smarty->assign('thumbSceneImageType', isset($thumbSceneImageType) ? $thumbSceneImageType : NULL);
-                    self::$smarty->assign('largeSceneImageType', isset($largeSceneImageType) ? $largeSceneImageType : NULL);
-                }
+self::$smarty->assign('HOOK_MAIN_TOP' ,      Module::hookExec('displayMainTop'));
+self::$smarty->assign('HOOK_CONTENT_SIDE1' , Module::hookExec('displayContentSide1'));
+//self::$smarty->assign('HOOK_CONTENT_TOP' ,   Module::hookExec('displayContentTop'));
+//self::$smarty->assign('HOOK_CONTENT_BTM' ,   Module::hookExec('displayContentBtm'));
+self::$smarty->assign('HOOK_CONTENT_SIDE2' , Module::hookExec('displayContentSide2'));
+self::$smarty->assign('HOOK_MAIN_BTM' ,      Module::hookExec('displayMainBtm'));
 	}
-/*
-	public function displayContent()
+	
+/*	public function displayContent()
 	{
 		parent::displayContent();
 		self::$smarty->display(_PS_THEME_DIR_.'index.tpl');
-	}
-*/
+	}*/
 }

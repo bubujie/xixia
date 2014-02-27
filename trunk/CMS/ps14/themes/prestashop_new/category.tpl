@@ -27,6 +27,11 @@
 {include file="$tpl_dir./breadcrumb.tpl"}
 {include file="$tpl_dir./errors.tpl"}
 
+{if $HOOK_MAIN_TOP}
+<div id="main_top">
+{$HOOK_MAIN_TOP}
+</div>
+{/if}
 {if isset($category)}
 	{if $category->id AND $category->active}
 		<h1>{strip}{$category->name|escape:'htmlall':'UTF-8'}{/strip}</h1>
