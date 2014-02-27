@@ -26,10 +26,49 @@
 
 {capture name=path}{l s='Sitemap'}{/capture}
 {include file="$tpl_dir./breadcrumb.tpl"}
-
+<script type="text/javascript">
+jQuery(function($){
+	// Tree Navigation
+	var tNav = $('.sitemap_block,.categTree');
+	var tNavPlus = '\<button type=\"button\" class=\"tNavToggle plus\"\>+\<\/button\>';
+	var tNavMinus = '\<button type=\"button\" class=\"tNavToggle minus\"\>-\<\/button\>';
+	tNav.find('li>ul').css('display','none');
+	tNav.find('ul>li:last-child').addClass('last');
+	tNav.find('li>ul:hidden').parent('li').prepend(tNavPlus);
+	tNav.find('li>ul:visible').parent('li').prepend(tNavMinus);
+	tNav.find('li.active').addClass('open').parents('li').addClass('open');
+	tNav.find('li.open').parents('li').addClass('open');
+	tNav.find('li.open>.tNavToggle').text('-').removeClass('plus').addClass('minus');
+	tNav.find('li.open>ul').slideDown(100);
+	$('.categTree .tNavToggle').click(function(){
+		t = $(this);
+		t.parent('li').toggleClass('open');
+		if(t.parent('li').hasClass('open')){
+			t.text('-').removeClass('plus').addClass('minus');
+			t.parent('li').find('>ul').slideDown(100);
+		} else {
+			t.text('+').removeClass('minus').addClass('plus');
+			t.parent('li').find('>ul').slideUp(100);
+		}
+		return false;
+	});
+	$('.tNav a[href=#]').click(function(){
+		t = $(this);
+		t.parent('li').toggleClass('open');
+		if(t.parent('li').hasClass('open')){
+			t.prev('button.tNavToggle').text('-').removeClass('plus').addClass('minus');
+			t.parent('li').find('>ul').slideDown(100);
+		} else {
+			t.prev('button.tNavToggle').text('+').removeClass('minus').addClass('plus');
+			t.parent('li').find('>ul').slideUp(100);
+		}
+		return false;
+	});
+});
+</script>
 <h1>{l s='Sitemap'}</h1>
-<div id="sitemap_content" class="clearfix">
-	<div class="sitemap_block">
+<div id="sitemap_content" class="ding">
+	<div class="sitemap_block w-1-2 xfl ding">
 		<h3>{l s='Our offers'}</h3>
 		<ul>
 			<li><a href="{$link->getPageLink('new-products.php')}">{l s='New products'}</a></li>
@@ -41,7 +80,7 @@
 			{if $display_supplier_link OR $PS_DISPLAY_SUPPLIERS}<li><a href="{$link->getPageLink('supplier.php')}">{l s='Suppliers'}</a></li>{/if}
 		</ul>
 	</div>
-	<div class="sitemap_block">
+	<div class="sitemap_block w-1-2 xfl ding">
 		<h3>{l s='Your Account'}</h3>
 		<ul>
 			<li><a href="{$link->getPageLink('my-account.php', true)}">{l s='Your Account'}</a></li>
@@ -53,8 +92,8 @@
 	</div>
 	<br class="clear" />
 </div>
-<div id="listpage_content">
-	<div class="categTree">
+<div id="listpage_content" class="ding">
+	<div class="categTree w-1-2 xfl ding">
 		<h3>{l s='Categories'}</h3>
 		<div class="tree_top"><a href="{$base_dir_ssl}">{$categoriesTree.name|escape:'htmlall':'UTF-8'}</a></div>
 		<ul class="tree">
@@ -69,7 +108,7 @@
 		{/if}
 		</ul>
 	</div>
-	<div class="categTree">
+	<div class="categTree w-1-2 xfl ding">
 		<h3>{l s='Pages'}</h3>
 		<div class="tree_top"><a href="{$categoriescmsTree.link}">{$categoriescmsTree.name|escape:'htmlall':'UTF-8'}</a></div>
 		<ul class="tree">

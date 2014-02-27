@@ -1,4 +1,4 @@
-#sitemap_content {margin-left: 20px}
+/*#sitemap_content {margin-left: 20px}
 #sitemap_content .sitemap_block h3, 
 #sitemap_content .categTree h3 {margin: 20px 0 0 0}
 
@@ -36,3 +36,20 @@
    border: medium none;
    background: url(../img/sitemap-last.gif) no-repeat -12px -2px transparent
 }
+*/
+.tree_top{line-height:20px;margin:0;padding:0;padding-left:20px;background:url(../img/tree/base/tab_top.gif) 2px top no-repeat;}
+/* Tree Navigation */
+.sitemap_block,.categTree{position:relative;margin:1em 0;zoom:1;width:48%;float:left;}
+.sitemap_block ul,.categTree ul{list-style:none;margin:0;padding:0}
+.sitemap_block ul ul,.categTree ul ul{margin:0 0 0 -3px}
+.sitemap_block li,.categTree li{position:relative;padding:0 0 0 22px;white-space:nowrap;line-height:20px;background:url(../img/tree/base/lineTree.gif) no-repeat 9px top;*zoom:1}
+.sitemap_block li.last,.categTree li.last{background-position:9px -1990px}
+.sitemap_block li.active a,.categTree li.active a{font-weight:bold;color:#333}
+.sitemap_block li.active li a,.categTree li.active li a{font-weight:normal;color:#767676}
+.sitemap_block a,.categTree a{text-decoration:none;color:#767676}
+.sitemap_block a:hover,.categTree a:hover,
+.sitemap_block a:active,.categTree a:active,
+.sitemap_block a:focus,.categTree a:focus{text-decoration:underline}
+.categTree .tNavToggle{position:absolute;top:0;left:0;width:19px;height:19px;padding:0;overflow:hidden;border:0;font-size:0;color:#fff;vertical-align:middle;text-indent:19px;*text-indent:0;background:transparent url(../img/tree/base/btnPlusMinus.gif) no-repeat;cursor:pointer}
+.categTree .tNavToggle.plus{background-position:5px -15px}
+.categTree .tNavToggle.minus{background-position:5px 5px}

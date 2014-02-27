@@ -72,9 +72,9 @@ INSERT INTO `PREFIX_module` (`id_module`, `name`, `active`) VALUES
 (8, 'blockbestsellers', 1),
 (9, 'blockcart', 1),
 (10, 'blockcategories', 1),
-(11, 'blockcurrencies', 1),
+(11, 'blockcurrencies', 0),
 (12, 'blockcms', 1),
-(13, 'blocklanguages', 1),
+(13, 'blocklanguages', 0),
 (14, 'blockmanufacturer', 1),
 (15, 'blockmyaccount', 1),
 (16, 'blocknewproducts', 1),
@@ -130,20 +130,8 @@ CREATE TABLE IF NOT EXISTS `PREFIX_linksmenutop_lang` (
 INDEX ( `id_link` , `id_lang` )
 ) ENGINE=ENGINE_TYPE DEFAULT CHARSET=utf8;
 
-INSERT INTO `PREFIX_hook` (`id_hook`, `name`, `title`, `description`, `position`) VALUES
-(96, 'myAccountBlock', 'My account block', 'Display extra informations inside the "my account" block', 1),
-(97, 'displayBheadTop', 'Bhead-Top', '页眉主区域之前', 1),
-(98, 'displayBheadBtm', 'Bhead-Btm', '页眉主区域之后', 1),
-(99, 'displayBbodyTop', 'Bbody-Top', '主区域之前', 1),
-(100, 'displayMainTop',  'Main-Top',  '主体之前', 1),
-(101, 'displayComSide',  'Com-Side',  '组件主侧边', 1),
-(102, 'displayComTop',   'Com-Top',  '组件之前', 1),
-(103, 'displayComBtm',   'Com-Btm', '组件之后', 1),
-(104, 'displayComAside', 'Com-Aside', '组件副侧边', 1),
-(105, 'displayMainBtm',  'Main-Btm',  '主体之后', 1),
-(106, 'displayBbodyBtm', 'Bbody-Btm', '主区域之后', 1),
-(107, 'displayBfootTop', 'Bfoot-Top', '页脚主区域之前', 1),
-(108, 'displayBfootBtm', 'Bfoot-Btm', '页脚主区域之后', 1);
+INSERT INTO `PREFIX_hook` (`name`, `title`, `description`, `position`) VALUES
+	('myAccountBlock', 'My account block', 'Display extra informations inside the "my account" block', 1);
 
 INSERT INTO `PREFIX_hook_module` (`id_module`, `id_hook`, `position`) VALUES
 (3, 1, 1),
@@ -237,7 +225,7 @@ INSERT INTO `PREFIX_hook_module` (`id_module`, `id_hook`, `position`) VALUES
 (56, 9, 1),
 (56, 50, 1),
 (56, 54, 1),
-(57, 98, 1);
+(57, 97, 1);
 
 CREATE TABLE `PREFIX_pagenotfound` (
   `id_pagenotfound` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,

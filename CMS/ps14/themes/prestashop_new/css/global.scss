@@ -1,0 +1,18 @@
+@charset "utf-8";
+@import "global-old";
+//编码保持
+.product_view #product_view_grid,.product_view #product_view_list{
+float: left;
+width: 25px;
+height: 22px;
+margin-left: -1px;
+background: url('../img/icon/ico_list_array.gif') no-repeat 0 0;
+font-size: 0;
+text-indent: -9999px;
+}
+.product_view #product_view_list {
+background-position: -24px 0;
+}
+.product_view .current {
+background-position-y: -22px !important;
+}

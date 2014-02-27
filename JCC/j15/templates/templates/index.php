@@ -11,7 +11,7 @@
 defined('_JEXEC') or die;
 /* ######### ######### ######### 注释 ######### ######### ######### */
 $showBheadTop = ($this->countModules('bhead-top')  || 0); //bhead-top
-$showBheadMid = ($this->countModules('bhead-mid')  || 0); //bhead-mid
+$showBhead    = ($this->countModules('bhead')      || 0); //bhead
 $showBheadBtm = ($this->countModules('bhead-btm')  || 0); //bhead-btm
 /* ######### ######### 注释 ######### ######### */
 $showBbodyTop = ($this->countModules('bbody-top')  || 0); //bbody-top
@@ -37,7 +37,7 @@ $showSide2   &= JRequest::getCmd('task')   != 'edit'; //基于1.5beez
 $showBbodyBtm = ($this->countModules('bbody-btm')  || 0); //bbody-btm
 /* ######### ######### 注释 ######### ######### */
 $showBfootTop = ($this->countModules('bfoot-top')  || 0); //bfoot-top
-$showBfootMid = ($this->countModules('bfoot-mid')  || 0); //bfoot-mid
+$showBfoot    = ($this->countModules('bfoot')      || 0); //bfoot
 $showBfootBtm = ($this->countModules('bfoot-btm')  || 0); //bfoot-btm
 /* ######### ######### ######### 注释 ######### ######### ######### */
 // 1.5不支持 JHTML::_('behavior.framework', true);
@@ -114,7 +114,7 @@ endif;
 ?>
         </div>
         <div class="ming">
-<jdoc:include type="modules" name="bhead-mid" style="division" headerLevel="3" />
+<jdoc:include type="modules" name="bhead" style="division" headerLevel="3" />
 <jdoc:include type="modules" name="search" style="division" headerLevel="3" />
 	    </div>
 	  </div>
@@ -247,7 +247,7 @@ endif;
   	<div class="rowo">
       <div class="fillo <?php if($bfootLogo){ echo 'n'; } ?>m">
         <div class="ming">
-<jdoc:include type="modules" name="bfoot-mid" style="division" headerLevel="3" />
+<jdoc:include type="modules" name="bfoot" style="division" headerLevel="3" />
           <div class="quick">
             <a href="<?php echo $this->baseurl; ?>"><img src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template;?>/img/btn_home.gif" alt="<?php echo JText::_('HOME'); ?>" /></a>
             <a href="javascript:history.back();"><img src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template;?>/img/btn_back.gif" alt="<?php echo JText::_('BACK'); ?>" /></a>

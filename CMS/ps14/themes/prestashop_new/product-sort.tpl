@@ -35,7 +35,8 @@
 {else}
 	{assign var='request' value=$link->getPaginationLink(false, false, false, true)}
 {/if}
-<form id="productsSortForm" action="{$request|escape:'htmlall':'UTF-8'}">
+<div class="ding">
+<form id="productsSortForm" action="{$request|escape:'htmlall':'UTF-8'}" class="xfl">
 	<p class="select">
 		<label for="selectPrductSort">{l s='Sort by'}</label>
 		<select id="selectPrductSort" onchange="document.location.href = $(this).val();">
@@ -53,4 +54,9 @@
 	</p>
 </form>
 <!-- /Sort products -->
+<ul class="product_view xfr">
+	<li id="product_view_grid" class="current">grid</li>
+	<li id="product_view_list">list</li>
+</ul>
+</div>
 {/if}
