@@ -41,7 +41,7 @@ class plgContentchangyan extends JPlugin
      * Method is called by the view and the results are imploded and displayed in a placeholder
      *
      * @param  string  $context     The context for the content passed to the plugin.
-     * @param  object  &$article    The content object.  Note $article->text is also available
+     * @param  object  &$article    The content object.  Note @$row->text is also available
      * @param  object  &$params     The content params
      * @param  int     $limitstart  The 'page' number
      *
@@ -58,7 +58,7 @@ class plgContentchangyan extends JPlugin
             if($view=='category' || $view=='frontpage' || $view=='article'){
                 $context='com_content.article';
             }
-            $duoshuoArea="<a name=\"comments\"></a><div id=\"SOHUCS\" sid=\"".$context.".".$article->id."\"></div>
+            $duoshuoArea="<a name=\"comments\"></a><div id=\"SOHUCS\" sid=\"".$context.".".@$row->id."\"></div>
 <script>
 	(function(){
 		var appid = 'cyqLttHmL',
@@ -75,7 +75,7 @@ class plgContentchangyan extends JPlugin
 </script>"/*.print_r($context,true)*/;
       
             $duoshuoCount="
-<a href=\"#changyan_area\" id=\"changyan_count_unit\" sid=\"".$context.".".$article->id."\"></a>";      
+<a href=\"#changyan_area\" id=\"changyan_count_unit\" sid=\"".$context.".".@$row->id."\"></a>";      
             if($view == 'article'){
                 return $duoshuoArea;
             }else{
@@ -109,7 +109,7 @@ class plgContentchangyan extends JPlugin
      * Method is called by the view and the results are imploded and displayed in a placeholder
      *
      * @param  string  $context     The context for the content passed to the plugin.
-     * @param  object  &$article    The content object.  Note $article->text is also available
+     * @param  object  &$article    The content object.  Note @$row->text is also available
      * @param  object  &$params     The content params
      * @param  int     $limitstart  The 'page' number
      *
@@ -139,7 +139,7 @@ class plgContentchangyan extends JPlugin
      * Method is called by the view and the results are imploded and displayed in a placeholder
      *
      * @param  string  $context     The context for the content passed to the plugin.
-     * @param  object  &$article    The content object.  Note $article->text is also available
+     * @param  object  &$article    The content object.  Note @$row->text is also available
      * @param  object  &$params     The content params
      * @param  int     $limitstart  The 'page' number
      *
@@ -151,9 +151,9 @@ class plgContentchangyan extends JPlugin
         // Admin check
 		if($mainframe->isAdmin()) return;
     	if($context=='com_content.article') :
-        $duoshuoLink='<a href="'. JRoute::_(ContentHelperRoute::getArticleRoute(@$article->slug, @$article->catslug , false)) .'#comments'.'" class="">留言反馈</a>';
+        $duoshuoLink='<a href="'. JRoute::_(ContentHelperRoute::getArticleRoute(@$row->slug, @$row->catslug , false)) .'#comments'.'" class="">留言反馈</a>';
         else :
-        $duoshuoLink='<a href="'. JRoute::_(ContentHelperRoute::getArticleRoute(@$article->slug, @$article->catid.':'.@$article->category_alias).'#comments').'" class="">留言</a>';
+        $duoshuoLink='<a href="'. JRoute::_(ContentHelperRoute::getArticleRoute(@$row->slug, @$row->catid.':'.@$row->category_alias).'#comments').'" class="">留言</a>';
         endif;
         return $duoshuoLink/*.'<pre>'.print_r($article,true).'</pre>'*/;
     }//function
@@ -164,7 +164,7 @@ class plgContentchangyan extends JPlugin
      * Method is called right before content is saved into the database.
      * Article object is passed by reference, so any changes will be saved!
      * NOTE:  Returning false will abort the save with an error.
-     * You can set the error by calling $article->setError($message)
+     * You can set the error by calling @$row->setError($message)
      *
      * @param  string  $context   The context of the content passed to the plugin.
      * @param  object  &$article  A JTableContent object
@@ -197,7 +197,7 @@ class plgContentchangyan extends JPlugin
      * Method is called by the view
      *
      * @param  string  $context     The context of the content being passed to the plugin.
-     * @param  object  &$article    The content object.  Note $article->text is also available
+     * @param  object  &$article    The content object.  Note @$row->text is also available
      * @param  object  &$params     The content params
      * @param  int     $limitstart  The 'page' number
      */
