@@ -47,10 +47,13 @@ class plgContentchangyan extends JPlugin
      *
      * @return string
      */
-    public function onContentAfterDisplay($context, &$article, &$params, $limitstart)
+    public function onContentAfterDisplay($context, &$row, &$params, $page=0)
     {
         $option     = JRequest::getCmd('option');
         $view       = JRequest::getCmd('view');
+        $mainframe	= JFactory::getApplication();
+        // Admin check
+		if($mainframe->isAdmin()) return;
         if($option=='com_content'){
             if($view=='category' || $view=='frontpage' || $view=='article'){
                 $context='com_content.article';
@@ -142,8 +145,11 @@ class plgContentchangyan extends JPlugin
      *
      * @return string
      */
-    public function onContentBeforeDisplay($context, &$article, &$params, $limitstart)
+    public function onContentBeforeDisplay($context, &$row, &$params, $page=0)
     {
+    	$mainframe	= JFactory::getApplication();
+        // Admin check
+		if($mainframe->isAdmin()) return;
     	if($context=='com_content.article') :
         $duoshuoLink='<a href="'. JRoute::_(ContentHelperRoute::getArticleRoute(@$article->slug, @$article->catslug , false)) .'#comments'.'" class="">留言反馈</a>';
         else :
@@ -166,7 +172,7 @@ class plgContentchangyan extends JPlugin
      *
      * @return  boolean  If false, abort the save
      */
-    public function onContentBeforeSave($context, &$article, $isNew)
+    public function onContentBeforeSave($context, $article, $isNew)
     {
         return true;
     }//function
