@@ -26,7 +26,7 @@ a:hover, a:active, a:focus {text-decoration:underline;}
 .hide{ position:absolute; left:0; top:0; width:1px; height:1px; font-size:0; line-height:0; visibility:hidden;}
 @include tuding($layout,$wrapping,$n1,$n2,$space,$incInner,$v1,$v2);
 /* ######### ######### ######### Pagination ######### ######### ######### */
-@include btnArea('.pagenav, .pagination .counter, .pagination ul');
+.pagenav, .pagination .counter, .pagination ul{@extend %btnArea;}
 .pagenavcounter, .pagenav, .pagination ul{margin:1em 0;padding:0;list-style:none;}
 .pagenav .pagenav-prev{float:left;}
 .pagenav .pagenav-next{float:right;}
