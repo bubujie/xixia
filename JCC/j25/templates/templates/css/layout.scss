@@ -6,7 +6,7 @@ $wrapping:96%;
 $n1:200px;
 $n2:200px;
 $space:1px;
-$incInner:false;
+$incInner:true;
 $v1:160px;
 $v2:160px;
 
@@ -67,7 +67,17 @@ margin: 0;
 //@include tuding_h_2cols($wrapping,$v1,$v2,-1,$space);
 //@include tuding_1col('',1);
 //@include tuding_1col('',0);
-
+#comment_sohu .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w {
+width: 107px;
+height: 30px;
+}
+#comment_sohu .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w a {
+width: 107px;
+height: 30px;
+padding: 0px;
+display: block;
+text-decoration: none;
+}
 @media screen and (max-width:1100px) {
 	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,null,0,2);
 	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,'',0,-1);
