@@ -51,9 +51,10 @@ class plgContentchangyan extends JPlugin
     {
         $option     = JRequest::getCmd('option');
         $view       = JRequest::getCmd('view');
+        $isPrinting = JRequest::getCmd('print');
         $mainframe	= JFactory::getApplication();
         // Admin check
-		if($mainframe->isAdmin()) return;
+		if($mainframe->isAdmin() || $isPrinting) return;
         if($option=='com_content'){
             if($view=='category' || $view=='frontpage' || $view=='article'){
                 $context='com_content.article';
@@ -148,8 +149,9 @@ class plgContentchangyan extends JPlugin
     public function onContentBeforeDisplay($context, &$row, &$params, $page=0)
     {
     	$mainframe	= JFactory::getApplication();
+    	$isPrinting = JRequest::getCmd('print');
         // Admin check
-		if($mainframe->isAdmin()) return;
+		if($mainframe->isAdmin() || $isPrinting) return;
     	//if($context=='com_content.article') :
 		switch ($context) {
 			case 'com_content.article':
