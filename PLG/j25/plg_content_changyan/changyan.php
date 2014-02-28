@@ -80,7 +80,7 @@ class plgContentchangyan extends JPlugin
                 return $duoshuoArea;
             }else{
         $document = JFactory::getDocument();
-        $document->addScriptDeclaration("var duoshuoQuery = {short_name:\"tuding\"};\n");
+        //$document->addScriptDeclaration("var duoshuoQuery = {short_name:\"tuding\"};\n");
         $document->addScript("http://assets.changyan.sohu.com/upload/plugins/plugins.count.js");
                 return $duoshuoCount;
             }
@@ -153,7 +153,13 @@ class plgContentchangyan extends JPlugin
     	if($context=='com_content.article') :
         $duoshuoLink='<a href="'. JRoute::_(ContentHelperRoute::getArticleRoute(@$row->slug, @$row->catslug , false)) .'#comments'.'" class="">留言反馈</a>';
         else :
+
+        $document = JFactory::getDocument();
+        //$document->addScriptDeclaration("var duoshuoQuery = {short_name:\"tuding\"};\n");
+        $document->addScript("http://assets.changyan.sohu.com/upload/plugins/plugins.count.js");
+
         $duoshuoLink='<a href="'. JRoute::_(ContentHelperRoute::getArticleRoute(@$row->slug, @$row->catid.':'.@$row->category_alias).'#comments').'" class="">留言</a>';
+        $duoshuoLink.='<span id = "sourceId::'.$context.".".@$row->id.'" class = "cy_cmt_count" >评论数</span>';
         endif;
         return $duoshuoLink/*.'<pre>'.print_r($article,true).'</pre>'*/;
     }//function
