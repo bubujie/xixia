@@ -150,18 +150,25 @@ class plgContentchangyan extends JPlugin
     	$mainframe	= JFactory::getApplication();
         // Admin check
 		if($mainframe->isAdmin()) return;
-    	if($context=='com_content.article') :
-        $duoshuoLink='<a href="'. JRoute::_(ContentHelperRoute::getArticleRoute(@$row->slug, @$row->catslug , false)) .'#comments'.'" class="">留言反馈</a>';
-        elseif($context=='com_content.category') :
-        $document = JFactory::getDocument();
-        //$document->addScriptDeclaration("var duoshuoQuery = {short_name:\"tuding\"};\n");
-        //$document->addScript("http://assets.changyan.sohu.com/upload/plugins/plugins.count.js");
-
-        $duoshuoLink='<a href="'. JRoute::_(ContentHelperRoute::getArticleRoute(@$row->slug, @$row->catid.':'.@$row->category_alias).'#comments').'" class="">留言</a>';
-        $duoshuoLink.='<span id = "sourceId::com_content.article.'.@$row->id.'" class = "cy_cmt_count" >评论数</span>';
-        endif;
-        return $duoshuoLink/*.'<pre>'.print_r($article,true).'</pre>'*/;
-    }//function
+    	//if($context=='com_content.article') :
+		switch ($context) {
+			case 'com_content.article':
+				$duoshuoLink='<a href="'. JRoute::_(ContentHelperRoute::getArticleRoute(@$row->slug, @$row->catslug , false)) .'#comments'.'" class="">留言反馈</a>';
+				break;
+			case 'com_content.category':
+			case 'com_content.featured':
+				$document = JFactory::getDocument();
+				//$document->addScriptDeclaration("var duoshuoQuery = {short_name:\"tuding\"};\n");
+				//$document->addScript("http://assets.changyan.sohu.com/upload/plugins/plugins.count.js");
+				$duoshuoLink='<a href="'. JRoute::_(ContentHelperRoute::getArticleRoute(@$row->slug, @$row->catid.':'.@$row->category_alias).'#comments').'" class="">留言</a>';
+				$duoshuoLink.='<span id = "sourceId::com_content.article.'.@$row->id.'" class = "cy_cmt_count" >评论数</span>';
+				break;
+			default:
+				$duoshuoLink='<div style="font-weight:bold;">'.$context.'</div>';
+				break;
+		}
+		return $duoshuoLink;/*.'<pre>'.print_r($article,true).'</pre>'*/
+	}//function
 
     /**
      * Example before save content method
