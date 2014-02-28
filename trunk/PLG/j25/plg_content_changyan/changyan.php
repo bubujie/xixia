@@ -55,11 +55,10 @@ class plgContentchangyan extends JPlugin
         $mainframe	= JFactory::getApplication();
         // Admin check
 		if($mainframe->isAdmin() || $isPrinting) return;
-        if($option=='com_content'){
-            if($view=='category' || $view=='frontpage' || $view=='article'){
-                $context='com_content.article';
-            }
-            $duoshuoArea="<a name=\"comments\"></a><div id=\"SOHUCS\" sid=\"".$context.".".@$row->id."\"></div>
+		switch ($context) {
+			case 'com_content.article':
+				//$changyanCount='<a href="#changyan_area" id="changyan_count_unit" sid="com_content.article.'.@$row->id.'"></a>';      
+				$changyanArea="<a name=\"comments\"></a><div id=\"SOHUCS\" sid=\"com_content.article.".@$row->id."\"></div>
 <script>
 	(function(){
 		var appid = 'cyqLttHmL',
@@ -73,19 +72,20 @@ class plgContentchangyan extends JPlugin
 		h.insertBefore(s,h.firstChild);
 		window.SCS_NO_IFRAME = true;
 	})()
-</script>"/*.print_r($context,true)*/;
-      
-            $duoshuoCount="
-<a href=\"#changyan_area\" id=\"changyan_count_unit\" sid=\"".$context.".".@$row->id."\"></a>";      
-            if($view == 'article'){
-                return $duoshuoArea;
-            }else{
-        $document = JFactory::getDocument();
-        //$document->addScriptDeclaration("var duoshuoQuery = {short_name:\"tuding\"};\n");
-        //$document->addScript("http://assets.changyan.sohu.com/upload/plugins/plugins.count.js");
-                return $duoshuoCount;
-            }
-        }
+</script>";
+				return $changyanArea;
+				break;
+			case 'com_content.category':
+			case 'com_content.featured':
+			default :
+				$changyanArea='';
+				//$changyanCount='<a href="#changyan_area" id="changyan_count_unit" sid="com_content.article.'.@$row->id.'"></a>';
+				break;
+		}
+		//$document = JFactory::getDocument();
+		//$document->addScriptDeclaration("var duoshuoQuery = {short_name:\"tuding\"};\n");
+		//$document->addScript("http://assets.changyan.sohu.com/upload/plugins/plugins.count.js");
+		//return $changyanCount;
     }//function
 
     /**
@@ -155,21 +155,21 @@ class plgContentchangyan extends JPlugin
     	//if($context=='com_content.article') :
 		switch ($context) {
 			case 'com_content.article':
-				$duoshuoLink='<a href="'. JRoute::_(ContentHelperRoute::getArticleRoute(@$row->slug, @$row->catslug , false)) .'#comments'.'" class="">留言反馈</a>';
+				$changyanLink='<a href="'. JRoute::_(ContentHelperRoute::getArticleRoute(@$row->slug, @$row->catslug , false)) .'#comments'.'" class="">留言反馈</a>';
 				break;
 			case 'com_content.category':
 			case 'com_content.featured':
 				$document = JFactory::getDocument();
 				//$document->addScriptDeclaration("var duoshuoQuery = {short_name:\"tuding\"};\n");
 				//$document->addScript("http://assets.changyan.sohu.com/upload/plugins/plugins.count.js");
-				$duoshuoLink='<a href="'. JRoute::_(ContentHelperRoute::getArticleRoute(@$row->slug, @$row->catid.':'.@$row->category_alias).'#comments').'" class="">留言</a>';
-				$duoshuoLink.='<span id = "sourceId::com_content.article.'.@$row->id.'" class = "cy_cmt_count" >评论数</span>';
+				$changyanLink='<a href="'. JRoute::_(ContentHelperRoute::getArticleRoute(@$row->slug, @$row->catid.':'.@$row->category_alias).'#comments').'" class="">留言</a>';
+				$changyanLink.='<span id = "sourceId::com_content.article.'.@$row->id.'" class = "cy_cmt_count" >评论数</span>';
 				break;
 			default:
-				$duoshuoLink='<div style="font-weight:bold;">'.$context.'</div>';
+				$changyanLink='<div style="font-weight:bold;">'.$context.'</div>';
 				break;
 		}
-		return $duoshuoLink;/*.'<pre>'.print_r($article,true).'</pre>'*/
+		return $changyanLink;/*.'<pre>'.print_r($article,true).'</pre>'*/
 	}//function
 
     /**
