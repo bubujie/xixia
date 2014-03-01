@@ -32,8 +32,10 @@
   </media>
   <positions>
     <position>debug</position>
-    <position>breadcrumbs</position>
     <position>search</position>
+    <position>banners</position>
+    <position>mainmenu</position>
+    <position>breadcrumbs</position>
     <position>bhead-top</position>
     <position>bhead</position>
     <position>bhead-btm</position>
@@ -61,16 +63,22 @@
     <language tag="en-GB">en-GB/en-GB.tpl_##template##.sys.ini</language>
     <language tag="zh-CN">zh-CN/zh-CN.tpl_##template##.ini</language>
     <language tag="zh-CN">zh-CN/zh-CN.tpl_##template##.sys.ini</language>
-  </languages>       
+  </languages>
+  <params>
+    <param name="bheadLogo" type="text" default="logo_header.png" label="TPL_##TEMPLATE##_FIELD_BHEADLOGO_LABEL" description="TPL_##TEMPLATE##_FIELD_BHEADLOGO_DESC" filter="string" />
+    <param name="bfootLogo" type="text" default="logo_footer.png" label="TPL_##TEMPLATE##_FIELD_BFOOTLOGO_LABEL" description="TPL_##TEMPLATE##_FIELD_BFOOTLOGO_DESC" filter="string" />
+    <param name="siteTitle" type="text" default="步步街工作室"    label="TPL_##TEMPLATE##_FIELD_SITETITLE_LABEL" description="TPL_##TEMPLATE##_FIELD_SITETITLE_DESC" filter="string" />
+    <param name="siteDesc"  type="text" default="步步街工作室"    label="TPL_##TEMPLATE##_FIELD_SITEDESC_LABEL"  description="TPL_##TEMPLATE##_FIELD_SITEDESC_DESC"  filter="string" />
+  </params>
   <config>
     <fields name="params">
       <fieldset name="advanced">
-        <field name="bheadLogo" type="text" default="logo_header.png"    label="TPL_##TEMPLATE##_FIELD_BHEADLOGO_LABEL" description="TPL_##TEMPLATE##_FIELD_BHEADLOGO_DESC" filter="string" />
-        <field name="bfootLogo" type="text" default=""                   label="TPL_##TEMPLATE##_FIELD_BFOOTLOGO_LABEL" description="TPL_##TEMPLATE##_FIELD_BFOOTLOGO_DESC" filter="string" />
-        <field name="siteTitle" type="text" default="步步街工作室" label="TPL_##TEMPLATE##_FIELD_SITETITLE_LABEL" description="TPL_##TEMPLATE##_FIELD_SITETITLE_DESC" filter="string" />
-        <field name="siteDesc"  type="text" default=""                   label="TPL_##TEMPLATE##_FIELD_SITEDESC_LABEL"  description="TPL_##TEMPLATE##_FIELD_SITEDESC_DESC"  filter="string" />
+        <field name="bheadLogo" type="text" default="logo_header.png" label="TPL_##TEMPLATE##_FIELD_BHEADLOGO_LABEL" description="TPL_##TEMPLATE##_FIELD_BHEADLOGO_DESC" filter="string" />
+        <field name="bfootLogo" type="text" default=""                label="TPL_##TEMPLATE##_FIELD_BFOOTLOGO_LABEL" description="TPL_##TEMPLATE##_FIELD_BFOOTLOGO_DESC" filter="string" />
+        <field name="siteTitle" type="text" default="步步街工作室"    label="TPL_##TEMPLATE##_FIELD_SITETITLE_LABEL" description="TPL_##TEMPLATE##_FIELD_SITETITLE_DESC" filter="string" />
+        <field name="siteDesc"  type="text" default=""                label="TPL_##TEMPLATE##_FIELD_SITEDESC_LABEL"  description="TPL_##TEMPLATE##_FIELD_SITEDESC_DESC"  filter="string" />
 
-        <field type="spacer" hr="true" />
+        <!--field type="spacer" hr="true" />
 
         <field name="posClose" type="checkboxes" label="强制关闭的位置" description="强制关闭的位置">
           <option value="anch">Anchovies</option>
@@ -83,7 +91,7 @@
           <option value="chor">Chorizo</option>
           <option value="on">Onions</option>
           <option value="mush">Mushrooms</option>
-        </field>
+        </field-->
       </fieldset>
     </fields>
   </config>
