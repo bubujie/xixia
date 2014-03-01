@@ -22,17 +22,21 @@ $showSide1    = ($this->countModules('side1') || $showSide1Top || $showSide1Btm 
 /* ### 注释 ### */
 $showMainTop  = ($this->countModules('main-top')   || 0); //main-top
 $showContentSide1 = ($this->countModules('content-side1')  || 0); //content-side1
+$showContentSide1 &= JRequest::getCmd('view')   != 'form'; //基于1.5beez，2.5不同
+$showContentSide1 &= JRequest::getCmd('layout') != 'edit'; //基于1.5beez，2.5不同
 $showContentTop   = ($this->countModules('content-top')    || 0); //content-top
 $showContentHome  = ($this->countModules('content-home')   || 0); //content-home
 $showContentBtm   = ($this->countModules('content-btm')    || 0); //content-btm
 $showContentSide2 = ($this->countModules('content-side2')  || 0); //content-side2
+$showContentSide2 &= JRequest::getCmd('view')   != 'form'; //基于1.5beez，2.5不同
+$showContentSide2 &= JRequest::getCmd('layout') != 'edit'; //基于1.5beez，2.5不同
 $showMainBtm  = ($this->countModules('main-btm')   || 0); //main-btm
 /* ### 注释 ### */
 $showSide2Top = ($this->countModules('side2-top') || 0); //side2-top
 $showSide2Btm = ($this->countModules('side2-btm') || 0); //side2-btm
 $showSide2    = ($this->countModules('side2') || $showSide2Top || $showSide2Btm || 0); //side2
-$showSide2   &= JRequest::getCmd('view')   != 'form'; //基于1.5beez，2.5不同
-$showSide2   &= JRequest::getCmd('layout') != 'edit'; //基于1.5beez，2.5不同
+$showSide2    &= JRequest::getCmd('view')   != 'form'; //基于1.5beez，2.5不同
+$showSide2    &= JRequest::getCmd('layout') != 'edit'; //基于1.5beez，2.5不同
 /* ######### 注释 ######### */
 $showBbodyBtm = ($this->countModules('bbody-btm')  || 0); //bbody-btm
 /* ######### ######### 注释 ######### ######### */
