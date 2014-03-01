@@ -51,9 +51,10 @@ $app = JFactory::getApplication(); //???
 $templateparams = $app->getTemplate(true)->params; //???
 /* ######### ######### isHome ######### ######### */
 $isHome = 0;
-if (JURI::current() == JURI::root() ) :
+$menu = & JSite::getMenu();
+if ($menu->getActive() == $menu->getDefault()) {
 	$isHome = 1;
-endif;
+}
 /* ######### ######### setTitle ######### ######### */
 $doc = JFactory::getDocument();
 //$doc->addScript($this->baseurl.'/templates/'.$this->template.'/js/jstools.js');
@@ -116,8 +117,8 @@ endif;
         <div class="ming">
 <jdoc:include type="modules" name="bhead" style="division" headerLevel="3" />
 <jdoc:include type="modules" name="search" style="division" headerLevel="3" />
-	    </div>
-	  </div>
+        </div>
+      </div>
     </div>
   </div>
 <?php if ($showBheadBtm) : ?>
@@ -225,7 +226,7 @@ endif;
   </div>
 <?php if ($showBbodyBtm) : ?>
   <div id="bbody-btm">
-  	<div class="rowo">
+    <div class="rowo">
       <div class="fillo">
 <jdoc:include type="modules" name="bbody-btm" style="stroke" headerLevel="3" />
       </div>
@@ -236,7 +237,7 @@ endif;
 <div id="bfoot">
 <?php if ($showBfootTop) : ?>
   <div id="bfoot-top">
-  	<div class="rowo">
+    <div class="rowo">
       <div class="fillo">
 <jdoc:include type="modules" name="bfoot-top" style="stroke" headerLevel="3" />
       </div>
@@ -244,15 +245,15 @@ endif;
   </div>
 <?php endif; ?>
   <div id="bfoot-mid">
-  	<div class="rowo">
+    <div class="rowo">
       <div class="fillo <?php if($bfootLogo){ echo 'n'; } ?>m">
         <div class="ming">
-<jdoc:include type="modules" name="bfoot" style="division" headerLevel="3" />
           <div class="quick">
             <a href="<?php echo $this->baseurl; ?>"><img src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template;?>/img/btn_home.gif" alt="<?php echo JText::_('HOME'); ?>" /></a>
             <a href="javascript:history.back();"><img src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template;?>/img/btn_back.gif" alt="<?php echo JText::_('BACK'); ?>" /></a>
             <a href="#"><img src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template;?>/img/btn_top.gif" alt="<?php echo JText::_('TOP'); ?>" /></a>
           </div>
+<jdoc:include type="modules" name="bfoot" style="division" headerLevel="3" />
         </div>
 <?php if($bfootLogo) :
 	echo   "        ".'<div class="n1">';
