@@ -179,7 +179,7 @@ endif;
     </div>
 <?php endif; ?>
     <div class="wing">
-<?php if ($showContentTop && !$isHome) : ?>
+<?php if ($showContentTop) : ?>
       <div id="content-top" class="ding">
 <jdoc:include type="modules" name="content-top" style="stroke" headerLevel="3" />
       </div>
@@ -190,7 +190,7 @@ endif;
 <?php else : ?>
 <jdoc:include type="modules" name="home" style="division" headerLevel="3" />
 <?php endif; ?>
-<?php if ($showContentBtm && !$isHome) : ?>
+<?php if ($showContentBtm) : ?>
       <div id="content-btm" class="ding">
 <jdoc:include type="modules" name="content-btm" style="stroke" headerLevel="3" />
       </div>
