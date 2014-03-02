@@ -25,7 +25,7 @@ $showContentSide1 = ($this->countModules('content-side1')  || 0); //content-side
 $showContentSide1 &= JRequest::getCmd('layout') != 'form'; //基于1.5beez
 $showContentSide1 &= JRequest::getCmd('task')   != 'edit'; //基于1.5beez
 $showContentTop   = ($this->countModules('content-top')    || 0); //content-top
-$showContentHome  = ($this->countModules('content-home')   || 0); //content-home
+$showHome  = ($this->countModules('home')   || 0); //home
 $showContentBtm   = ($this->countModules('content-btm')    || 0); //content-btm
 $showContentSide2 = ($this->countModules('content-side2')  || 0); //content-side2
 $showContentSide2 &= JRequest::getCmd('layout') != 'form'; //基于1.5beez
@@ -188,7 +188,7 @@ endif;
 <?php if(!$isHome) : ?>
 <jdoc:include type="component" />
 <?php else : ?>
-<jdoc:include type="modules" name="content-home" style="division" headerLevel="3" />
+<jdoc:include type="modules" name="home" style="division" headerLevel="3" />
 <?php endif; ?>
 <?php if ($showContentBtm && !$isHome) : ?>
       <div id="content-btm" class="ding">
