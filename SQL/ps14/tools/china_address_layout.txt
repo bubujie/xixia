@@ -1,0 +1,11 @@
+/*ÔÚ Back office -> Shipping -> Countries -> China -> Address layout ´¦ÐÞ¸Ä*/
+lastname firstname
+company
+Country:name
+State:name
+city
+address1
+address2
+postcode
+vat_number
+phone
