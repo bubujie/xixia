@@ -1,43 +1,41 @@
 html\com_content\article
-	dl.article-infoµÄ¸÷ÏîÃ°ºÅÖ®ºóµÄÄÚÈÝÌí¼ÓÒ»²ãÍâÌ×span.o>span.i
-	ÄÚÈÝÒ³µÄÕýÎÄÇøÓòÔö¼ÓÒ»²ãÍâÌ×div.content
+	dl.article-infoçš„å„é¡¹å†’å·ä¹‹åŽçš„å†…å®¹æ·»åŠ ä¸€å±‚å¤–å¥—span.o>span.i
+	å†…å®¹é¡µçš„æ­£æ–‡åŒºåŸŸå¢žåŠ ä¸€å±‚å¤–å¥—div.content
 html\com_mailto
-	½«±íµ¥¸ÄÎª±í¸ñ²¼¾Ö£¬ÇÒbutton±êÇ©Ôö¼ÓÒ»²ãÍâÌ×span.btn
-	div.mailto-closeÔö¼ÓÐÐ¼äÑùÊ½style="position:absolute;top:10px;right:10px;
-	Éæ¼°Ò»¸öÎÄ¼þ
+	å°†è¡¨å•æ”¹ä¸ºè¡¨æ ¼å¸ƒå±€ï¼Œä¸”buttonæ ‡ç­¾å¢žåŠ ä¸€å±‚å¤–å¥—span.btn
+	div.mailto-closeå¢žåŠ è¡Œé—´æ ·å¼style="position:absolute;top:10px;right:10px;
+	æ¶‰åŠä¸€ä¸ªæ–‡ä»¶
 		html\com_mailto\mailto\default.php
 html\mode_menu\
-	Ã¿¸öul>li>aÏîÄ¿ÖÐÔö¼ÓÒ»²ãÇ¶Ì×span.stroke
-	Éæ¼°Á½¸öÎÄ¼þ
+	æ¯ä¸ªul>li>aé¡¹ç›®ä¸­å¢žåŠ ä¸€å±‚åµŒå¥—span.stroke
+	æ¶‰åŠä¸¤ä¸ªæ–‡ä»¶
 		html\mod_menu\default_component.php
 		html\mod_menu\default_url.php
-£¡£¡£¡×¢Òâ£º
-·²ÊÇÔÚÊÓÍ¼ÎÄ¼þÖÐÊä³ö$moduleclass_sfxµÄÄ£¿é¶¼ÐèÔÚÄ£°åÖÐ¸²Ð´£¬ÒÔ±ÜÃâÀàËÆdiv.w-1-3>div.w-1-3µÄ³åÍ»£¬ÕâÐ©Ä£¿éÓÐ£º
+ï¼ï¼ï¼æ³¨æ„ï¼š
+å‡ ä¹Žæ‰€æœ‰çš„æ¨¡å—éƒ½ä¼šåœ¨è§†å›¾æ–‡ä»¶ä¸­è¾“å‡º<?php echo $moduleclass_sfx ?>ï¼Œå› æ­¤å¿…é¡»é¿å…åœ¨æ¨¡å—ClassåŽç¼€ä¸­è¾“å…¥å°ºå¯¸ç›¸å…³çš„å†…å®¹ï¼Œä»¥é˜²æ­¢å‡ºçŽ°ç±»ä¼¼div.w-1-3>div.w-1-3çš„å†²çªï¼ï¼ï¼
 
+systemæ¨¡æ¿åŒ…å«çš„chrome
+	none    æ²¡æœ‰å¤–å¥—
+	table   è¡¨æ ¼åŒ…è£¹
+	horz    åŒå±‚è¡¨æ ¼åŒ…è£¹
+	xhtml   å•å±‚divåŒ…è£¹
+	rounded å››å±‚divåµŒå¥—
+	outline ç”¨äºŽé¢„è§ˆ
+	ï¼ï¼ï¼æ³¨æ„ï¼šè¿™äº›chromeåç§°ä¸èƒ½å†å‡ºçŽ°åœ¨å…¶ä»–æ¨¡æ¿ä¸­
 
+	è‡ªå®šä¹‰æ¨¡æ¿ä¸­chromeçš„æ›¿ä»£é¡¹
+		none     ä»£æ›¿ openï¼ˆå®žé™…æ— å·®åˆ«ï¼Œæ— æ³•å¢žåŠ æŽ§åˆ¶ç‚¹ï¼‰
+		division ä»£æ›¿ xhtmlï¼ˆå¢žåŠ idæŽ§åˆ¶ç‚¹ï¼Œgridå°ºå¯¸æŽ§åˆ¶ç‚¹ï¼‰
+		è°       ä»£æ›¿ roundedï¼ˆå¢žåŠ idæŽ§åˆ¶ç‚¹ï¼Œgridå°ºå¯¸æŽ§åˆ¶ç‚¹ï¼‰
+		stroke   æè¾¹
+		squared  ä¹å®«æ ¼
+		panel    ç»„åˆé¢æ¿
 
-systemÄ£°å°üº¬µÄchrome
-	none    Ã»ÓÐÍâÌ×
-	table   ±í¸ñ°ü¹ü
-	horz    Ë«²ã±í¸ñ°ü¹ü
-	xhtml   µ¥²ãdiv°ü¹ü
-	rounded ËÄ²ãdivÇ¶Ì×
-	outline ÓÃÓÚÔ¤ÀÀ
-	£¡£¡£¡×¢Òâ£ºÕâÐ©chromeÃû³Æ²»ÄÜÔÙ³öÏÖÔÚÆäËûÄ£°åÖÐ
-
-	×Ô¶¨ÒåÄ£°åÖÐchromeµÄÌæ´úÏî
-		none     ´úÌæ open£¨Êµ¼ÊÎÞ²î±ð£¬ÎÞ·¨Ôö¼Ó¿ØÖÆµã£©
-		division ´úÌæ xhtml£¨Ôö¼Óid¿ØÖÆµã£¬grid³ß´ç¿ØÖÆµã£©
-		Ë­       ´úÌæ rounded£¨Ôö¼Óid¿ØÖÆµã£¬grid³ß´ç¿ØÖÆµã£©
-		stroke   Ãè±ß
-		squared  ¾Å¹¬¸ñ
-		panel    ×éºÏÃæ°å
-
-	¿É²Î¿¼µÄÈ«²¿chrome
-		beezDivision£¨µ¥²ãÍâÌ×£¬±êÌâ3²ãspan°ü¹ü£©
-		beezHide£¨¿ÉÏÔÒþÄ£¿éÔ²ÐÎ£©
-		beezTabs£¨×éºÏÃæ°åÔ­ÐÍ£©
-		container   £¨³ö×Ôatomic£¬ÎÞ±êÌâµ¥²ã°ü¹ü£©
-		bottommodule£¨³ö×Ôatomic£¬Ã»ÓÐÍâÌ×£¬h6±êÌâ£©
-		sidebar     £¨³ö×Ôatomic£¬Ã»ÓÐÍâÌ×£¬h3±êÌâ£©
+	å¯å‚è€ƒçš„å…¨éƒ¨chrome
+		beezDivisionï¼ˆå•å±‚å¤–å¥—ï¼Œæ ‡é¢˜3å±‚spanåŒ…è£¹ï¼‰
+		beezHideï¼ˆå¯æ˜¾éšæ¨¡å—åœ†å½¢ï¼‰
+		beezTabsï¼ˆç»„åˆé¢æ¿åŽŸåž‹ï¼‰
+		container   ï¼ˆå‡ºè‡ªatomicï¼Œæ— æ ‡é¢˜å•å±‚åŒ…è£¹ï¼‰
+		bottommoduleï¼ˆå‡ºè‡ªatomicï¼Œæ²¡æœ‰å¤–å¥—ï¼Œh6æ ‡é¢˜ï¼‰
+		sidebar     ï¼ˆå‡ºè‡ªatomicï¼Œæ²¡æœ‰å¤–å¥—ï¼Œh3æ ‡é¢˜ï¼‰
 
