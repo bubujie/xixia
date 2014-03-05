@@ -1,6 +1,8 @@
 html\com_content\article
 	dl.article-info的各项冒号之后的内容添加一层外套span.o>span.i
 	内容页的正文区域增加一层外套div.content
+html\com_content\category
+	为表格式增加一列num，可方便地切换顺序或逆序
 html\com_mailto
 	将表单改为表格布局，且button标签增加一层外套span.btn
 	div.mailto-close增加行间样式style="position:absolute;top:10px;right:10px;
