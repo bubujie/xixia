@@ -1,8 +1,18 @@
-mode_menu
+html\com_content\article
+	dl.article-info的各项冒号之后的内容添加一层外套span.o>span.i
+	内容页的正文区域增加一层外套div.content
+html\com_mailto
+	将表单改为表格布局，且button标签增加一层外套span.btn
+	div.mailto-close增加行间样式style="position:absolute;top:10px;right:10px;
+	涉及一个文件
+		html\com_mailto\mailto\default.php
+html\mode_menu\
 	每个ul>li>a项目中增加一层嵌套span.stroke
 	涉及两个文件
-		tuding/html/mod_menu/default_component.php
-		tuding/html/mod_menu/default_url.php
+		html\mod_menu\default_component.php
+		html\mod_menu\default_url.php
+！！！注意：
+凡是在视图文件中输出$moduleclass_sfx的模块都需在模板中覆写，以避免类似div.w-1-3>div.w-1-3的冲突，这些模块有：
 
 
 
@@ -16,7 +26,7 @@ system模板包含的chrome
 	！！！注意：这些chrome名称不能再出现在其他模板中
 
 	自定义模板中chrome的替代项
-		none     代替 open（实际无差别，无法增控制点）
+		none     代替 open（实际无差别，无法增加控制点）
 		division 代替 xhtml（增加id控制点，grid尺寸控制点）
 		谁       代替 rounded（增加id控制点，grid尺寸控制点）
 		stroke   描边
