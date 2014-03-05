@@ -1,9 +1,10 @@
 <?php
 /**
- * @package		Joomla.Site
- * @subpackage	mod_menu
- * @copyright	Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @package   ##website## Template
+ * @author    ##author## ##email##
+ * @version   ##version## ##date##
+ * @copyright Copyright (C) ##author## 2008 - 2012 ##website##. All Rights Reserved.
+ * @license   ##license##
  */
 
 // No direct access.
