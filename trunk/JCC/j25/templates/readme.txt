@@ -11,8 +11,15 @@ html\mode_menu\
 	涉及两个文件
 		html\mod_menu\default_component.php
 		html\mod_menu\default_url.php
+html\mod_footer
+	该模块显示网站版权信息，自定义内容仅有网站名称（后台全局设置中的）。
+	而地址第二行只是直接调用语言文件中的内容而已，完整输出：
+		<div class="footer1_moduleclass_sfx">版权 &#169; %date% %sitename% <?php echo JText :: _('MOD_FOOTER_LINE1'); ?></div>
+		<div class="footer2_moduleclass_sfx"><?php echo JText::_('MOD_FOOTER_LINE2'); ?></div>
+	因此需覆写以去掉第二行内容，修改div.footer1为div.footer
+
 ！！！注意：
-几乎所有的模块都会在视图文件中输出<?php echo $moduleclass_sfx ?>，因此必须避免在模块Class后缀中输入尺寸相关的内容，以防止出现类似div.w-1-3>div.w-1-3的冲突！！！
+几乎所有的模块都会在视图文件中输出<?php echo $moduleclass_sfx ?>，而chrome中还会再次输出，因此必须避免在模块Class后缀中输入尺寸相关的内容，以防止出现类似div.w-1-3>div.w-1-3的冲突！！！
 
 system模板包含的chrome
 	none    没有外套
