@@ -49,3 +49,7 @@ system模板包含的chrome
 		bottommodule（出自atomic，没有外套，h6标题）
 		sidebar     （出自atomic，没有外套，h3标题）
 
+备用布局命名：
+	list   （classic） 经典风格 Classic Style
+	zine   （webzine） 杂志风格    Zine Style
+	gallery（gallery） 画廊风格 Gallery Style
