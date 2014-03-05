@@ -9,9 +9,5 @@
 
 // no direct access
 defined('_JEXEC') or die;
-
-printf("\n  ".'<div class="footer1%s">%s</div>' ,
-	$moduleclass_sfx ,
-	$lineone
-);
 ?>
+<div class="footer1<?php echo $moduleclass_sfx ?>"><?php echo $lineone; ?></div>
