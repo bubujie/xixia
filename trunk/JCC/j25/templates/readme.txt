@@ -1,10 +1,10 @@
-html\com_content\article
+html\com_content\article\
 	dl.article-info的各项冒号之后的内容添加一层外套span.o>span.i
 	内容页的正文区域增加一层外套div.content
-html\com_content\category
+html\com_content\category\
 	为表格式增加一列num，可方便地切换顺序或逆序
 	共增加三处共4行内容
-html\com_mailto
+html\com_mailto\
 	将表单改为表格布局，且button标签增加一层外套span.btn
 	div.mailto-close增加行间样式style="position:absolute;top:10px;right:10px;
 	涉及一个文件
@@ -14,7 +14,7 @@ html\mode_menu\
 	涉及两个文件
 		html\mod_menu\default_component.php
 		html\mod_menu\default_url.php
-html\mod_footer
+html\mod_footer\
 	该模块显示网站版权信息，自定义内容仅有网站名称（后台全局设置中的）。
 	而地址第二行只是直接调用语言文件中的内容而已，完整输出：
 		<div class="footer1_moduleclass_sfx">版权 &#169; %date% %sitename% <?php echo JText :: _('MOD_FOOTER_LINE1'); ?></div>
