@@ -21,7 +21,7 @@ $user		= JFactory::getUser();
 
 ?>
 <div class="item-page<?php echo $this->pageclass_sfx?>">
-<?php if ($this->params->get('show_page_heading', 1)) : ?>
+<?php if ($this->params->get('show_page_heading')) : ?>
 	<h1>
 	<?php echo $this->escape($this->params->get('page_heading')); ?>
 	</h1>
@@ -93,9 +93,9 @@ endif; ?>
 	<?php	$title = $this->escape($this->item->parent_title);
 	$url = '<a href="'.JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->parent_slug)).'">'.$title.'</a>';?>
 	<?php if ($params->get('link_parent_category') and $this->item->parent_slug) : ?>
-		<?php echo '<span>'.JText::sprintf('COM_CONTENT_PARENT', '</span>'.$url); ?>
+		<?php echo '<span class="o"><span class="i">'.JText::sprintf('COM_CONTENT_PARENT', '</span></span>'.$url); ?>
 	<?php else : ?>
-		<?php echo '<span>'.JText::sprintf('COM_CONTENT_PARENT', '</span>'.$title); ?>
+		<?php echo '<span class="o"><span class="i">'.JText::sprintf('COM_CONTENT_PARENT', '</span></span>'.$title); ?>
 	<?php endif; ?>
 	</dd>
 <?php endif; ?>
@@ -104,25 +104,25 @@ endif; ?>
 	<?php 	$title = $this->escape($this->item->category_title);
 	$url = '<a href="'.JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->catslug)).'">'.$title.'</a>';?>
 	<?php if ($params->get('link_category') and $this->item->catslug) : ?>
-		<?php echo '<span>'.JText::sprintf('COM_CONTENT_CATEGORY', '</span>'.$url); ?>
+		<?php echo '<span class="o"><span class="i">'.JText::sprintf('COM_CONTENT_CATEGORY', '</span></span>'.$url); ?>
 	<?php else : ?>
-		<?php echo '<span>'.JText::sprintf('COM_CONTENT_CATEGORY', '</span>'.$title); ?>
+		<?php echo '<span class="o"><span class="i">'.JText::sprintf('COM_CONTENT_CATEGORY', '</span></span>'.$title); ?>
 	<?php endif; ?>
 	</dd>
 <?php endif; ?>
 <?php if ($params->get('show_create_date')) : ?>
 	<dd class="create">
-	<?php echo '<span>'.JText::sprintf('COM_CONTENT_CREATED_DATE_ON', '</span>'.JHtml::_('date', $this->item->created, JText::_('DATE_FORMAT_LC2'))); ?>
+	<?php echo '<span class="o"><span class="i">'.JText::sprintf('COM_CONTENT_CREATED_DATE_ON', '</span></span>'.JHtml::_('date', $this->item->created, JText::_('DATE_FORMAT_LC2'))); ?>
 	</dd>
 <?php endif; ?>
 <?php if ($params->get('show_modify_date')) : ?>
 	<dd class="modified">
-	<?php echo '<span>'.JText::sprintf('COM_CONTENT_LAST_UPDATED', '</span>'.JHtml::_('date', $this->item->modified, JText::_('DATE_FORMAT_LC2'))); ?>
+	<?php echo '<span class="o"><span class="i">'.JText::sprintf('COM_CONTENT_LAST_UPDATED', '</span></span>'.JHtml::_('date', $this->item->modified, JText::_('DATE_FORMAT_LC2'))); ?>
 	</dd>
 <?php endif; ?>
 <?php if ($params->get('show_publish_date')) : ?>
 	<dd class="published">
-	<?php echo '<span>'.JText::sprintf('COM_CONTENT_PUBLISHED_DATE_ON', '</span>'.JHtml::_('date', $this->item->publish_up, JText::_('DATE_FORMAT_LC2'))); ?>
+	<?php echo '<span class="o"><span class="i">'.JText::sprintf('COM_CONTENT_PUBLISHED_DATE_ON', '</span></span>'.JHtml::_('date', $this->item->publish_up, JText::_('DATE_FORMAT_LC2'))); ?>
 	</dd>
 <?php endif; ?>
 <?php if ($params->get('show_author') && !empty($this->item->author )) : ?>
@@ -135,15 +135,15 @@ endif; ?>
 		$item = $menu->getItems('link', $needle, true);
 		$cntlink = !empty($item) ? $needle . '&Itemid=' . $item->id : $needle;
 	?>
-		<?php echo '<span>'.JText::sprintf('COM_CONTENT_WRITTEN_BY', '</span>'.JHtml::_('link', JRoute::_($cntlink), $author)); ?>
+		<?php echo '<span class="o"><span class="i">'.JText::sprintf('COM_CONTENT_WRITTEN_BY', '</span></span>'.JHtml::_('link', JRoute::_($cntlink), $author)); ?>
 	<?php else: ?>
-		<?php echo '<span>'.JText::sprintf('COM_CONTENT_WRITTEN_BY', '</span>'.$author); ?>
+		<?php echo '<span class="o"><span class="i">'.JText::sprintf('COM_CONTENT_WRITTEN_BY', '</span></span>'.$author); ?>
 	<?php endif; ?>
 	</dd>
 <?php endif; ?>
 <?php if ($params->get('show_hits')) : ?>
 	<dd class="hits">
-	<?php echo '<span>'.JText::sprintf('COM_CONTENT_ARTICLE_HITS', '</span>'.$this->item->hits); ?>
+	<?php echo '<span class="o"><span class="i">'.JText::sprintf('COM_CONTENT_ARTICLE_HITS', '</span></span>'.$this->item->hits); ?>
 	</dd>
 <?php endif; ?>
 <?php if ($useDefList) : ?>
