@@ -20,6 +20,10 @@ $n			= count($this->items);
 $listOrder	= $this->escape($this->state->get('list.ordering'));
 $listDirn	= $this->escape($this->state->get('list.direction'));
 ?>
+<?php
+$limitStart = $this->pagination->get('limitstart');
+$total      = $this->pagination->get('total')
+?>
 
 <?php if (empty($this->items)) : ?>
 
@@ -61,6 +65,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 		<?php if ($this->params->get('show_headings')) :?>
 		<thead>
 			<tr>
+				<th class="list-num">#</th>
 				<th class="list-title" id="tableOrdering">
 					<?php  echo JHtml::_('grid.sort', 'JGLOBAL_TITLE', 'a.title', $listDirn, $listOrder) ; ?>
 				</th>
@@ -102,6 +107,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 			<?php endif; ?>
 				<?php if (in_array($article->access, $this->user->getAuthorisedViewLevels())) : ?>
 
+					<td class="list-num"><?php echo 0 ? $total-$limitStart-$i : $limitStart+$i+1; ?></td>
 					<td class="list-title">
 						<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid, $article->language)); ?>">
 							<?php echo $this->escape($article->title); ?></a>
