@@ -75,9 +75,9 @@ system模板包含的Chrome
 	$headerClass	= $params->get('header_class');
 	$headerClass	= !empty($headerClass) ? ' class="' . htmlspecialchars($headerClass) . '"' : '';
 	$gridSize       = $params->get('grid_size', 0);
-	echo $gridSize ? "".'<div class="'.$gridSize.' xfl ding">' : '';
+	echo $gridSize ? "\n".'<div class="'.$gridSize.' xfl ding">' : '';
 		……
-	echo $gridSize ? "".'</div>' : '';
+	echo $gridSize ? "\n".'</div>' : '';
 
 
 
