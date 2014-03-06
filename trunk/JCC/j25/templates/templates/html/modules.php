@@ -26,8 +26,9 @@ function modChrome_open($module, &$params, &$attribs)
 	$gridSize       = $params->get('grid_size', 0);
 
 	if (!empty ($module->content)) :
-		echo   $gridSize ? "\n".'<div class="'.$gridSize.' xfl ding">' : '';
+		echo $gridSize ? "\n".'<div class="'.$gridSize.' xfl ding">' : '';
 		echo $module->content;
+		echo $gridSize ? "\n".'</div>' : '';
 	endif;
 }
 
@@ -48,7 +49,7 @@ function modChrome_division($module, &$params, &$attribs)
 
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
-		echo   $gridSize ? "\n".'<div class="'.$gridSize.' xfl ding">' : '';
+		echo $gridSize ? "\n".'<div class="'.$gridSize.' xfl ding">' : '';
 		printf("\n".'<div id="module-%s" class="module mod%s ding">' ,
 			$module->id ,
 			$params->get('moduleclass_sfx')
@@ -73,9 +74,19 @@ function modChrome_division($module, &$params, &$attribs)
 // 模块的zen garden风格结构（特点是最外部仅有单层外套，content没有外套）
 function modChrome_zengarden($module, &$params, &$attribs)
 {
+	$moduleTag      = $params->get('module_tag', 'div');
+	$headerTag      = htmlspecialchars($params->get('header_tag', 'h3'));
+	$bootstrapSize  = (int) $params->get('bootstrap_size', 0);
+	$moduleClass    = $bootstrapSize != 0 ? ' span' . $bootstrapSize : '';
+
+	// Temporarily store header class in variable
+	$headerClass	= $params->get('header_class');
+	$headerClass	= !empty($headerClass) ? ' class="' . htmlspecialchars($headerClass) . '"' : '';
+	$gridSize       = $params->get('grid_size', 0);
+
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
-		//echo   "\n".'<!-- ######### module ######### -->';
+		echo $gridSize ? "\n".'<div class="'.$gridSize.' xfl ding">' : '';
 		printf("\n".'<div id="module-%s" class="module mod%s ding">' ,
 			$module->id ,
 			$params->get('moduleclass_sfx')
@@ -90,7 +101,7 @@ function modChrome_zengarden($module, &$params, &$attribs)
 		echo $module->content;
 		//echo   "\n  ".'<div class="blank"></div>';
 		echo   "\n".'</div>';
-		//echo   "\n".'<!-- ######### /module ######### -->';
+		echo $gridSize ? "\n".'</div>' : '';
 	endif;
 }
 
@@ -183,16 +194,6 @@ function modChrome_squared($module, &$params, &$attribs)
 // 模块的加Panel结构（特点是没有完整外套，专为panel准备）
 function modChrome_panel($module, &$params, &$attribs)
 {
-	$moduleTag      = $params->get('module_tag', 'div');
-	$headerTag      = htmlspecialchars($params->get('header_tag', 'h3'));
-	$bootstrapSize  = (int) $params->get('bootstrap_size', 0);
-	$moduleClass    = $bootstrapSize != 0 ? ' span' . $bootstrapSize : '';
-
-	// Temporarily store header class in variable
-	$headerClass	= $params->get('header_class');
-	$headerClass	= !empty($headerClass) ? ' class="' . htmlspecialchars($headerClass) . '"' : '';
-	$gridSize       = $params->get('grid_size', 0);
-
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
 		echo   "\n".'<!-- ### panel ### -->';
