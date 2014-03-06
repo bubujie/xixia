@@ -31,30 +31,55 @@ html\mod_footer\
 ！！！注意：
 几乎所有的模块都会在视图文件中输出<?php echo $moduleclass_sfx ?>，而chrome中还会再次输出，因此必须避免在模块Class后缀中输入尺寸相关的内容，以防止出现类似div.w-1-3>div.w-1-3的冲突！！！
 
-system模板包含的chrome
-	none    没有外套
+system模板包含的Chrome
+	none    没有外套     （j35 protostar 为 no） 
 	table   表格包裹
 	horz    双层表格包裹
-	xhtml   单层div包裹
+	xhtml   单层div包裹  （j35 protostar 为 well）
 	rounded 四层div嵌套
 	outline 用于预览
 	！！！注意：这些chrome名称不能再出现在其他模板中
 
 	自定义模板中chrome的替代项
-		none     代替 open（实际无差别，无法增加控制点）
+		none    代替 open（实际无差别，无法增加控制点）
 		division 代替 xhtml（增加id控制点，grid尺寸控制点）
 		谁       代替 rounded（增加id控制点，grid尺寸控制点）
 		stroke   描边
 		squared  九宫格
 		panel    组合面板
 
-	可参考的全部chrome
-		beezDivision（单层外套，标题3层span包裹）
-		beezHide（可显隐模块圆形）
-		beezTabs（组合面板原型）
+	可参考的全部Chrome
+		beezDivision（单层外套，标题3层span包裹） j35的beez3模板一致
+		beezHide    （可显隐模块圆形）            j35的beez3模板一致
+		beezTabs    （组合面板原型）              j35的beez3模板一致
 		container   （出自atomic，无标题单层包裹）
 		bottommodule（出自atomic，没有外套，h6标题）
 		sidebar     （出自atomic，没有外套，h3标题）
+	附加Joomla! 3 system模板增加的重要Chrome
+		html5（唯有此Chrome会使用bootstrap_size参数）
+			$moduleTag      = $params->get('module_tag', 'div');
+			$headerTag      = htmlspecialchars($params->get('header_tag', 'h3'));
+			$bootstrapSize  = (int) $params->get('bootstrap_size', 0);
+			$moduleClass    = $bootstrapSize != 0 ? ' span' . $bootstrapSize : '';
+
+			// Temporarily store header class in variable
+			$headerClass	= $params->get('header_class');
+			$headerClass	= !empty($headerClass) ? ' class="' . htmlspecialchars($headerClass) . '"' : '';
+		借鉴上面的用法，可为普通的模块增加下面的内容
+	$moduleTag      = $params->get('module_tag', 'div');
+	$headerTag      = htmlspecialchars($params->get('header_tag', 'h3'));
+	$bootstrapSize  = (int) $params->get('bootstrap_size', 0);
+	$moduleClass    = $bootstrapSize != 0 ? ' span' . $bootstrapSize : '';
+
+	// Temporarily store header class in variable
+	$headerClass	= $params->get('header_class');
+	$headerClass	= !empty($headerClass) ? ' class="' . htmlspecialchars($headerClass) . '"' : '';
+	$gridSize       = $params->get('grid_size', 0);
+	echo $gridSize ? "".'<div class="'.$gridSize.' xfl ding">' : '';
+		……
+	echo $gridSize ? "".'</div>' : '';
+
+
 
 备用布局命名：
 	list   （classic） 经典风格 Classic Style
