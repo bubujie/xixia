@@ -50,7 +50,7 @@ function modChrome_division($module, &$params, &$attribs)
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
 		echo $gridSize ? "\n".'<div class="'.$gridSize.' xfl ding">' : '';
-		printf("\n".'<div id="module-%s" class="module mod%s ding">' ,
+		printf("\n".'<div id="module-%s" class="module mod%s division ding">' ,
 			$module->id ,
 			$params->get('moduleclass_sfx')
 		);
@@ -123,13 +123,15 @@ function modChrome_stroke($module, &$params, &$attribs)
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
 		echo $gridSize ? "\n".'<div class="'.$gridSize.' xfl ding">' : '';
-		printf("\n".'<div id="module-%s" class="module mod%s ding">' ,
+		printf("\n".'<div id="module-%s" class="module mod%s stroke ding">' ,
 			$module->id ,
 			$params->get('moduleclass_sfx')
 		);
-		echo   "\n  ".'<div class="stroke">';
+		echo   "\n  ".'<div class="strokeo ding">';
+		echo   "\n  ".'<div class="strokec ding">';
+		echo   "\n  ".'<div class="strokei ding">';
 		if ($module->showtitle) :
-			printf("\n    ".'<h%s class="mod-heading"><span>%s</span></h%s>' ,
+			printf("\n    ".'<h%s class="mod-heading ding"><span>%s</span></h%s>' ,
 				$headerLevel ,
 				$module->title ,
 				$headerLevel
@@ -139,9 +141,11 @@ function modChrome_stroke($module, &$params, &$attribs)
 		echo   "\n    ".'<div class="mod-content">'; 
 		echo $module->content;
 		echo   "\n    ".'</div>';
-		//echo   "\n    ".'<div class="tl"></div><div class="tr"></div><div class="bl"></div><div class="br"></div>';
+		//echo   "\n    ".'<div class="lt"></div><div class="rt"></div><div class="lb"></div><div class="rb"></div>';
 		echo   "\n  ".'</div>';
 		//echo   "\n  ".'<div class="blank"></div>';
+		echo   "\n".'</div>';
+		echo   "\n".'</div>';
 		echo   "\n".'</div>';
 		echo $gridSize ? "\n".'</div>' : '';
 	endif;
@@ -181,9 +185,9 @@ function modChrome_squared($module, &$params, &$attribs)
 		echo   "\n    ".'<div class="mod-content">'; 
 		echo $module->content;
 		echo   "\n    ".'</div>';
-		echo   "\n    ".'<div class="tl"></div><div class="tr"></div><div class="bl"></div><div class="br"></div>';
+		echo   "\n    ".'<div class="lt"></div><div class="rt"></div><div class="lb"></div><div class="rb"></div>';
 		echo   "\n  ".'</div>';
-		echo   "\n  ".'<div class="blank"></div>';
+		//echo   "\n  ".'<div class="blank"></div>';
 		echo   "\n".'</div>';
 		echo $gridSize ? "\n".'</div>' : '';
 	endif;
