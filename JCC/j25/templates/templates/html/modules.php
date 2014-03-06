@@ -15,10 +15,19 @@ defined('_JEXEC') or die('Restricted access');
 // 模块的加open结构（特点是没有外套，没有标题，直接输出content部分）
 function modChrome_open($module, &$params, &$attribs)
 {
+	$moduleTag      = $params->get('module_tag', 'div');
+	$headerTag      = htmlspecialchars($params->get('header_tag', 'h3'));
+	$bootstrapSize  = (int) $params->get('bootstrap_size', 0);
+	$moduleClass    = $bootstrapSize != 0 ? ' span' . $bootstrapSize : '';
+
+	// Temporarily store header class in variable
+	$headerClass	= $params->get('header_class');
+	$headerClass	= !empty($headerClass) ? ' class="' . htmlspecialchars($headerClass) . '"' : '';
+	$gridSize       = $params->get('grid_size', 0);
+
 	if (!empty ($module->content)) :
-		echo   "\n".'<!-- ######### module ######### -->';
+		echo   $gridSize ? "\n".'<div class="'.$gridSize.' xfl ding">' : '';
 		echo $module->content;
-		echo   "\n".'<!-- ######### /module ######### -->';
 	endif;
 }
 
@@ -27,9 +36,19 @@ function modChrome_open($module, &$params, &$attribs)
 // 模块的加div结构（特点是最外部仅有单层外套，content有外套）
 function modChrome_division($module, &$params, &$attribs)
 {
+	$moduleTag      = $params->get('module_tag', 'div');
+	$headerTag      = htmlspecialchars($params->get('header_tag', 'h3'));
+	$bootstrapSize  = (int) $params->get('bootstrap_size', 0);
+	$moduleClass    = $bootstrapSize != 0 ? ' span' . $bootstrapSize : '';
+
+	// Temporarily store header class in variable
+	$headerClass	= $params->get('header_class');
+	$headerClass	= !empty($headerClass) ? ' class="' . htmlspecialchars($headerClass) . '"' : '';
+	$gridSize       = $params->get('grid_size', 0);
+
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
-		echo   "\n".'<!-- ######### module ######### -->';
+		echo   $gridSize ? "\n".'<div class="'.$gridSize.' xfl ding">' : '';
 		printf("\n".'<div id="module-%s" class="module mod%s ding">' ,
 			$module->id ,
 			$params->get('moduleclass_sfx')
@@ -45,7 +64,7 @@ function modChrome_division($module, &$params, &$attribs)
 		echo $module->content;
 		echo   "\n  ".'</div>';
 		echo   "\n".'</div>';
-		echo   "\n".'<!-- ######### /module ######### -->';
+		echo $gridSize ? "\n".'</div>' : '';
 	endif;
 }
 
@@ -56,7 +75,7 @@ function modChrome_zengarden($module, &$params, &$attribs)
 {
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
-		echo   "\n".'<!-- ######### module ######### -->';
+		//echo   "\n".'<!-- ######### module ######### -->';
 		printf("\n".'<div id="module-%s" class="module mod%s ding">' ,
 			$module->id ,
 			$params->get('moduleclass_sfx')
@@ -71,7 +90,7 @@ function modChrome_zengarden($module, &$params, &$attribs)
 		echo $module->content;
 		//echo   "\n  ".'<div class="blank"></div>';
 		echo   "\n".'</div>';
-		echo   "\n".'<!-- ######### /module ######### -->';
+		//echo   "\n".'<!-- ######### /module ######### -->';
 	endif;
 }
 
@@ -80,9 +99,19 @@ function modChrome_zengarden($module, &$params, &$attribs)
 // 模块的Stroke风格结构（特点是最外部有双层外套，content部分也有外套）
 function modChrome_stroke($module, &$params, &$attribs)
 {
+	$moduleTag      = $params->get('module_tag', 'div');
+	$headerTag      = htmlspecialchars($params->get('header_tag', 'h3'));
+	$bootstrapSize  = (int) $params->get('bootstrap_size', 0);
+	$moduleClass    = $bootstrapSize != 0 ? ' span' . $bootstrapSize : '';
+
+	// Temporarily store header class in variable
+	$headerClass	= $params->get('header_class');
+	$headerClass	= !empty($headerClass) ? ' class="' . htmlspecialchars($headerClass) . '"' : '';
+	$gridSize       = $params->get('grid_size', 0);
+
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
-		echo   "\n".'<!-- ######### module ######### -->';
+		echo $gridSize ? "\n".'<div class="'.$gridSize.' xfl ding">' : '';
 		printf("\n".'<div id="module-%s" class="module mod%s ding">' ,
 			$module->id ,
 			$params->get('moduleclass_sfx')
@@ -103,7 +132,7 @@ function modChrome_stroke($module, &$params, &$attribs)
 		echo   "\n  ".'</div>';
 		//echo   "\n  ".'<div class="blank"></div>';
 		echo   "\n".'</div>';
-		echo   "\n".'<!-- ######### /module ######### -->';
+		echo $gridSize ? "\n".'</div>' : '';
 	endif;
 }
 
@@ -112,9 +141,19 @@ function modChrome_stroke($module, &$params, &$attribs)
 // 模块的Squared风格结构（九宫格）
 function modChrome_squared($module, &$params, &$attribs)
 {
+	$moduleTag      = $params->get('module_tag', 'div');
+	$headerTag      = htmlspecialchars($params->get('header_tag', 'h3'));
+	$bootstrapSize  = (int) $params->get('bootstrap_size', 0);
+	$moduleClass    = $bootstrapSize != 0 ? ' span' . $bootstrapSize : '';
+
+	// Temporarily store header class in variable
+	$headerClass	= $params->get('header_class');
+	$headerClass	= !empty($headerClass) ? ' class="' . htmlspecialchars($headerClass) . '"' : '';
+	$gridSize       = $params->get('grid_size', 0);
+
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
-		echo   "\n".'<!-- ######### module ######### -->';
+		echo $gridSize ? "\n".'<div class="'.$gridSize.' xfl ding">' : '';
 		printf("\n".'<div id="module-%s" class="module mod%s ding">' ,
 			$module->id ,
 			$params->get('moduleclass_sfx')
@@ -135,7 +174,7 @@ function modChrome_squared($module, &$params, &$attribs)
 		echo   "\n  ".'</div>';
 		echo   "\n  ".'<div class="blank"></div>';
 		echo   "\n".'</div>';
-		echo   "\n".'<!-- ######### /module ######### -->';
+		echo $gridSize ? "\n".'</div>' : '';
 	endif;
 }
 
@@ -144,6 +183,16 @@ function modChrome_squared($module, &$params, &$attribs)
 // 模块的加Panel结构（特点是没有完整外套，专为panel准备）
 function modChrome_panel($module, &$params, &$attribs)
 {
+	$moduleTag      = $params->get('module_tag', 'div');
+	$headerTag      = htmlspecialchars($params->get('header_tag', 'h3'));
+	$bootstrapSize  = (int) $params->get('bootstrap_size', 0);
+	$moduleClass    = $bootstrapSize != 0 ? ' span' . $bootstrapSize : '';
+
+	// Temporarily store header class in variable
+	$headerClass	= $params->get('header_class');
+	$headerClass	= !empty($headerClass) ? ' class="' . htmlspecialchars($headerClass) . '"' : '';
+	$gridSize       = $params->get('grid_size', 0);
+
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
 		echo   "\n".'<!-- ### panel ### -->';
