@@ -28,7 +28,7 @@
   </files>
   <media folder="media" destination="">
         <folder>jui</folder>
-        <folder>system</folder>
+        <!--folder>system</folder-->
   </media>  
   <positions>
     <position>debug</position>

@@ -16,6 +16,8 @@ html\com_mailto\
 	div.mailto-close增加行间样式style="position:absolute;top:10px;right:10px;
 	涉及一个文件
 		html\com_mailto\mailto\default.php
+html\mod_breadcrumbs\
+	本模块无法方便的应用SUIO，一方面由于.showHere的背景项照顾不到，再者原生方案可以方便的替换图标。重构时可以增加.home和.now控制点使其更健壮
 html\mod_login\
 	前两个p标签uid和upw转换为dl>dt+dd
 	后一个P标签keep调换中间lable和input位置
