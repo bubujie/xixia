@@ -308,7 +308,7 @@ class plgContentPagebreak extends JPlugin
 			// Next >>
 			$next = '<a href="'. $link_next .'" class="btnDate"><span>' . JText::_('JNEXT') . $pnSpace . JText::_('JGLOBAL_GT') . JText::_('JGLOBAL_GT') .'</span></a>';
 		} else {
-			$next = JText::_('JNEXT');
+			$next = '<span class="btnDate disabled"><span>' . JText::_('JNEXT') . '</span></span>';
 		}
 
 		if ($page > 0) {
@@ -316,9 +316,9 @@ class plgContentPagebreak extends JPlugin
 
 			$link_prev = JRoute::_(ContentHelperRoute::getArticleRoute($row->slug, $row->catid, $row->language).'&showall=&limitstart='. ($page_prev));
 			// << Prev
-			$prev = '<a href="'. $link_prev .'" class="btnDate"><span>'. JText::_('JGLOBAL_LT') . JText::_('JGLOBAL_LT') . $pnSpace . JText::_('JPREV') .'</span></a>';
+			$prev = '<a href="'. $link_prev .'" class="btnDate"><span>' . JText::_('JGLOBAL_LT') . JText::_('JGLOBAL_LT') . $pnSpace . JText::_('JPREV') .'</span></a>';
 		} else {
-			$prev = JText::_('JPREV');
+			$prev = '<span class="btnDate disabled"><span>' . JText::_('JPREV') . '</span></span>';
 		}
 
 		$row->text .= '<ul><li>' . $prev . ' </li><li>' . $next .'</li></ul>';
