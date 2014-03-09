@@ -26,10 +26,10 @@
     <filename>index.php</filename>
     <filename>error.php</filename>
   </files>
-  <media folder="media/js" destination="system/js">
-    <filename>jstools.js</filename>
-    <filename>switchable.js</filename>
-  </media>
+  <media folder="media" destination="">
+        <folder>jui</folder>
+        <folder>system</folder>
+  </media>  
   <positions>
     <position>debug</position>
     <position>search</position>
