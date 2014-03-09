@@ -16,7 +16,10 @@ html\com_mailto\
 	div.mailto-close增加行间样式style="position:absolute;top:10px;right:10px;
 	涉及一个文件
 		html\com_mailto\mailto\default.php
-html\mode_menu\
+html\mod_login\
+	前两个p标签uid和upw转换为dl>dt+dd
+	后一个P标签keep调换中间lable和input位置
+html\mod_menu\
 	每个ul>li>a项目中增加一层嵌套span.stroke
 	涉及两个文件
 		html\mod_menu\default_component.php
