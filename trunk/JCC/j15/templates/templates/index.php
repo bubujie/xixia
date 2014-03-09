@@ -56,9 +56,9 @@ $templateparams = $app->getTemplate(true)->params; //???
 /* ######### ######### isHome ######### ######### */
 $isHome = 0;
 $menu = & JSite::getMenu();
-if ($menu->getActive() == $menu->getDefault()) {
+if ($menu->getActive() == $menu->getDefault()) :
 	$isHome = 1;
-}
+endif;
 /* ######### ######### setTitle ######### ######### */
 $doc = JFactory::getDocument();
 //$doc->addScript($this->baseurl.'/templates/'.$this->template.'/js/jstools.js');
@@ -67,6 +67,11 @@ if($isHome) :
 	$doc->setTitle($siteTitle);
 else :
 	$doc->setTitle($doc->getTitle() . ' | ' . $siteTitle);
+endif;
+$jVersion = new JVersion;
+if(!version_compare($jVersion->getShortVersion(), '3.0', 'ge')) :
+  $doc->addScript($this->baseurl.'/media/jui/js/jquery.min.js');
+  $doc->addScript($this->baseurl.'/media/jui/js/jquery-noconflict.js');
 endif;
 /* ######### ######### ######### 注释 ######### ######### ######### */
 ?>
