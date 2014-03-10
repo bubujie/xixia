@@ -3,7 +3,7 @@
 //乱码测试
 @include tuding($layout:'h',$row:96%,$n1:200px,$n2:200px,$space:10px,$incInner:0,$v1:200px,$v2:200px);
 
-@include clearfix($selector:'#thumbs_list');
+#thumbs_list{@extend %clearfix;}
 //.box, .box-heading, .box-content{
 //	@extend .box;
 //}

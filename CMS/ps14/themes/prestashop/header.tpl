@@ -56,7 +56,7 @@
 			<div id="header" class="fillo nm">
 				<div class="ning n1">
 					<a id="header_logo" href="{$link->getPageLink('index.php')}" title="{$shop_name|escape:'htmlall':'UTF-8'}">
-						<img class="logo" src="{$img_ps_dir}logo.jpg?{$img_update_time}" alt="{$shop_name|escape:'htmlall':'UTF-8'}" {if $logo_image_width}width="{$logo_image_width}"{/if} {if $logo_image_height}height="{$logo_image_height}" {/if} />
+						<img class="logo" src="{$img_ps_dir}logo.gif?{$img_update_time}" alt="{$shop_name|escape:'htmlall':'UTF-8'}" {if $logo_image_width}width="{$logo_image_width}"{/if} {if $logo_image_height}height="{$logo_image_height}" {/if} />
 					</a>
 				</div>
 				<div id="header_right" class="ming">{$HOOK_TOP}</div>
