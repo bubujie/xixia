@@ -50,9 +50,11 @@ class plgContentChangyan extends JPlugin
     public function onContentAfterDisplay($context, &$row, &$params, $page=0)
     {
         $isPrinting = JRequest::getCmd('print');
-        $mainframe	= JFactory::getApplication();
-        // Admin check
-		if($mainframe->isAdmin() || $isPrinting) return;
+        $app        = JFactory::getApplication();
+        if($app->isAdmin() || $isPrinting) return false;
+        $type       = JFactory::getDocument()->getType();
+        if($type != 'html') return false;
+
 		switch ($context) {
 			case 'com_content.article':
 				//$changyanCount='<a href="#changyan_area" id="changyan_count_unit" sid="com_content.article.'.@$row->id.'"></a>';      
@@ -143,11 +145,12 @@ class plgContentChangyan extends JPlugin
      */
     public function onContentBeforeDisplay($context, &$row, &$params, $page=0)
     {
-    	$app    	= JFactory::getApplication();
-    	$isPrinting = JRequest::getCmd('print');
-        // Admin check
-		if($app->isAdmin() || $isPrinting) return;
-    	//if($context=='com_content.article') :
+        $isPrinting = JRequest::getCmd('print');
+        $app        = JFactory::getApplication();
+        if($app->isAdmin() || $isPrinting) return false;
+        $type       = JFactory::getDocument()->getType();
+        if($type != 'html') return false;
+
 		switch ($context) {
 			case 'com_content.article':
 				$changyanLink='<a href="'. JRoute::_(ContentHelperRoute::getArticleRoute(@$row->slug, @$row->catslug , false)) .'#comments'.'" class="">留言反馈</a>';
@@ -219,13 +222,9 @@ class plgContentChangyan extends JPlugin
     {
 $isPrinting = JRequest::getCmd('print');
 $app        = JFactory::getApplication();
-        if($app->isAdmin() || $isPrinting) {
-            return false;
-        }
+        if($app->isAdmin() || $isPrinting) return false;
 $type       = JFactory::getDocument()->getType();
-        if($type != 'html') {
-            return false;
-        }
+        if($type != 'html') return false;
 
 $option     = JRequest::getCmd('option');
 $view       = JRequest::getCmd('view', '');
