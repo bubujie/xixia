@@ -27,7 +27,53 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 	<?php endif; ?>
 
 <?php else : ?>
+<style type="text/css">
+/* 공통 */
+.xans-product-1 { margin:30px 0 0; }
+.xans-product-1 h2 { height:30px; font-size:12px; color:#272823; background:url("http://img.echosting.cafe24.com/design/skin/default_cn/layout/bg_title.gif") 0 3px repeat-x; }
+.xans-product-1 h2 span { padding:0 7px 0 10px; background:#fff url("http://img.echosting.cafe24.com/design/skin/default_cn/common/ico_title.gif") 0 0 no-repeat; }
+.xans-product-1 img { vertical-align:middle; }
+.xans-product-1 ul.prdList { display:table; width:100%; min-width:756px; margin:-20px 0 0; font-size:0; line-height:0; }
+.xans-product-1 ul.prdList li.item { display:inline-block; *display:inline; *zoom:1; margin:20px 0 40px 0; color:#838383; vertical-align:top; }
+.xans-product-1 ul.prdList li.item div.box { margin:0 auto; font-size:12px; line-height:1.8em; }
+.xans-product-1 ul.prdList li .mileage { display:block; }
+.xans-product-1 span.grid { display:block; }
 
+.xans-product-1 ul.prdList .name { position:relative; padding:7px 12px 0 0; }
+.xans-product-1 ul.prdList .name a { color:#838383; }
+.xans-product-1 ul.prdList .name .zoom {  position:absolute; width:12px; top:10px; right:0; cursor:pointer; }
+.xans-product-1 ul.prdList .button { overflow:hidden; zoom:1; }
+.xans-product-1 ul.prdList .button img { cursor:pointer; margin:0 4px 0 0; }
+.xans-product-1 ul.prdList .button .bag { float:left; padding:7px 10px 0 0; }
+.xans-product-1 ul.prdList .button .option { float:left; padding:7px 0 0; }
+
+/* 진열방식 */
+.xans-product-1 ul.column3 li.item { width:33.33%; }
+.xans-product-1 ul.column3 li.item .box { width:240px; }
+.xans-product-1 ul.column3 li.item .thumb { width:240px; height:240px; }
+.xans-product-1 ul.column4 li.item { width:25%; }
+.xans-product-1 ul.column4 li.item .box { width:180px; }
+.xans-product-1 ul.column4 li.item .thumb { width:180px; height:180px; }
+.xans-product-1 ul.column5 li.item { width:20%; }
+.xans-product-1 ul.column5 li.item .box { width:140px; }
+.xans-product-1 ul.column5 li.item .thumb { width:140px; height:140px; }
+
+/* module="product_ListItem" */
+.xans-product-1 .xans-product-listitem { margin:0; }
+.xans-product-1 .xans-product-listitem li .title { font-weight:normal; }
+
+/* 할인기간 레이어 */
+.xans-product-1 .discountPeriod { display:inline-block; z-index:10; position:relative; width:55px; height:19px; vertical-align:middle; *zoom:1; *display:inline; }
+.xans-product-1 .discountPeriod .edge { position:absolute; left:14px; top:-6px; width:9px; height:6px; font-size:0; line-height:0; background:url("http://img.echosting.cafe24.com/design/skin/default/common/bg_edge.gif") no-repeat 0 0; }
+.xans-product-1 .layerDiscountPeriod { display:none; position:absolute; left:0; top:27px; width:313px; border:1px solid #6f94bf; font-size:12px; background-color:#fff; border-radius:3px; }
+.xans-product-1 .layerDiscountPeriod strong.title { display:block; margin:0 0 8px; padding:0 35px 0 0; font-weight:bold; color:#010101; }
+.xans-product-1 .layerDiscountPeriod .content { padding:11px 19px 15px; }
+.xans-product-1 .layerDiscountPeriod .content p { color:#000; line-height:16px; }
+.xans-product-1 .layerDiscountPeriod .content p strong { color:#80aeef; }
+.xans-product-1 .layerDiscountPeriod .content p strong span { font-size:11px; }
+.xans-product-1 .layerDiscountPeriod .close { position:absolute; right:12px; top:11px; }
+.xans-product-1 .layerDiscountPeriod .close img { cursor:pointer; }
+</style>
 <form action="<?php echo htmlspecialchars(JFactory::getURI()->toString()); ?>" method="post" name="adminForm" id="adminForm">
 	<?php if ($this->params->get('show_headings') || $this->params->get('filter_field') != 'hide' || $this->params->get('show_pagination_limit')) :?>
 	<fieldset class="filters">
@@ -90,15 +136,15 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 		</div>
 		<?php endif; ?>
 
-	<div class="category">
+	<div class="category xans-product-1">
 
-		<ul>
+		<ul class="prdList column4">
 
 		<?php foreach ($this->items as $i => $article) : ?>
 			<?php if ($this->items[$i]->state == 0) : ?>
 				<li><ul class="system-unpublished cat-list-row<?php echo $i % 2; ?>">
 			<?php else: ?>
-				<li><ul class="cat-list-row<?php echo $i % 2; ?>" >
+				<li class="item"><div class="box"><ul class="cat-list-row<?php echo $i % 2; ?>" >
 			<?php endif; ?>
 				<?php if (in_array($article->access, $this->user->getAuthorisedViewLevels())) : ?>
 <?php $images = json_decode($article->images); ?>
@@ -106,7 +152,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 	<?php $imgfloat = (empty($images->float_intro)) ? $this->params->get('float_intro') : $images->float_intro; ?>
 	<li>
 	<div class="img-intro-<?php echo htmlspecialchars($imgfloat); ?>">
-	<img
+	<img class="thumb"
 		<?php if ($images->image_intro_caption):
 			echo 'class="caption"'.' title="' .htmlspecialchars($images->image_intro_caption) .'"';
 		endif; ?>
@@ -115,7 +161,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 	</li>
 <?php endif; ?>
 					<li class="list-title">
-						<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid, $article->language)); ?>">
+						<a class="name" href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid, $article->language)); ?>">
 							<?php echo $this->escape($article->title); ?></a>
 
 						<?php if ($article->params->get('access-edit')) : ?>
@@ -176,7 +222,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 							<?php echo JText::_( 'COM_CONTENT_REGISTER_TO_READ_MORE' ); ?></a>
 					</li>
 				<?php endif; ?>
-				</ul></li>
+				</ul></div></li>
 		<?php endforeach; ?>
 		</ul>
 	</div>
