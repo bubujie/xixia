@@ -19,7 +19,7 @@ jimport('joomla.plugin.plugin');
  * @package    changyan
  * @subpackage Plugin
  */
-class plgContentchangyan extends JPlugin
+class plgContentChangyan extends JPlugin
 {
 
     /**
@@ -49,8 +49,6 @@ class plgContentchangyan extends JPlugin
      */
     public function onContentAfterDisplay($context, &$row, &$params, $page=0)
     {
-        $option     = JRequest::getCmd('option');
-        $view       = JRequest::getCmd('view');
         $isPrinting = JRequest::getCmd('print');
         $mainframe	= JFactory::getApplication();
         // Admin check
@@ -77,15 +75,12 @@ class plgContentchangyan extends JPlugin
 				break;
 			case 'com_content.category':
 			case 'com_content.featured':
+            case 'com_content.archive':
 			default :
 				$changyanArea='';
-				//$changyanCount='<a href="#changyan_area" id="changyan_count_unit" sid="com_content.article.'.@$row->id.'"></a>';
+				return false;
 				break;
 		}
-		//$document = JFactory::getDocument();
-		//$document->addScriptDeclaration("var duoshuoQuery = {short_name:\"tuding\"};\n");
-		//$document->addScript("http://assets.changyan.sohu.com/upload/plugins/plugins.count.js");
-		//return $changyanCount;
     }//function
 
     /**
@@ -148,10 +143,10 @@ class plgContentchangyan extends JPlugin
      */
     public function onContentBeforeDisplay($context, &$row, &$params, $page=0)
     {
-    	$mainframe	= JFactory::getApplication();
+    	$app    	= JFactory::getApplication();
     	$isPrinting = JRequest::getCmd('print');
         // Admin check
-		if($mainframe->isAdmin() || $isPrinting) return;
+		if($app->isAdmin() || $isPrinting) return;
     	//if($context=='com_content.article') :
 		switch ($context) {
 			case 'com_content.article':
@@ -159,6 +154,7 @@ class plgContentchangyan extends JPlugin
 				break;
 			case 'com_content.category':
 			case 'com_content.featured':
+            case 'com_content.archive':
 				$document = JFactory::getDocument();
 				//$document->addScriptDeclaration("var duoshuoQuery = {short_name:\"tuding\"};\n");
 				//$document->addScript("http://assets.changyan.sohu.com/upload/plugins/plugins.count.js");
@@ -218,4 +214,39 @@ class plgContentchangyan extends JPlugin
     public function onContentPrepare($context, &$article, &$params, $limitstart)
     {
     }//function
+
+	function onAfterRender() // for replacing any body tag
+    {
+$isPrinting = JRequest::getCmd('print');
+$app        = JFactory::getApplication();
+        if($app->isAdmin() || $isPrinting) {
+            return false;
+        }
+$type       = JFactory::getDocument()->getType();
+        if($type != 'html') {
+            return false;
+        }
+
+$option     = JRequest::getCmd('option');
+$view       = JRequest::getCmd('view', '');
+$context    = $option.'.'.$view;
+
+
+        switch ($context) {
+            case 'com_content.category':
+            case 'com_content.featured':
+            case 'com_content.archive':
+        $response = JResponse::getBody();
+        $replace = "</body>";
+        $response = str_replace($replace, '<script id="cy_cmt_num" src="http://assets.changyan.sohu.com/upload/tools/cy_cmt_count.js?clientId=cyqLttHmL"></script>'."\n".'</body>', $response);
+        JResponse::setBody($response);
+                return true;
+                break;
+            case 'com_content.article':
+            default:
+                return false;
+                break;
+        }
+        
+    }
 }//class
