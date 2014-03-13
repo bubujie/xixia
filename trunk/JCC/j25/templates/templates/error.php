@@ -6,7 +6,7 @@
  * @copyright Copyright (C) ##author## 2008 - 2012 ##website##. All Rights Reserved.
  * @license   ##license##
  */
-
+//编码保持
 defined('_JEXEC') or die;
 if (!isset($this->error)) {
 	$this->error = JError::raiseWarning(404, JText::_('JERROR_ALERTNOAUTHOR'));

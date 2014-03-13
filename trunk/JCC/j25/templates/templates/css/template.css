@@ -6,6 +6,7 @@
  * @copyright Copyright (C) ##author## 2008 - 2012 ##website##. All Rights Reserved.
  * @license   ##license##
  */
+ //ч╝ЦчаБф┐ЭцМБ
 body, input, textarea, select, table, button { font-family:Tahoma, Geneva, sans-serif; font-size:12px;}
 img, fieldset { border:0;}
 form, fieldset { margin:0; padding:0;}
@@ -13,22 +14,22 @@ em, address { font-style:normal;}
 button{ margin:0; padding:0; overflow:visible; cursor:pointer;}
 a { text-decoration:none;}
 a:hover, a:active, a:focus {text-decoration:underline;}
-/* блблблблблблблблбл ╫в╩═ блблблблблблблблбл */
+/* ######### ц│ищЗК ######### */
 /* Text styles */
 .blog-featured h2 {font-size: 1.5em;margin-bottom:0em;}
 p.readmore {text-indent:0;font-size: .9em;}
 .joomla-footer {font-size: .9em;margin-bottom: 30px;}
-/* блблблблблблблблбл ╫в╩═ блблблблблблблблбл */
+/* ######### ц│ищЗК ######### */
 ul.actions {clear:both;margin-top: -50px;float:right;}
 ul.actions li {list-style-type: none;float:right;margin-left: 10px;}
-/* блблблблблблблблбл ╫в╩═ блблблблблблблблбл */
+/* ######### ц│ищЗК ######### */
 p#form-login-username label,
 p#form-login-password label {width: 160px;display:block;}
 p#form-login-remember label {font-size: .9em;font-weight: normal;line-height: 25px;}
 p#form-login-remember input {float:left;margin-right: 5px;}
 form#form-login ul {margin: 0;padding: 0;}
 form#form-login ul li {list-style-type: none;margin-left: 20px;font-size: .9em;}
-/* блблблблблблблблбл ╫в╩═ блблблблблблблблбл */
+/* ######### ц│ищЗК ######### */
 /* System Messages */
 #system-message { margin-top: 10px; margin-bottom: 10px; padding: 0; }
 #system-message dt { font-weight: bold; display: none; }
@@ -53,7 +54,7 @@ span.highlight { background-color:#FFFFCC; font-weight:bold; padding:1px 4px; }
 .img-intro-float-right { float: right; margin-left: 5px; margin-bottom: 5px; }
 .img-intro-float-left { float: left; margin-right: 5px; margin-bottom: 5px; }
 .img-intro-float-none { }
-/* блблблблблблблблбл ╫в╩═ блблблблблблблблбл */
+/* ######### ц│ищЗК ######### */
 dl.article-info{border-top: 1px solid #DDDDDD;margin-bottom: 15px;padding: 5px;background: #ECECEC;}
 dl.article-info dt.article-info-term{display:none;}
 dl.article-info dd{margin-left:0;padding: 3px 3px 3px 20px;display:inline;font-family:Dotum;_font-family:Tahoma, Geneva, sans-serif;}
@@ -61,4 +62,4 @@ dl.article-info dd.category-name{}
 dl.article-info dd.create,dl.article-info dd.modified,dl.article-info dd.published{background:url(../img/ico_date.gif) 0 50% no-repeat;}
 dl.article-info dd.createdby{background:url(../img/ico_user.gif) 0 50% no-repeat;}
 dl.article-info{}
-/* блблблблблблблблбл ╫в╩═ блблблблблблблблбл */
+/* ######### ц│ищЗК ######### */
