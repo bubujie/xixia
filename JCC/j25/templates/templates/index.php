@@ -6,7 +6,7 @@
  * @copyright Copyright (C) ##author## 2008 - 2012 ##website##. All Rights Reserved.
  * @license   ##license##
  */
-
+//编码保持
 // no direct access
 defined('_JEXEC') or die;
 /* ######### ######### ######### 注释 ######### ######### ######### */

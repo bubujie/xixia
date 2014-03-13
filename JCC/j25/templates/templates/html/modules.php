@@ -6,7 +6,7 @@
  * @copyright Copyright (C) ##author## 2008 - 2012 ##website##. All Rights Reserved.
  * @license   ##license##
  */
-
+//编码保持
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
@@ -26,7 +26,7 @@ function modChrome_open($module, &$params, &$attribs)
 	$gridSize       = $params->get('grid_size', 0);
 
 	if (!empty ($module->content)) :
-		echo $gridSize ? "\n".'<div class="'.$gridSize.' xfl ding">' : '';
+		echo $gridSize ? "\n".'<div class="'.$gridSize.' xfl clearfix">' : '';
 		echo $module->content;
 		echo $gridSize ? "\n".'</div>' : '';
 	endif;
@@ -49,8 +49,8 @@ function modChrome_division($module, &$params, &$attribs)
 
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
-		echo $gridSize ? "\n".'<div class="'.$gridSize.' xfl ding">' : '';
-		printf("\n".'<div id="module-%s" class="module mod%s division ding">' ,
+		echo $gridSize ? "\n".'<div class="'.$gridSize.' xfl clearfix">' : '';
+		printf("\n".'<div id="module-%s" class="module mod%s division clearfix">' ,
 			$module->id ,
 			$params->get('moduleclass_sfx')
 		);
@@ -86,8 +86,8 @@ function modChrome_zengarden($module, &$params, &$attribs)
 
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
-		echo $gridSize ? "\n".'<div class="'.$gridSize.' xfl ding">' : '';
-		printf("\n".'<div id="module-%s" class="module mod%s ding">' ,
+		echo $gridSize ? "\n".'<div class="'.$gridSize.' xfl clearfix">' : '';
+		printf("\n".'<div id="module-%s" class="module mod%s clearfix">' ,
 			$module->id ,
 			$params->get('moduleclass_sfx')
 		);
@@ -122,16 +122,16 @@ function modChrome_stroke($module, &$params, &$attribs)
 
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
-		echo $gridSize ? "\n".'<div class="'.$gridSize.' xfl ding">' : '';
-		printf("\n".'<div id="module-%s" class="module mod%s stroke ding">' ,
+		echo $gridSize ? "\n".'<div class="'.$gridSize.' xfl clearfix">' : '';
+		printf("\n".'<div id="module-%s" class="module mod%s stroke clearfix">' ,
 			$module->id ,
 			$params->get('moduleclass_sfx')
 		);
-		echo   "\n  ".'<div class="strokeo ding">';
-		echo   "\n  ".'<div class="strokec ding">';
-		echo   "\n  ".'<div class="strokei ding">';
+		echo   "\n  ".'<div class="strokeo clearfix">';
+		echo   "\n  ".'<div class="strokec clearfix">';
+		echo   "\n  ".'<div class="strokei clearfix">';
 		if ($module->showtitle) :
-			printf("\n    ".'<h%s class="mod-heading ding"><span>%s</span></h%s>' ,
+			printf("\n    ".'<h%s class="mod-heading clearfix"><span>%s</span></h%s>' ,
 				$headerLevel ,
 				$module->title ,
 				$headerLevel
@@ -168,8 +168,8 @@ function modChrome_squared($module, &$params, &$attribs)
 
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) :
-		echo $gridSize ? "\n".'<div class="'.$gridSize.' xfl ding">' : '';
-		printf("\n".'<div id="module-%s" class="module mod%s ding">' ,
+		echo $gridSize ? "\n".'<div class="'.$gridSize.' xfl clearfix">' : '';
+		printf("\n".'<div id="module-%s" class="module mod%s clearfix">' ,
 			$module->id ,
 			$params->get('moduleclass_sfx')
 		);
