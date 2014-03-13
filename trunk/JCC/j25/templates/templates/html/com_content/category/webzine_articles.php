@@ -28,51 +28,64 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 
 <?php else : ?>
 <style type="text/css">
-/* 공통 */
-.xans-product-1 { margin:30px 0 0; }
-.xans-product-1 h2 { height:30px; font-size:12px; color:#272823; background:url("http://img.echosting.cafe24.com/design/skin/default_cn/layout/bg_title.gif") 0 3px repeat-x; }
-.xans-product-1 h2 span { padding:0 7px 0 10px; background:#fff url("http://img.echosting.cafe24.com/design/skin/default_cn/common/ico_title.gif") 0 0 no-repeat; }
-.xans-product-1 img { vertical-align:middle; }
-.xans-product-1 ul.prdList { display:table; width:100%; min-width:756px; margin:-20px 0 0; font-size:0; line-height:0; }
-.xans-product-1 ul.prdList li.item { display:inline-block; *display:inline; *zoom:1; margin:20px 0 40px 0; color:#838383; vertical-align:top; }
-.xans-product-1 ul.prdList li.item div.box { margin:0 auto; font-size:12px; line-height:1.8em; }
-.xans-product-1 ul.prdList li .mileage { display:block; }
-.xans-product-1 span.grid { display:block; }
 
-.xans-product-1 ul.prdList .name { position:relative; padding:7px 12px 0 0; }
-.xans-product-1 ul.prdList .name a { color:#838383; }
-.xans-product-1 ul.prdList .name .zoom {  position:absolute; width:12px; top:10px; right:0; cursor:pointer; }
-.xans-product-1 ul.prdList .button { overflow:hidden; zoom:1; }
-.xans-product-1 ul.prdList .button img { cursor:pointer; margin:0 4px 0 0; }
-.xans-product-1 ul.prdList .button .bag { float:left; padding:7px 10px 0 0; }
-.xans-product-1 ul.prdList .button .option { float:left; padding:7px 0 0; }
+/*
+ * 상품리스트
+**/
 
-/* 진열방식 */
-.xans-product-1 ul.column3 li.item { width:33.33%; }
-.xans-product-1 ul.column3 li.item .box { width:240px; }
-.xans-product-1 ul.column3 li.item .thumb { width:240px; height:240px; }
-.xans-product-1 ul.column4 li.item { width:25%; }
-.xans-product-1 ul.column4 li.item .box { width:180px; }
-.xans-product-1 ul.column4 li.item .thumb { width:180px; height:180px; }
-.xans-product-1 ul.column5 li.item { width:20%; }
-.xans-product-1 ul.column5 li.item .box { width:140px; }
-.xans-product-1 ul.column5 li.item .thumb { width:140px; height:140px; }
+/* 타입 : 설명 */
+.xans-product-listnormal.typeDesc h2 { margin:0 4px 0; padding:10px 0 0 18px; font-size:13px; line-height:15px; background:url("http://img.echosting.cafe24.com/design/skin/mobile_cn/bg_product_title.png") 0 10px no-repeat; background-size:13px 10px; }
+.xans-product-listnormal.typeDesc { margin:10px 0 0; font-size:12px; }
+.xans-product-listnormal.typeDesc > ul > li { position:relative; padding:10px 10px 10px 0; border-bottom:1px dashed #a1a1a3;}
+.xans-product-listnormal.typeDesc .thumbnail { position:absolute; left:0; top:10px; }
+.xans-product-listnormal.typeDesc .description { min-height:85px; padding:0 30px 0 100px; }
+.xans-product-listnormal.typeDesc .name a { color:#63666e; }
+.xans-product-listnormal.typeDesc .price { color:#f60; font-weight:bold; font-family:Tahoma; }
+.xans-product-listnormal.typeDesc .strike { text-decoration:line-through; }
+.xans-product-listnormal.typeDesc .delete { position:absolute; top:10px; right:10px; overflow:hidden; text-indent:-999px; width:21px; height:20px; border:0; cursor:pointer; background:url("http://img.echosting.cafe24.com/design/skin/mobile_cn/btn_del.png") no-repeat 0 0; background-size:100% 100%; }
+.xans-product-listnormal.typeDesc .button { padding:5px 0; }
+.xans-product-listnormal.typeDesc .button:after { content:""; display:block; clear:both; }
+.xans-product-listnormal.typeDesc .button .tButton.type2 { float:right; }
+.xans-product-listnormal.typeDesc .option { display:none; }
+.xans-product-listnormal.typeDesc .option li { margin:3px 0 0; padding:0 0 0 8px; font-size:11px; border-bottom:0; background:url("http://img.echosting.cafe24.com/design/skin/mobile_cn/bg_boardwrite_th.png") 0 7px no-repeat; background-size:3px 7px; }
+.xans-product-listnormal.typeDesc .btnEm { display:inline-block; height:22px; margin:0; padding:0 15px 0 6px; border:1px solid #bcbcbc; border-radius:3px; -moz-box-sizing:border-box; box-sizing:border-box; font-size:11px; color:#666; line-height:21px; cursor:pointer; vertical-align:middle; font-family:Verdana, Dotum; letter-spacing:-1px; background:#fff url("http://img.echosting.cafe24.com/design/skin/mobile_cn/bg_button_arrow.png") no-repeat 100% 50%; background-size:10px 8px; }
+.xans-product-listnormal.typeDesc .discountPeriod { position:relative; display:inline-block; font-weight:normal; font-family:"돋움", Dotum, sans-serif; color:#212530; vertical-align:middle; }
+.xans-product-listnormal.typeDesc .layerDiscountPeriod { display:none; z-index:1000; position:fixed; left:50%; width:280px; top:100px; margin:0 0 0 -150px; padding:17px 10px 10px; border:1px solid #999; border-radius:3px; text-align:center; background-color: #f5f5f6; }
+.xans-product-listnormal.typeDesc .layerDiscountPeriod strong { font-weight:normal; font-size:13px; }
+.xans-product-listnormal.typeDesc .layerDiscountPeriod .btnArea { margin:10px; }
+.xans-product-listnormal.typeDesc .layerDiscountPeriod .btnArea .submit { width:71px; height:29px; line-height:25px; }
+.xans-product-listnormal.typeDesc .layerDiscountPeriod .btnClose { position:absolute; right:4px; top:5px; overflow:hidden; width:18px; height:18px; font-size:0; background:url("http://img.echosting.cafe24.com/design/skin/mobile_cn/btn_layer_close.png") no-repeat 50% 50%; background-size:9px 8px; }
 
-/* module="product_ListItem" */
-.xans-product-1 .xans-product-listitem { margin:0; }
-.xans-product-1 .xans-product-listitem li .title { font-weight:normal; }
 
-/* 할인기간 레이어 */
-.xans-product-1 .discountPeriod { display:inline-block; z-index:10; position:relative; width:55px; height:19px; vertical-align:middle; *zoom:1; *display:inline; }
-.xans-product-1 .discountPeriod .edge { position:absolute; left:14px; top:-6px; width:9px; height:6px; font-size:0; line-height:0; background:url("http://img.echosting.cafe24.com/design/skin/default/common/bg_edge.gif") no-repeat 0 0; }
-.xans-product-1 .layerDiscountPeriod { display:none; position:absolute; left:0; top:27px; width:313px; border:1px solid #6f94bf; font-size:12px; background-color:#fff; border-radius:3px; }
-.xans-product-1 .layerDiscountPeriod strong.title { display:block; margin:0 0 8px; padding:0 35px 0 0; font-weight:bold; color:#010101; }
-.xans-product-1 .layerDiscountPeriod .content { padding:11px 19px 15px; }
-.xans-product-1 .layerDiscountPeriod .content p { color:#000; line-height:16px; }
-.xans-product-1 .layerDiscountPeriod .content p strong { color:#80aeef; }
-.xans-product-1 .layerDiscountPeriod .content p strong span { font-size:11px; }
-.xans-product-1 .layerDiscountPeriod .close { position:absolute; right:12px; top:11px; }
-.xans-product-1 .layerDiscountPeriod .close img { cursor:pointer; }
+
+.xans-product-listnormal.typeDesc img { width:85px; }
+/* 타입 : 섬네일 */
+.xans-product-listnormal.typeThumb { margin:10px -4px 0; }
+.xans-product-listnormal.typeThumb:first-child h2 { border-top:0; }
+.xans-product-listnormal.typeThumb h2 { margin:0 4px 0; padding:10px 0 0 18px; font-size:13px; line-height:15px; background:url("http://img.echosting.cafe24.com/design/skin/mobile_cn/bg_product_title.png") 0 10px no-repeat; background-size:13px 10px; }
+.xans-product-listnormal.typeThumb ul { display:table; table-layout:fixed; width:100%; font-size:0; line-height:0; }
+.xans-product-listnormal.typeThumb img { max-width:100%; }
+.xans-product-listnormal.typeThumb li { position:relative; display:inline-block; padding:7px 0; text-align:center; vertical-align:top; }
+.xans-product-listnormal.typeThumb .thumbnail { margin:0 4px; }
+.xans-product-listnormal.typeThumb .thumbnail img { width:100%; }
+.xans-product-listnormal.typeThumb .information { position:relative; min-height:10px; margin:8px 4px 0 4px; }
+.xans-product-listnormal.typeThumb .name { margin:8px 4px 0; font-size:12px; line-height:15px; word-wrap:break-word; }
+.xans-product-listnormal.typeThumb .name a { color:#1D2B6D; }
+.xans-product-listnormal.typeThumb .price { margin:0 4px; color:#f60; font-weight:bold; font-size:12px; font-family:Tahoma; line-height:15px; word-wrap:break-word; }
+.xans-product-listnormal.typeThumb .strike { text-decoration:line-through; }
+.xans-product-listnormal.typeThumb .more_view { margin:7px 4px 0; }
+.xans-product-listnormal.typeThumb .more_view a { display:block; padding:0 0 0 0; background:#d4d4d6; }
+.xans-product-listnormal.typeThumb .more_view a span { overflow:hidden; display:block; width:100%; height:30px; text-indent:-9999px; background:url("http://img.echosting.cafe24.com/design/skin/mobile_cn/bg_togglebar_show.png") no-repeat 50% 50%; background-size:12px 12px; }
+.xans-product-listnormal.typeThumb .grid3 li { width:33.333%; }
+.xans-product-listnormal.typeThumb .grid4 li { width:25%; }
+.xans-product-listnormal.typeThumb .btnEm { display:inline-block; height:22px; margin:0; padding:0 15px 0 6px; border:1px solid #bcbcbc; border-radius:3px; -moz-box-sizing:border-box; box-sizing:border-box; font-size:11px; color:#666; line-height:21px; cursor:pointer; vertical-align:middle; font-family:Verdana, Dotum; letter-spacing:-1px; background:#fff url("http://img.echosting.cafe24.com/design/skin/mobile_cn/bg_button_arrow.png") no-repeat 100% 50%; background-size:10px 8px; }
+.xans-product-listnormal.typeThumb .discountPeriod { position:relative; display:inline-block; font-weight:normal; font-family:"돋움", Dotum, sans-serif; color:#212530; vertical-align:middle; }
+.xans-product-listnormal.typeThumb .layerDiscountPeriod { display:none; z-index:1000; position:fixed; left:50%; width:280px; top:100px; margin:0 0 0 -150px; padding:17px 10px 10px; border:1px solid #999; border-radius:3px; text-align:center; background-color: #f5f5f6; }
+.xans-product-listnormal.typeThumb .layerDiscountPeriod p { margin:3px 0; }
+.xans-product-listnormal.typeThumb .layerDiscountPeriod strong { font-weight:normal; font-size:13px; }
+.xans-product-listnormal.typeThumb .layerDiscountPeriod .btnArea { margin:10px; }
+.xans-product-listnormal.typeThumb .layerDiscountPeriod .btnArea .submit { width:71px; height:29px; line-height:25px; }
+.xans-product-listnormal.typeThumb .layerDiscountPeriod .btnClose { position:absolute; right:4px; top:5px; overflow:hidden; width:18px; height:18px; font-size:0; background:url("http://img.echosting.cafe24.com/design/skin/mobile_cn/btn_layer_close.png") no-repeat 50% 50%; background-size:9px 8px; }
 </style>
 <form action="<?php echo htmlspecialchars(JFactory::getURI()->toString()); ?>" method="post" name="adminForm" id="adminForm">
 	<?php if ($this->params->get('show_headings') || $this->params->get('filter_field') != 'hide' || $this->params->get('show_pagination_limit')) :?>
@@ -136,33 +149,35 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 		</div>
 		<?php endif; ?>
 
-	<div class="category xans-product-1">
+	<div class="category xans-product-listnormal typeDesc">
 
-		<ul class="prdList column4">
+		<ul class="grid4">
 
 		<?php foreach ($this->items as $i => $article) : ?>
 			<?php if ($this->items[$i]->state == 0) : ?>
 				<li><ul class="system-unpublished cat-list-row<?php echo $i % 2; ?>">
 			<?php else: ?>
-				<li class="item"><div class="box"><ul class="cat-list-row<?php echo $i % 2; ?>" >
+				<li class="item cat-list-row<?php echo $i % 2; ?>">
 			<?php endif; ?>
 				<?php if (in_array($article->access, $this->user->getAuthorisedViewLevels())) : ?>
 <?php $images = json_decode($article->images); ?>
 <?php  if (isset($images->image_intro) and !empty($images->image_intro)) : ?>
 	<?php $imgfloat = (empty($images->float_intro)) ? $this->params->get('float_intro') : $images->float_intro; ?>
-	<li>
-	<div class="img-intro-<?php echo htmlspecialchars($imgfloat); ?>">
+	<div class="thumbnail">
+	<a class="layer" href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid, $article->language)); ?>">
 	<img class="thumb"
 		<?php if ($images->image_intro_caption):
 			echo 'class="caption"'.' title="' .htmlspecialchars($images->image_intro_caption) .'"';
 		endif; ?>
 		src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>"/>
+	</a>
 	</div>
-	</li>
-<?php endif; ?>
+<?php endif; ?><div class="description">
+					<ul>
 					<li class="list-title">
-						<a class="name" href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid, $article->language)); ?>">
-							<?php echo $this->escape($article->title); ?></a>
+						<span class="name">
+						<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid, $article->language)); ?>">
+							<?php echo $this->escape($article->title); ?></a></span>
 
 						<?php if ($article->params->get('access-edit')) : ?>
 						<ul class="actions">
