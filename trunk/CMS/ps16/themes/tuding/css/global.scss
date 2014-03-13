@@ -1,0 +1,94 @@
+@charset "utf-8";
+//@import "global-old";
+@import "E:/tuding/css/layout";
+@import "E:/tuding/css/xeui";
+body,table,input,textarea,select,button{font-family:Tahoma,Geneva,sans-serif;font-size:12px;color:#333}
+//乱码测试
+@include tuding($layout:'h',$row:960px,$n1:200px,$n2:200px,$space:10px,$incInner:0,$v1:200px,$v2:200px);
+
+#thumbs_list{@extend %clearfix;}
+//.box, .box-heading, .box-content{
+//	@extend .box;
+//}
+#thumbs_list li{width:90px !important;height:90px !important;}
+#order #center_column {
+width: 100% !important;
+}
+
+//编码保持
+.product_view #product_view_grid,.product_view #product_view_list{
+float: left;
+width: 25px;
+height: 22px;
+margin-left: -1px;
+background: url('../img/icon/ico_list_array.gif') no-repeat 0 0;
+font-size: 0;
+text-indent: -9999px;
+}
+.product_view #product_view_list {
+background-position: -24px 0;
+}
+.product_view .current {
+background-position-y: -22px !important;
+}
+/* ######### ######### ######### 修复 ######### ######### ######### */
+label label, label a {
+outline:0 !important;
+}
+.layered_slider_container {
+margin: 6px 0 6px 8px !important;
+width: 91%;
+}
+/* ######### ######### ######### 附加布局 ######### ######### ######### */
+//@include tuding_by_h_nmn($selectorNMN:'.primary_block',$selectorMING:'.pb-center-column',$selectorN1:'.pb-left-column',$selectorN2:'.pb-right-column',$row:null,$n1:302px,$n2:320px,$space:10px);
+//#view_full_size img{border:1px solid #EEE;}
+//@include tuding_by_h_nmn($selectorNMN:'#views_block',$selectorMING:'#thumbs_list',$selectorN1:'.view_scroll_spacer',$selectorN2:'#view_scroll_right',$row:null,$n1:25px,$n2:25px,$space:0px);
+//@include tuding_by_h_nmn($selectorNMN:'.list .product-container .row',$selectorMING:'.center-block',$selectorN1:'.left-block',$selectorN2:'.right-block',$row:null,$n1:400px,$n2:100px,$space:10px);
+//@include tuding_by_ft7_nmn($selectorNMN:'#views_block',$selectorMING:'#thumbs_list',$selectorN1:'.view_scroll_spacer',$selectorN2:'#view_scroll_right',$row:300px,$n1:25px,$n2:25px,$space:0px);
+span.view_scroll_spacer,#view_scroll_left, #view_scroll_right{display:block;padding:0;height:90px;}
+#view_scroll_left, #view_scroll_right {padding:0 !important;}
+#pb-right-column #views_block {width: auto !important;}
+#thumbs_list {margin-left:0 !important;}
+//@include tuding_by_h_nmn($selectorNMN:'.product-list .ajax_block_product',$selectorMING:'.center_block',$selectorN1:'.left_block',$selectorN2:'.right_block',$row:null,$n1:20px,$n2:150px,$space:10px);
+//#product_list .ajax_block_product{border-bottom:1px solid #000;padding-top:20px;padding-bottom:20px;}
+#product_list .first_item{border-top:1px solid #000;}
+@media screen and (max-width:1100px) {
+	//@include tuding_h_2cols($rowo,$v1,$v2,$space,null,0,2);
+	//@include tuding_h_2cols($rowo,$v1,$v2,$space,'',0,-1);
+	//@include tuding_1col('',1);
+	//@include tuding_1col('',0);
+}
+
+@media screen and (max-width:900px) {
+	$rowo:96%;
+	$n1:200px;
+	$n2:200px;
+	$space:0px;
+	@include tuding_h_2cols($rowo,$n1,$n2,$space,null,0,2);
+	//@include tuding_h_2cols($rowo,$v1,$v2,$space,'',0,-1);
+	//@include tuding_1col('',1);
+	//@include tuding_1col('',0);
+}
+
+@media screen and (max-width:700px) {
+	//@include tuding_h_2cols($rowo,$v1,$v2,$space,null,1,-1);
+	//@include tuding_h_2cols($rowo,$v1,$v2,$space,'',0,-1);
+	//@include tuding_1col('',1);
+	//@include tuding_1col('',0);
+}
+
+@media screen and (max-width:500px) {
+	//@include tuding_h_2cols($rowo,$v1,$v2,$space,null,1,-1);
+	//@include tuding_h_2cols($rowo,$v1,$v2,$space,'',0,-1);
+	//@include tuding_1col('',1);
+	@include tuding_1col('',0);
+	@include tuding_by_1col($selector:'.product-list .ajax_block_product',$selectorMING:'.center_block',$selectorN1:'.left_block',$selectorN2:'.right_block',$row:auto);
+	@include tuding_by_1col($selector:'#primary_block',$selectorMING:'#pb-left-column',$selectorN1:'#pb-right-column',$selectorN2:'',$row:720px);
+}
+/*
+.n1{background-color:#F00;}
+.ming{background-color:#0F0;}
+.n2{background-color:#00F;}
+*/
+
+//.product_list.grid>li{width:300px;height:600px;float:left;display:inline-block;margin-left:2px;margin-right:2px;}
