@@ -24,8 +24,7 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-{capture name=path}{l s='Login'}{/capture}
-{include file="$tpl_dir./breadcrumb.tpl"}
+{capture name=path}{l s='Login'}{/capture}}
 
 <script type="text/javascript">
 // <![CDATA[

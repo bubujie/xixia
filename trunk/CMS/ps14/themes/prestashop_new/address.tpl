@@ -73,7 +73,6 @@ $(function(){ldelim}
 </script>
 
 {capture name=path}{l s='Your addresses'}{/capture}
-{include file="$tpl_dir./breadcrumb.tpl"}
 
 <h1>{l s='Your addresses'}</h1>
 
