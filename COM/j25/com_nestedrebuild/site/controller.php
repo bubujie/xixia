@@ -59,6 +59,7 @@ class NestedRebuildController extends JController
         {
 
             // fetch the source column
+            /*
             $s_query = "SELECT * FROM `adjacent_table` WHERE `id`  = '".$i_id."'";
             if (!$i_result = mysql_query($s_query))
             {
@@ -70,7 +71,7 @@ class NestedRebuildController extends JController
             {
                 $a_source = mysql_fetch_assoc($i_result);
             }
-
+            */
             // root node?  label it unless already labeled in source table
             if (1 == $i_lft && empty($a_source['category']))
             {
