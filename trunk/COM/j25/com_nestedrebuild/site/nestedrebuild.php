@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `nested_table` (
 // Require the base controller
 require_once JPATH_COMPONENT.'/controller.php';
     mysql_connect('localhost','root','xampp') or die(mysql_error());
-    mysql_select_db('bubujienet') or die(mysql_error());
+    mysql_select_db('joomla') or die(mysql_error());
 
     // build a complete copy of the adjacency table in ram
     $s_query = "SELECT `id`,`parent_id` FROM `jos_categories`";
