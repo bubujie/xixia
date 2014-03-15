@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="package" version="2.5.0" method="upgrade">
+	<name>Modules Extra Params</name>
+	<packagename>modulesextraparams</packagename>
+	<author>步步街工作室</author>
+	<packager>步步街工作室</packager>
+	<packageurl>www.bubujie.net</packageurl>
+	<creationDate>2014年03月15日</creationDate>
+	<copyright>Copyright (C) 步步街工作室 2008 - 2014. All rights reserved.</copyright>
+	<version>1.0.0</version>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>Plugins to add extra params to modules</description>
+
+	<files folder="plugins">
+		<file type="plugin" id="modulesextraparams" group="system">plg_system_modulesextraparams.zip</file>
+		<file type="plugin" id="modulesextraparams" group="content">plg_content_modulesextraparams.zip</file>
+	</files>
+</extension>
