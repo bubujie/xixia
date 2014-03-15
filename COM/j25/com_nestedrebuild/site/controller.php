@@ -42,7 +42,7 @@ class NestedRebuildController extends JController
             {
                 foreach($a_kid as $a_child) 
                 {
-                    $this->traverse($a_child);
+                    @$this->traverse($a_child);
                 }
             }
             $i_rgt=$this->i_count;
@@ -52,7 +52,7 @@ class NestedRebuildController extends JController
 
         private function get_children($i_id) 
         {
-            return @$this->a_link[$i_id];
+            return $this->a_link[$i_id];
         }
 
         private function write($i_lft,$i_rgt,$i_id) 
@@ -78,18 +78,24 @@ class NestedRebuildController extends JController
                 $a_source['category'] = 'ROOT';
             }
 
+if($i_lft<0){
+    $s_query='';
+}else{
             // insert into the new nested tree table
             // use mysql_real_escape_string because one value "CD's"  has a single '
-            $s_query = "
+            $s_query_remove = "
                 INSERT INTO `nested_table`
                 (`id`,`lft`,`rgt`,`category`)
                 VALUES (
                     '".$i_id."',
                     '".$i_lft."',
-                    '".$i_rgt."',
-                    '".mysql_real_escape_string(@$a_source['category'])."'
+                    '".$i_rgt."'
                 )
             ";
+            $s_query = "
+                UPDATE `jos_assets`
+                SET lft='".$i_lft."', rgt='".$i_rgt."' WHERE id='".$i_id."';<br />";
+}
             //原始代码：若已执行，则输出
             //if (！$i_result = mysql_query($s_query))
             if ($i_result = mysql_query($s_query))
