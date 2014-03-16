@@ -36,10 +36,10 @@
     <position>banners</position>
     <position>mainmenu</position>
     <position>breadcrumbs</position>
-    <position>bhead-top</position>
+    <!--position>bhead-top</position-->
     <position>bhead</position>
-    <position>bhead-btm</position>
-    <position>bbody-top</position>
+    <!--position>bhead-btm</position-->
+    <!--position>bbody-top</position-->
     <!--position>side1-top</position-->
     <position>side1</position>
     <!--position>side1-btm</position-->
@@ -53,10 +53,10 @@
     <!--position>side2-top</position-->
     <position>side2</position>
     <!--position>side2-btm</position-->
-    <position>bbody-btm</position>
-    <position>bfoot-top</position>
+    <!--position>bbody-btm</position-->
+    <!--position>bfoot-top</position-->
     <position>bfoot</position>
-    <position>bfoot-btm</position>
+    <!--position>bfoot-btm</position-->
   </positions>
   <languages folder="language">
     <language tag="en-GB">en-GB/en-GB.tpl_##template##.ini</language>
