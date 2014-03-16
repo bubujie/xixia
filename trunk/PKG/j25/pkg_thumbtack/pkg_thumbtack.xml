@@ -13,7 +13,7 @@
 	<files folder="plugins">
 		<file type="plugin" id="modulesextraparams" group="content">plg_content_modulesextraparams.zip</file>
 		<file type="plugin" id="modulesextraparams" group="system">plg_system_modulesextraparams.zip</file>
-		<file type="plugin" id="byebyegenerator" group="system">plg_system_byebyegenerator</file>
+		<file type="plugin" id="byebyegenerator" group="system">plg_system_byebyegenerator.zip</file>
 		<file type="plugin" id="mobiletemplate" group="system">plg_system_mobiletemplate.zip</file>
 	</files>
 </extension>
