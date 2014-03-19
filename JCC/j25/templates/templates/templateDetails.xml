@@ -57,6 +57,9 @@
     <position>bfoot-top</position>
     <position>bfoot</position>
     <position>bfoot-btm</position>
+    <position>virtual1</position>
+    <position>virtual2</position>
+    <position>virtual3</position>
   </positions>
   <languages folder="language">
     <language tag="en-GB">en-GB/en-GB.tpl_##template##.ini</language>
