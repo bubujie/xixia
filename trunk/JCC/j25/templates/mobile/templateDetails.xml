@@ -34,6 +34,7 @@
     <position>debug</position>
     <position>search</position>
     <position>banners</position>
+    <position>topmenu</position>
     <position>mainmenu</position>
     <position>breadcrumbs</position>
     <!--position>bhead-top</position-->
