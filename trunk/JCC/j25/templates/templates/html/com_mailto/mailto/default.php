@@ -75,13 +75,13 @@ $data	= $this->get('data');
 	</tr>
 	<tr>
 		<td>
+		</td>
+		<td>
 		<span class="btn">
 			<button class="button" onclick="return Joomla.submitbutton('send');">
 				<?php echo JText::_('COM_MAILTO_SEND'); ?>
 			</button>
 		</span>
-		</td>
-		<td>
 		<span class="btn">
 			<button class="button" onclick="window.close();return false;">
 				<?php echo JText::_('COM_MAILTO_CANCEL'); ?>
