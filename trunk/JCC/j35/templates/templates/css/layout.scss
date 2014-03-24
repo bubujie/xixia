@@ -1,5 +1,8 @@
-@import "D:/colophon/Sass/layout";
-@import "D:/colophon/Sass/table";
+@charset "utf-8";
+//编码保持
+@import "E:/tuding/css/blueprint";
+@import "E:/tuding/css/layout";
+@import "E:/tuding/css/table";
 $layout:'h';
 $rowo:90%;
 $n1:200px;
@@ -8,21 +11,13 @@ $space:10px;
 $incInner:false;
 $v1:200px;
 $v2:200px;
-
-
-/* Element Reset */
-body, input, textarea, select, table, button { font-family:Tahoma, Geneva, sans-serif; font-size:12px;}
-img, fieldset { border:0;}
-form, fieldset { margin:0; padding:0;}
-em, address { font-style:normal;}
-button{ margin:0; padding:0; overflow:visible; cursor:pointer;}
-a { text-decoration:none;}
-a:hover, a:active, a:focus {text-decoration:underline;}
-
-/* Common Class */
-.iText{ border:1px solid #b7b7b7; border-right-color:#e1e1e1; border-bottom-color:#e1e1e1; background:transparent;}
-.iCheck, .iRadio{ width:13px; height:13px; margin:0; padding:0; vertical-align:middle;}
-.hide{ position:absolute; left:0; top:0; width:1px; height:1px; font-size:0; line-height:0; visibility:hidden;}
+/* LoVe/HAte(爱恨原则) */
+a{text-decoration:none;color:gray;}
+a:link, a:visited, a:hover, a:active{}
+a:link{}
+a:visited{}
+a:hover{text-decoration:underline;}
+a:active{}
 @include tuding($layout,$rowo,$n1,$n2,$space,$incInner,$v1,$v2);
 //@include tuding_by_h_nmn($selectorNMN:'.container',$selectorMING:'.main',$selectorN1:'.sidebar1',$selectorN2:'.sidebar2',$rowo:NULL,$n1:100px,$n2:100px,$space:20px);
 //IE6 || IE7 || IE8
@@ -30,7 +25,72 @@ a:hover, a:active, a:focus {text-decoration:underline;}
 //@include tuding_h_2cols($rowo,$v1,$v2,-1,$space);
 //@include tuding_1col('',1);
 //@include tuding_1col('',0);
-
+.chzn-container-single .chzn-single {
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px;
+}
+.chzn-container-single .chzn-single div b {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.chzn-container-single .chzn-drop {
+    border-radius: 0px 0px 0px 0px;
+}
+.item-page .page-header h2{margin:0;}
+.item-page .btn-group{position:absolute;right:0;top:-50px;}
+/* ######### ######### ######### Pagination ######### ######### ######### */
+.pagenav,.pager ul,.pagination ul{
+@extend %btnArea;
+margin:1em 0;padding:0;list-style:none;
+}
+.pagenav .previous{float:left;}
+.pagenav .next{float:right;}
+.pager ul li,.pagination ul li{display:inline-block;}
+/* ######### ######### ######### Article index ######### ######### ######### */
+.article-index { float:right; margin-left:1em; padding:1em 2em;border:1px solid #F2E2A1; background:#FFFCF0; font-size:1em; }/* 深橙色线条，浅橙色背景， 字号*/
+.article-index ul { margin-left:0; padding-left:1em; } /* 去除列表左侧重排 */
+.article-index ul li { list-style-image:url(../img/li_off.png); } /* 列表项图标 */
+.article-index ul li a { font-weight:normal; color:#585858; } /*列表项字号颜色*/
+.article-index ul li a.active { font-weight:bold; } /* 列表项当前项高亮 */
+#helpsite-refresh{
+	border:3px double #bbb;
+	border-top:3px double #ddd;
+	border-left:3px double #ddd;
+	background-color: #fff;
+	font-size:12px;
+	background:url(../img/bg_btn.gif);
+	height:25px;
+	padding-top:3px;
+	vertical-align:top;
+}
+/* Tooltips */
+/* ######### ######### ######### Tooltips ######### ######### ######### */
+.hasTooltip{position:relative;}
+div.tooltip { float: left; background: #ffc; border: 1px solid #D4D5AA; padding: 5px; max-width: 200px; z-index:13000; }
+div.tooltip h4 { padding: 0; margin: 0; font-size: 95%; font-weight: bold; margin-top: -15px; padding-top: 15px; padding-bottom: 5px; background: url(../../../media/system/images/selector-arrow.png) no-repeat; }
+div.tooltip p { font-size: 90%; margin: 0; }
+/* ######### ######### ######### Category table ######### ######### ######### */
+table.category{
+@include table_wang(0.5em,silver);
+	th{
+		white-space:nowrap;
+	}
+	#categorylist_header_title, .list-title, .item-num{
+		border-left:none;
+	}
+	.list-title,.item-title{
+		width:100%;
+	}
+	.list-author, .list-hits, .list-edit{
+		white-space:nowrap;
+	}
+}
+/* 例外：此表格仅有一列.list-title */
+.tag-category table.category{width:100%;}
+/* ######### ######### ######### Category ul ######### ######### ######### */
+ul.category{margin-left:0;padding-left:0;border-top:1px solid #000;list-style:none;}
+ul.category li{border-bottom:1px solid #000;}
 @media screen and (max-width:1100px) {
 	//@include tuding_h_2cols($rowo,$v1,$v2,$space,null,0,2);
 	//@include tuding_h_2cols($rowo,$v1,$v2,$space,'',0,-1);
@@ -62,62 +122,3 @@ a:hover, a:active, a:focus {text-decoration:underline;}
 	//@include tuding_1col('',1);
 	@include tuding_1col('',0);
 }
-.chzn-container-single .chzn-single {
-    background-color: rgb(255, 255, 255);
-    border-radius: 0px;
-}
-.chzn-container-single .chzn-single div b {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-.chzn-container-single .chzn-drop {
-    border-radius: 0px 0px 0px 0px;
-}
-.item-page .page-header h2{margin:0;}
-.item-page .btn-group{position:absolute;right:0;top:-50px;}
-/* ######### ######### ######### Pagination ######### ######### ######### */
-@include btnArea('.pagenav,.pager ul,.pagination ul');
-.pagenav,.pager ul,.pagination ul{margin:1em 0;padding:0;list-style:none;}
-.pagenav .previous{float:left;}
-.pagenav .next{float:right;}
-.pager ul li,.pagination ul li{display:inline-block;}
-/* ######### ######### ######### Article index ######### ######### ######### */
-.article-index { float:right; margin-left:1em; padding:1em 2em;border:1px solid #F2E2A1; background:#FFFCF0; font-size:1em; }/* 深橙色线条，浅橙色背景， 字号*/
-.article-index ul { margin-left:0; padding-left:1em; } /* 去除列表左侧重排 */
-.article-index ul li { list-style-image:url(../img/li_off.png); } /* 列表项图标 */
-.article-index ul li a { font-weight:normal; color:#585858; } /*列表项字号颜色*/
-.article-index ul li a.active { font-weight:bold; } /* 列表项当前项高亮 */
-#helpsite-refresh{
-	border:3px double #bbb;
-	border-top:3px double #ddd;
-	border-left:3px double #ddd;
-	background-color: #fff;
-	font-size:12px;
-	background:url(../img/bg_btn.gif);
-	height:25px;
-	padding-top:3px;
-	vertical-align:top;
-}
-/* Tooltips */
-/* ######### ######### ######### Tooltips ######### ######### ######### */
-.hasTooltip{position:relative;}
-div.tooltip { float: left; background: #ffc; border: 1px solid #D4D5AA; padding: 5px; max-width: 200px; z-index:13000; }
-div.tooltip h4 { padding: 0; margin: 0; font-size: 95%; font-weight: bold; margin-top: -15px; padding-top: 15px; padding-bottom: 5px; background: url(../../../media/system/images/selector-arrow.png) no-repeat; }
-div.tooltip p { font-size: 90%; margin: 0; }
-/* ######### ######### ######### Category table ######### ######### ######### */
-@include tbl-wang('.category',0.5em,green,'.col1');
-table.category th{white-space:nowrap;}
-table.category #categorylist_header_title,
-table.category .list-title,
-table.category .item-num{border-left:none;}
-table.category{width:auto;}
-table.category .list-title,table.category .item-title{width:100%;}
-table.category .list-author,
-table.category .list-hits,
-table.category .list-edit{white-space:nowrap;}
-/* 例外：此表格仅有一列.list-title */
-.tag-category table.category{width:100%;}
-/* ######### ######### ######### Category ul ######### ######### ######### */
-ul.category{margin-left:0;padding-left:0;border-top:1px solid #000;list-style:none;}
-ul.category li{border-bottom:1px solid #000;}
