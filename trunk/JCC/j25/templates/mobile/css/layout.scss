@@ -1,0 +1,302 @@
+@charset "utf-8";
+//编码保持
+@import "E:/tuding/css/blueprint";
+@import "E:/tuding/css/layout";
+@import "E:/tuding/css/table";
+@import "E:/tuding/css/emmet";
+body{@extend .ffs;}
+/* LoVe/HAte(爱恨原则) */
+a{text-decoration:none;color:#369;}
+a:link, a:visited, a:hover, a:active{}
+a:link{}
+a:visited{}
+a:hover{text-decoration:underline;}
+a:active{}
+table.category{
+@include table_wang(0.5em,silver);
+	th{
+		white-space:nowrap;
+	}
+	#categorylist_header_title, .list-title, .item-num{
+		border-left:none;
+	}
+	.list-title,.item-title{
+		width:100%;
+	}
+	.list-author, .list-hits, .list-edit{
+		white-space:nowrap;
+	}
+}
+table.tbl{
+	@include table_tian(0.2em,silver);
+	border-width:1px;
+	tbody tr:nth-child(even) td, tbody tr.even td {background-color:#FDFDFD;}
+}
+/* ######### ######### ######### 注释 ######### ######### ######### */
+#footer { margin:50px 0 0; }
+//#footer p { padding:0 0 8px; text-align:center; font-size:0; line-height:0; }
+#footer p a { font-size:11px; line-height:14px; letter-spacing:-1px; color:#212530; font-weight:bold; padding:0 13px; border-left:1px solid #212530; } 
+#footer p a:first-child { border:0 none; padding-left:0; }
+#footer p a:last-child { padding-right:0; }
+#footer address { padding:15px 10px; font-size:11px; line-height:1.5em; color:#434447; background:#dfdfdf; }
+#footer address a { color:#434447; }
+#footer .tel { 
+    position:relative; padding:2px 6px 1px 14px; border:1px solid #9e9e9e; background-color:#ebebeb; 
+    background: -webkit-linear-gradient(bottom, #f8f8f8 , #eff0f1); /* For Safari */
+    background: -o-linear-gradient(bottom, #f8f8f8, #eff0f1); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, #f8f8f8, #eff0f1); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, #f8f8f8 , #eff0f1); /* Standard syntax */
+    box-shadow: inset 0px 1px 1px #fff;
+    border-radius:3px; 
+}
+#footer .tel:before { content:""; position:absolute; left:5px; top:50%; width:8px; height:8px; margin-top:-3px; background:url("http://img.echosting.cafe24.com/design/skin/mobile/ico_footer_tel.png") no-repeat 0 0; background-size:100% 100%; }
+
+/* 메인 고객센터 전화걸기 */
+.customer { margin:10px auto; text-align:center; } 
+.customer a { 
+    position:relative; display:inline-block; width:295px; padding:6px 20px 5px 20px !important; font-size:12px; border:1px solid #9e9e9e !important; background-color:#a9a9a9; 
+    background: -webkit-linear-gradient(bottom, #ffffff , #f5f5f5); /* For Safari */
+    background: -o-linear-gradient(bottom, #ffffff, #f5f5f5); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, #ffffff, #f5f5f5); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, #ffffff , #f5f5f5); /* Standard syntax */
+    box-shadow: inset 0px 1px 1px #fff;
+    border-radius:3px; 
+    -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; 
+}
+.customer a:before { content:""; display:inline-block; width:11px; height:11px; margin-right:5px; vertical-align:middle; margin-top:-2px; background:url("http://img.echosting.cafe24.com/design/skin/mobile/ico_footer_tel.png") no-repeat 0 0; background-size:100% 100%; }
+
+/* titleArea */
+.titleArea { margin:20px 0 0; border-bottom:1px solid #434447; }
+.titleArea:after { content:""; display:block; clear:both; }
+#contents > .titleArea:first-child { margin-top:0; }
+.titleArea h2 { float:left; padding:0 0 3px 16px; font-size:14px; color:#000; line-height:20px; background:url("http://img.echosting.cafe24.com/design/skin/mobile_cn/bg_titlearea.png") no-repeat 5px 0; background-size:4px 19px; }
+.titleArea h2 img { vertical-align:middle; }
+.titleArea + .boardView { margin-top:-1px; }
+
+/* btnArea */
+.btnArea { 
+    max-width:320px; margin:20px auto; text-align:center; font-size:0; line-height:0; letter-spacing:-4px; 
+    -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; 
+}
+.btnArea:after { content:""; display:block; clear:both; }
+.btnArea > a:first-child,
+.btnArea > button:first-child { margin-left:0; }
+.btnArea > a,
+.btnArea > span,
+.btnArea > button {
+    position:relative; display:inline-block; margin:0 0 0 10px; padding:0 10px; font-size:12px; line-height:1.25; letter-spacing:0; text-align:center; cursor:pointer; vertical-align:top; border:0; background:none;
+    border-radius:7px;
+    -moz-box-sizing:border-box; box-sizing:border-box;
+}
+.btnArea .submit{ height:36px; line-height:36px; color:#fff; background-color:#434447; }
+.btnArea .normal { height:36px; line-height:32px; border:2px solid #434447; background-color:#fff; }
+.btnArea .soldout { cursor:default; }
+    /* type1 */
+    .btnArea.type1 > a,
+    .btnArea.type1 > button { width:100%; margin:0; }
+    /* type2 */
+    .btnArea.type2 { padding:0 3px; }
+    .btnArea.type2 > a,
+    .btnArea.type2 > button { width:50%; margin:0; }
+    .btnArea.type2 > a:nth-child(1),
+    .btnArea.type2 > button:nth-child(1) { left:-3px; }
+    .btnArea.type2 > a:nth-child(2),
+    .btnArea.type2 > button:nth-child(2) { right:-3px; }
+    /* type3 */
+    .btnArea.type3 { padding:0 6px; }
+    .btnArea.type3 > a,
+    .btnArea.type3 > button { width:33.333%; margin:0; }
+    .btnArea.type3 > a:nth-child(1),
+    .btnArea.type3 > button:nth-child(1) { left:-6px; }
+    .btnArea.type3 > a:nth-child(3),
+    .btnArea.type3 > button:nth-child(3) { right:-6px; }
+    /* type4 */
+    .btnArea.type4 { padding:0 10px; }
+    .btnArea.type4 > a,
+    .btnArea.type4 > button { width:25%; margin:0; }
+    .btnArea.type4 > a:nth-child(1),
+    .btnArea.type4 > button:nth-child(1) { left:-10px; }
+    .btnArea.type4 > a:nth-child(2),
+    .btnArea.type4 > button:nth-child(2) { left:-3px; }
+    .btnArea.type4 > a:nth-child(3),
+    .btnArea.type4 > button:nth-child(3) { right:-3px; }
+    .btnArea.type4 > a:nth-child(4),
+    .btnArea.type4 > button:nth-child(4) { right:-10px; }
+
+/* main > 메인배너 */
+.mainBanner { padding:10px 0 0; }
+.mainBanner a { display:block; }
+.mainBanner img { width:100%; }
+
+/* main > 레이어 팝업 */
+.xans-popup-mobile .mainLayerArea { z-index:10; position:relative; height:0px; }
+.xans-popup-mobile .mMainLayer { position:absolute; left:7px; top:7px; right:7px; border:1px solid #9d9db0; }
+.xans-popup-mobile .mMainLayer .banner { position:relative; overflow:hidden; background-color:#fff; }
+.xans-popup-mobile .mMainLayer ul { position:relative; white-space:nowrap; font-size:0; line-height:0; }
+.xans-popup-mobile .mMainLayer ul img { width:100%; }
+.xans-popup-mobile .mMainLayer li { display:inline; }
+.xans-popup-mobile .mMainLayer .pagenate { position:absolute; left:0px; bottom:5px; width:100%; text-align:center; font-size:0; line-height:0; }
+.xans-popup-mobile .mMainLayer .pagenate button { overflow:hidden; width:9px; height:9px; margin:0 5px 0 0; border:0; background:url("http://img.echosting.cafe24.com/design/skin/mobile_cn/ico_mainlayer_pagenate_off.png") no-repeat 0px 0px; background-size:8px 8px; }
+.xans-popup-mobile .mMainLayer .pagenate button.selected { background-image:url("http://img.echosting.cafe24.com/design/skin/mobile_cn/ico_mainlayer_pagenate_on.png"); }
+.xans-popup-mobile .mMainLayer .pagenate button span { visibility:hidden; font-size:0; line-height:0; }
+.xans-popup-mobile .mMainLayer .option { padding:5px; color:#fff; background-color:#434447; }
+.xans-popup-mobile .mMainLayer .option:after{ content:""; display: block; clear:both; }
+.xans-popup-mobile .mMainLayer .option label { float:left; font-size:12px; }
+.xans-popup-mobile .mMainLayer .option input { margin-right:5px; vertical-align:middle; }
+.xans-popup-mobile .mMainLayer .option button { position:relative; top:2px; float:right; padding-right:12px; color:#fff; border:0; cursor:pointer; background:url("http://img.echosting.cafe24.com/design/skin/mobile_cn/ico_mainlayer_close.png") no-repeat right 2px; background-size:10px 9px; }
+
+/* 마이샵 > 마일리지 > 적립금 > 관련 링크 */
+.myshopMileage .navigation { margin:20px 0 0 0; }
+.myshopMileage .navigation li { height:39px; padding:0 10px 0 10px; background:#dfdfe0; border-top:1px solid #b7b7b9; border-bottom:1px solid #fff; }
+.myshopMileage .navigation li a { display:block; padding:0 0 0 0; font-size:12px; line-height:39px; color:#212530; background:url("http://img.echosting.cafe24.com/design/skin/mobile_cn/bg_product_addtion_arow.png") right 50% no-repeat; background-size:5px 10px; }
+
+/* Top 버튼 */
+.btnTop { margin: 19px 0 0 0; text-align: center; }
+.btnTop a { display:inline-block; padding:4px 0 0 0; font-size:12px; font-weight:bold; color:#63666e; background:url("http://img.echosting.cafe24.com/design/skin/mobile_cn/bg_top.png") no-repeat 50% 0; background-size:8px 5px; }
+
+
+
+$layout:'h';
+$wrapping:88%;
+$n1:200px;
+$n2:200px;
+$space:1px;
+$incInner:false;
+$v1:160px;
+$v2:160px;
+@include tuding($layout,$wrapping,$n1,$n2,$space,$incInner,$v1,$v2);
+/* ######### ######### ######### Pagination ######### ######### ######### */
+.pagenav, .pagination .counter, .pagination ul{@extend %btnArea;}
+.pagenavcounter, .pagenav, .pagination ul{margin:1em 0;padding:0;list-style:none;}
+.pagenav .pagenav-prev{float:left;}
+.pagenav .pagenav-next{float:right;}
+.pagination .counter{float:right;}
+.pagination ul li{display:inline-block;}
+/* ######### ######### ######### Article index ######### ######### ######### */
+#article-index { float:right; margin-left:1em; padding:1em 2em;border:1px solid #F2E2A1; background:#FFFCF0; font-size:1em; }/* 深橙色线条，浅橙色背景， 字号*/
+#article-index ul { margin-left:0; padding-left:1em; } /* 去除列表左侧重排 */
+#article-index ul li { list-style-image:url(../img/li_off.png); } /* 列表项图标 */
+#article-index ul li a { font-weight:normal; color:#585858; } /*列表项字号颜色*/
+#article-index ul li a.active { font-weight:bold; } /* 列表项当前项高亮 */
+/* ######### ######### ######### 注释 ######### ######### ######### */
+.categories-list li,.category-list li{overflow:hidden;}
+#main ul.actions {
+text-align: right;
+padding: 0;
+width: 100%;
+margin: 0;
+}
+/* ######### ######### ######### BEGIN::Blog Featured ######### ######### ######### */
+.items-leading, .items-row, .items-row .item { position:relative; *zoom:1; } /* 每个独立区块的ding */
+.items-leading, .items-row:after, .items-row .item:after { content:""; display:block; clear:both; }/* ding:after */
+.items-leading { margin-right:10px; } /* blog上部单列项目 */
+.items-row{  }
+.items-row .item{ float:left; overflow:hidden; }
+.items-row.cols-1 .item{ width:100%; }
+.items-row.cols-2 .item{ width:50%}
+.items-row.cols-3 .item{ width:33.3333%; }
+.items-row.cols-4 .item{ width:25%; *width:24.9999%; }
+.items-row.cols-5 .item{ width:20%; }
+.items-row ul.actions, .items-row dl.article-info{ margin-right:10px; } /* 内部没有外套，只能对每个项目设置右margin */
+.items-row .item h2, .items-row .item p{ margin-right:10px; } /* 同上 */
+.items-leading p.readmore a, .items-row p.readmore a{ display:inline-block; padding:0.2em 0.3em; border:3px double #CCC; background:url(../../img/bg_input.gif); } /* blog布局readmore，需另外定义module中的readmore */
+/* ######### ######### ######### END::Blog Featured ######### ######### ######### */
+//@include tuding_by_h_nmn($selectorNMN:'.container',$selectorMING:'.main',$selectorN1:'.sidebar1',$selectorN2:'.sidebar2',$wrapping:NULL,$n1:100px,$n2:100px,$space:20px);
+//IE6 || IE7 || IE8
+//@include tuding_h_2cols($wrapping,$v1,$v2,-1,$space,1);
+//@include tuding_h_2cols($wrapping,$v1,$v2,-1,$space);
+//@include tuding_1col('',1);
+//@include tuding_1col('',0);
+@media screen and (max-width:1100px) {
+	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,null,0,2);
+	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,'',0,-1);
+	//@include tuding_1col('',1);
+	//@include tuding_1col('',0);
+}
+
+@media screen and (max-width:900px) {
+	$wrapping:96%;
+	$n1:160px;
+	$n2:160px;
+	$space:1px;
+	@include tuding_h_2cols($wrapping,$n1,$n2,$space,null,0,2);
+	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,'',0,-1);
+	//@include tuding_1col('',1);
+	//@include tuding_1col('',0);
+}
+
+@media screen and (max-width:700px) {
+	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,null,1,-1);
+	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,'',0,-1);
+	@include tuding_1col('',1);
+	@include tuding_1col('',0);
+}
+
+@media screen and (max-width:500px) {
+	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,null,1,-1);
+	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,'',0,-1);
+	//@include tuding_1col('',1);
+	@include tuding_1col('',0);
+	@include tuding_width_1col();
+}
+#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li {
+float: left;
+padding: 10px 10px 0 0 !important;
+}
+#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w {
+width: 117px;
+height: 20px !important;
+}
+#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w a {
+width: 107px;
+height: 20px !important;
+padding: 0px !important;
+display: block;
+text-decoration: none;
+}
+#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w span.wrap-icon-w {
+display: inline-block;
+width: 16px !important;
+height: 16px !important;
+cursor: pointer;
+vertical-align: -10px;
+}
+#SOHUCS .post-login-w ul li .login-wrap-w span.icon30-sina-b,
+#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w span.icon30-qq-b,
+#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w span.icon30-renren-b, 
+#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w span.icon30-sohu-b,
+#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w span.icon30-visitor-b
+{
+background-image: url(../img/service-icons-color.png) !important;
+background-repeat: no-repeat;
+}
+#SOHUCS .post-login-w ul li .login-wrap-w span.icon30-sina-b{
+background-position: 0px 0px !important;
+}
+#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w span.icon30-qq-b{
+background-position: 0px -192px !important;
+}
+#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w span.icon30-renren-b{
+background-position: 0px -32px !important;
+}
+#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w span.icon30-sohu-b{
+background-position: 0px -16px !important;
+}
+#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w span.icon30-visitor-b{
+background-position: 0px -144px !important;
+}
+/* ######### ######### ######### bizdemo13302 ######### ######### ######### */
+//bizdemo13302
+#bhead{border-bottom:8px solid #C53C27;}
+#bfoot{border-top:1px solid #CFCFCF;background-color:#F7F7F7;}
+.crumbs{@extend %clearfix;text-align:right;font-weight:bold;font-family:Dotum; _font-family:SimSun,Kaiti_GB2312;;}
+.crumbs .box-heading{display:none;}
+/* LoVe/HAte(爱恨原则) */
+.crumbs a:link, .crumbs a:visited, .crumbs a:hover, .crumbs a:active{color:#000;font-weight:normal;}
+.crumbs a:link{}
+.crumbs a:visited{}
+.crumbs a:hover{}
+.crumbs a:active{}
+#home .crumbs{display:none;}
+#bfoot .quick{position:relative;float:right;}
+.colophon{@extend %ding;clear:both;}
