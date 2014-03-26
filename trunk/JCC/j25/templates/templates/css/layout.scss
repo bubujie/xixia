@@ -3,7 +3,8 @@
 @import "E:/tuding/css/layout";
 @import "E:/tuding/css/table";
 @import "E:/tuding/css/blueprint";
-body{@extend .ffs;}
+@import "E:/tuding/css/emmet";
+body{@extend .ff_kr;}
 /* LoVe/HAte(爱恨原则) */
 a{text-decoration:none;color:#369;}
 a:link, a:visited, a:hover, a:active{}
