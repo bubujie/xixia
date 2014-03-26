@@ -3,6 +3,37 @@
 @import "E:/tuding/css/layout";
 @import "E:/tuding/css/table";
 @import "E:/tuding/css/blueprint";
+body{@extend .ffs;}
+/* LoVe/HAte(爱恨原则) */
+a{text-decoration:none;color:#369;}
+a:link, a:visited, a:hover, a:active{}
+a:link{}
+a:visited{}
+a:hover{text-decoration:underline;}
+a:active{}
+table.category{
+@include table_wang(0.5em,silver);
+	th{
+		white-space:nowrap;
+	}
+	#categorylist_header_title, .list-title, .item-num{
+		border-left:none;
+	}
+	.list-title,.item-title{
+		width:100%;
+	}
+	.list-author, .list-hits, .list-edit{
+		white-space:nowrap;
+	}
+}
+table.tbl{
+	@include table_tian(0.2em,silver);
+	border-width:1px;
+	tbody tr:nth-child(even) td, tbody tr.even td {background-color:#FDFDFD;}
+}
+
+
+
 $layout:'h';
 $wrapping:88%;
 $n1:200px;

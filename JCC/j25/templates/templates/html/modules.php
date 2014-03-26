@@ -3,7 +3,7 @@
  * @package   ##website## Template
  * @author    ##author## ##email##
  * @version   ##version## ##date##
- * @copyright Copyright (C) ##author## 2008 - 2012 ##website##. All Rights Reserved.
+ * @copyright Copyright (C) ##author## 2008 - ##year## ##website##. All Rights Reserved.
  * @license   ##license##
  */
 //编码保持
@@ -28,6 +28,7 @@ function modChrome_open($module, &$params, &$attribs)
 	if (!empty ($module->content)) :
 		echo $gridSize ? "\n".'<div class="'.$gridSize.' xfl clearfix">' : '';
 		echo $module->content;
+		//echo   "\n  ".'<div class="blank"></div>';
 		echo $gridSize ? "\n".'</div>' : '';
 	endif;
 }
@@ -64,6 +65,7 @@ function modChrome_division($module, &$params, &$attribs)
 		echo   "\n  ".'<div class="mod-content">';
 		echo $module->content;
 		echo   "\n  ".'</div>';
+		//echo   "\n  ".'<div class="blank"></div>';
 		echo   "\n".'</div>';
 		echo $gridSize ? "\n".'</div>' : '';
 	endif;
@@ -128,24 +130,23 @@ function modChrome_stroke($module, &$params, &$attribs)
 			$params->get('moduleclass_sfx')
 		);
 		echo   "\n  ".'<div class="strokeo clearfix">';
-		echo   "\n  ".'<div class="strokec clearfix">';
-		echo   "\n  ".'<div class="strokei clearfix">';
+		echo   "\n    ".'<div class="strokec clearfix">';
+		echo   "\n      ".'<div class="strokei clearfix">';
 		if ($module->showtitle) :
-			printf("\n    ".'<h%s class="mod-heading clearfix"><span>%s</span></h%s>' ,
+			printf("\n        ".'<h%s class="mod-heading clearfix"><span>%s</span></h%s>' ,
 				$headerLevel ,
 				$module->title ,
 				$headerLevel
 			);
 		endif;
 
-		echo   "\n    ".'<div class="mod-content">'; 
+		echo   "\n        ".'<div class="mod-content">'; 
 		echo $module->content;
-		echo   "\n    ".'</div>';
-		//echo   "\n    ".'<div class="lt"></div><div class="rt"></div><div class="lb"></div><div class="rb"></div>';
-		echo   "\n  ".'</div>';
+		echo   "\n        ".'</div>';
 		//echo   "\n  ".'<div class="blank"></div>';
-		echo   "\n".'</div>';
-		echo   "\n".'</div>';
+		echo   "\n      ".'</div>';
+		echo   "\n    ".'</div>';
+		echo   "\n  ".'</div>';
 		echo   "\n".'</div>';
 		echo $gridSize ? "\n".'</div>' : '';
 	endif;
@@ -187,7 +188,6 @@ function modChrome_squared($module, &$params, &$attribs)
 		echo   "\n    ".'</div>';
 		echo   "\n    ".'<div class="lt"></div><div class="rt"></div><div class="lb"></div><div class="rb"></div>';
 		echo   "\n  ".'</div>';
-		//echo   "\n  ".'<div class="blank"></div>';
 		echo   "\n".'</div>';
 		echo $gridSize ? "\n".'</div>' : '';
 	endif;
