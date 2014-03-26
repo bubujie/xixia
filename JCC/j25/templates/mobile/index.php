@@ -75,16 +75,19 @@ if(!version_compare($jVersion->getShortVersion(), '3.0', 'ge')) :
 	$doc->addScript($this->baseurl.'/media/jui/js/jquery-noconflict.js');
 endif;
 /* ######### ######### ######### 注释 ######### ######### ######### */
+//$doc->addStyleSheet($this->baseurl.'/templates/system/css/system.css');
+$doc->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/style.css', $type = 'text/css', $media = 'screen,projection');
+$doc->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/template.css', $type = 'text/css', $media = 'screen,projection');
+$doc->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/prettify.css', $type = 'text/css', $media = 'screen,projection');
+$doc->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/print.css', $type = 'text/css', $media = 'print');
+if ($this->direction == 'rtl') :
+	$doc->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/template_rtl.css', $type = 'text/css', $media = 'screen,projection');
+endif;
 ?>
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
-<jdoc:include type="head" />  <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/layout.css" type="text/css" />
-  <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
-<?php if ($this->direction == 'rtl') : ?>
-  <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/template_rtl.css" type="text/css" />
-<?php endif; ?>
-  <link rel="stylesheet" href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/prettify.css" type="text/css" />
+<jdoc:include type="head" />
   <!--[if lt IE 9]>
   <script src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/html5shiv.js"></script>
   <script src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/respond.min.js"></script>
