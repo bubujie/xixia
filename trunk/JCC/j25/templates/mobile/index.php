@@ -71,8 +71,8 @@ else :
 endif;
 $jVersion = new JVersion;
 if(!version_compare($jVersion->getShortVersion(), '3.0', 'ge')) :
-  $doc->addScript($this->baseurl.'/media/jui/js/jquery.min.js');
-  $doc->addScript($this->baseurl.'/media/jui/js/jquery-noconflict.js');
+	$doc->addScript($this->baseurl.'/media/jui/js/jquery.min.js');
+	$doc->addScript($this->baseurl.'/media/jui/js/jquery-noconflict.js');
 endif;
 /* ######### ######### ######### 注释 ######### ######### ######### */
 ?>
