@@ -4,6 +4,45 @@
 @import "E:/tuding/css/table";
 @import "E:/tuding/css/blueprint";
 @import "E:/tuding/css/emmet";
+//@import "./system_site";
+/* ######### ######### ######### 注释 ######### ######### ######### */
+@import "./general";
+.button2-left .article, .button2-left .blank {
+	background: url(../images_general/j_button2_blank.png) 100% 0 no-repeat;
+}
+#editor-xtd-buttons,.toggle-editor {
+	padding: 5px;
+	float:left;
+}
+/* Tooltips */
+div.tip {
+	float: left;
+	background: #ffc;
+	border: 1px solid #D4D5AA;
+	padding: 5px;
+	max-width: 200px;
+}
+
+div.tip .tip-title {
+	padding: 0;
+	margin: 0;
+	font-size: 95%;
+	font-weight: bold;
+	margin-top: -15px;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	background: url(../images_general/selector-arrow.png) no-repeat;
+}
+
+div.tip .tip-text {
+	font-size: 90%;
+	margin: 0;
+}
+/* System Warning Messages */
+#system-message dt.warning { display: none; }
+#system-message dd.warning {  }
+#system-message dd.warning ul { color: #93246F; background: #F2E3ED; border-top: 3px solid #93246F; border-bottom: 3px solid #93246F;}
+/* ######### ######### ######### 注释 ######### ######### ######### */
 body{@extend .ff_kr;}
 /* LoVe/HAte(爱恨原则) */
 a{text-decoration:none;color:#369;}
@@ -39,7 +78,7 @@ $layout:'h';
 $wrapping:88%;
 $n1:200px;
 $n2:200px;
-$space:1px;
+$space:10px;
 $incInner:true;
 $v1:160px;
 $v2:160px;
