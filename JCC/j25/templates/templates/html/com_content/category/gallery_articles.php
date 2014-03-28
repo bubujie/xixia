@@ -19,7 +19,9 @@ $n			= count($this->items);
 $listOrder	= $this->escape($this->state->get('list.ordering'));
 $listDirn	= $this->escape($this->state->get('list.direction'));
 
-$column		= ($this->params->get('column', 3));
+$column = JRequest::getVar('column');
+
+echo $column;
 $noimg = JHtml::_('image', 'noimg_300.gif', 'ljj', NULL, true, true);
 ?>
 
