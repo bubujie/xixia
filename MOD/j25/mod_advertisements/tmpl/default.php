@@ -9,10 +9,14 @@
 // no direct access
 defined('_JEXEC') or die;
 
-JHTML::script('media/system/js/jstools.js');
-JHTML::script('media/system/js/switchable.js');
 require_once JPATH_ROOT . '/components/com_banners/helpers/banner.php';
-$baseurl = JURI::base();
+
+$img = JHtml::_('image', 'searchButton.gif', 'ljj', NULL, true, true);
+echo '<img src="'.$img.'"/>';
+
+$doc = JFactory::getDocument();
+$doc->addScript(JURI::base(true).'/media/yui/js/jquery.flexslider.min.js');
+
 $pannelwidth	= $params->get('pannelwidth');
 $pannelheight	= $params->get('pannelheight');
 $effect			= $params->get('direction');
