@@ -18,6 +18,9 @@ $params		= &$this->item->params;
 $n			= count($this->items);
 $listOrder	= $this->escape($this->state->get('list.ordering'));
 $listDirn	= $this->escape($this->state->get('list.direction'));
+
+$column		= ($this->params->get('column', 3));
+$noimg = JHtml::_('image', 'noimg_300.gif', 'ljj', NULL, true, true);
 ?>
 
 <?php if (empty($this->items)) : ?>
@@ -90,29 +93,33 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 		</div>
 		<?php endif; ?>
 
-	<div class="category">
+	<div class="category uuie-list-fixed">
 
-		<ul>
+		<ul class="gallery column<?php echo $column; ?>">
 
 		<?php foreach ($this->items as $i => $article) : ?>
 			<?php if ($this->items[$i]->state == 0) : ?>
 				<li><ul class="system-unpublished cat-list-row<?php echo $i % 2; ?>">
 			<?php else: ?>
-				<li><ul class="cat-list-row<?php echo $i % 2; ?>" >
+				<li class="item"><ul class="cat-list-row<?php echo $i % 2; ?>" >
 			<?php endif; ?>
 				<?php if (in_array($article->access, $this->user->getAuthorisedViewLevels())) : ?>
 <?php $images = json_decode($article->images); ?>
 <?php  if (isset($images->image_intro) and !empty($images->image_intro)) : ?>
 	<?php $imgfloat = (empty($images->float_intro)) ? $this->params->get('float_intro') : $images->float_intro; ?>
 	<li>
-	<div class="img-intro-<?php echo htmlspecialchars($imgfloat); ?>">
-	<img
+	<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid, $article->language)); ?>">
+	<img class="thumb"
 		<?php if ($images->image_intro_caption):
 			echo 'class="caption"'.' title="' .htmlspecialchars($images->image_intro_caption) .'"';
 		endif; ?>
 		src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>"/>
-	</div>
+	</a>
 	</li>
+<?php else : ?>
+<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid, $article->language)); ?>">
+<?php echo '<img class="thumb" src="'.$noimg.'"/>'; ?>
+</a>
 <?php endif; ?>
 					<li class="list-title">
 						<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid, $article->language)); ?>">

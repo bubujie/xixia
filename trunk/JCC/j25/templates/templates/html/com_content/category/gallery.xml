@@ -20,6 +20,11 @@
 				label="JGLOBAL_CHOOSE_CATEGORY_LABEL"
 				required="true"
 			/>
+			<field name="column" type="list" default="" label="Select an option" description="">
+				<option value="3">Option 3</option>
+				<option value="4">Option 4</option>
+				<option value="5">Option 5</option>
+			</field>
 		</fieldset>
 	</fields>
 
