@@ -95,3 +95,21 @@ system模板包含的Chrome
 	list   （classic） 经典风格 Classic Style
 	zine   （webzine） 杂志风格    Zine Style
 	gallery（gallery） 画廊风格 Gallery Style
+	有xml文件则为menu备用布局（可以增加设置项，设置参数通说url传递），无xml文件则为categories/category/article/备用布局
+
+
+
+
+
+
+
+
+扩展开发重要代码：
+$baseurl = JURI::base();
+$baseurl = JURI::base(true);
+
+$noimg = JHtml::_('image', 'noimg_300.gif', 'ljj', NULL, true, true);
+echo '<img src="'.$noimg.'"/>';
+
+$doc = JFactory::getDocument();
+$doc->addScript(JURI::base(true).'/media/jui/js/jquery.flexslider.min.js');
