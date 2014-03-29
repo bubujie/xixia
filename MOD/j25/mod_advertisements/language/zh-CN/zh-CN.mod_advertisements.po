@@ -1,0 +1,88 @@
+# Copyright (C) 2013 WordPress
+# This file is distributed under the same license as the WordPress package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress 3.8\n"
+"Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
+"POT-Creation-Date: 2013-12-11 23:13:40+00:00\n"
+"PO-Revision-Date: 2014-03-29 18:06+0800\n"
+"Last-Translator: Jimmy Xu <me@jimmyxu.org>\n"
+"Language-Team: WordPress China\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.6.4\n"
+
+msgid "COM_BANNERS_NO_CLIENT"
+msgstr "- 没有客户 -"
+
+msgid "MOD_BANNERS"
+msgstr "旗帜广告列表"
+
+msgid "MOD_BANNERS_BANNER"
+msgstr "旗帜广告"
+
+msgid "MOD_BANNERS_FIELD_BANNERCLIENT_DESC"
+msgstr "从单个客户选择旗帜广告。"
+
+msgid "MOD_BANNERS_FIELD_BANNERCLIENT_LABEL"
+msgstr "客户"
+
+msgid "MOD_BANNERS_FIELD_CACHETIME_DESC"
+msgstr "该模块重建缓存的时间间隔"
+
+msgid "MOD_BANNERS_FIELD_CACHETIME_LABEL"
+msgstr "缓存时间"
+
+msgid "MOD_BANNERS_FIELD_CATEGORY_DESC"
+msgstr "从一个或一组分类中选择旗帜广告，如果没有选择，默认情况显示全部分类"
+
+msgid "MOD_BANNERS_FIELD_COUNT_DESC"
+msgstr "要显示的banner数（默认：5）"
+
+msgid "MOD_BANNERS_FIELD_COUNT_LABEL"
+msgstr "数量"
+
+msgid "MOD_BANNERS_FIELD_FOOTER_DESC"
+msgstr "在这组banner之后要显示的Text 或 HTML"
+
+msgid "MOD_BANNERS_FIELD_FOOTER_LABEL"
+msgstr "页脚文字"
+
+msgid "MOD_BANNERS_FIELD_HEADER_DESC"
+msgstr "在这组banner之前要显示的Text 或 HTML "
+
+msgid "MOD_BANNERS_FIELD_HEADER_LABEL"
+msgstr "页眉文字"
+
+msgid "MOD_BANNERS_FIELD_RANDOMISE_DESC"
+msgstr "对banner随机排序"
+
+msgid "MOD_BANNERS_FIELD_RANDOMISE_LABEL"
+msgstr "随机"
+
+msgid "MOD_BANNERS_FIELD_TAG_DESC"
+msgstr "根据当前文章的关键词和banner的标签来选择banner。"
+
+msgid "MOD_BANNERS_FIELD_TAG_LABEL"
+msgstr "根据Tag搜索"
+
+msgid "MOD_BANNERS_FIELD_TARGET_DESC"
+msgstr "点击链接时的目标窗口"
+
+msgid "MOD_BANNERS_FIELD_TARGET_LABEL"
+msgstr "目标窗口"
+
+msgid "MOD_BANNERS_VALUE_STICKYORDERING"
+msgstr "固定，排序"
+
+msgid "MOD_BANNERS_VALUE_STICKYRANDOMISE"
+msgstr "固定，随机"
+
+msgid "MOD_BANNERS_XML_DESCRIPTION"
+msgstr "banner模块从组件里显示了一个banner。"
+
+msgid "MOD_ADVERTISEMENTS_FIELD_GROUP_DISPLAY_LABEL"
+msgstr "显示设置"
