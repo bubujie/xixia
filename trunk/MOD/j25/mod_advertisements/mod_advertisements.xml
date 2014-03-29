@@ -14,18 +14,13 @@
 	<version>2.5.0</version>
 	<description>MOD_BANNERS_XML_DESCRIPTION</description>
 	<files>
+		<folder>language</folder>
 		<filename module="mod_advertisements">mod_advertisements.php</filename>
 		<folder>tmpl</folder>
 		<filename>helper.php</filename>
 		<filename>index.html</filename>
 		<filename>mod_advertisements.xml</filename>
 	</files>
-	<languages>
-		<language tag="en-GB">en-GB.mod_advertisements.ini</language>
-		<language tag="en-GB">en-GB.mod_advertisements.sys.ini</language>
-		<language tag="zh-CN">zh-CN.mod_advertisements.ini</language>
-		<language tag="zh-CN">zh-CN.mod_advertisements.sys.ini</language>
-	</languages>
 	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_BANNERS" />
 	<config>
 		<fields name="params">
