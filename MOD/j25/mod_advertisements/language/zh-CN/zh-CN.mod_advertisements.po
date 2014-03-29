@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: J25+ mod_uuie_banners\n"
 "POT-Creation-Date: 2014-03-29 18:49+0800\n"
-"PO-Revision-Date: 2014-03-29 18:54+0800\n"
+"PO-Revision-Date: 2014-03-29 20:30+0800\n"
 "Last-Translator: \n"
 "Language-Team: 步步街工作室 <bubujie@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Language: zh_CN\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-# Copyright (C) 2013 bubujie.net
+# Copyright (C) 2014 bubujie.net
 # This file is distributed under the same license as the Joomla! package.
 msgid "COM_BANNERS_NO_CLIENT"
 msgstr "- 没有客户 -"
@@ -89,19 +89,149 @@ msgid "MOD_ADVERTISEMENTS_FIELD_GROUP_DISPLAY_LABEL"
 msgstr "显示设置"
 
 msgid "MOD_UUIE_BANNERS_FIELD_ANIMATION_LABEL"
-msgstr ""
+msgstr "animation"
 
 msgid "MOD_UUIE_BANNERS_FIELD_ANIMATION_DESC"
-msgstr ""
+msgstr "Controls the animation type, \"fade\" or \"slide\"."
 
 msgid "MOD_UUIE_BANNERS_FIELD_DIRECTION_LABEL"
-msgstr ""
+msgstr "direction"
 
 msgid "MOD_UUIE_BANNERS_FIELD_DIRECTION_DESC"
-msgstr ""
+msgstr "Controls the animation direction, \"horizontal\" or \"vertical\""
 
 msgid "MOD_UUIE_BANNERS_FIELD_SLIDESHOW_LABEL"
-msgstr ""
+msgstr "Slideshow"
 
 msgid "MOD_UUIE_BANNERS_FIELD_SLIDESHOW_DESC"
+msgstr "Setup a slideshow for the slider to animate automatically."
+
+msgid "MOD_UUIE_BANNERS_FIELD_REVERSE_LABEL"
+msgstr "Reverse"
+
+msgid "MOD_UUIE_BANNERS_FIELD_REVERSE_DESC"
+msgstr "Reverse the animation direction."
+
+msgid "MOD_UUIE_BANNERS_FIELD_SLIDESHOWSPEED_LABEL"
+msgstr "Slideshow Speed"
+
+msgid "MOD_UUIE_BANNERS_FIELD_SLIDESHOWSPEED_DESC"
+msgstr "Set the speed of the slideshow cycling, in milliseconds"
+
+msgid "MOD_UUIE_BANNERS_FIELD_ANIMATIONSPEED_LABEL"
+msgstr "Animation Speed"
+
+msgid "MOD_UUIE_BANNERS_FIELD_ANIMATIONSPEED_DESC"
+msgstr "Set the speed of animations, in milliseconds"
+
+msgid "MOD_UUIE_BANNERS_FIELD_TOUCH_LABEL"
+msgstr "Touch"
+
+msgid "MOD_UUIE_BANNERS_FIELD_TOUCH_DESC"
+msgstr "Allow touch swipe navigation of the slider on enabled devices"
+
+msgid "MOD_UUIE_BANNERS_FIELD_PREVTEXT_LABEL"
+msgstr "Previous"
+
+msgid "MOD_UUIE_BANNERS_FIELD_PREVTEXT_DESC"
+msgstr "Set the text for the \"previous\" directionNav item"
+
+msgid "MOD_UUIE_BANNERS_FIELD_NEXTTEXT_LABEL"
+msgstr "Next Text"
+
+msgid "MOD_UUIE_BANNERS_FIELD_NEXTTEXT_DESC"
+msgstr "Set the text for the \"next\" directionNav item"
+
+msgid "MOD_UUIE_BANNERS_FIELD_KEYBOARD_LABEL"
+msgstr "Keyboard"
+
+msgid "MOD_UUIE_BANNERS_FIELD_KEYBOARD_DESC"
+msgstr "Allow slider navigating via keyboard left/right keys."
+
+msgid "MOD_UUIE_BANNERS_FIELD_ANIMATIONLOOP_LABEL"
+msgstr "Animation Loop"
+
+msgid "MOD_UUIE_BANNERS_FIELD_ANIMATIONLOOP_DESC"
+msgstr "Gives the slider a seamless infinite loop."
+
+msgid "MOD_UUIE_BANNERS_FIELD_MOUSEWHEEL_LABEL"
+msgstr "Mouse Wheel"
+
+msgid "MOD_UUIE_BANNERS_FIELD_MOUSEWHEEL_DESC"
+msgstr "(Dependency) Allows slider navigating via mousewheel"
+
+msgid "MOD_UUIE_BANNERS_FIELD_PAUSEONACTION_LABEL"
+msgstr "Pause on action"
+
+msgid "MOD_UUIE_BANNERS_FIELD_PAUSEONACTION_DESC"
+msgstr "Pause the slideshow when interacting with control elements."
+
+msgid "MOD_UUIE_BANNERS_FIELD_PAUSEONHOVER_LABEL"
+msgstr "Pause on hover"
+
+msgid "MOD_UUIE_BANNERS_FIELD_PAUSEONHOVER_DESC"
 msgstr ""
+"Pause the slideshow when hovering over slider, then resume when no longer "
+"hovering."
+
+msgid "MOD_UUIE_BANNERS_FIELD_CONTROLNAV_LABEL"
+msgstr "Creat control navigation"
+
+msgid "MOD_UUIE_BANNERS_FIELD_CONTROLNAV_DESC"
+msgstr "Create navigation for paging control of each slide."
+
+msgid "MOD_UUIE_BANNERS_FIELD_DIRECTIONNAV_LABEL"
+msgstr "Direction navigation."
+
+msgid "MOD_UUIE_BANNERS_FIELD_DIRECTIONNAV_DESC"
+msgstr "Create previous/next arrow navigation."
+
+msgid "MOD_UUIE_BANNERS_FIELD_PAUSEPLAY_LABEL"
+msgstr "Pause play"
+
+msgid "MOD_UUIE_BANNERS_FIELD_PAUSEPLAY_DESC"
+msgstr "Create pause/play element to control slider slideshow."
+
+msgid "MOD_UUIE_BANNERS_FIELD_PAUSETEXT_LABEL"
+msgstr "Pause text"
+
+msgid "MOD_UUIE_BANNERS_FIELD_PAUSETEXT_DESC"
+msgstr "Set the text for the \"pause\" pausePlay item"
+
+msgid "MOD_UUIE_BANNERS_FIELD_PLAYTEXT_LABEL"
+msgstr "Play text"
+
+msgid "MOD_UUIE_BANNERS_FIELD_PLAYTEXT_DESC"
+msgstr "Set the text for the \"play\" pausePlay item"
+
+msgid "MOD_UUIE_BANNERS_FIELD_ITEMWIDTH_LABEL"
+msgstr "Item width"
+
+msgid "MOD_UUIE_BANNERS_FIELD_ITEMWIDTH_DESC"
+msgstr ""
+"Box-model width of individual carousel items, including horizontal borders "
+"and padding."
+
+msgid "MOD_UUIE_BANNERS_FIELD_ITEMMARGIN_LABEL"
+msgstr "Item margin"
+
+msgid "MOD_UUIE_BANNERS_FIELD_ITEMMARGIN_DESC"
+msgstr "Margin between carousel items."
+
+msgid "MOD_UUIE_BANNERS_FIELD_MINITEMS_LABEL"
+msgstr "Min items"
+
+msgid "MOD_UUIE_BANNERS_FIELD_MINITEMS_DESC"
+msgstr "Minimum number of carousel items that should be visible."
+
+msgid "MOD_UUIE_BANNERS_FIELD_MAXITEMS_LABEL"
+msgstr "Max items"
+
+msgid "MOD_UUIE_BANNERS_FIELD_MAXITEMS_DESC"
+msgstr "Maximum number of carousel items that should be visible."
+
+msgid "MOD_UUIE_BANNERS_FIELD_MOVE_LABEL"
+msgstr "Move"
+
+msgid "MOD_UUIE_BANNERS_FIELD_MOVE_DESC"
+msgstr "Number of carousel items that should move on animation."
