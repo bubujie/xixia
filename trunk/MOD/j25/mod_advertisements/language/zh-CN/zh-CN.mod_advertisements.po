@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: WordPress 3.8\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
 "POT-Creation-Date: 2013-12-11 23:13:40+00:00\n"
-"PO-Revision-Date: 2014-03-29 18:06+0800\n"
+"PO-Revision-Date: 2014-03-29 18:29+0800\n"
 "Last-Translator: Jimmy Xu <me@jimmyxu.org>\n"
 "Language-Team: WordPress China\n"
 "Language: zh_CN\n"
@@ -86,3 +86,21 @@ msgstr "banner模块从组件里显示了一个banner。"
 
 msgid "MOD_ADVERTISEMENTS_FIELD_GROUP_DISPLAY_LABEL"
 msgstr "显示设置"
+
+msgid "MOD_UUIE_BANNERS_FIELD_ANIMATION_LABEL"
+msgstr ""
+
+msgid "MOD_UUIE_BANNERS_FIELD_ANIMATION_DESC"
+msgstr ""
+
+msgid "MOD_UUIE_BANNERS_FIELD_DIRECTION_LABEL"
+msgstr ""
+
+msgid "MOD_UUIE_BANNERS_FIELD_DIRECTION_DESC"
+msgstr ""
+
+msgid "MOD_UUIE_BANNERS_FIELD_SLIDESHOW_LABEL"
+msgstr ""
+
+msgid "MOD_UUIE_BANNERS_FIELD_SLIDESHOW_DESC"
+msgstr ""
