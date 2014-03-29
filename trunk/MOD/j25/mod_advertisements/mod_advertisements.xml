@@ -108,84 +108,191 @@
 					description="MOD_BANNERS_FIELD_FOOTER_DESC" />
 			</fieldset>
 <fieldset name="display" label="MOD_ADVERTISEMENTS_FIELD_GROUP_DISPLAY_LABEL">
-	<field name="pannelwidth" type="text" default="200px" label="宽度" description="" size="10" />
-	<field name="pannelheight" type="text" default="200px" label="高度" description="" size="10" />
-	<field type="spacer" hr="true" />
-	<field name="trigger" type="list" default="" label="触发器内容" description="">
-		<option value="title">标题</option>
-		<option value="round">圆点</option>
-		<option value="number">数字</option>
-	</field>
-	<field name="haslrbtn" type="radio" default="1"
-		label="是否支持前后翻页"
-		description="MOD_ARTICLES_CATEGORY_FIELD_LINKTITLES_DESC"
-		>
-		<option value="1">JYES</option>
-		<option value="0">JNO</option>
-	</field>
-	<field name="direction" type="list" default="scrollx" label="轮播效果" description="">
-		<option value="scrollx">左右</option>
-		<option value="scrolly">上下</option>
-		<option value="fade">透明</option>
-	</field>
-	<field name="around" type="radio" default="0" label="过渡效果" description="">
-		<option value="0">向后</option>
-		<option value="1">向前</option>
-	</field>
-	<field name="mousetype" type="radio" default="0" label="鼠标触发类型" description="">
-		<option value="click">鼠标点击</option>
-		<option value="mouse">鼠标移过</option>
-	</field>
-	<field name="stayTime" type="list" default="" label="轮播速度" description="">
-		<option value="2000">快</option>
-		<option value="3000">普通</option>
-		<option value="5000">慢</option>
-	</field>
-	<field name="autoplay" type="radio" default="1"
-		label="是否自动播放"
-		description="MOD_ARTICLES_CATEGORY_FIELD_LINKTITLES_DESC"
-		>
-		<option value="1">JYES</option>
-		<option value="0">JNO</option>
-	</field>
-	<field name="pauseonhover" type="radio" default="1"
-		label="悬浮是否停止"
-		description="MOD_ARTICLES_CATEGORY_FIELD_LINKTITLES_DESC"
-		>
-		<option value="1">JYES</option>
-		<option value="0">JNO</option>
-	</field>
-	<field name="hastriggers" type="radio" default="1"
-		label="是否有触点"
-		description="MOD_ARTICLES_CATEGORY_FIELD_LINKTITLES_DESC"
-		>
-		<option value="1">JYES</option>
-		<option value="0">JNO</option>
-	</field>
-	<field name="lazyload" type="radio" default="1"
-		label="是否延迟加载图片"
-		description="MOD_ARTICLES_CATEGORY_FIELD_LINKTITLES_DESC"
-		>
-		<option value="1">JYES</option>
-		<option value="0">JNO</option>
-	</field>
-	<field name="triggerspos" type="list" default="insidebottom" label="触发器位置" description="">
-		<option value="top">外面上部</option>
-		<option value="right">外面右部</option>
-		<option value="bottom">外面下部</option>
-		<option value="left">外面左部</option>
-		<option value="insidetop">内部顶端</option>
-		<option value="insidebottom">内部底端</option>
-	</field>
-	<field name="oribg" type="color" default="#eee"
-		label="触点文字背景"
-		description="TPL_BEEZ3_FIELD_HEADER_BACKGROUND_COLOR_DESC" />
-	<field name="style" type="chromestyle"
-		label="COM_MODULES_FIELD_MODULE_STYLE_LABEL"
-		description="COM_MODULES_FIELD_MODULE_STYLE_DESC" />
-	<field name="myintegeralue" type="integer" description="" first="0" last="10" step="1"
-		label="触点背景透明度"
-		default="Some integer" />
+<field name="animation"
+	type="radio"
+	default="0"
+	label="MOD_UUIE_BANNERS_FIELD_ANIMATION_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_ANIMATION_DESC"
+	>
+	<option value="fide">fide</option>
+	<option value="slide">slide</option>
+</field>
+<field name="direction"
+	type="radio"
+	default="0"
+	label="MOD_UUIE_BANNERS_FIELD_DIRECTION_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_DIRECTION_DESC"
+	>
+	<option value="horizontal">horizontal</option>
+	<option value="vertical">vertical</option>
+</field>
+<field name="slideshow"
+	type="radio"
+	default="1"
+	label="MOD_UUIE_BANNERS_FIELD_SLIDESHOW_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_SLIDESHOW_DESC"
+	>
+	<option value="1">JYES</option>
+	<option value="0">JNO</option>
+</field>
+<field name="reverse"
+	type="radio"
+	default="0"
+	label="MOD_UUIE_BANNERS_FIELD_REVERSE_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_REVERSE_DESC"
+	>
+	<option value="1">JYES</option>
+	<option value="0">JNO</option>
+</field>
+<field name="slideshowSpeed"
+	type="text"
+	default="7000"
+	label="MOD_UUIE_BANNERS_FIELD_SLIDESHOWSPEED_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_SLIDESHOWSPEED_DESC"
+	size="10" />
+<field name="animationSpeed"
+	type="text"
+	default="600"
+	label="MOD_UUIE_BANNERS_FIELD_ANIMATIONSPEED_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_ANIMATIONSPEED_DESC"
+	size="10" />
+<field name="touch"
+	type="radio"
+	default="1"
+	label="MOD_UUIE_BANNERS_FIELD_TOUCH_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_TOUCH_DESC"
+	>
+	<option value="1">JYES</option>
+	<option value="0">JNO</option>
+</field>
+<field name="prevText"
+	type="text"
+	default="Previous"
+	label="MOD_UUIE_BANNERS_FIELD_PREVTEXT_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_PREVTEXT_DESC"
+	size="10" />
+<field name="nextText"
+	type="text"
+	default="Next"
+	label="MOD_UUIE_BANNERS_FIELD_NEXTTEXT_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_NEXTTEXT_DESC"
+	size="10" />
+<field name="keyboard"
+	type="radio"
+	default="1"
+	label="MOD_UUIE_BANNERS_FIELD_KEYBOARD_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_KEYBOARD_DESC"
+	>
+	<option value="1">JYES</option>
+	<option value="0">JNO</option>
+</field>
+<field name="animationLoop"
+	type="radio"
+	default="1"
+	label="MOD_UUIE_BANNERS_FIELD_ANIMATIONLOOP_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_ANIMATIONLOOP_DESC"
+	>
+	<option value="1">JYES</option>
+	<option value="0">JNO</option>
+</field>
+<field name="mousewheel"
+	type="radio"
+	default="0"
+	label="MOD_UUIE_BANNERS_FIELD_MOUSEWHEEL_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_MOUSEWHEEL_DESC"
+	>
+	<option value="1">JYES</option>
+	<option value="0">JNO</option>
+</field>
+<field name="pauseOnAction"
+	type="radio"
+	default="1"
+	label="MOD_UUIE_BANNERS_FIELD_PAUSEONACTION_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_PAUSEONACTION_DESC"
+	>
+	<option value="1">JYES</option>
+	<option value="0">JNO</option>
+</field>
+<field name="pauseOnHover"
+	type="radio"
+	default="0"
+	label="MOD_UUIE_BANNERS_FIELD_PAUSEONHOVER_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_PAUSEONHOVER_DESC"
+	>
+	<option value="1">JYES</option>
+	<option value="0">JNO</option>
+</field>
+<field name="controlNav"
+	type="radio"
+	default="1"
+	label="MOD_UUIE_BANNERS_FIELD_CONTROLNAV_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_CONTROLNAV_DESC"
+	>
+	<option value="1">JYES</option>
+	<option value="0">JNO</option>
+</field>
+<field name="directionNav"
+	type="radio"
+	default="1"
+	label="MOD_UUIE_BANNERS_FIELD_DIRECTIONNAV_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_DIRECTIONNAV_DESC"
+	>
+	<option value="1">JYES</option>
+	<option value="0">JNO</option>
+</field>
+<field type="spacer" hr="true" />
+<field name="pausePlay"
+	type="radio"
+	default="0"
+	label="MOD_UUIE_BANNERS_FIELD_PAUSEPLAY_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_PAUSEPLAY_DESC"
+	>
+	<option value="1">JYES</option>
+	<option value="0">JNO</option>
+</field>
+<field name="pauseText"
+	type="text"
+	default="Pause"
+	label="MOD_UUIE_BANNERS_FIELD_PAUSETEXT_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_PAUSETEXT_DESC"
+	size="10" />
+<field name="playText"
+	type="text"
+	default="Play"
+	label="MOD_UUIE_BANNERS_FIELD_PLAYTEXT_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_PLAYTEXT_DESC"
+	size="10" />
+<field type="spacer" hr="true" />
+<field name="itemWidth"
+	type="text"
+	default="0"
+	label="MOD_UUIE_BANNERS_FIELD_ITEMWIDTH_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_ITEMWIDTH_DESC"
+	size="10" />
+<field name="itemMargin"
+	type="text"
+	default="0"
+	label="MOD_UUIE_BANNERS_FIELD_ITEMMARGIN_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_ITEMMARGIN_DESC"
+	size="10" />
+<field name="minItems"
+	type="text"
+	default="0"
+	label="MOD_UUIE_BANNERS_FIELD_MINITEMS_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_MINITEMS_DESC"
+	size="10" />
+<field name="maxItems"
+	type="text"
+	default="0"
+	label="MOD_UUIE_BANNERS_FIELD_MAXITEMS_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_MAXITEMS_DESC"
+	size="10" />
+<field name="move"
+	type="text"
+	default="0"
+	label="MOD_UUIE_BANNERS_FIELD_MOVE_LABEL"
+	description="MOD_UUIE_BANNERS_FIELD_MOVE_DESC"
+	size="10" />
 </fieldset>
 			<fieldset
 				name="advanced">
