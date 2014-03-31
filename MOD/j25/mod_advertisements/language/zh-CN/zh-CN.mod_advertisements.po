@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: J25+ mod_uuie_banners\n"
+"Project-Id-Version: J25+ mod_uuie_advertisements\n"
 "POT-Creation-Date: 2014-03-29 18:49+0800\n"
 "PO-Revision-Date: 2014-03-29 20:32+0800\n"
 "Last-Translator: \n"
@@ -16,222 +16,222 @@ msgstr ""
 
 # Copyright (C) 2014 bubujie.net
 # This file is distributed under the same license as the Joomla! package.
-msgid "COM_BANNERS_NO_CLIENT"
+msgid "COM_ADVERTISEMENTS_NO_CLIENT"
 msgstr "- 没有客户 -"
 
-msgid "MOD_BANNERS"
+msgid "MOD_ADVERTISEMENTS"
 msgstr "旗帜广告列表"
 
-msgid "MOD_BANNERS_BANNER"
+msgid "MOD_ADVERTISEMENTS_BANNER"
 msgstr "旗帜广告"
 
-msgid "MOD_BANNERS_FIELD_BANNERCLIENT_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_BANNERCLIENT_DESC"
 msgstr "从单个客户选择旗帜广告。"
 
-msgid "MOD_BANNERS_FIELD_BANNERCLIENT_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_BANNERCLIENT_LABEL"
 msgstr "客户"
 
-msgid "MOD_BANNERS_FIELD_CACHETIME_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_CACHETIME_DESC"
 msgstr "该模块重建缓存的时间间隔"
 
-msgid "MOD_BANNERS_FIELD_CACHETIME_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_CACHETIME_LABEL"
 msgstr "缓存时间"
 
-msgid "MOD_BANNERS_FIELD_CATEGORY_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_CATEGORY_DESC"
 msgstr "从一个或一组分类中选择旗帜广告，如果没有选择，默认情况显示全部分类"
 
-msgid "MOD_BANNERS_FIELD_COUNT_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_COUNT_DESC"
 msgstr "要显示的banner数（默认：5）"
 
-msgid "MOD_BANNERS_FIELD_COUNT_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_COUNT_LABEL"
 msgstr "数量"
 
-msgid "MOD_BANNERS_FIELD_FOOTER_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_FOOTER_DESC"
 msgstr "在这组banner之后要显示的Text 或 HTML"
 
-msgid "MOD_BANNERS_FIELD_FOOTER_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_FOOTER_LABEL"
 msgstr "页脚文字"
 
-msgid "MOD_BANNERS_FIELD_HEADER_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_HEADER_DESC"
 msgstr "在这组banner之前要显示的Text 或 HTML "
 
-msgid "MOD_BANNERS_FIELD_HEADER_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_HEADER_LABEL"
 msgstr "页眉文字"
 
-msgid "MOD_BANNERS_FIELD_RANDOMISE_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_RANDOMISE_DESC"
 msgstr "对banner随机排序"
 
-msgid "MOD_BANNERS_FIELD_RANDOMISE_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_RANDOMISE_LABEL"
 msgstr "随机"
 
-msgid "MOD_BANNERS_FIELD_TAG_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_TAG_DESC"
 msgstr "根据当前文章的关键词和banner的标签来选择banner。"
 
-msgid "MOD_BANNERS_FIELD_TAG_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_TAG_LABEL"
 msgstr "根据Tag搜索"
 
-msgid "MOD_BANNERS_FIELD_TARGET_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_TARGET_DESC"
 msgstr "点击链接时的目标窗口"
 
-msgid "MOD_BANNERS_FIELD_TARGET_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_TARGET_LABEL"
 msgstr "目标窗口"
 
-msgid "MOD_BANNERS_VALUE_STICKYORDERING"
+msgid "MOD_ADVERTISEMENTS_VALUE_STICKYORDERING"
 msgstr "固定，排序"
 
-msgid "MOD_BANNERS_VALUE_STICKYRANDOMISE"
+msgid "MOD_ADVERTISEMENTS_VALUE_STICKYRANDOMISE"
 msgstr "固定，随机"
 
-msgid "MOD_BANNERS_XML_DESCRIPTION"
-msgstr "banner模块从组件里显示了一个banner。"
+msgid "MOD_ADVERTISEMENTS_XML_DESCRIPTION"
+msgstr "advertisement模块从组件里显示了一个banner。"
 
 msgid "MOD_ADVERTISEMENTS_FIELD_GROUP_DISPLAY_LABEL"
 msgstr "显示设置"
 
-msgid "MOD_UUIE_BANNERS_FIELD_ANIMATION_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_ANIMATION_LABEL"
 msgstr "animation"
 
-msgid "MOD_UUIE_BANNERS_FIELD_ANIMATION_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_ANIMATION_DESC"
 msgstr "Controls the animation type, \"fade\" or \"slide\"."
 
-msgid "MOD_UUIE_BANNERS_FIELD_DIRECTION_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_DIRECTION_LABEL"
 msgstr "direction"
 
-msgid "MOD_UUIE_BANNERS_FIELD_DIRECTION_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_DIRECTION_DESC"
 msgstr "Controls the animation direction, \"horizontal\" or \"vertical\""
 
-msgid "MOD_UUIE_BANNERS_FIELD_SLIDESHOW_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_SLIDESHOW_LABEL"
 msgstr "Slideshow"
 
-msgid "MOD_UUIE_BANNERS_FIELD_SLIDESHOW_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_SLIDESHOW_DESC"
 msgstr "Setup a slideshow for the slider to animate automatically."
 
-msgid "MOD_UUIE_BANNERS_FIELD_REVERSE_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_REVERSE_LABEL"
 msgstr "Reverse"
 
-msgid "MOD_UUIE_BANNERS_FIELD_REVERSE_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_REVERSE_DESC"
 msgstr "Reverse the animation direction."
 
-msgid "MOD_UUIE_BANNERS_FIELD_SLIDESHOWSPEED_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_SLIDESHOWSPEED_LABEL"
 msgstr "Slideshow Speed"
 
-msgid "MOD_UUIE_BANNERS_FIELD_SLIDESHOWSPEED_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_SLIDESHOWSPEED_DESC"
 msgstr "Set the speed of the slideshow cycling, in milliseconds"
 
-msgid "MOD_UUIE_BANNERS_FIELD_ANIMATIONSPEED_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_ANIMATIONSPEED_LABEL"
 msgstr "Animation Speed"
 
-msgid "MOD_UUIE_BANNERS_FIELD_ANIMATIONSPEED_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_ANIMATIONSPEED_DESC"
 msgstr "Set the speed of animations, in milliseconds"
 
-msgid "MOD_UUIE_BANNERS_FIELD_TOUCH_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_TOUCH_LABEL"
 msgstr "Touch"
 
-msgid "MOD_UUIE_BANNERS_FIELD_TOUCH_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_TOUCH_DESC"
 msgstr "Allow touch swipe navigation of the slider on enabled devices"
 
-msgid "MOD_UUIE_BANNERS_FIELD_PREVTEXT_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_PREVTEXT_LABEL"
 msgstr "Previous"
 
-msgid "MOD_UUIE_BANNERS_FIELD_PREVTEXT_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_PREVTEXT_DESC"
 msgstr "Set the text for the \"previous\" directionNav item"
 
-msgid "MOD_UUIE_BANNERS_FIELD_NEXTTEXT_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_NEXTTEXT_LABEL"
 msgstr "Next Text"
 
-msgid "MOD_UUIE_BANNERS_FIELD_NEXTTEXT_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_NEXTTEXT_DESC"
 msgstr "Set the text for the \"next\" directionNav item"
 
-msgid "MOD_UUIE_BANNERS_FIELD_KEYBOARD_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_KEYBOARD_LABEL"
 msgstr "Keyboard"
 
-msgid "MOD_UUIE_BANNERS_FIELD_KEYBOARD_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_KEYBOARD_DESC"
 msgstr "Allow slider navigating via keyboard left/right keys."
 
-msgid "MOD_UUIE_BANNERS_FIELD_ANIMATIONLOOP_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_ANIMATIONLOOP_LABEL"
 msgstr "Animation Loop"
 
-msgid "MOD_UUIE_BANNERS_FIELD_ANIMATIONLOOP_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_ANIMATIONLOOP_DESC"
 msgstr "Gives the slider a seamless infinite loop."
 
-msgid "MOD_UUIE_BANNERS_FIELD_MOUSEWHEEL_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_MOUSEWHEEL_LABEL"
 msgstr "Mouse Wheel"
 
-msgid "MOD_UUIE_BANNERS_FIELD_MOUSEWHEEL_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_MOUSEWHEEL_DESC"
 msgstr "(Dependency) Allows slider navigating via mousewheel"
 
-msgid "MOD_UUIE_BANNERS_FIELD_PAUSEONACTION_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_PAUSEONACTION_LABEL"
 msgstr "Pause on action"
 
-msgid "MOD_UUIE_BANNERS_FIELD_PAUSEONACTION_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_PAUSEONACTION_DESC"
 msgstr "Pause the slideshow when interacting with control elements."
 
-msgid "MOD_UUIE_BANNERS_FIELD_PAUSEONHOVER_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_PAUSEONHOVER_LABEL"
 msgstr "Pause on hover"
 
-msgid "MOD_UUIE_BANNERS_FIELD_PAUSEONHOVER_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_PAUSEONHOVER_DESC"
 msgstr ""
 "Pause the slideshow when hovering over slider, then resume when no longer "
 "hovering."
 
-msgid "MOD_UUIE_BANNERS_FIELD_CONTROLNAV_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_CONTROLNAV_LABEL"
 msgstr "Control navigation"
 
-msgid "MOD_UUIE_BANNERS_FIELD_CONTROLNAV_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_CONTROLNAV_DESC"
 msgstr "Create navigation for paging control of each slide."
 
-msgid "MOD_UUIE_BANNERS_FIELD_DIRECTIONNAV_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_DIRECTIONNAV_LABEL"
 msgstr "Direction navigation."
 
-msgid "MOD_UUIE_BANNERS_FIELD_DIRECTIONNAV_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_DIRECTIONNAV_DESC"
 msgstr "Create previous/next arrow navigation."
 
-msgid "MOD_UUIE_BANNERS_FIELD_PAUSEPLAY_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_PAUSEPLAY_LABEL"
 msgstr "Pause play"
 
-msgid "MOD_UUIE_BANNERS_FIELD_PAUSEPLAY_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_PAUSEPLAY_DESC"
 msgstr "Create pause/play element to control slider slideshow."
 
-msgid "MOD_UUIE_BANNERS_FIELD_PAUSETEXT_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_PAUSETEXT_LABEL"
 msgstr "Pause text"
 
-msgid "MOD_UUIE_BANNERS_FIELD_PAUSETEXT_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_PAUSETEXT_DESC"
 msgstr "Set the text for the \"pause\" pausePlay item"
 
-msgid "MOD_UUIE_BANNERS_FIELD_PLAYTEXT_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_PLAYTEXT_LABEL"
 msgstr "Play text"
 
-msgid "MOD_UUIE_BANNERS_FIELD_PLAYTEXT_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_PLAYTEXT_DESC"
 msgstr "Set the text for the \"play\" pausePlay item"
 
-msgid "MOD_UUIE_BANNERS_FIELD_ITEMWIDTH_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_ITEMWIDTH_LABEL"
 msgstr "Item width"
 
-msgid "MOD_UUIE_BANNERS_FIELD_ITEMWIDTH_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_ITEMWIDTH_DESC"
 msgstr ""
 "Box-model width of individual carousel items, including horizontal borders "
 "and padding."
 
-msgid "MOD_UUIE_BANNERS_FIELD_ITEMMARGIN_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_ITEMMARGIN_LABEL"
 msgstr "Item margin"
 
-msgid "MOD_UUIE_BANNERS_FIELD_ITEMMARGIN_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_ITEMMARGIN_DESC"
 msgstr "Margin between carousel items."
 
-msgid "MOD_UUIE_BANNERS_FIELD_MINITEMS_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_MINITEMS_LABEL"
 msgstr "Min items"
 
-msgid "MOD_UUIE_BANNERS_FIELD_MINITEMS_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_MINITEMS_DESC"
 msgstr "Minimum number of carousel items that should be visible."
 
-msgid "MOD_UUIE_BANNERS_FIELD_MAXITEMS_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_MAXITEMS_LABEL"
 msgstr "Max items"
 
-msgid "MOD_UUIE_BANNERS_FIELD_MAXITEMS_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_MAXITEMS_DESC"
 msgstr "Maximum number of carousel items that should be visible."
 
-msgid "MOD_UUIE_BANNERS_FIELD_MOVE_LABEL"
+msgid "MOD_ADVERTISEMENTS_FIELD_MOVE_LABEL"
 msgstr "Move"
 
-msgid "MOD_UUIE_BANNERS_FIELD_MOVE_DESC"
+msgid "MOD_ADVERTISEMENTS_FIELD_MOVE_DESC"
 msgstr "Number of carousel items that should move on animation."
