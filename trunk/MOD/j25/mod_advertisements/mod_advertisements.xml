@@ -7,12 +7,12 @@
 	<name>Advertisements</name>
 	<author>步步街工作室</author>
 	<creationDate>July 2012</creationDate>
-	<copyright>Copyright (C) 步步街工作室 2008 - 2012. All rights reserved.</copyright>
+	<copyright>Copyright (C) 步步街工作室 2008 - 2014. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>bubujie@gmail.com</authorEmail>
 	<authorUrl>www.bubujie.net</authorUrl>
 	<version>2.5.0</version>
-	<description>MOD_BANNERS_XML_DESCRIPTION</description>
+	<description>MOD_ADVERTISEMENTS_XML_DESCRIPTION</description>
 	<files>
 		<folder>language</folder>
 		<filename module="mod_advertisements">mod_advertisements.php</filename>
@@ -21,7 +21,7 @@
 		<filename>index.html</filename>
 		<filename>mod_advertisements.xml</filename>
 	</files>
-	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_BANNERS" />
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_ADVERTISEMENTS" />
 	<config>
 		<fields name="params">
 			<fieldset name="basic"
@@ -30,8 +30,8 @@
 					name="target"
 					type="list"
 					default="1"
-					label="MOD_BANNERS_FIELD_TARGET_LABEL"
-					description="MOD_BANNERS_FIELD_TARGET_DESC">
+					label="MOD_ADVERTISEMENTS_FIELD_TARGET_LABEL"
+					description="MOD_ADVERTISEMENTS_FIELD_TARGET_DESC">
 					<option
 						value="0">JBROWSERTARGET_PARENT</option>
 					<option
@@ -47,13 +47,13 @@
 					last="10"
 					step="1"
 					default="5"
-					label="MOD_BANNERS_FIELD_COUNT_LABEL"
-					description="MOD_BANNERS_FIELD_COUNT_DESC" />
+					label="MOD_ADVERTISEMENTS_FIELD_COUNT_LABEL"
+					description="MOD_ADVERTISEMENTS_FIELD_COUNT_DESC" />
 				<field
 					name="cid"
 					type="bannerclient"
-					label="MOD_BANNERS_FIELD_BANNERCLIENT_LABEL"
-					description="MOD_BANNERS_FIELD_BANNERCLIENT_DESC" />
+					label="MOD_ADVERTISEMENTS_FIELD_BANNERCLIENT_LABEL"
+					description="MOD_ADVERTISEMENTS_FIELD_BANNERCLIENT_DESC" />
 
 				<field
 					name="catid"
@@ -62,7 +62,7 @@
 					label="JCATEGORY"
 					multiple="true" size="5"
 					default=""
-					description="MOD_BANNERS_FIELD_CATEGORY_DESC" >
+					description="MOD_ADVERTISEMENTS_FIELD_CATEGORY_DESC" >
 					<option value="">JOPTION_ALL_CATEGORIES</option>
 				</field>
 
@@ -70,8 +70,8 @@
 					name="tag_search"
 					type="radio"
 					default="0"
-					label="MOD_BANNERS_FIELD_TAG_LABEL"
-					description="MOD_BANNERS_FIELD_TAG_DESC">
+					label="MOD_ADVERTISEMENTS_FIELD_TAG_LABEL"
+					description="MOD_ADVERTISEMENTS_FIELD_TAG_DESC">
 					<option
 						value="0">JNO</option>
 					<option
@@ -81,12 +81,12 @@
 					name="ordering"
 					type="list"
 					default="0"
-					label="MOD_BANNERS_FIELD_RANDOMISE_LABEL"
-					description="MOD_BANNERS_FIELD_RANDOMISE_DESC">
+					label="MOD_ADVERTISEMENTS_FIELD_RANDOMISE_LABEL"
+					description="MOD_ADVERTISEMENTS_FIELD_RANDOMISE_DESC">
 					<option
-						value="0">MOD_BANNERS_VALUE_STICKYORDERING</option>
+						value="0">MOD_ADVERTISEMENTS_VALUE_STICKYORDERING</option>
 					<option
-						value="random">MOD_BANNERS_VALUE_STICKYRANDOMISE</option>
+						value="random">MOD_ADVERTISEMENTS_VALUE_STICKYRANDOMISE</option>
 				</field>
 
 				<field
@@ -95,8 +95,8 @@
 					filter="safehtml"
 					rows="3"
 					cols="40"
-					label="MOD_BANNERS_FIELD_HEADER_LABEL"
-					description="MOD_BANNERS_FIELD_HEADER_DESC" />
+					label="MOD_ADVERTISEMENTS_FIELD_HEADER_LABEL"
+					description="MOD_ADVERTISEMENTS_FIELD_HEADER_DESC" />
 
 				<field
 					name="footer_text"
@@ -104,15 +104,15 @@
 					filter="safehtml"
 					rows="3"
 					cols="40"
-					label="MOD_BANNERS_FIELD_FOOTER_LABEL"
-					description="MOD_BANNERS_FIELD_FOOTER_DESC" />
+					label="MOD_ADVERTISEMENTS_FIELD_FOOTER_LABEL"
+					description="MOD_ADVERTISEMENTS_FIELD_FOOTER_DESC" />
 			</fieldset>
 <fieldset name="display" label="MOD_ADVERTISEMENTS_FIELD_GROUP_DISPLAY_LABEL">
 <field name="animation"
 	type="radio"
 	default="0"
-	label="MOD_UUIE_BANNERS_FIELD_ANIMATION_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_ANIMATION_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_ANIMATION_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_ANIMATION_DESC"
 	>
 	<option value="fide">fide</option>
 	<option value="slide">slide</option>
@@ -120,8 +120,8 @@
 <field name="direction"
 	type="radio"
 	default="0"
-	label="MOD_UUIE_BANNERS_FIELD_DIRECTION_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_DIRECTION_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_DIRECTION_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_DIRECTION_DESC"
 	>
 	<option value="horizontal">horizontal</option>
 	<option value="vertical">vertical</option>
@@ -129,8 +129,8 @@
 <field name="slideshow"
 	type="radio"
 	default="1"
-	label="MOD_UUIE_BANNERS_FIELD_SLIDESHOW_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_SLIDESHOW_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_SLIDESHOW_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_SLIDESHOW_DESC"
 	>
 	<option value="1">JYES</option>
 	<option value="0">JNO</option>
@@ -138,8 +138,8 @@
 <field name="reverse"
 	type="radio"
 	default="0"
-	label="MOD_UUIE_BANNERS_FIELD_REVERSE_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_REVERSE_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_REVERSE_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_REVERSE_DESC"
 	>
 	<option value="1">JYES</option>
 	<option value="0">JNO</option>
@@ -147,20 +147,20 @@
 <field name="slideshowSpeed"
 	type="text"
 	default="7000"
-	label="MOD_UUIE_BANNERS_FIELD_SLIDESHOWSPEED_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_SLIDESHOWSPEED_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_SLIDESHOWSPEED_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_SLIDESHOWSPEED_DESC"
 	size="10" />
 <field name="animationSpeed"
 	type="text"
 	default="600"
-	label="MOD_UUIE_BANNERS_FIELD_ANIMATIONSPEED_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_ANIMATIONSPEED_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_ANIMATIONSPEED_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_ANIMATIONSPEED_DESC"
 	size="10" />
 <field name="touch"
 	type="radio"
 	default="1"
-	label="MOD_UUIE_BANNERS_FIELD_TOUCH_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_TOUCH_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_TOUCH_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_TOUCH_DESC"
 	>
 	<option value="1">JYES</option>
 	<option value="0">JNO</option>
@@ -168,20 +168,20 @@
 <field name="prevText"
 	type="text"
 	default="Previous"
-	label="MOD_UUIE_BANNERS_FIELD_PREVTEXT_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_PREVTEXT_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_PREVTEXT_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_PREVTEXT_DESC"
 	size="10" />
 <field name="nextText"
 	type="text"
 	default="Next"
-	label="MOD_UUIE_BANNERS_FIELD_NEXTTEXT_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_NEXTTEXT_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_NEXTTEXT_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_NEXTTEXT_DESC"
 	size="10" />
 <field name="keyboard"
 	type="radio"
 	default="1"
-	label="MOD_UUIE_BANNERS_FIELD_KEYBOARD_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_KEYBOARD_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_KEYBOARD_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_KEYBOARD_DESC"
 	>
 	<option value="1">JYES</option>
 	<option value="0">JNO</option>
@@ -189,8 +189,8 @@
 <field name="animationLoop"
 	type="radio"
 	default="1"
-	label="MOD_UUIE_BANNERS_FIELD_ANIMATIONLOOP_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_ANIMATIONLOOP_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_ANIMATIONLOOP_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_ANIMATIONLOOP_DESC"
 	>
 	<option value="1">JYES</option>
 	<option value="0">JNO</option>
@@ -198,8 +198,8 @@
 <field name="mousewheel"
 	type="radio"
 	default="0"
-	label="MOD_UUIE_BANNERS_FIELD_MOUSEWHEEL_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_MOUSEWHEEL_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_MOUSEWHEEL_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_MOUSEWHEEL_DESC"
 	>
 	<option value="1">JYES</option>
 	<option value="0">JNO</option>
@@ -207,8 +207,8 @@
 <field name="pauseOnAction"
 	type="radio"
 	default="1"
-	label="MOD_UUIE_BANNERS_FIELD_PAUSEONACTION_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_PAUSEONACTION_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_PAUSEONACTION_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_PAUSEONACTION_DESC"
 	>
 	<option value="1">JYES</option>
 	<option value="0">JNO</option>
@@ -216,8 +216,8 @@
 <field name="pauseOnHover"
 	type="radio"
 	default="0"
-	label="MOD_UUIE_BANNERS_FIELD_PAUSEONHOVER_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_PAUSEONHOVER_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_PAUSEONHOVER_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_PAUSEONHOVER_DESC"
 	>
 	<option value="1">JYES</option>
 	<option value="0">JNO</option>
@@ -225,8 +225,8 @@
 <field name="controlNav"
 	type="radio"
 	default="1"
-	label="MOD_UUIE_BANNERS_FIELD_CONTROLNAV_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_CONTROLNAV_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_CONTROLNAV_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_CONTROLNAV_DESC"
 	>
 	<option value="1">JYES</option>
 	<option value="0">JNO</option>
@@ -234,8 +234,8 @@
 <field name="directionNav"
 	type="radio"
 	default="1"
-	label="MOD_UUIE_BANNERS_FIELD_DIRECTIONNAV_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_DIRECTIONNAV_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_DIRECTIONNAV_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_DIRECTIONNAV_DESC"
 	>
 	<option value="1">JYES</option>
 	<option value="0">JNO</option>
@@ -244,8 +244,8 @@
 <field name="pausePlay"
 	type="radio"
 	default="0"
-	label="MOD_UUIE_BANNERS_FIELD_PAUSEPLAY_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_PAUSEPLAY_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_PAUSEPLAY_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_PAUSEPLAY_DESC"
 	>
 	<option value="1">JYES</option>
 	<option value="0">JNO</option>
@@ -253,45 +253,45 @@
 <field name="pauseText"
 	type="text"
 	default="Pause"
-	label="MOD_UUIE_BANNERS_FIELD_PAUSETEXT_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_PAUSETEXT_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_PAUSETEXT_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_PAUSETEXT_DESC"
 	size="10" />
 <field name="playText"
 	type="text"
 	default="Play"
-	label="MOD_UUIE_BANNERS_FIELD_PLAYTEXT_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_PLAYTEXT_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_PLAYTEXT_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_PLAYTEXT_DESC"
 	size="10" />
 <field type="spacer" hr="true" />
 <field name="itemWidth"
 	type="text"
 	default="0"
-	label="MOD_UUIE_BANNERS_FIELD_ITEMWIDTH_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_ITEMWIDTH_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_ITEMWIDTH_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_ITEMWIDTH_DESC"
 	size="10" />
 <field name="itemMargin"
 	type="text"
 	default="0"
-	label="MOD_UUIE_BANNERS_FIELD_ITEMMARGIN_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_ITEMMARGIN_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_ITEMMARGIN_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_ITEMMARGIN_DESC"
 	size="10" />
 <field name="minItems"
 	type="text"
 	default="0"
-	label="MOD_UUIE_BANNERS_FIELD_MINITEMS_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_MINITEMS_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_MINITEMS_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_MINITEMS_DESC"
 	size="10" />
 <field name="maxItems"
 	type="text"
 	default="0"
-	label="MOD_UUIE_BANNERS_FIELD_MAXITEMS_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_MAXITEMS_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_MAXITEMS_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_MAXITEMS_DESC"
 	size="10" />
 <field name="move"
 	type="text"
 	default="0"
-	label="MOD_UUIE_BANNERS_FIELD_MOVE_LABEL"
-	description="MOD_UUIE_BANNERS_FIELD_MOVE_DESC"
+	label="MOD_ADVERTISEMENTS_FIELD_MOVE_LABEL"
+	description="MOD_ADVERTISEMENTS_FIELD_MOVE_DESC"
 	size="10" />
 </fieldset>
 			<fieldset

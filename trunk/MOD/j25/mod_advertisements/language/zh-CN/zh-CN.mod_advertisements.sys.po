@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: J25+ mod_uuie_banners\n"
+"Project-Id-Version: J25+ mod_uuie_advertisements\n"
 "POT-Creation-Date: 2014-03-29 18:49+0800\n"
 "PO-Revision-Date: 2014-03-29 18:54+0800\n"
 "Last-Translator: \n"
@@ -17,11 +17,11 @@ msgstr ""
 # Copyright (C) 2014 bubujie.net
 # This file is distributed under the same license as the Joomla! package.
 
-msgid "MOD_BANNERS"
+msgid "MOD_ADVERTISEMENTS"
 msgstr "旗帜广告列表"
 
-msgid "MOD_BANNERS_XML_DESCRIPTION"
-msgstr "banner模块从组件里显示了一个banner。po语言文件测试"
+msgid "MOD_ADVERTISEMENTS_XML_DESCRIPTION"
+msgstr "advertesement模块从组件里显示了一个banner。"
 
-msgid "MOD_BANNERS_LAYOUT_DEFAULT"
+msgid "MOD_ADVERTISEMENTS_LAYOUT_DEFAULT"
 msgstr "默认"
