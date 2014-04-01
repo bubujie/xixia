@@ -114,7 +114,7 @@
 	label="MOD_ADVERTISEMENTS_FIELD_ANIMATION_LABEL"
 	description="MOD_ADVERTISEMENTS_FIELD_ANIMATION_DESC"
 	>
-	<option value="fide">fade</option>
+	<option value="fade">fade</option>
 	<option value="slide">slide</option>
 </field>
 <field name="direction"
