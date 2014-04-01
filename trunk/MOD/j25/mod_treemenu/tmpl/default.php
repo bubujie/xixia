@@ -13,10 +13,10 @@ defined('_JEXEC') or die;
 ?>
 <?php
 $doc = JFactory::getDocument();
-$doc->addScript(JURI::base(true).'/media/mod_dropmenu/js/mod_dropmenu.js');
-$doc->addStylesheet(JURI::base(true).'/media/mod_dropmenu/css/mod_dropmenu.css');
+$doc->addScript(JURI::base(true).'/media/mod_treemenu/js/mod_treemenu.js');
+$doc->addStylesheet(JURI::base(true).'/media/mod_treemenu/css/mod_treemenu.css');
 ?>
-<div id="dropmenu-<?php echo $module->id; ?>" class="dropmenu y">
+<div id="treemenu-<?php echo $module->id; ?>" class="treemenu">
 <ul class="menu<?php echo $class_sfx;?>"<?php
 	$tag = '';
 	if ($params->get('tag_id')!=NULL) {

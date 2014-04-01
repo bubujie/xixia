@@ -1,0 +1,50 @@
+@charset "utf-8";
+@import "E:/tuding/css/layout";
+#module-23{width:200px;}
+/* @extend %ding; */
+.dropmenu .so,
+.dropmenu .sc,
+.dropmenu .si{display:block;}
+.dropmenu ul.menu li, .dropmenu ul.menu a, .dropmenu ul.menu ul{@extend %ding;margin:0;padding:0;}
+/* 注释 */
+/* ######### ######### ######### 注释 ######### ######### ######### */
+.dropmenu ul.menu li, .dropmenu ul.menu a, .dropmenu ul.menu ul {
+	position: relative;
+	*zoom: 1;
+}
+.dropmenu ul.menu li:after, .dropmenu ul.menu a:after, .dropmenu ul.menu ul:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.dropmenu ul.menu li{list-style:none;margin:0;padding:0;*margin-bottom:-3px;}
+.dropmenu ul.menu li a{display:block;float:left;width:100%;}
+.dropmenu ul.menu li a .si{display:block;line-height:2em;padding-left:1em;}
+.dropmenu ul.menu{width:auto;}
+.dropmenu ul.menu ul{width:200px;float:right;margin-right:0;padding:0;background-color:#ccc;position:absolute;top:0px;}
+.dropmenu ul.menu ul{/*margin-left:160px;*/ *margin-left:0;border-bottom:1px solid #000;}
+.dropmenu ul.menu ul li .si{border:0px solid #000;border-bottom:0;white-space:nowrap;background-color:#000;}
+.dropmenu ul.menu ul ul{/*margin-left:200px;*/ *margin-left:0;}
+.dropmenu ul.menu .childshow>a{color:red;}
+.dropmenu ul.menu .deeper>a span.si{font-weight:bold;background-color:#ccc}
+/* ######### ######### ######### 注释 ######### ######### ######### */
+.x ul.menu ul{margin-left:0px;*margin-left:0;}
+/* ######### 注释 ######### */
+/* Dom控制点完善时的复杂写法 */
+.dropmenu ul.menu ul{display:none;}
+.dropmenu ul.menu ul.show{display:block;}
+/* 对IE6无用，菜单会被prettyprint区域遮盖 */
+.dropmenu ul.menu ul{z-index:10000;}
+/* ######### 注释 ######### */
+.y ul.menu ul.show{width:0px;}
+/* ######### 注释 ######### */
+#dropmenu-91{background-color:#000;}
+#dropmenu-91 h3{display:none;}
+#dropmenu-91 ul.menu .si{background-color:#369;}
+#dropmenu-91 ul.menu ul .si{background-color:#000;}
+#dropmenu-91 a{padding-right:1em;}
+#dropmenu-91 a a{padding-right:0;}
+#dropmenu-91 li{float:left;}
+#dropmenu-91 li li{float:none;}
+#dropmenu-91 li ul{top:2em;}
+#dropmenu-91 li li ul{top:0px;}
