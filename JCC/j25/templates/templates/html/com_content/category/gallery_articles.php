@@ -20,9 +20,23 @@ $listOrder	= $this->escape($this->state->get('list.ordering'));
 $listDirn	= $this->escape($this->state->get('list.direction'));
 
 $column = JRequest::getVar('column');
-
-echo $column;
-$noimg = JHtml::_('image', 'noimg_300.gif', 'ljj', NULL, true, true);
+switch($column) :
+	case '2' :
+		$noimg = JHtml::_('image', 'noimg_500.gif', 'ljj', NULL, true, true);
+	break;
+	case '3' :
+		$noimg = JHtml::_('image', 'noimg_300.gif', 'ljj', NULL, true, true);
+	break;
+	case '4' :
+		$noimg = JHtml::_('image', 'noimg_130.gif', 'ljj', NULL, true, true);
+	break;
+	case '5' :
+		$noimg = JHtml::_('image', 'noimg_100.gif', 'ljj', NULL, true, true);
+	break;
+	default :
+		$noimg = JHtml::_('image', 'noimg_300.gif', 'ljj', NULL, true, true);
+	break;
+endswitch;
 ?>
 
 <?php if (empty($this->items)) : ?>
