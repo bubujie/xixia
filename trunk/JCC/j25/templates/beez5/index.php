@@ -29,6 +29,12 @@ $doc			= JFactory::getDocument();
 $templateparams	= $app->getTemplate(true)->params;
 
 $doc->addScript($this->baseurl.'/templates/'.$this->template.'/javascript/md_stylechanger.js', 'text/javascript', true);
+
+$jVersion = new JVersion;
+if(!version_compare($jVersion->getShortVersion(), '3.0', 'ge')) :
+	$doc->addScript($this->baseurl.'/media/jui/js/jquery-1.8.3.min.js');
+	$doc->addScript($this->baseurl.'/media/jui/js/jquery-noconflict.js');
+endif;
 ?>
 <?php if(!$templateparams->get('html5', 0)): ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

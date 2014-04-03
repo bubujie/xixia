@@ -17,7 +17,7 @@ $doc->addScript(JURI::base(true).'/media/mod_treemenu/js/mod_treemenu.js');
 $doc->addStylesheet(JURI::base(true).'/media/mod_treemenu/css/mod_treemenu.css');
 ?>
 <div id="treemenu-<?php echo $module->id; ?>" class="treemenu">
-<ul class="menu<?php echo $class_sfx;?>"<?php
+<ul class="tree<?php echo $class_sfx;?>"<?php
 	$tag = '';
 	if ($params->get('tag_id')!=NULL) {
 		$tag = $params->get('tag_id').'';

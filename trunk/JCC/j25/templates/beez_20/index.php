@@ -56,6 +56,11 @@ if ($this->direction == 'rtl') {
 $doc->addScript($this->baseurl.'/templates/'.$this->template.'/javascript/md_stylechanger.js', 'text/javascript');
 $doc->addScript($this->baseurl.'/templates/'.$this->template.'/javascript/hide.js', 'text/javascript');
 
+$jVersion = new JVersion;
+if(!version_compare($jVersion->getShortVersion(), '3.0', 'ge')) :
+	$doc->addScript($this->baseurl.'/media/jui/js/jquery-1.8.3.min.js');
+	$doc->addScript($this->baseurl.'/media/jui/js/jquery-noconflict.js');
+endif;
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" >
