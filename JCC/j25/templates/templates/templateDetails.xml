@@ -57,12 +57,6 @@
     <position>virtual2</position>
     <position>virtual3</position>
   </positions>
-  <languages folder="language">
-    <language tag="en-GB">en-GB/en-GB.tpl_##template##.ini</language>
-    <language tag="en-GB">en-GB/en-GB.tpl_##template##.sys.ini</language>
-    <language tag="zh-CN">zh-CN/zh-CN.tpl_##template##.ini</language>
-    <language tag="zh-CN">zh-CN/zh-CN.tpl_##template##.sys.ini</language>
-  </languages>
   <params>
     <param name="bheadLogo" type="text" default="logo_header.png" label="TPL_##TEMPLATE##_FIELD_BHEADLOGO_LABEL" description="TPL_##TEMPLATE##_FIELD_BHEADLOGO_DESC" filter="string" />
     <param name="bfootLogo" type="text" default="logo_footer.png" label="TPL_##TEMPLATE##_FIELD_BFOOTLOGO_LABEL" description="TPL_##TEMPLATE##_FIELD_BFOOTLOGO_DESC" filter="string" />
