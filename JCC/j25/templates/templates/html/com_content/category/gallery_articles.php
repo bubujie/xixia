@@ -117,13 +117,13 @@ endswitch;
 			<?php if ($this->items[$i]->state == 0) : ?>
 				<li><ul class="system-unpublished cat-list-row<?php echo $i % 2; ?>">
 			<?php else: ?>
-				<li class="item"><ul class="cat-list-row<?php echo $i % 2; ?>" >
+				<li class="item">
 			<?php endif; ?>
 				<?php if (in_array($article->access, $this->user->getAuthorisedViewLevels())) : ?>
+<div class="box cat-list-row<?php echo $i % 2; ?>" >
 <?php $images = json_decode($article->images); ?>
 <?php  if (isset($images->image_intro) and !empty($images->image_intro)) : ?>
 	<?php $imgfloat = (empty($images->float_intro)) ? $this->params->get('float_intro') : $images->float_intro; ?>
-	<li>
 	<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid, $article->language)); ?>">
 	<img class="thumb"
 		<?php if ($images->image_intro_caption):
@@ -131,13 +131,12 @@ endswitch;
 		endif; ?>
 		src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>"/>
 	</a>
-	</li>
 <?php else : ?>
 <a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid, $article->language)); ?>">
 <?php echo '<img class="thumb" src="'.$noimg.'"/>'; ?>
 </a>
 <?php endif; ?>
-					<li class="list-title">
+					<p class="list-title name">
 						<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid, $article->language)); ?>">
 							<?php echo $this->escape($article->title); ?></a>
 
@@ -148,17 +147,17 @@ endswitch;
 							</li>
 						</ul>
 						<?php endif; ?>
-					</li>
+					</p>
 
 					<?php if ($this->params->get('list_show_date')) : ?>
-					<li class="list-date">
+					<span class="list-date">
 						<?php echo JHtml::_('date', $article->displayDate, $this->escape(
 						$this->params->get('date_format', JText::_('DATE_FORMAT_LC3')))); ?>
-					</li>
+					</span>
 					<?php endif; ?>
 
 					<?php if ($this->params->get('list_show_author', 1)) : ?>
-					<li class="list-author">
+					<span class="list-author">
 						<?php if(!empty($article->author) || !empty($article->created_by_alias)) : ?>
 							<?php $author =  $article->author ?>
 							<?php $author = ($article->created_by_alias ? $article->created_by_alias : $author);?>
@@ -174,17 +173,17 @@ endswitch;
 								<?php echo JText::sprintf('COM_CONTENT_WRITTEN_BY', $author); ?>
 							<?php endif; ?>
 						<?php endif; ?>
-					</li>
+					</span>
 					<?php endif; ?>
 
 					<?php if ($this->params->get('list_show_hits', 1)) : ?>
-					<li class="list-hits">
+					<span class="list-hits">
 						<?php echo $article->hits; ?>
-					</li>
+					</span>
 					<?php endif; ?>
 
 				<?php else : // Show unauth links. ?>
-					<li>
+					<span>
 						<?php
 							echo $this->escape($article->title).' : ';
 							$menu		= JFactory::getApplication()->getMenu();
@@ -197,9 +196,9 @@ endswitch;
 						?>
 						<a href="<?php echo $fullURL; ?>" class="register">
 							<?php echo JText::_( 'COM_CONTENT_REGISTER_TO_READ_MORE' ); ?></a>
-					</li>
+					</span>
 				<?php endif; ?>
-				</ul></li>
+				</div></li>
 		<?php endforeach; ?>
 		</ul>
 	</div>
