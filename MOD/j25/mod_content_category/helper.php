@@ -2,7 +2,7 @@
 /**
  * @package		Bubujie.Studio
  * @subpackage	mod_content_category
- * @copyright	Copyright (C) 步步街工作室 2008 - 2014. All rights reserved.
+ * @copyright	Copyright (C) 2008 - 2014 步步街工作室. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -14,7 +14,7 @@ require_once $com_path.'helpers/route.php';
 
 JModelLegacy::addIncludePath($com_path . '/models', 'ContentModel');
 
-abstract class modContentCategorylHelper
+abstract class modContentCategoryHelper
 {
 	public static function getList(&$params)
 	{
@@ -196,7 +196,7 @@ abstract class modContentCategorylHelper
 
 			if ($access || in_array($item->access, $authorised)) {
 				// We know that user has the privilege to view the article
-				$item->link = JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catslug));
+				$item->link = JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catslug, $item->language));
 			}
 			 else {
 				// Angie Fixed Routing

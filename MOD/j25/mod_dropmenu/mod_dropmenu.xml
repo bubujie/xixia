@@ -22,7 +22,7 @@
 		<filename>mod_dropmenu.xml</filename>
 	</files>
 	<media folder="media" destination="mod_dropmenu">
-		<filename>mod_dropmenu_logo.png</filename>
+		<folder>img</folder>
 		<folder>css</folder>
 		<folder>js</folder>
 	</media>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+   <paths>
+      <left>D:\xixia\MOD\j25\mod_content_category\mod_content_category.php</left>
+      <right>F:\htdocs\Joomla_2.5.19-Stable-Full_Package\modules\mod_articles_category\mod_articles_category.php</right>
+      <filter>*.*</filter>
+      <subfolders>0</subfolders>
+      <left-readonly>0</left-readonly>
+      <right-readonly>0</right-readonly>
+   </paths>
+   <paths>
+      <left>D:\xixia\MOD\j25\mod_content_category\helper.php</left>
+      <right>F:\htdocs\Joomla_2.5.19-Stable-Full_Package\modules\mod_articles_category\helper.php</right>
+      <filter>*.*</filter>
+      <subfolders>0</subfolders>
+      <left-readonly>0</left-readonly>
+      <right-readonly>0</right-readonly>
+   </paths>
+   <paths>
+      <left>D:\xixia\MOD\j25\mod_content_category\mod_content_category.xml</left>
+      <right>F:\htdocs\Joomla_2.5.19-Stable-Full_Package\modules\mod_articles_category\mod_articles_category.xml</right>
+      <filter>*.*</filter>
+      <subfolders>0</subfolders>
+      <left-readonly>0</left-readonly>
+      <right-readonly>0</right-readonly>
+   </paths>
+</project>

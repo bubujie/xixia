@@ -17,6 +17,11 @@
 		<filename>index.html</filename>
 		<filename>mod_content_category.xml</filename>
 	</files>
+	<media folder="media" destination="mod_content_category">
+		<folder>img</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+	</media>
 	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_CONTENT_CATEGORY" />
 	<config>
 		<fields name="params">
