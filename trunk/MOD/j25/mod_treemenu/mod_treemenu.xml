@@ -22,7 +22,7 @@
 		<filename>mod_treemenu.xml</filename>
 	</files>
 	<media folder="media" destination="mod_treemenu">
-		<filename>mod_treemenu_logo.png</filename>
+		<folder>img</folder>
 		<folder>css</folder>
 		<folder>js</folder>
 	</media>
