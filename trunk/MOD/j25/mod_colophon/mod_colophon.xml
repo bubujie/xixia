@@ -19,10 +19,11 @@
 		<filename>index.html</filename>
 		<filename>mod_colophon.xml</filename>
 	</files>
-	<languages>
-		<language tag="en-GB">en-GB.mod_colophon.ini</language>
-		<language tag="en-GB">en-GB.mod_colophon.sys.ini</language>
-	</languages>
+	<media folder="media" destination="mod_colophon">
+		<folder>img</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+	</media>
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
