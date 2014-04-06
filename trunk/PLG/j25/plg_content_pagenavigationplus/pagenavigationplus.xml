@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content">
+	<name>plg_content_pagenavigationplus</name>
+	<author>步步街工作室</author>
+	<creationDate>January 20014</creationDate>
+	<copyright>Copyright (C) 2008 - 2014 步步街工作室. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>bubujie@gmail.com</authorEmail>
+	<authorUrl>www.bubujie.net</authorUrl>
+	<version>2.5.0</version>
+	<description>PLG_PAGENAVIGATIONPLUS_XML_DESCRIPTION</description>
+	<files>
+		<folder>language</folder>
+		<filename plugin="pagenavigationplus">pagenavigationplus.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+				<field name="position" type="radio"
+					default="1"
+					description="PLG_PAGENAVIGATIONPLUS_FIELD_POSITION_DESC"
+					label="PLG_PAGENAVIGATIONPLUS_FIELD_POSITION_LABEL"
+				>
+					<option value="1">PLG_PAGENAVIGATIONPLUS_FIELD_VALUE_BELOW</option>
+					<option value="0">PLG_PAGENAVIGATIONPLUS_FIELD_VALUE_ABOVE</option>
+				</field>
+
+			<field name="relative" type="radio"
+					default="1"
+					description="PLG_PAGENAVIGATIONPLUS_FIELD_RELATIVE_DESC"
+					label="PLG_PAGENAVIGATIONPLUS_FIELD_RELATIVE_LABEL"
+			>
+					<option value="1">PLG_PAGENAVIGATIONPLUS_FIELD_VALUE_ARTICLE</option>
+					<option value="0">PLG_PAGENAVIGATIONPLUS_FIELD_VALUE_TEXT</option>
+			</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
