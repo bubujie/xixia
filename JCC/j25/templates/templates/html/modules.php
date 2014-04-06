@@ -109,7 +109,7 @@ function modChrome_zengarden($module, &$params, &$attribs)
 
 
 
-// 模块的Stroke风格结构（特点是最外部有双层外套，content部分也有外套）
+// 模块的Stroke风格结构（特点是最外部有四层外套，content部分也有外套）
 function modChrome_stroke($module, &$params, &$attribs)
 {
 	$moduleTag      = $params->get('module_tag', 'div');
@@ -146,6 +146,51 @@ function modChrome_stroke($module, &$params, &$attribs)
 		//echo   "\n  ".'<div class="blank"></div>';
 		echo   "\n      ".'</div>';
 		echo   "\n    ".'</div>';
+		echo   "\n  ".'</div>';
+		echo   "\n".'</div>';
+		echo $gridSize ? "\n".'</div>' : '';
+	endif;
+}
+
+
+
+// 模块的double风格结构（特点是最外部有双层外套，content部分也有外套）
+function modChrome_double($module, &$params, &$attribs)
+{
+	$moduleTag      = $params->get('module_tag', 'div');
+	$headerTag      = htmlspecialchars($params->get('header_tag', 'h3'));
+	$bootstrapSize  = (int) $params->get('bootstrap_size', 0);
+	$moduleClass    = $bootstrapSize != 0 ? ' span' . $bootstrapSize : '';
+
+	// Temporarily store header class in variable
+	$headerClass	= $params->get('header_class');
+	$headerClass	= !empty($headerClass) ? ' class="' . htmlspecialchars($headerClass) . '"' : '';
+	$gridSize       = $params->get('grid_size', 0);
+
+	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
+	if (!empty ($module->content)) :
+		echo $gridSize ? "\n".'<div class="'.$gridSize.' xfl clearfix">' : '';
+		printf("\n".'<div id="module-%s" class="module mod%s outer clearfix">' ,
+			$module->id ,
+			$params->get('moduleclass_sfx')
+		);
+		echo   "\n  ".'<div class="inner clearfix">';
+		//echo   "\n    ".'<div class="strokec clearfix">';
+		//echo   "\n      ".'<div class="strokei clearfix">';
+		if ($module->showtitle) :
+			printf("\n        ".'<h%s class="mod-heading clearfix"><span>%s</span></h%s>' ,
+				$headerLevel ,
+				$module->title ,
+				$headerLevel
+			);
+		endif;
+
+		echo   "\n        ".'<div class="mod-content">'; 
+		echo $module->content;
+		echo   "\n        ".'</div>';
+		//echo   "\n  ".'<div class="blank"></div>';
+		//echo   "\n      ".'</div>';
+		//echo   "\n    ".'</div>';
 		echo   "\n  ".'</div>';
 		echo   "\n".'</div>';
 		echo $gridSize ? "\n".'</div>' : '';

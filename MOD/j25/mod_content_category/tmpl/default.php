@@ -9,7 +9,11 @@
 // no direct access
 defined('_JEXEC') or die;
 ?>
-
+<?php
+$doc = JFactory::getDocument();
+$doc->addScript(JURI::base(true).'/media/mod_content_category/js/mod_content_category.js');
+$doc->addStylesheet(JURI::base(true).'/media/mod_content_category/css/mod_content_category.css');
+?>
 <?php if ($grouped) : ?>
 <ul class="category-module<?php echo $moduleclass_sfx; ?>">
 	<?php foreach ($list as $group_name => $group) : ?>
@@ -122,7 +126,7 @@ defined('_JEXEC') or die;
 	</div>
 <?php else : ?>
 <div class="thumb">
-<img src="<?php echo JURI::base().'media/system/images/no-image.gif'; ?>" alt=""/>
+<img src="<?php echo JURI::base().'media/images/noimg_300.gif'; ?>" alt=""/>
 </div>
 <?php endif; ?>
 <?php endif; ?>
