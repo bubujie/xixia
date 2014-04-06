@@ -8,10 +8,10 @@
 defined('_JEXEC') or die;
 
 /**
- * Pagenavigation plugin class.
+ * Pagenavigationplus plugin class.
  *
- * @package		Joomla.Plugin
- * @subpackage	Content.pagenavigation
+ * @package		BuBuJie.Plugin
+ * @subpackage	Content.pagenavigationplus
  */
 class plgContentPagenavigationplus extends JPlugin
 {
