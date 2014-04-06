@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="package" version="2.5.0" method="upgrade">
 	<name>Package Thumbtack</name>
-	<packagename>modulesextraparams</packagename>
+	<packagename>thumbtack</packagename>
 	<author>步步街工作室</author>
 	<packager>步步街工作室</packager>
 	<packageurl>www.bubujie.net</packageurl>

@@ -15,12 +15,11 @@
 	<files>
 		<filename module="mod_multiple_modules">mod_multiple_modules.php</filename>
 	</files>
-	<languages>
-		<language tag="en-GB">en-GB.mod_multiple_modules.ini</language>
-		<language tag="en-GB">en-GB.mod_multiple_modules.sys.ini</language>
-		<language tag="zh-CN">zh-CN.mod_multiple_modules.ini</language>
-		<language tag="zh-CN">zh-CN.mod_multiple_modules.sys.ini</language>
-	</languages>
+	<media folder="media" destination="mod_multiple_modules">
+		<folder>img</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+	</media>
 	<params>
 		<param name="moduleDebug" type="radio" default="0" label="Debug" description="Show debug information.">
 			<option value="0">No</option>
