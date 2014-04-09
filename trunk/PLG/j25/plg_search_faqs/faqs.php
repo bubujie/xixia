@@ -37,7 +37,7 @@ class plgSearchFaqs extends JPlugin
 	 */
 	function onContentSearchAreas() {
 		static $areas = array(
-			'faqs' => 'PLG_SEARCH_WEBLINKS_WEBLINKS'
+			'faqs' => 'PLG_SEARCH_FAQS_FAQS'
 			);
 			return $areas;
 	}
@@ -82,7 +82,7 @@ class plgSearchFaqs extends JPlugin
 		if ($text == '') {
 			return array();
 		}
-		$section	= JText::_('PLG_SEARCH_WEBLINKS');
+		$section	= JText::_('PLG_SEARCH_FAQS');
 
 		$wheres	= array();
 		switch ($phrase)
