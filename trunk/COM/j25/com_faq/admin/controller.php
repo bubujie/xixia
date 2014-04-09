@@ -38,7 +38,7 @@ class FaqController extends JControllerLegacy
 		$id			= JRequest::getInt('id');
 
 		// Check for edit form.
-		if ($view == 'faqs' && $layout == 'edit' && !$this->checkEditId('com_faq.edit.faq', $id)) {
+		if ($view == 'faq' && $layout == 'edit' && !$this->checkEditId('com_faq.edit.faq', $id)) {
 			// Somehow the person just went to the form - we don't allow that.
 			$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
 			$this->setMessage($this->getError(), 'error');
