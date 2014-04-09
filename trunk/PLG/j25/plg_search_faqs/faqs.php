@@ -90,7 +90,7 @@ class plgSearchFaqs extends JPlugin
 			case 'exact':
 				$text		= $db->Quote('%'.$db->escape($text, true).'%', false);
 				$wheres2	= array();
-				//$wheres2[]	= 'a.url LIKE '.$text;
+				$wheres2[]	= 'a.url LIKE '.$text;
 				$wheres2[]	= 'a.description LIKE '.$text;
 				$wheres2[]	= 'a.title LIKE '.$text;
 				$where		= '(' . implode(') OR (', $wheres2) . ')';
@@ -105,7 +105,7 @@ class plgSearchFaqs extends JPlugin
 				{
 					$word		= $db->Quote('%'.$db->escape($word, true).'%', false);
 					$wheres2	= array();
-					//$wheres2[]	= 'a.url LIKE '.$word;
+					$wheres2[]	= 'a.url LIKE '.$word;
 					$wheres2[]	= 'a.description LIKE '.$word;
 					$wheres2[]	= 'a.title LIKE '.$word;
 					$wheres[]	= implode(' OR ', $wheres2);
@@ -157,7 +157,7 @@ class plgSearchFaqs extends JPlugin
 	        $case_when1 .= ' ELSE ';
 	        $case_when1 .= $c_id.' END as catslug';
 
-			$query->select('a.title AS title, a.description AS text, a.created AS created, '
+			$query->select('a.title AS title, a.description AS text, a.created AS created, a.url, '
 						.$case_when.','.$case_when1.', '
 						.$query->concatenate(array($db->Quote($section), "c.title"), " / ").' AS section, \'1\' AS browsernav');
 			$query->from('#__faqs AS a');
@@ -182,7 +182,7 @@ class plgSearchFaqs extends JPlugin
 				}
 
 				foreach($rows as $key => $faq) {
-					if (searchHelper::checkNoHTML($faq, $searchText, array('text', 'title'))) {
+					if (searchHelper::checkNoHTML($faq, $searchText, array('url', 'text', 'title'))) {
 						$return[] = $faq;
 					}
 				}
