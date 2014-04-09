@@ -100,7 +100,7 @@ class FaqModelFaq extends JModelAdmin
 		}
 
 		// Determine correct permissions to check.
-		if ($this->getState('faq.id')) {
+		if ($this->getState('faqs.id')) {
 			// Existing record. Can only edit in selected categories.
 			$form->setFieldAttribute('catid', 'action', 'core.edit');
 		} else {
