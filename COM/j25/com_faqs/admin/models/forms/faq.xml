@@ -22,12 +22,17 @@
 		<field name="url" type="url" class="inputbox"
 			filter="url"
 			size="40" label="COM_FAQS_FIELD_URL_LABEL"
-			description="COM_FAQS_FIELD_URL_DESC" required="true" />
+			description="COM_FAQS_FIELD_URL_DESC" required="false" />
+
+<field name="imageurl" type="media" directory="faqs"
+	hide_none="1" label="COM_BANNERS_FIELD_IMAGE_LABEL"
+	size="40"
+	description="COM_BANNERS_FIELD_IMAGE_DESC" />
 
 		<field name="description" type="editor" buttons="true" hide="pagebreak,readmore"
 			class="inputbox"
 			filter="JComponentHelper::filterText"
-			label="JGLOBAL_DESCRIPTION" description="COM_FAQS_FIELD_DESCRIPTION_DESC" />
+			label="JGLOBAL_DESCRIPTION" description="COM_FAQS_FIELD_DESCRIPTION_DESC" required="true" />
 
 		<field name="date" type="Date" class="inputbox"
 			label="FAQS_DATE_LABEL" description="FAQS_DATE_DESC"
@@ -137,7 +142,7 @@
 
 	<fields name="params">
 		<fieldset name="jbasic" label="COM_FAQS_FIELDSET_OPTIONS">
-			<field name="target" type="list" default=""
+			<!--field name="target" type="list" default=""
 				label="COM_FAQS_FIELD_TARGET_LABEL" description="COM_FAQS_FIELD_TARGET_DESC"
 			>
 				<option value="">JGLOBAL_USE_GLOBAL</option>
@@ -145,24 +150,24 @@
 				<option value="1">JBROWSERTARGET_NEW</option>
 				<option value="2">JBROWSERTARGET_POPUP</option>
 				<option value="3">JBROWSERTARGET_MODAL</option>
-			</field>
+			</field-->
 
-			<field name="width" type="text"
+			<!--field name="width" type="text"
 				class="inputbox validate-numeric" label="COM_FAQS_FIELD_WIDTH_LABEL"
-				description="COM_FAQS_FIELD_WIDTH_DESC" />
+				description="COM_FAQS_FIELD_WIDTH_DESC" /-->
 
-			<field name="height" type="text"
+			<!--field name="height" type="text"
 				class="inputbox validate-numeric" label="COM_FAQS_FIELD_HEIGHT_LABEL"
-				description="COM_FAQS_FIELD_HEIGHT_DESC" />
+				description="COM_FAQS_FIELD_HEIGHT_DESC" /-->
 
-			<field name="count_clicks" type="list"
+			<!--field name="count_clicks" type="list"
 				label="COM_FAQS_FIELD_COUNTCLICKS_LABEL"
 				description="COM_FAQS_FIELD_COUNTCLICKS_DESC"
 			>
 				<option value="">JGLOBAL_USE_GLOBAL</option>
 				<option value="0">JNO</option>
 				<option value="1">JYES</option>
-			</field>
+			</field-->
 		</fieldset>
 	</fields>
 	<fields name="metadata">
