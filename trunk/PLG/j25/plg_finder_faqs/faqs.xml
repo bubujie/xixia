@@ -13,9 +13,6 @@
 	<files>
 		<file plugin="faqs">faqs.php</file>
     	<filename>index.html</filename>
+    	<folder>language</folder>
 	</files>
-	<languages>
-		<language tag="en-GB">language/en-GB/en-GB.plg_finder_faqs.ini</language>
-		<language tag="en-GB">language/en-GB/en-GB.plg_finder_faqs.sys.ini</language>
-	</languages>
 </extension>
