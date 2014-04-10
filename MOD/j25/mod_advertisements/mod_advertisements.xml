@@ -115,7 +115,7 @@
 <fieldset name="display" label="MOD_ADVERTISEMENTS_FIELD_GROUP_DISPLAY_LABEL">
 <field name="animation"
 	type="radio"
-	default="0"
+	default="fade"
 	label="MOD_ADVERTISEMENTS_FIELD_ANIMATION_LABEL"
 	description="MOD_ADVERTISEMENTS_FIELD_ANIMATION_DESC"
 	>
@@ -124,7 +124,7 @@
 </field>
 <field name="direction"
 	type="radio"
-	default="0"
+	default="horizontal"
 	label="MOD_ADVERTISEMENTS_FIELD_DIRECTION_LABEL"
 	description="MOD_ADVERTISEMENTS_FIELD_DIRECTION_DESC"
 	>
