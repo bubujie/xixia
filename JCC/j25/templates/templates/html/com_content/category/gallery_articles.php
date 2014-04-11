@@ -22,19 +22,19 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 $column = JRequest::getVar('column');
 switch($column) :
 	case '2' :
-		$noimg = JHtml::_('image', 'noimg_500.gif', 'ljj', NULL, true, true);
+		$noimg = JHtml::_('image', 'noimg_500.gif', 'bubujie', NULL, true, true);
 	break;
 	case '3' :
-		$noimg = JHtml::_('image', 'noimg_300.gif', 'ljj', NULL, true, true);
+		$noimg = JHtml::_('image', 'noimg_300.gif', 'bubujie', NULL, true, true);
 	break;
 	case '4' :
-		$noimg = JHtml::_('image', 'noimg_130.gif', 'ljj', NULL, true, true);
+		$noimg = JHtml::_('image', 'noimg_130.gif', 'bubujie', NULL, true, true);
 	break;
 	case '5' :
-		$noimg = JHtml::_('image', 'noimg_100.gif', 'ljj', NULL, true, true);
+		$noimg = JHtml::_('image', 'noimg_100.gif', 'bubujie', NULL, true, true);
 	break;
 	default :
-		$noimg = JHtml::_('image', 'noimg_300.gif', 'ljj', NULL, true, true);
+		$noimg = JHtml::_('image', 'noimg_300.gif', 'bubujie', NULL, true, true);
 	break;
 endswitch;
 ?>
@@ -109,9 +109,9 @@ endswitch;
 		</div>
 		<?php endif; ?>
 
-	<div class="category uuie-list-fixed">
+	<div class="category xans-product-1">
 
-		<ul class="gallery column<?php echo $column; ?>">
+		<ul class="prdList column<?php echo $column; ?>">
 
 		<?php foreach ($this->items as $i => $article) : ?>
 			<?php if ($this->items[$i]->state == 0) : ?>
@@ -136,7 +136,7 @@ endswitch;
 <?php echo '<img class="thumb" src="'.$noimg.'"/>'; ?>
 </a>
 <?php endif; ?>
-					<p class="list-title name">
+					<span class="list-title name">
 						<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid, $article->language)); ?>">
 							<?php echo $this->escape($article->title); ?></a>
 
@@ -147,7 +147,7 @@ endswitch;
 							</li>
 						</ul>
 						<?php endif; ?>
-					</p>
+					</span>
 
 					<?php if ($this->params->get('list_show_date')) : ?>
 					<span class="list-date">
