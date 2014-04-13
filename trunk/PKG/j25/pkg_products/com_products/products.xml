@@ -46,7 +46,7 @@
 				XML and be parsed by the installer
 			-->
 			<menu link="option=com_products" view="products" img="class:products"
-				alt="Products/Products">com_products_links</menu>
+				alt="Products/Products">com_products_products</menu>
 			<menu link="option=com_categories&amp;extension=com_products"
 				view="categories" img="class:products-cat" alt="Products/Categories">com_products_categories</menu>
 		</submenu>
