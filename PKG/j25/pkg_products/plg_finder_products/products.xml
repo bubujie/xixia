@@ -17,5 +17,7 @@
 	<languages>
 		<language tag="en-GB">language/en-GB/en-GB.plg_finder_products.ini</language>
 		<language tag="en-GB">language/en-GB/en-GB.plg_finder_products.sys.ini</language>
+		<language tag="zh-CN">language/zh-CN/zh-CN.plg_finder_products.ini</language>
+		<language tag="zh-CN">language/zh-CN/zh-CN.plg_finder_products.sys.ini</language>
 	</languages>
 </extension>

@@ -36,6 +36,7 @@
 	</files>
 	<languages folder="site">
 		<language tag="en-GB">language/en-GB/en-GB.com_products.ini</language>
+		<language tag="zh-CN">language/zh-CN/zh-CN.com_products.ini</language>
 	</languages>
 	<administration>
 		<menu img="class:products">com_products</menu>
@@ -44,8 +45,8 @@
 				Note that all & must be escaped to &amp; for the file to be valid
 				XML and be parsed by the installer
 			-->
-			<menu link="option=com_products" view="links" img="class:products"
-				alt="Products/Links">com_products_links</menu>
+			<menu link="option=com_products" view="products" img="class:products"
+				alt="Products/Products">com_products_links</menu>
 			<menu link="option=com_categories&amp;extension=com_products"
 				view="categories" img="class:products-cat" alt="Products/Categories">com_products_categories</menu>
 		</submenu>
@@ -65,6 +66,8 @@
 		<languages folder="admin">
 			<language tag="en-GB">language/en-GB/en-GB.com_products.ini</language>
 			<language tag="en-GB">language/en-GB/en-GB.com_products.sys.ini</language>
+			<language tag="zh-CN">language/zh-CN/zh-CN.com_products.ini</language>
+			<language tag="zh-CN">language/zh-CN/zh-CN.com_products.sys.ini</language>
 		</languages>
 	</administration>
 </extension>
