@@ -23,6 +23,8 @@
 	<languages>
 		<language tag="en-GB">language/en-GB/en-GB.mod_products.ini</language>
 		<language tag="en-GB">language/en-GB/en-GB.mod_products.sys.ini</language>
+		<language tag="zh-CN">language/zh-CN/zh-CN.mod_products.ini</language>
+		<language tag="zh-CN">language/zh-CN/zh-CN.mod_products.sys.ini</language>
 	</languages>
 	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_PRODUCTS" />
 	<config>

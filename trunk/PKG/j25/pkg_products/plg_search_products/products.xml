@@ -16,6 +16,8 @@
 	<languages>
 		<language tag="en-GB">language/en-GB/en-GB.plg_search_products.ini</language>
 		<language tag="en-GB">language/en-GB/en-GB.plg_search_products.sys.ini</language>
+		<language tag="zh-CN">language/zh-CN/zh-CN.plg_search_products.ini</language>
+		<language tag="zh-CN">language/zh-CN/zh-CN.plg_search_products.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">
