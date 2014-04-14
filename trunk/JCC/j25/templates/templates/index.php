@@ -143,6 +143,7 @@ endif;
 <?php endif; ?>
 </div>
 <div id="bbody" class="bg-<?php if($showContentSide1){ echo 'v'; } ?>w<?php if($showContentSide2){ echo 'v'; } ?>">
+  <div id="bg_top"><div class="rowo"><div class="fillo"></div></div></div>
 <?php if ($showBbodyTop) : ?>
   <div id="bbody-top">
     <div class="rowo">
@@ -244,6 +245,7 @@ endif;
     </div>
   </div>
 <?php endif; ?>
+  <div id="bg_btm"><div class="rowo"><div class="fillo"></div></div></div>
 </div>
 <div id="bfoot">
 <?php if ($showBfootTop) : ?>
