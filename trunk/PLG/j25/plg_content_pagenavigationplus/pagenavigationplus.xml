@@ -14,7 +14,7 @@
 		<filename plugin="pagenavigationplus">pagenavigationplus.php</filename>
 		<filename>index.html</filename>
 	</files>
-	<media folder="media" destination="mod_pagenavigationplus">
+	<media folder="media" destination="plg_content_pagenavigationplus">
 		<folder>img</folder>
 		<folder>css</folder>
 		<folder>js</folder>

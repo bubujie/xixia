@@ -176,6 +176,8 @@ class plgContentPagenavigationplus extends JPlugin
 			}
 
 			// Output.
+			$btnPrev = '<img src="' . JURI::base(true) . '/media/plg_content_pagenavigationplus/img/btn_prev.gif' . '" />';
+			$btnNext = '<img src="' . JURI::base(true) . '/media/plg_content_pagenavigationplus/img/btn_next.gif' . '" />';
 			if ($row->prev || $row->next) {
 				$html = '
 				<ul class="pagenav">'
@@ -184,7 +186,7 @@ class plgContentPagenavigationplus extends JPlugin
 					$html .= '
 					<li class="pagenav-prev">
 						<a href="'. $row->prev .'" rel="prev">'
-							. JText::_('JGLOBAL_LT') . $pnSpace . JText::_('JPREV') . $prev_title . $prev_created .'</a>
+							. JText::_('JGLOBAL_LT') . $btnPrev . $pnSpace . JText::_('JPREV') . $prev_title . $prev_created .'</a>
 					</li>'
 					;
 				}
@@ -195,7 +197,7 @@ class plgContentPagenavigationplus extends JPlugin
 					$html .= '
 					<li class="pagenav-next">
 						<a href="'. $row->next .'" rel="next">'
-							. JText::_('JNEXT') . $pnSpace . JText::_('JGLOBAL_GT') . $next_title . $next_created .'</a>
+							. JText::_('JNEXT') . $pnSpace . $next_title . $next_created . $btnNext . JText::_('JGLOBAL_GT') .'</a>
 					</li>'
 					;
 				}
