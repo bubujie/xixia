@@ -178,28 +178,48 @@ class plgContentPagenavigationplus extends JPlugin
 			// Output.
 			$btnPrev = '<img src="' . JURI::base(true) . '/media/plg_content_pagenavigationplus/img/btn_prev.gif' . '" />';
 			$btnNext = '<img src="' . JURI::base(true) . '/media/plg_content_pagenavigationplus/img/btn_next.gif' . '" />';
+			$starImageOn = JHtml::_('image', 'system/rating_star.png', NULL, NULL, true);
+			$starImageOff = JHtml::_('image', 'system/rating_star_blank.png', NULL, NULL, true);
 			if ($row->prev || $row->next) {
 				$html = '
-				<ul class="pagenav">'
+				<ul class="pagenavplus">'
 				;
 				if ($row->prev) {
+					if(0) :
 					$html .= '
 					<li class="pagenav-prev">
 						<a href="'. $row->prev .'" rel="prev">'
 							. JText::_('JGLOBAL_LT') . $btnPrev . $pnSpace . JText::_('JPREV') . $prev_title . $prev_created .'</a>
 					</li>'
 					;
+					else :
+					$html .= '
+					<li class="pagenav-prev">
+						<a href="'. $row->prev .'" rel="prev">'
+							. $btnPrev .'</a>
+					</li>'
+					;
+					endif;
 				}
 
 
 
 				if ($row->next) {
+					if(0) :
 					$html .= '
 					<li class="pagenav-next">
 						<a href="'. $row->next .'" rel="next">'
 							. JText::_('JNEXT') . $pnSpace . $next_title . $next_created . $btnNext . JText::_('JGLOBAL_GT') .'</a>
 					</li>'
 					;
+					else :
+					$html .= '
+					<li class="pagenav-next">
+						<a href="'. $row->next .'" rel="next">'
+							. $btnNext .'</a>
+					</li>'
+					;
+					endif;
 				}
 				$html .= '
 				</ul>'
@@ -213,5 +233,11 @@ class plgContentPagenavigationplus extends JPlugin
 		}
 
 		return ;
+	}
+	public function onContentAfterDisplay($context, &$row, &$params, $page=0)
+	{
+			$doc = JFactory::getDocument();
+			$doc->addScript(JURI::base(true).'/media/plg_content_pagenavigationplus/js/plg_content_pagenavigationplus.js');
+			$doc->addStylesheet(JURI::base(true).'/media/plg_content_pagenavigationplus/css/plg_content_pagenavigationplus.css');
 	}
 }
