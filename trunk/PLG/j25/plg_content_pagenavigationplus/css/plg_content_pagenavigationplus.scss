@@ -1,7 +1,7 @@
 @charset "utf-8";
 //编码保持
 @import "E:/tuding/css/layout";
-ul.pagenavplus {@extend %btnArea; clear:both; margin:0 !important; padding:0 !important; background-color:gray; height:20px; }
+ul.pagenavplus {@extend %btnArea; clear:both; margin:2em 0 !important; padding:0 !important; background-color:gray; height:20px; }
 ul.pagenavplus li{margin:0;padding:0;display:inline-block;background-color:#FFF;overflow:hidden;}
 ul.pagenavplus .pagenav-prev{float:left;list-style:none;padding-right:1px;}
 ul.pagenavplus .pagenav-next{float:right;list-style:none;padding-left:1px;}
