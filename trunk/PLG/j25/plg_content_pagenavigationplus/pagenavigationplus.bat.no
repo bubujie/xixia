@@ -1,0 +1,6 @@
+xcopy F:\htdocs\j25\plugins\content\plg_content_pagenavigationplus D:\xixia\PLG\j25\plg_content_pagenavigationplus /I /Y /E
+
+xcopy F:\htdocs\j25\media\plg_content_pagenavigationplus\css\plg_content_pagenavigationplus.scss D:\xixia\PLG\j25\plg_content_pagenavigationplus\css\plg_content_pagenavigationplus.scss /I /Y /E
+xcopy F:\htdocs\j25\media\plg_content_pagenavigationplus\css\plg_content_pagenavigationplus.css D:\xixia\PLG\j25\plg_content_pagenavigationplus\css\plg_content_pagenavigationplus.css /I /Y /E
+xcopy F:\htdocs\j25\media\plg_content_pagenavigationplus\js\plg_content_pagenavigationplus.js   D:\xixia\PLG\j25\plg_content_pagenavigationplus\js\plg_content_pagenavigationplus.js /I /Y /E
+xcopy F:\htdocs\j25\media\plg_content_pagenavigationplus\img                                    D:\xixia\PLG\j25\plg_content_pagenavigationplus\img /I /Y /E
