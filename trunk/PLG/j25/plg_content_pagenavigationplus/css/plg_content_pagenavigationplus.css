@@ -27,14 +27,14 @@ ul.pagenavplus {
   clear: both;
   margin: 2em 0 !important;
   padding: 0 !important;
-  background-color: gray;
+  background: #A0A0A0;
   height: 20px; }
 
 ul.pagenavplus li {
   margin: 0;
   padding: 0;
   display: inline-block;
-  background-color: #FFF;
+  background: #FFF;
   overflow: hidden; }
 
 ul.pagenavplus li img {
