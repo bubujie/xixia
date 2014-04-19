@@ -14,7 +14,8 @@
 		<file type="plugin" id="pagenavigationplus" group="content">plg_content_pagenavigationplus.zip</file>
 		<file type="plugin" id="modulesextraparams" group="content">plg_content_modulesextraparams.zip</file>
 		<file type="plugin" id="modulesextraparams" group="system">plg_system_modulesextraparams.zip</file>
-		<file type="plugin" id="byebyegenerator" group="system">plg_system_byebyegenerator.zip</file>
-		<file type="plugin" id="mobiletemplate" group="system">plg_system_mobiletemplate.zip</file>
+		<file type="plugin" id="adminexile"         group="system">plg_system_adminexile.zip</file>
+		<file type="plugin" id="byebyegenerator"    group="system">plg_system_byebyegenerator.zip</file>
+		<file type="plugin" id="mobiletemplate"     group="system">plg_system_mobiletemplate.zip</file>
 	</files>
 </extension>
