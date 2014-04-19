@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="2.5.0" type="plugin" group="content" method="upgrade">
+    <name>Content - Modules Extra Params</name>
+    <author>步步街工作室</author>
+    <creationDate>2014年03月15日</creationDate>
+    <copyright>Copyright (C) 步步街工作室 2008 - 2014. All rights reserved.</copyright>
+    <authorEmail>bubujie@gmail.com</authorEmail>
+    <authorUrl>www.bubujie.net</authorUrl>
+    <version>1.0.0</version>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <description><![CDATA[Plugin to extend modules params]]></description>
+    <files>
+        <filename plugin="modulesextraparams">modulesextraparams.php</filename>
+        <folder>forms</folder>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_content_modulesextraparams.ini</language>
+        <language tag="zh-CN">zh-CN/zh-CN.plg_content_modulesextraparams.ini</language>
+    </languages>
+    <params>
+
+    </params>
+</install>
