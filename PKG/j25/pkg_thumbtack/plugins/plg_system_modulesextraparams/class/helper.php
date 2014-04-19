@@ -194,6 +194,7 @@ abstract class JModuleHelper
 			$chrome[$chromePath] = true;
 		}
 // Based on version 2.5.19
+// j25\libraries\joomla\application\module\helper.php
 // The method 'renderModule' was updated to support this plugin!
 // Check if module params has a style to override template style
 $paramsChromeStyle = $params->get('style');
