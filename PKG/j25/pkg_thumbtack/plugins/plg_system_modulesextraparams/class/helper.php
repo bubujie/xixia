@@ -193,13 +193,13 @@ abstract class JModuleHelper
 
 			$chrome[$chromePath] = true;
 		}
+// Based on version 2.5.19
 // The method 'renderModule' was updated to support this plugin!
 // Check if module params has a style to override template style
-$template = $app->getTemplate();
 $paramsChromeStyle = $params->get('style');
 if ($paramsChromeStyle)
 {
-	$attribs['style'] = preg_replace('/^(system|'.$template.')\-/i', '', $paramsChromeStyle);
+	$attribs['style'] = preg_replace('/^(system|'.$app->getTemplate().')\-/i', '', $paramsChromeStyle);
 }
 		// Make sure a style is set
 		if (!isset($attribs['style']))

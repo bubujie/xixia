@@ -13,7 +13,7 @@ jimport( 'joomla.plugin.plugin' );
 
 // Load modified JDocumentRendererModule before the Joomla Framework doest it, to ignore that
 // Works with Joomla 2.5.7 too.
-require_once JPATH_SITE.DS.'plugins'.DS.'system'.DS.'modulesextraparams'.DS.'class'.DS.'jmodulehelper-2.5.6.php';
+require_once JPATH_SITE.DS.'plugins'.DS.'system'.DS.'modulesextraparams'.DS.'class'.DS.'helper.php';
 
 
 /**
