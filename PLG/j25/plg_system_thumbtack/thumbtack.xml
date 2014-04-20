@@ -8,7 +8,7 @@
 	<authorUrl>www.bubujie.net</authorUrl>
 	<version>1.0.1</version>
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
-	<description><![CDATA[Plugin to extend modules extra params]]></description>
+	<description>PLG_THUMBTACK_XML_DESCRIPTION</description>
 	<files>
 		<filename plugin="thumbtack">thumbtack.php</filename>
 		<folder>class</folder>
