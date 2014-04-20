@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fields name="params">
+        <fieldset
+            name="advanced">
+
+            <field
+                name="module_tag"
+                type="moduletags"
+                label="PLG_THUMBTACK_MODULE_TAG_LABEL"
+                description="PLG_THUMBTACK_MODULE_TAG_DESC"
+                default="div" />
+
+	<field
+		name="grid_size"
+		type="list"
+		default="none"
+		label="PLG_THUMBTACK_GRID_SIZE_LABEL"
+		description="PLG_THUMBTACK_GRID_SIZE_DESC">
+		<option value="0">None</option>
+		<option value="w-1">1</option>
+		<option value="w-1-2">1/2</option>
+		<option value="w-1-3">1/3</option>
+		<option value="w-2-3">2/3</option>
+		<option value="w-1-4">1/4</option>
+		<option value="w-3-4">3/4</option>
+		<option value="w-1-5">1/5</option>
+		<option value="w-2-5">2/5</option>
+		<option value="w-3-5">3/5</option>
+		<option value="w-4-5">4/5</option>
+		<option value="w-1-6">1/6</option>
+		<option value="w-5-6">5/6</option>
+		<option value="w-1-8">1/8</option>
+		<option value="w-3-8">3/8</option>
+		<option value="w-5-8">5/8</option>
+		<option value="w-7-8">7/8</option>
+		<option value="w-1-12">1/12</option>
+		<option value="w-5-12">5/12</option>
+		<option value="w-7-12">7/12</option>
+		<option value="w-11-12">11/12</option>
+		<option value="w-1-24">1/24</option>
+		<option value="w-5-24">5/24</option>
+		<option value="w-7-24">7/24</option>
+		<option value="w-11-24">11/24</option>
+		<option value="w-13-24">13/24</option>
+		<option value="w-17-24">17/24</option>
+		<option value="w-19-24">19/24</option>
+		<option value="w-23-24">23/24</option>
+	</field>
+
+            <field
+                name="header_tag"
+                type="headertags"
+                label="PLG_THUMBTACK_HEADER_TAG_LABEL"
+                description="PLG_THUMBTACK_HEADER_TAG_DESC" />
+
+            <field
+                name="header_class"
+                type="text"
+                label="PLG_THUMBTACK_HEADER_CLASS_LABEL"
+                description="PLG_THUMBTACK_HEADER_CLASS_DESC" />
+
+            <field
+                name="style"
+                type="chromestyles"
+                label="PLG_THUMBTACK_MODULE_STYLE_LABEL"
+                description="PLG_THUMBTACK_MODULE_STYLE_DESC" />
+        </fieldset>
+    </fields>
+</form>
