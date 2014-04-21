@@ -1,0 +1,33 @@
+dl.tabs {
+background-color: #e9eff5;
+position: relative;
+height: 30px;
+border: 1px solid #c8cdd2;
+zoom: 1;
+margin: 0 0 18px;
+}
+dl.tabs dt{float:left;margin:0;padding:0;}
+dl.tabs dd{display:none;}
+dl.tabs h3{margin:0 !important;padding:0 !important;}
+dl.tabs dt a {
+position: relative;
+float: left;
+min-width: 40px;
+height: 30px;
+padding: 0 30px 0 20px;
+text-align: center;
+line-height: 30px;
+border-right: 1px solid #c8cdd2;
+text-decoration: none;
+background: url("//img.echosting.cafe24.com/suio/sflex_tab.png") no-repeat 100% 13px;
+}
+dl.tabs dt.open a {
+position: relative;
+top: -1px;
+height: 31px;
+margin: 0 0 -1px;
+line-height: 31px;
+border-top: 1px solid #c8cdd2;
+background-color: #fff;
+background-position: 100% -87px;
+}
