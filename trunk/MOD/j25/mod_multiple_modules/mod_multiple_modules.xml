@@ -43,6 +43,15 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
+				<field name="presentation_style" type="list"
+					description="COM_CONTACT_FIELD_PRESENTATION_DESC"
+					label="COM_CONTACT_FIELD_PRESENTATION_LABEL"
+					default="plain"
+				>
+					<option value="sliders">COM_CONTACT_FIELD_VALUE_SLIDERS</option>
+					<option value="tabs">COM_CONTACT_FIELD_VALUE_TABS</option>
+					<option value="plain">COM_CONTACT_FIELD_VALUE_PLAIN</option>
+				</field>
 				<field name="moduleDebug" type="radio" default="0" label="Debug" description="Show debug information.">
 					<option value="0">No</option>
 					<option value="1">Yes</option>
