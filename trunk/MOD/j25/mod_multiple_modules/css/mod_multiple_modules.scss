@@ -1,5 +1,7 @@
 @charset "utf-8";
 @import "E:/tuding/css/layout";
+@import "E:/tuding/css/justifygrid";
+.abc{width: grid-span(1, 2);}
 dl.tabs {
 	background-color: #e9eff5;
 	position: relative;
@@ -36,8 +38,28 @@ dl.tabs dt.open a {
 	background-color: #fff;
 	background-position: 100% -87px;
 }
-.ding{@extend %ding;}
-.u-1-2,.u-1-3,.u-2-3,.u-1-4,.u-2-4,.u-3-4{@extend %ding;float:left;margin-left:1.99%;}
+//.ding{@extend %ding;}
+.u-1-2,.u-1-3,.u-2-3,.u-1-4,.u-2-4,.u-3-4{
+//margin-left:1.99%;
+vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  font-size: medium;
+  *display: inline;
+  *zoom: 1;
+}
+.split2, .split3, .split4{
+text-align: justify !important;
+text-justify: distribute-all-lines;
+font-size: 0 !important;
+*zoom: expression(this.runtimeStyle.zoom="1", this.appendChild( document.createElement("span") ).style.fontSize="0");
+}
+.split2:after, .split3:after, .split4:after{
+content: "";
+display: inline-block;
+width: 100%;
+}
 // 计算公式
 // n(m%+s%)=100%+s%
 // n(m+s)=100+s
