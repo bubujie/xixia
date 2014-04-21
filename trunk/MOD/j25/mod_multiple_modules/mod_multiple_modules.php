@@ -9,13 +9,14 @@
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
-jimport( 'joomla.html.html.tabs' );
-jimport( 'joomla.html.html.sliders' );
+//jimport( 'joomla.html.html.tabs' );
+//jimport( 'joomla.html.html.sliders' );
 $doc = JFactory::getDocument();
 
 // Module inclusion style(s) (chrome(s)) for child modules
 $moduleStyle = $params->get('moduleStyle');
 //print_r($module);
+//需排除
 if (strlen($moduleStyle) == 0) :
     $moduleStyle = 'xhtml';
 endif;
@@ -28,13 +29,17 @@ $position = $params->get('position');
 $moduleDebug = $params->get('moduleDebug');
 
 $child_modules = &JModuleHelper::getModules($position);
+//无法准确删除
+//unset($child_modules[array_search('mod_multiple_modules' , $child_modules)]);
 //print_r($child_modules);
 $innerContents = '';
 foreach ($child_modules as $child_module) :
-	$child_module_options = array('style' => $moduleStyle);
+	$child_module_options = array('style' => $moduleStyle,'showtitle' => 0);
 	$innerContents .= JModuleHelper::renderModule($child_module, $child_module_options);
 endforeach;
-
+//print_r($innerContents);
+	//print_r($child_modules[array_search('mod_multiple_modules' , $child_modules)]);
+	
 
 
 ?>
@@ -48,7 +53,7 @@ endforeach;
     Unified module chrome debug<br/>
     <b>Inner modules:</b> <?php echo count($child_modules); ?><br/>
     <b>Output buffer level:</b> <?php echo ob_get_level(); ?><br/>
-    <b>Inherit chrome(s):</b> <?php echo $inheritChromes; ?><br/>
+    <b>Module chrome(s):</b> <?php //echo $moduleChromes; ?><br/>
     <?php
         if (count($child_modules) == 0) :
             echo 'No modules are within floating container. Put some into module position <b>' . $position . '</b><br/>';
@@ -66,21 +71,28 @@ if(!empty($child_modules)) :
 
 
 	echo   "".'<pre>';
-	//print_r($child_modules);
+	//print_r($innerContents);
 	echo   "".'</pre>';
 
 
-
+$innerContent = '';
 if ($params->get('presentation_style')!='plain') :
-	echo JHtml::_($params->get('presentation_style').'.start', 'tab_group_id', $options);
-		foreach ($child_modules as $key => $child_module) :
-			echo JHtml::_($params->get('presentation_style').'.panel', $child_module->title, 'tab_'.$key);
-			echo $child_module->content;
-		endforeach;
+	echo JHtml::_($params->get('presentation_style').'.start', 'tab_group_id');
+	foreach ($child_modules as $key => $child_module) :
+		echo JHtml::_($params->get('presentation_style').'.panel', $child_module->title, 'tab_'.$key);
+		$child_module_options = array('style' => $moduleStyle, 'showtitle' => 0);
+		$innerContent = JModuleHelper::renderModule($child_module, $child_module_options);
+		//echo $child_module->content;
+		echo $innerContent;
+	endforeach;
 	echo JHtml::_($params->get('presentation_style').'.end');
 else :
 	foreach ($child_modules as $key => $child_module) :
-		echo $child_module->content;
+		$child_module_options = array('style' => $moduleStyle, 'showtitle' => 0);
+		$innerContent = JModuleHelper::renderModule($child_module, $child_module_options);
+		//echo $child_module->content;
+		echo $child_module->title;
+		echo $innerContent;
 	endforeach;
 endif;
 
