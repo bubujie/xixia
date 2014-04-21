@@ -1,6 +1,5 @@
 @charset "utf-8";
 @import "E:/tuding/css/layout";
-@import "E:/tuding/css/emmet";
 dl.tabs {
 	background-color: #e9eff5;
 	position: relative;
@@ -25,7 +24,7 @@ dl.tabs dt a {
 	background:transparent url("../img/sflex_tab.png") no-repeat 100% 13px;
 	font-weight:normal !important;
 	color:#000;
-	@extend .ff_kr;
+	font-family: "굴림","Gulim","돋움","Dotum","AppleGothic","Sans-serif";
 }
 dl.tabs dt.open a {
 	position: relative;
