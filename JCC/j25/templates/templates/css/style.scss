@@ -11,6 +11,7 @@
 /* ######### ######### ######### 注释 ######### ######### ######### */
 @include tuding($layout:'h',$row:88%,$n1:200px,$n2:200px,$space:10px,$incInner:0,$v1:200px,$v2:200px);
 @include split();
+.items-more{clear:both;}
 .button2-left .article, .button2-left .blank {
 	background: url(../images_general/j_button2_blank.png) 100% 0 no-repeat;
 }
