@@ -77,7 +77,6 @@
 		default="1"
 		label="PLG_THUMBTACK_SPLIT2_LABEL"
 		description="PLG_THUMBTACK_SPLIT2_DESC">
-			<option value="0">None</option>
 			<option value="1">1 Column (100)</option>
 			<option value="2">2 Column (50/50)</option>
 			<option value="3">2 Column (66/33)</option>
