@@ -59,10 +59,10 @@ $split = array(
 	's11' => array('1-4', '1-4', '1-4', '1-4'),
 	's12' => array('1-5', '1-5', '1-5', '1-5', '1-5')
 );
-echo $split['s'.$split1][0];
-echo '<hr />';
-echo $split['s'.$split2][0];
-echo '<hr />';
+//echo $split['s'.$split1][0];
+//echo '<hr />';
+//echo $split['s'.$split2][0];
+//echo '<hr />';
 $max =count($child_modules);
 $numGroup1 = count($split['s'.$split1]);
 $numGroup2 = count($split['s'.$split2]);
@@ -73,25 +73,25 @@ $numGroup3 = count($split['s'.$split3]);
 		{
 			$group1_items[$i] = &$child_modules[$i];
 		}
-echo   "".'<pre>';
+//echo   "".'<pre>';
 //print_r($group1_items);
-echo   "".'</pre>';
+//echo   "".'</pre>';
 		$limit = $numGroup1 + $numGroup2;
 		for ($i = $numGroup1; $i < $limit && $i < $max; $i++)
 		{
 			$group2_items[$i] = &$child_modules[$i];
 		}
-echo   "".'<pre>';
+//echo   "".'<pre>';
 //print_r($group2_items);
-echo   "".'</pre>';
+//echo   "".'</pre>';
 		$limit = $numGroup1 + $numGroup2 + $numGroup3;
 		for ($i = $numGroup1 + $numGroup2; $i < $limit && $i < $max; $i++)
 		{
 			$group3_items[$i] = &$child_modules[$i];
 		}
-echo   "".'<pre>';
+//echo   "".'<pre>';
 //print_r($group3_items);
-echo   "".'</pre>';
+//echo   "".'</pre>';
 
 
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
