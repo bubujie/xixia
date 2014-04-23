@@ -112,6 +112,21 @@ margin: 0;
 
 
 
+/* ######### ######### ######### bizdemo13302 ######### ######### ######### */
+//bizdemo13302
+#bhead{border-bottom:8px solid #C53C27;}
+#bfoot{border-top:1px solid #CFCFCF;background-color:#F7F7F7;}
+.crumbs{@extend %clearfix;text-align:right;font-weight:bold;font-family:Dotum; _font-family:SimSun,Kaiti_GB2312;;}
+.crumbs .box-heading{display:none;}
+/* LoVe/HAte(爱恨原则) */
+.crumbs a:link, .crumbs a:visited, .crumbs a:hover, .crumbs a:active{color:#000;font-weight:normal;}
+.crumbs a:link{}
+.crumbs a:visited{}
+.crumbs a:hover{}
+.crumbs a:active{}
+#home .crumbs{display:none;}
+#bfoot .quick{position:relative;float:right;}
+.colophon{@extend %ding;clear:both;}
 @media screen and (max-width:1100px) {
 	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,null,0,2);
 	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,'',0,-1);
@@ -145,18 +160,3 @@ margin: 0;
 	@include tuding_width_1col();
 	@include split_1col();
 }
-/* ######### ######### ######### bizdemo13302 ######### ######### ######### */
-//bizdemo13302
-#bhead{border-bottom:8px solid #C53C27;}
-#bfoot{border-top:1px solid #CFCFCF;background-color:#F7F7F7;}
-.crumbs{@extend %clearfix;text-align:right;font-weight:bold;font-family:Dotum; _font-family:SimSun,Kaiti_GB2312;;}
-.crumbs .box-heading{display:none;}
-/* LoVe/HAte(爱恨原则) */
-.crumbs a:link, .crumbs a:visited, .crumbs a:hover, .crumbs a:active{color:#000;font-weight:normal;}
-.crumbs a:link{}
-.crumbs a:visited{}
-.crumbs a:hover{}
-.crumbs a:active{}
-#home .crumbs{display:none;}
-#bfoot .quick{position:relative;float:right;}
-.colophon{@extend %ding;clear:both;}
