@@ -1,6 +1,7 @@
 @charset "utf-8";
 //编码保持
 @import "E:/tuding/css/layout";
+@import "E:/tuding/css/split";
 @import "E:/tuding/css/table";
 @import "E:/tuding/css/blueprint";
 @import "E:/tuding/css/emmet";
@@ -9,6 +10,19 @@
 @import "./general";
 /* ######### ######### ######### 注释 ######### ######### ######### */
 @import "./general";
+
+
+
+$layout:'h';
+$wrapping:88%;
+$n1:200px;
+$n2:200px;
+$space:10px;
+$incInner:true;
+$v1:160px;
+$v2:160px;
+@include tuding($layout,$wrapping,$n1,$n2,$space,$incInner,$v1,$v2);
+@include split();
 .button2-left .article, .button2-left .blank {
 	background: url(../images_general/j_button2_blank.png) 100% 0 no-repeat;
 }
@@ -74,17 +88,6 @@ table.tbl{
 	tbody tr:nth-child(even) td, tbody tr.even td {background-color:#FDFDFD;}
 }
 
-
-
-$layout:'h';
-$wrapping:88%;
-$n1:200px;
-$n2:200px;
-$space:10px;
-$incInner:true;
-$v1:160px;
-$v2:160px;
-@include tuding($layout,$wrapping,$n1,$n2,$space,$incInner,$v1,$v2);
 /* ######### ######### ######### Pagination ######### ######### ######### */
 .pagenav, .pagination .counter, .pagination ul{@extend %btnArea;}
 .pagenavcounter, .pagenav, .pagination ul{margin:1em 0;padding:0;list-style:none;}
@@ -106,27 +109,9 @@ padding: 0;
 width: 100%;
 margin: 0;
 }
-/* ######### ######### ######### BEGIN::Blog Featured ######### ######### ######### */
-.items-leading, .items-row, .items-row .item { position:relative; *zoom:1; } /* 每个独立区块的ding */
-.items-leading, .items-row:after, .items-row .item:after { content:""; display:block; clear:both; }/* ding:after */
-.items-leading { margin-right:10px; } /* blog上部单列项目 */
-.items-row{  }
-.items-row .item{ float:left; overflow:hidden; }
-.items-row.cols-1 .item{ width:100%; }
-.items-row.cols-2 .item{ width:50%}
-.items-row.cols-3 .item{ width:33.3333%; }
-.items-row.cols-4 .item{ width:25%; *width:24.9999%; }
-.items-row.cols-5 .item{ width:20%; }
-.items-row ul.actions, .items-row dl.article-info{ margin-right:10px; } /* 内部没有外套，只能对每个项目设置右margin */
-.items-row .item h2, .items-row .item p{ margin-right:10px; } /* 同上 */
-.items-leading p.readmore a, .items-row p.readmore a{ display:inline-block; padding:0.2em 0.3em; border:3px double #CCC; background:url(../../img/bg_input.gif); } /* blog布局readmore，需另外定义module中的readmore */
-/* ######### ######### ######### END::Blog Featured ######### ######### ######### */
-//@include tuding_by_h_nmn($selectorNMN:'.container',$selectorMING:'.main',$selectorN1:'.sidebar1',$selectorN2:'.sidebar2',$wrapping:NULL,$n1:100px,$n2:100px,$space:20px);
-//IE6 || IE7 || IE8
-//@include tuding_h_2cols($wrapping,$v1,$v2,-1,$space,1);
-//@include tuding_h_2cols($wrapping,$v1,$v2,-1,$space);
-//@include tuding_1col('',1);
-//@include tuding_1col('',0);
+
+
+
 @media screen and (max-width:1100px) {
 	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,null,0,2);
 	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,'',0,-1);
@@ -158,52 +143,7 @@ margin: 0;
 	//@include tuding_1col('',1);
 	@include tuding_1col('',0);
 	@include tuding_width_1col();
-}
-#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li {
-float: left;
-padding: 10px 10px 0 0 !important;
-}
-#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w {
-width: 117px;
-height: 20px !important;
-}
-#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w a {
-width: 107px;
-height: 20px !important;
-padding: 0px !important;
-display: block;
-text-decoration: none;
-}
-#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w span.wrap-icon-w {
-display: inline-block;
-width: 16px !important;
-height: 16px !important;
-cursor: pointer;
-vertical-align: -10px;
-}
-#SOHUCS .post-login-w ul li .login-wrap-w span.icon30-sina-b,
-#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w span.icon30-qq-b,
-#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w span.icon30-renren-b, 
-#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w span.icon30-sohu-b,
-#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w span.icon30-visitor-b
-{
-background-image: url(../img/service-icons-color.png) !important;
-background-repeat: no-repeat;
-}
-#SOHUCS .post-login-w ul li .login-wrap-w span.icon30-sina-b{
-background-position: 0px 0px !important;
-}
-#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w span.icon30-qq-b{
-background-position: 0px -192px !important;
-}
-#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w span.icon30-renren-b{
-background-position: 0px -32px !important;
-}
-#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w span.icon30-sohu-b{
-background-position: 0px -16px !important;
-}
-#SOHUCS .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul li .login-wrap-w span.icon30-visitor-b{
-background-position: 0px -144px !important;
+	@include split_1col();
 }
 /* ######### ######### ######### bizdemo13302 ######### ######### ######### */
 //bizdemo13302
