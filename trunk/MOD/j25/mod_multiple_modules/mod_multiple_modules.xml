@@ -52,6 +52,64 @@
 					<option value="tabs">COM_CONTACT_FIELD_VALUE_TABS</option>
 					<option value="plain">COM_CONTACT_FIELD_VALUE_PLAIN</option>
 				</field>
+	<field
+		name="split1"
+		type="list"
+		default="1"
+		label="PLG_THUMBTACK_SPLIT1_LABEL"
+		description="PLG_THUMBTACK_SPLIT1_DESC">
+			<option value="1">1 Column (100)</option>
+			<option value="2">2 Column (50/50)</option>
+			<option value="3">2 Column (66/33)</option>
+			<option value="4">2 Column (33/66)</option>
+			<option value="5">2 Column (75/25)</option>
+			<option value="6">2 Column (25/75)</option>
+			<option value="7">3 Column (33/33/33)</option>
+			<option value="8">3 Column (50/25/25)</option>
+			<option value="9">3 Column (25/50/25)</option>
+			<option value="10">3 Column (25/25/50)</option>
+			<option value="11">4 Column (25/25/25/25)</option>
+			<option value="12">5 Column (20/20/20/20/20)</option>
+	</field>
+	<field
+		name="split2"
+		type="list"
+		default="1"
+		label="PLG_THUMBTACK_SPLIT2_LABEL"
+		description="PLG_THUMBTACK_SPLIT2_DESC">
+			<option value="0">None</option>
+			<option value="1">1 Column (100)</option>
+			<option value="2">2 Column (50/50)</option>
+			<option value="3">2 Column (66/33)</option>
+			<option value="4">2 Column (33/66)</option>
+			<option value="5">2 Column (75/25)</option>
+			<option value="6">2 Column (25/75)</option>
+			<option value="7">3 Column (33/33/33)</option>
+			<option value="8">3 Column (50/25/25)</option>
+			<option value="9">3 Column (25/50/25)</option>
+			<option value="10">3 Column (25/25/50)</option>
+			<option value="11">4 Column (25/25/25/25)</option>
+			<option value="12">5 Column (20/20/20/20/20)</option>
+	</field>
+	<field
+		name="split3"
+		type="list"
+		default="1"
+		label="PLG_THUMBTACK_SPLIT3_LABEL"
+		description="PLG_THUMBTACK_SPLIT3_DESC">
+			<option value="1">1 Column (100)</option>
+			<option value="2">2 Column (50/50)</option>
+			<option value="3">2 Column (66/33)</option>
+			<option value="4">2 Column (33/66)</option>
+			<option value="5">2 Column (75/25)</option>
+			<option value="6">2 Column (25/75)</option>
+			<option value="7">3 Column (33/33/33)</option>
+			<option value="8">3 Column (50/25/25)</option>
+			<option value="9">3 Column (25/50/25)</option>
+			<option value="10">3 Column (25/25/50)</option>
+			<option value="11">4 Column (25/25/25/25)</option>
+			<option value="12">5 Column (20/20/20/20/20)</option>
+	</field>
 				<field name="moduleDebug" type="radio" default="0" label="Debug" description="Show debug information.">
 					<option value="0">No</option>
 					<option value="1">Yes</option>
