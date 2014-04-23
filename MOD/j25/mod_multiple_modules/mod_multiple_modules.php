@@ -85,7 +85,7 @@ echo   "".'<pre>';
 //print_r($group2_items);
 echo   "".'</pre>';
 		$limit = $numGroup1 + $numGroup2 + $numGroup3;
-		for ($i = $numGroup2; $i < $limit && $i < $max; $i++)
+		for ($i = $numGroup1 + $numGroup2; $i < $limit && $i < $max; $i++)
 		{
 			$group3_items[$i] = &$child_modules[$i];
 		}
