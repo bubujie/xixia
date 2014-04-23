@@ -18,7 +18,7 @@ $doc->addStylesheet(JURI::base(true).'/media/mod_multiple_modules/css/mod_multip
 
 <!-- begin: unified module chrome debug -->
 <div>
-    Unified module chrome debug<br/>
+    Multiple modules chrome debug<br/>
     <b>Inner modules:</b> <?php echo count($child_modules); ?><br/>
     <b>Output buffer level:</b> <?php echo ob_get_level(); ?><br/>
     <b>Module chrome(s):</b> <?php //echo $moduleChromes; ?><br/>
@@ -56,36 +56,57 @@ if ($params->get('presentation_style')!='plain') :
 	echo JHtml::_($params->get('presentation_style').'.end');
 else :
 	//echo   "".'<div class="" style="width:100%;">';
-	echo   "".'<ul class="split">';
-	$i=0;
-	foreach ($group1_items as $key => $child_module) :
-		$child_module_options = array('style' => $moduleStyle,);
-		$innerContent = JModuleHelper::renderModule($child_module, $child_module_options);
-		//echo $child_module->content;
-		echo   "".'<li class="s-' . $split['s'.$split1][$i] . ' ' . $key . '">';
-		echo   "".'<div>';
-		//echo $child_module->title;
-		echo $innerContent;
-		echo   "".'</div>';
-		echo   "".'</li>';
-		$i++;
-	endforeach;
-	echo   "".'</ul>';
-	echo   "".'<ul class="split">';
-	$i=0;
-	foreach ($group2_items as $key => $child_module) :
-		$child_module_options = array('style' => $moduleStyle);
-		$innerContent = JModuleHelper::renderModule($child_module, $child_module_options);
-		//echo $child_module->content;
-		echo   "".'<li class="s-' . $split['s'.$split2][$i] . ' ' . $key . '">';
-		echo   "".'<div>';
-		//echo $child_module->title;
-		echo $innerContent;
-		echo   "".'</div>';
-		echo   "".'</li>';
-		$i++;
-	endforeach;
-	echo   "".'</ul>';
+	if (!empty($group1_items)) :
+		echo   "".'<ul class="split">';
+		$i=0;
+		foreach ($group1_items as $key => $child_module) :
+			$child_module_options = array('style' => $moduleStyle,);
+			$innerContent = JModuleHelper::renderModule($child_module, $child_module_options);
+			//echo $child_module->content;
+			echo   "".'<li class="s-' . $split['s'.$split1][$i] . ' ' . $key . '">';
+			echo   "".'<div>';
+			//echo $child_module->title;
+			echo $innerContent;
+			echo   "".'</div>';
+			echo   "".'</li>';
+			$i++;
+		endforeach;
+		echo   "".'</ul>';
+	endif;
+	if (!empty($group2_items)) :
+		echo   "".'<ul class="split">';
+		$i=0;
+		foreach ($group2_items as $key => $child_module) :
+			$child_module_options = array('style' => $moduleStyle);
+			$innerContent = JModuleHelper::renderModule($child_module, $child_module_options);
+			//echo $child_module->content;
+			echo   "".'<li class="s-' . $split['s'.$split2][$i] . ' ' . $key . '">';
+			echo   "".'<div>';
+			//echo $child_module->title;
+			echo $innerContent;
+			echo   "".'</div>';
+			echo   "".'</li>';
+			$i++;
+		endforeach;
+		echo   "".'</ul>';
+	endif;
+	if (!empty($group3_items)) :
+		echo   "".'<ul class="split">';
+		$i=0;
+		foreach ($group3_items as $key => $child_module) :
+			$child_module_options = array('style' => $moduleStyle);
+			$innerContent = JModuleHelper::renderModule($child_module, $child_module_options);
+			//echo $child_module->content;
+			echo   "".'<li class="s-' . $split['s'.$split3][$i] . ' ' . $key . '">';
+			echo   "".'<div>';
+			//echo $child_module->title;
+			echo $innerContent;
+			echo   "".'</div>';
+			echo   "".'</li>';
+			$i++;
+		endforeach;
+		echo   "".'</ul>';
+	endif;
 endif;
 
 /*
