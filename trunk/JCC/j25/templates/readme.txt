@@ -1,12 +1,19 @@
 html\com_content\article\
-	dl.article-info的各项冒号之后的内容添加一层外套span.o>span.i
-	内容页的正文区域增加一层外套div.content
+	将ul.actions下移到与dl.article-info相邻区域
+html\com_content\category\blog.php
+	应用tuding拆分
+html\com_content\category\blog_item.php
+	将ul.actions下移到与dl.article-info相邻区域
+html\com_content\featured\default.php
+	应用tuding拆分
+html\com_content\featured\default_item.php
+	将ul.actions下移到与dl.article-info相邻区域
+
+
+
 html\com_content\category\classic...
 	为表格式增加一列num，可方便地切换顺序或逆序
 	相对于default，仅增加三处共4行内容
-html\com_content\category\blog_item.php
-html\com_content\featured\default_item.php
-	readmore标签应用SUIO样式
 html\com_content\category\webzine...
 html\com_content\category\gallery...
 html\com_content\category\card...
