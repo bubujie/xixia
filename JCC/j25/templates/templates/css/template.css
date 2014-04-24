@@ -10,6 +10,13 @@
 .items-more {
 	clear:both;
 }
+ul.actions li {
+	display:inline-block;
+	list-style:none;
+}
+ul.actions li.print-icon {}
+ul.actions li.email-icon {}
+ul.actions li.edit-icon {}
 dl.article-info dt.article-info-term {
 	display:none;
 }
