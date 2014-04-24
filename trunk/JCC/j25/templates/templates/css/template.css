@@ -6,9 +6,14 @@
  * @copyright Copyright (C) ##author## 2008 - 2012 ##website##. All Rights Reserved.
  * @license   ##license##
  */
- //编码保持
+//编码保持
+/* ######### ######### ######### 注释 ######### ######### ######### */
 .items-more {
 	clear:both;
+}
+ul.actions {
+	position:absolute;
+	right:1em;
 }
 ul.actions li {
 	display:inline-block;
@@ -41,7 +46,7 @@ dl.article-info dd.createdby {
 dl.article-info dd.hits {
 	background:url(../img/bul_info.gif) left center no-repeat;
 }
-/* ######### 注释 ######### */
+/* ######### ######### ######### 注释 ######### ######### ######### */
 dl.article-info{border-top: 1px solid #DDDDDD;margin-bottom: 15px;padding: 5px;background: #ECECEC;}
 dl.article-info dt.article-info-term{display:none;}
 dl.article-info dd{margin-left:0;padding: 3px 3px 3px 20px;display:inline;font-family:Dotum;_font-family:Tahoma, Geneva, sans-serif;}
@@ -49,4 +54,4 @@ dl.article-info dd.category-name{}
 dl.article-info dd.create,dl.article-info dd.modified,dl.article-info dd.published{background:url(../img/ico_date.gif) 0 50% no-repeat;}
 dl.article-info dd.createdby{background:url(../img/ico_user.gif) 0 50% no-repeat;}
 dl.article-info{}
-/* ######### 注释 ######### */
+/* ######### ######### ######### 注释 ######### ######### ######### */
