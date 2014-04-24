@@ -36,6 +36,8 @@ dl.article-info dt.article-info-term {
 }
 dl.article-info dd {
 	display:inline-block;
+	*display:inline;
+	*zoom:1;
 	margin-left:0;
 	margin-right:0.5em;
 	padding-left:18px;
