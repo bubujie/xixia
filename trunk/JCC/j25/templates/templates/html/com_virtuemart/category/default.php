@@ -226,7 +226,7 @@ if (!empty($this->products)) {
 
 		// Show Products
 		?>
-		<div class="product s-1-3<?php //echo $Browsecellwidth . $show_vertical_separator ?>">
+		<div class="product s-1-<?php echo $BrowseProducts_per_row . $show_vertical_separator ?>">
 			<div class="spacer" style="border:1px solid #EEE;">
 			<div class="split">
 				<div class="s-2-5 center">

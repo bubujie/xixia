@@ -48,7 +48,7 @@ $verticalseparator = " vertical-separator";
 
 	    // Show Category
 	    ?>
-    	<div class="category s-1-5<?php //echo $category_cellwidth . $show_vertical_separator ?>">
+    	<div class="category s-1-<?php echo $categories_per_row . $show_vertical_separator ?>">
     	    <div class="spacer" style="border:1px solid #EEE;">
     		<h2>
     		    <a href="<?php echo $caturl ?>" title="<?php echo $category->category_name ?>">

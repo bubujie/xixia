@@ -43,7 +43,7 @@ foreach ( $productList as $product ) {
 	}
 
 		// Show Products ?>
-		<div class="product s-1-3<?php //echo $cellwidth . $show_vertical_separator ?>">
+		<div class="product s-1-<?php echo $products_per_row . $show_vertical_separator ?>">
 			<div class="spacer" style="border:1px solid #EEE;">
 
 
