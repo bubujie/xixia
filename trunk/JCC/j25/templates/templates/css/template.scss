@@ -1,0 +1,134 @@
+@charset "utf-8";
+@import "E:/tuding/css/layout";
+/**
+ * @package   ##website## Template
+ * @author    ##author## ##email##
+ * @version   ##version## ##date##
+ * @copyright Copyright (C) ##author## 2008 - 2012 ##website##. All Rights Reserved.
+ * @license   ##license##
+ */
+//编码保持
+/* ######### ######### ######### 注释 ######### ######### ######### */
+.items-more {
+	clear:both;
+}
+ul.actions {
+	display:inline-block;
+	position:absolute;
+	float:right;
+	margin:0;
+	padding-top:2em;
+	padding-right:1em;
+	right:0;
+}
+ul.actions li {
+	display:inline-block;
+	list-style:none;
+}
+ul.actions li.print-icon {}
+ul.actions li.email-icon {}
+ul.actions li.edit-icon {}
+dl.article-info {
+	border:1px solid #CCC;
+	padding:0.5em;
+}
+dl.article-info dt.article-info-term {
+	display:none;
+}
+dl.article-info dd {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	margin-left:0;
+	margin-right:0.5em;
+	padding-left:18px;
+}
+dl.article-info dd.parent-category-name,
+dl.article-info dd.category-name {
+	background:url(../img/bul_category.gif) left center no-repeat;
+}
+dl.article-info dd.create,
+dl.article-info dd.modified,
+dl.article-info dd.published {
+	background:url(../img/bul_clock.gif) left center no-repeat;
+}
+dl.article-info dd.createdby {
+	background:url(../img/bul_author.gif) left center no-repeat;
+}
+dl.article-info dd.hits {
+	background:url(../img/bul_info.gif) left center no-repeat;
+}
+/* ######### ######### ######### 注释 ######### ######### ######### */
+/* ######### ######### ######### Pagination ######### ######### ######### */
+//单篇文章多部分页（上一页下一页）
+//div.pagination>ul>li*2
+//单篇文章页面导航（上一页下一页）
+//ul.pagenav>(li.pagenav-prev+li.pagenav-next)
+//文章列表分页
+//div.pagination>(p.counter+ul>li>span.pagenav)
+//div.pagination>(p.counter+ul>li>a.pagenav)
+.pagination ul li, ul.pagenav li{display:inline-block;*display:inline;*zoom:1;list-style:none;}
+.pagination,ul.pagenav{@extend %btnArea;clear:both}
+.pagenavcounter, ul.pagenav, .pagination ul{margin:1em 0 !important;padding:0 !important;}
+ul.pagenav li.pagenav-prev{float:left;}
+ul.pagenav li.pagenav-next{float:right;}
+.pagination .counter{float:right;}
+.pagination {
+	ul {
+		li {
+			margin-left:5px;
+			margin-right:5px;
+			.pagenav {
+				padding: 0px 4px 0px 4px;
+			}
+			a {
+				border:1px solid #000;
+			}
+			span {
+				border:1px solid #000;
+				font-weight:bold;
+				color:#FFF;
+				background:#000;
+			}
+		}
+		li.pagination-start,
+		li.pagination-prev,
+		li.pagination-next,
+		li.pagination-end {
+			color:#FF0;
+		}
+		li.pagination-start span,
+		li.pagination-prev span,
+		li.pagination-next span,
+		li.pagination-end span {
+			font-weight:normal;
+			background:#FFF;
+			color:#000;
+		}
+		li.pagination-start a,
+		li.pagination-prev a,
+		li.pagination-next a,
+		li.pagination-end a {
+			font-weight:normal;
+		}
+		li.pagination-start {
+			color:#F00;
+		}
+		li.pagination-prev {
+			color:#0F0;
+		}
+		li.pagination-next {
+			color:#00F;
+		}
+		li.pagination-end {
+			color:#FF0;
+		}
+	}
+}
+/* ######### ######### ######### Article index ######### ######### ######### */
+#article-index { float:right; margin-left:1em; padding:1em 2em;border:1px solid #F2E2A1; background:#FFFCF0; font-size:1em; }/* 深橙色线条，浅橙色背景， 字号*/
+#article-index ul { margin-left:0; padding-left:1em; } /* 去除列表左侧重排 */
+#article-index ul li { list-style-image:url(../img/li_off.png); } /* 列表项图标 */
+#article-index ul li a { font-weight:normal; color:#585858; } /*列表项字号颜色*/
+#article-index ul li a.active { font-weight:bold; } /* 列表项当前项高亮 */
+/* ######### ######### ######### 注释 ######### ######### ######### */
