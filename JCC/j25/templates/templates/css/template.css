@@ -7,53 +7,33 @@
  * @license   ##license##
  */
  //编码保持
-body, input, textarea, select, table, button { font-family:Tahoma, Geneva, sans-serif; font-size:12px;}
-img, fieldset { border:0;}
-form, fieldset { margin:0; padding:0;}
-em, address { font-style:normal;}
-button{ margin:0; padding:0; overflow:visible; cursor:pointer;}
-a { text-decoration:none;}
-a:hover, a:active, a:focus {text-decoration:underline;}
-/* ######### 注释 ######### */
-/* Text styles */
-.blog-featured h2 {font-size: 1.5em;margin-bottom:0em;}
-p.readmore {text-indent:0;font-size: .9em;}
-.joomla-footer {font-size: .9em;margin-bottom: 30px;}
-/* ######### 注释 ######### */
-ul.actions {clear:both;margin-top: -50px;float:right;}
-ul.actions li {list-style-type: none;float:right;margin-left: 10px;}
-/* ######### 注释 ######### */
-p#form-login-username label,
-p#form-login-password label {width: 160px;display:block;}
-p#form-login-remember label {font-size: .9em;font-weight: normal;line-height: 25px;}
-p#form-login-remember input {float:left;margin-right: 5px;}
-form#form-login ul {margin: 0;padding: 0;}
-form#form-login ul li {list-style-type: none;margin-left: 20px;font-size: .9em;}
-/* ######### 注释 ######### */
-/* System Messages */
-#system-message { margin-top: 10px; margin-bottom: 10px; padding: 0; }
-#system-message dt { font-weight: bold; display: none; }
-#system-message dd { margin: 0; font-weight: bold; text-indent: 30px; }
-#system-message dd ul { color: #0055BB; background-position: 4px top; background-repeat: no-repeat; margin-bottom: 10px; list-style: none; padding: 10px; border-top: 3px solid #84A7DB; border-bottom: 3px solid #84A7DB; }
-#system-message dd ul li { line-height: 1.5em }
-/* System Standard Messages */
-#system-message .message ul { background-color: #C3D2E5; background-image: url(../../../media/system/images/notice-info.png); }
-/* System Error Messages */
-#system-message .error ul, #system-message .warning ul, #system-message .notice ul { color: #c00; }
-#system-message .error ul { background-color: #E6C0C0; background-image: url(../../../media/system/images/notice-alert.png); border-color: #DE7A7B; }
-/* System Warning Messages */
-#system-message .warning ul { background-color: #E6C8A6; background-image: url(../../../media/system/images/notice-note.png); border-color: #FFBB00; }
-/* System Notice Messages */
-#system-message .notice ul { background-color: #EFE7B8; background-image: url(../../../media/system/images/notice-note.png); border-color: #F0DC7E; }
-/* Unpublished */
-.system-unpublished, tr.system-unpublished { background: #e8edf1; border-top: 4px solid #c4d3df; border-bottom: 4px solid #c4d3df; }
-span.highlight { background-color:#FFFFCC; font-weight:bold; padding:1px 4px; }
-.img-fulltext-float-right { float: right; margin-left: 10px; margin-bottom: 10px; }
-.img-fulltext-float-left { float: left; margin-right: 10px; margin-bottom: 10px; }
-.img-fulltext-float-none { }
-.img-intro-float-right { float: right; margin-left: 5px; margin-bottom: 5px; }
-.img-intro-float-left { float: left; margin-right: 5px; margin-bottom: 5px; }
-.img-intro-float-none { }
+.items-more {
+	clear:both;
+}
+dl.article-info dt.article-info-term {
+	display:none;
+}
+dl.article-info dd {
+	display:inline-block;
+	margin-left:0;
+	margin-right:1em;
+	padding-left:18px;
+}
+dl.article-info dd.parent-category-name,
+dl.article-info dd.category-name {
+	background:url(../img/bul_category.gif) left center no-repeat;
+}
+dl.article-info dd.create,
+dl.article-info dd.modified,
+dl.article-info dd.published {
+	background:url(../img/bul_clock.gif) left center no-repeat;
+}
+dl.article-info dd.createdby {
+	background:url(../img/bul_author.gif) left center no-repeat;
+}
+dl.article-info dd.hits {
+	background:url(../img/bul_info.gif) left center no-repeat;
+}
 /* ######### 注释 ######### */
 dl.article-info{border-top: 1px solid #DDDDDD;margin-bottom: 15px;padding: 5px;background: #ECECEC;}
 dl.article-info dt.article-info-term{display:none;}
