@@ -1,3 +1,8 @@
+原则：
+	最少偏移量
+
+
+
 html\com_content\article\
 	将ul.actions下移到与dl.article-info相邻区域
 html\com_content\category\blog.php
