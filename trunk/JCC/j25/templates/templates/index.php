@@ -89,7 +89,7 @@ endif;
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
 <jdoc:include type="head" />
-  <!--[if lt IE 9]>
+  <!--[if lte IE 8]>
   <script src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/html5shiv.js"></script>
   <script src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/respond.min.js"></script>
   <![endif]-->
