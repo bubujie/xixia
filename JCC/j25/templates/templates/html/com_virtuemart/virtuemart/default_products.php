@@ -23,6 +23,9 @@ $productTitle = JText::_('COM_VIRTUEMART_'.$type.'_PRODUCT')
 
 <?php // Start the Output
 
+$countProducts = count($productList);
+$countFilling = $products_per_row - $countProducts % $products_per_row;
+$endProduct = end($productList);
 foreach ( $productList as $product ) {
 
 	// Show the horizontal seperator
@@ -32,7 +35,7 @@ foreach ( $productList as $product ) {
 
 	// this is an indicator wether a row needs to be opened or not
 	if ($col == 1) { ?>
-	<div class="row split">
+	<div class="row slipt">
 	<?php }
 
 	// Show the vertical seperator
@@ -44,7 +47,7 @@ foreach ( $productList as $product ) {
 
 		// Show Products ?>
 		<div class="product s-1-<?php echo $products_per_row . $show_vertical_separator ?>">
-			<div class="spacer" style="border:1px solid #EEE;">
+			<div class="spacer">
 
 
 					<h3>
@@ -103,8 +106,13 @@ foreach ( $productList as $product ) {
 	$nb ++;
 
 	// Do we need to close the current row now?
+if($product===$endProduct) :
+	for($i = 1; $i <= $countFilling; $i++) :
+		echo   "".'<div class="s-1-' . $products_per_row . '"></div>';
+	endfor;
+endif;
 	if ($col == $products_per_row) { ?>
-	<div class="clear"></div>
+	<?php //div class="clear"></div ?>
 	</div>
 		<?php
 		$col = 1;

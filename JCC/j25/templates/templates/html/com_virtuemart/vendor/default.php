@@ -4,7 +4,7 @@
 * Description
 *
 * @package	VirtueMart
-* @subpackage Manufacturer
+* @subpackage vendor
 * @author Kohl Patrick, Eugen Stranz
 * @link http://www.virtuemart.net
 * @copyright Copyright (c) 2004 - 2010 VirtueMart Team. All rights reserved.
@@ -21,14 +21,14 @@ defined('_JEXEC') or die('Restricted access');
 
 // Category and Columns Counter
 $iColumn = 1;
-$iManufacturer = 1;
+$ivendor = 1;
 
 // Calculating Categories Per Row
-$manufacturerPerRow = 3;
-if ($manufacturerPerRow != 1) {
-	$manufacturerCellWidth = ' width'.floor ( 100 / $manufacturerPerRow );
+$vendorPerRow = 3;
+if ($vendorPerRow != 1) {
+	$vendorCellWidth = ' width'.floor ( 100 / $vendorPerRow );
 } else {
-	$manufacturerCellWidth = '';
+	$vendorCellWidth = '';
 }
 
 // Separator
@@ -36,18 +36,18 @@ $verticalSeparator = " vertical-separator";
 $horizontalSeparator = '<div class="horizontal-separator"></div>';
 
 // Lets output the categories, if there are some
-if (!empty($this->manufacturers)) { ?>
+if (!empty($this->vendors)) { ?>
 
-<div class="manufacturer-view-default">
+<div class="vendor-view-default">
 
 	<?php // Start the Output
-$countManufacturers = count($this->manufacturers);
-$countFilling = $manufacturerPerRow - $countManufacturers % $manufacturerPerRow;
-$endManufacturer = end($this->manufacturers);
-	foreach ( $this->manufacturers as $manufacturer ) {
+$countVendors = count($this->vendors);
+$countFilling = $vendorPerRow - $countVendors % $vendorPerRow;
+$endVendor = end($this->vendors);
+	foreach ( $this->vendors as $vendor ) {
 
 		// Show the horizontal seperator
-		if ($iColumn == 1 && $iManufacturer > $manufacturerPerRow) {
+		if ($iColumn == 1 && $ivendor > $vendorPerRow) {
 			echo $horizontalSeparator;
 		}
 
@@ -57,36 +57,37 @@ $endManufacturer = end($this->manufacturers);
 		<?php }
 
 		// Show the vertical seperator
-		if ($iManufacturer == $manufacturerPerRow or $iManufacturer % $manufacturerPerRow == 0) {
+		if ($ivendor == $vendorPerRow or $ivendor % $vendorPerRow == 0) {
 			$showVerticalSeparator = ' ';
 		} else {
 			$showVerticalSeparator = $verticalSeparator;
 		}
 
-		// Manufacturer Elements
-		$manufacturerURL = JRoute::_('index.php?option=com_virtuemart&view=manufacturer&virtuemart_manufacturer_id=' . $manufacturer->virtuemart_manufacturer_id, FALSE);
-		$manufacturerIncludedProductsURL = JRoute::_('index.php?option=com_virtuemart&view=category&virtuemart_manufacturer_id=' . $manufacturer->virtuemart_manufacturer_id, FALSE);
-		$manufacturerImage = $manufacturer->images[0]->displayMediaThumb("",false);
+		// vendor Elements
+		$vendorsLink = JRoute::_('index.php?option=com_virtuemart&view=vendor&virtuemart_vendor_id=' . $vendor->virtuemart_vendor_id, FALSE);
+		$vendorIncludedProductsURL = JRoute::_('index.php?option=com_virtuemart&view=category&virtuemart_vendor_id=' . $vendor->virtuemart_vendor_id, FALSE);
+		//$vendorImage = $vendor->images[0]->displayMediaThumb("",false);
 
 		// Show Category ?>
-		<div class="manufacturer s-1-<?php echo $manufacturerPerRow . $showVerticalSeparator ?>">
+		<div class="vendor s-1-<?php echo $vendorPerRow . $showVerticalSeparator ?>">
 			<div class="spacer">
 				<h2>
-					<a title="<?php echo $manufacturer->mf_name; ?>" href="<?php echo $manufacturerURL; ?>"><?php echo $manufacturer->mf_name; ?></a>
+					<a title="<?php echo $vendor->vendor_store_name; ?>" href="<?php echo $vendorsLink; ?>"><?php echo $vendor->vendor_store_name; ?></a>
 				</h2>
-				<a title="<?php echo $manufacturer->mf_name; ?>" href="<?php echo $manufacturerURL; ?>"><?php echo $manufacturerImage;?></a>
+				<a title="<?php echo $vendor->vendor_store_name; ?>" href="<?php echo $vendorsLink; ?>"><?php //echo $vendorImage;?></a>
 			</div>
+			<div><?php echo $vendor->vendor_name; ?></div>
 		</div>
 		<?php
-		$iManufacturer ++;
+		$ivendor ++;
 
 		// Do we need to close the current row now?
-if($manufacturer===$endManufacturer) :
+if($vendor===$endVendor) :
 	for($i = 1; $i <= $countFilling; $i++) :
-		echo   "".'<div class="s-1-' . $manufacturerPerRow . '"></div>';
+		echo   "".'<div class="s-1-' . $vendorPerRow . '"></div>';
 	endfor;
 endif;
-		if ($iColumn == $manufacturerPerRow) {
+		if ($iColumn == $vendorPerRow) {
 			//echo '<div class="clear"></div></div>';
 			echo '</div>;
 			$iColumn = 1;
@@ -103,5 +104,7 @@ endif;
 
 </div>
 <?php
+} else {
+	echo 'Serious configuration problem, no vendor found.';
 }
 ?>
