@@ -91,6 +91,8 @@ endif;
 <jdoc:include type="head" />
   <!--[if lte IE 8]>
   <script src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/html5shiv.js"></script>
+  <![endif]-->
+  <!--[if IE 8]>
   <script src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/respond.min.js"></script>
   <![endif]-->
 </head>
