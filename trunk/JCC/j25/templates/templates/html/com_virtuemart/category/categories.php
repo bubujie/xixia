@@ -80,7 +80,7 @@ if ($this->category->children ) {
 
 	    // Do we need to close the current row now?
 	    if ($iCol == $categories_per_row) { ?>
-	    <div class="clear"></div>
+	    <?php //div class="clear"></div ?>
 	    </div>
 		    <?php
 		    $iCol = 1;
@@ -91,7 +91,7 @@ if ($this->category->children ) {
 }
 // Do we need a final closing row tag?
 if ($iCol != 1) { ?>
-	<div class="clear"></div>
+	<?php //div class="clear"></div ?>
 	</div>
 <?php
 }

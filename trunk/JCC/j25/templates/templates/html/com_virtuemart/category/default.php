@@ -69,6 +69,9 @@ if (VmConfig::get ('showCategory', 1) and empty($this->keyword)) {
 		<?php // Start the Output
 		if (!empty($this->category->children)) {
 
+$countCategories = count($this->category->children);
+$countFilling = $categories_per_row - $countCategories % $categories_per_row;
+$endCategory = end($this->category->children);
 			foreach ($this->category->children as $category) {
 
 				// Show the horizontal seperator
@@ -81,7 +84,7 @@ if (VmConfig::get ('showCategory', 1) and empty($this->keyword)) {
 				// this is an indicator wether a row needs to be opened or not
 				if ($iCol == 1) {
 					?>
-			<div class="row">
+			<div class="row split">
 			<?php
 				}
 
@@ -97,8 +100,8 @@ if (VmConfig::get ('showCategory', 1) and empty($this->keyword)) {
 
 				// Show Category
 				?>
-				<div class="category floatleft<?php echo $category_cellwidth . $show_vertical_separator ?>">
-					<div class="spacer">
+				<div class="category s-1-<?php echo $categories_per_row . $show_vertical_separator ?>">
+					<div class="spacer" style="border:1px solid #EEE;">
 						<h2>
 							<a href="<?php echo $caturl ?>" title="<?php echo $category->category_name ?>">
 								<?php echo $category->category_name ?>
@@ -113,6 +116,12 @@ if (VmConfig::get ('showCategory', 1) and empty($this->keyword)) {
 				<?php
 				$iCategory++;
 
+//需要在foreach内部判断是否是最后一个row
+if($category===$endCategory) :
+	for($i = 1; $i <= $countFilling; $i++) :
+		echo   "".'<div class="s-1-' . $categories_per_row . '"></div>';
+	endfor;
+endif;
 				// Do we need to close the current row now?
 				if ($iCol == $categories_per_row) {
 					?>
@@ -128,7 +137,7 @@ if (VmConfig::get ('showCategory', 1) and empty($this->keyword)) {
 		// Do we need a final closing row tag?
 		if ($iCol != 1) {
 			?>
-			<div class="clear"></div>
+			<?php //div class="clear"></div ?>
 		</div>
 	<?php } ?>
 	</div>
@@ -201,6 +210,9 @@ if (!empty($this->products)) {
 	$BrowseTotalProducts = count($this->products);
 
 	// Start the Output
+$countProducts = count($this->products);
+$countFilling = $BrowseProducts_per_row - $countProducts % $BrowseProducts_per_row;
+$endProduct = end($this->products);
 	foreach ($this->products as $product) {
 
 		// Show the horizontal seperator
@@ -229,7 +241,7 @@ if (!empty($this->products)) {
 		<div class="product s-1-<?php echo $BrowseProducts_per_row . $show_vertical_separator ?>">
 			<div class="spacer" style="border:1px solid #EEE;">
 			<div class="split">
-				<div class="s-2-5 center">
+				<div class="s-1-1 center">
 				    <a title="<?php echo $product->product_name ?>"  href="<?php echo $product->link; ?>">
 						<?php
 
@@ -268,7 +280,7 @@ if (!empty($this->products)) {
 					<?php } ?>
 				</div>
 
-				<div class="s-3-5">
+				<div class="s-1-1">
 
 					<h2><?php echo JHTML::link ($product->link, $product->product_name); ?></h2>
 
@@ -325,11 +337,15 @@ if (!empty($this->products)) {
 			<!-- end of spacer -->
 		</div> <!-- end of product -->
 		<?php
-
+if($product===$endProduct) :
+	for($i = 1; $i <= $countFilling; $i++) :
+		echo   "".'<div class="s-1-' . $BrowseProducts_per_row . '"></div>';
+	endfor;
+endif;
 		// Do we need to close the current row now?
 		if ($iBrowseCol == $BrowseProducts_per_row || $iBrowseProduct == $BrowseTotalProducts) {
 			?>
-			<div class="clear"></div>
+			<?php //div class="clear"></div ?>
    </div> <!-- end of row -->
 			<?php
 			$iBrowseCol = 1;
