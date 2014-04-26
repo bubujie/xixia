@@ -101,7 +101,7 @@ $endCategory = end($this->category->children);
 				// Show Category
 				?>
 				<div class="category s-1-<?php echo $categories_per_row . $show_vertical_separator ?>">
-					<div class="spacer" style="border:1px solid #EEE;">
+					<div class="spacer">
 						<h2>
 							<a href="<?php echo $caturl ?>" title="<?php echo $category->category_name ?>">
 								<?php echo $category->category_name ?>
@@ -116,16 +116,15 @@ $endCategory = end($this->category->children);
 				<?php
 				$iCategory++;
 
-//需要在foreach内部判断是否是最后一个row
+				// Do we need to close the current row now?
 if($category===$endCategory) :
 	for($i = 1; $i <= $countFilling; $i++) :
 		echo   "".'<div class="s-1-' . $categories_per_row . '"></div>';
 	endfor;
 endif;
-				// Do we need to close the current row now?
 				if ($iCol == $categories_per_row) {
 					?>
-					<div class="clear"></div>
+					<?php //div class="clear"></div ?>
 		</div>
 			<?php
 					$iCol = 1;
@@ -137,7 +136,7 @@ endif;
 		// Do we need a final closing row tag?
 		if ($iCol != 1) {
 			?>
-			<?php //div class="clear"></div ?>
+			<div class="clear"></div>
 		</div>
 	<?php } ?>
 	</div>
@@ -185,7 +184,7 @@ if (!empty($this->products)) {
 		<?php echo $this->orderByList['manufacturer']; ?>
 	</div>
 	<div class="width30 floatright display-number"><?php echo $this->vmPagination->getResultsCounter ();?><br/><?php echo $this->vmPagination->getLimitBox ($this->category->limit_list_step); ?></div>
-	<div class="pagination">
+	<div class="vm-pagination">
 		<?php echo $this->vmPagination->getPagesLinks (); ?>
 		<span style="float:right"><?php echo $this->vmPagination->getPagesCounter (); ?></span>
 	</div>
@@ -239,7 +238,7 @@ $endProduct = end($this->products);
 		// Show Products
 		?>
 		<div class="product s-1-<?php echo $BrowseProducts_per_row . $show_vertical_separator ?>">
-			<div class="spacer" style="border:1px solid #EEE;">
+			<div class="spacer">
 			<div class="split">
 				<div class="s-1-1 center">
 				    <a title="<?php echo $product->product_name ?>"  href="<?php echo $product->link; ?>">
@@ -331,18 +330,19 @@ $endProduct = end($this->products);
 					</p>
 
 				</div>
-				</div>
-				<div class="clear"></div>
+				<?php //div class="clear"></div ?>
+			</div>
 			</div>
 			<!-- end of spacer -->
 		</div> <!-- end of product -->
 		<?php
+
+		// Do we need to close the current row now?
 if($product===$endProduct) :
 	for($i = 1; $i <= $countFilling; $i++) :
 		echo   "".'<div class="s-1-' . $BrowseProducts_per_row . '"></div>';
 	endfor;
 endif;
-		// Do we need to close the current row now?
 		if ($iBrowseCol == $BrowseProducts_per_row || $iBrowseProduct == $BrowseTotalProducts) {
 			?>
 			<?php //div class="clear"></div ?>
@@ -364,7 +364,7 @@ endif;
 	}
 	?>
 
-<div class="pagination"><?php echo $this->vmPagination->getPagesLinks (); ?><span style="float:right"><?php echo $this->vmPagination->getPagesCounter (); ?></span></div>
+<div class="vm-pagination"><?php echo $this->vmPagination->getPagesLinks (); ?><span style="float:right"><?php echo $this->vmPagination->getPagesCounter (); ?></span></div>
 
 	<?php
 } elseif (!empty($this->keyword)) {

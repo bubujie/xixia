@@ -20,6 +20,9 @@ $verticalseparator = " vertical-separator";
 
     <?php
     // Start the Output
+$countCategories = count($this->categories);
+$countFilling = $categories_per_row - $countCategories % $categories_per_row;
+$endCategory = end($this->categories);
     foreach ($this->categories as $category) {
 
 	// Show the horizontal seperator
@@ -49,7 +52,7 @@ $verticalseparator = " vertical-separator";
 	    // Show Category
 	    ?>
     	<div class="category s-1-<?php echo $categories_per_row . $show_vertical_separator ?>">
-    	    <div class="spacer" style="border:1px solid #EEE;">
+    	    <div class="spacer">
     		<h2>
     		    <a href="<?php echo $caturl ?>" title="<?php echo $category->category_name ?>">
     <?php echo $category->category_name ?>
@@ -67,9 +70,14 @@ $verticalseparator = " vertical-separator";
 	$iCategory++;
 
 	// Do we need to close the current row now?
+if($category===$endCategory) :
+	for($i = 1; $i <= $countFilling; $i++) :
+		echo   "".'<div class="s-1-' . $categories_per_row . '"></div>';
+	endfor;
+endif;
 	if ($iCol == $categories_per_row) {
 	    ?>
-		<div class="clear"></div>
+		<?php //div class="clear"></div ?>
 	    </div>
 	<?php
 	$iCol = 1;
