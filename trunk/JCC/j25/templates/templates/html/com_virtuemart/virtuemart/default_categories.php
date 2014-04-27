@@ -20,9 +20,6 @@ $verticalseparator = " vertical-separator";
 
     <?php
     // Start the Output
-$countCategories = count($this->categories);
-$countFilling = $categories_per_row - $countCategories % $categories_per_row;
-$endCategory = end($this->categories);
     foreach ($this->categories as $category) {
 
 	// Show the horizontal seperator
@@ -70,11 +67,6 @@ $endCategory = end($this->categories);
 	$iCategory++;
 
 	// Do we need to close the current row now?
-if($category===$endCategory) :
-	for($i = 1; $i <= $countFilling; $i++) :
-		echo   "".'<div class="s-1-' . $categories_per_row . '"></div>';
-	endfor;
-endif;
 	if ($iCol == $categories_per_row) {
 	    ?>
 		<?php //div class="clear"></div ?>
@@ -87,8 +79,11 @@ endif;
 }
 // Do we need a final closing row tag?
 if ($iCol != 1) {
+for($i = 0; $i <= ($categories_per_row - $iCol); $i++) :
+	echo   "".'<div class="s-1-' . $categories_per_row . '"></div>';
+endfor;
     ?>
-        <div class="clear"></div>
+        <?php //div class="clear"></div ?>
     </div>
     <?php
 }

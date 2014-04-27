@@ -69,9 +69,6 @@ if (VmConfig::get ('showCategory', 1) and empty($this->keyword)) {
 		<?php // Start the Output
 		if (!empty($this->category->children)) {
 
-$countCategories = count($this->category->children);
-$countFilling = $categories_per_row - $countCategories % $categories_per_row;
-$endCategory = end($this->category->children);
 			foreach ($this->category->children as $category) {
 
 				// Show the horizontal seperator
@@ -117,11 +114,6 @@ $endCategory = end($this->category->children);
 				$iCategory++;
 
 				// Do we need to close the current row now?
-if($category===$endCategory) :
-	for($i = 1; $i <= $countFilling; $i++) :
-		echo   "".'<div class="s-1-' . $categories_per_row . '"></div>';
-	endfor;
-endif;
 				if ($iCol == $categories_per_row) {
 					?>
 					<?php //div class="clear"></div ?>
@@ -135,8 +127,11 @@ endif;
 		}
 		// Do we need a final closing row tag?
 		if ($iCol != 1) {
+for($i = 0; $i <= ($categories_per_row - $iCol); $i++) :
+	echo   "".'<div class="s-1-' . $categories_per_row . '"></div>';
+endfor;
 			?>
-			<div class="clear"></div>
+			<?php //div class="clear"></div ?>
 		</div>
 	<?php } ?>
 	</div>
@@ -209,9 +204,6 @@ if (!empty($this->products)) {
 	$BrowseTotalProducts = count($this->products);
 
 	// Start the Output
-$countProducts = count($this->products);
-$countFilling = $BrowseProducts_per_row - $countProducts % $BrowseProducts_per_row;
-$endProduct = end($this->products);
 	foreach ($this->products as $product) {
 
 		// Show the horizontal seperator
@@ -338,11 +330,6 @@ $endProduct = end($this->products);
 		<?php
 
 		// Do we need to close the current row now?
-if($product===$endProduct) :
-	for($i = 1; $i <= $countFilling; $i++) :
-		echo   "".'<div class="s-1-' . $BrowseProducts_per_row . '"></div>';
-	endfor;
-endif;
 		if ($iBrowseCol == $BrowseProducts_per_row || $iBrowseProduct == $BrowseTotalProducts) {
 			?>
 			<?php //div class="clear"></div ?>
@@ -357,8 +344,11 @@ endif;
 	} // end of foreach ( $this->products as $product )
 	// Do we need a final closing row tag?
 	if ($iBrowseCol != 1) {
+for($i = 0; $i <= ($BrowseProducts_per_row - $iBrowseCol); $i++) :
+	echo   "".'<div class="s-1-' . $BrowseProducts_per_row . '"></div>';
+endfor;
 		?>
-	<div class="clear"></div>
+	</div>
 
 		<?php
 	}

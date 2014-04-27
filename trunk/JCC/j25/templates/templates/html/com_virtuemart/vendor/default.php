@@ -41,9 +41,6 @@ if (!empty($this->vendors)) { ?>
 <div class="vendor-view-default">
 
 	<?php // Start the Output
-$countVendors = count($this->vendors);
-$countFilling = $vendorPerRow - $countVendors % $vendorPerRow;
-$endVendor = end($this->vendors);
 	foreach ( $this->vendors as $vendor ) {
 
 		// Show the horizontal seperator
@@ -82,11 +79,6 @@ $endVendor = end($this->vendors);
 		$ivendor ++;
 
 		// Do we need to close the current row now?
-if($vendor===$endVendor) :
-	for($i = 1; $i <= $countFilling; $i++) :
-		echo   "".'<div class="s-1-' . $vendorPerRow . '"></div>';
-	endfor;
-endif;
 		if ($iColumn == $vendorPerRow) {
 			//echo '<div class="clear"></div></div>';
 			echo '</div>';
@@ -97,8 +89,12 @@ endif;
 	}
 
 	// Do we need a final closing row tag?
-	if ($iColumn != 1) { ?>
-		<div class="clear"></div>
+	if ($iColumn != 1) {
+for($i = 0; $i <= ($vendorPerRow - $iColumn); $i++) :
+	echo   "".'<div class="s-1-' . $vendorPerRow . '"></div>';
+endfor;
+?>
+		<?php //div class="clear"></div ?>
 	</div>
 	<?php } ?>
 
