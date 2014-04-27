@@ -89,7 +89,7 @@ if($vendor===$endVendor) :
 endif;
 		if ($iColumn == $vendorPerRow) {
 			//echo '<div class="clear"></div></div>';
-			echo '</div>;
+			echo '</div>';
 			$iColumn = 1;
 		} else {
 			$iColumn ++;
