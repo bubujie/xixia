@@ -89,7 +89,7 @@ if (!empty($this->manufacturers)) { ?>
 
 	// Do we need a final closing row tag?
 	if ($iColumn != 1) {
-for($i = 1; $i <= ($manufacturerPerRow - $iColumn); $i++) :
+for($i = 0; $i <= ($manufacturerPerRow - $iColumn); $i++) :
 	echo   "".'<div class="s-1-' . $manufacturerPerRow . '"></div>';
 endfor;
 ?>
