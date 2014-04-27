@@ -312,8 +312,9 @@ if (VmConfig::get('ask_question', 0) == 1) {
 
 	    </div>
 	</div>
-	<div class="clear"></div>
+	<?php //div class="clear"></div ?>
     </div>
+<div class="clear"></div>
 
 	<?php // event onContentBeforeDisplay
 	echo $this->product->event->beforeDisplayContent; ?>
