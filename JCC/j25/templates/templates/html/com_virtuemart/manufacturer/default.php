@@ -41,9 +41,6 @@ if (!empty($this->manufacturers)) { ?>
 <div class="manufacturer-view-default">
 
 	<?php // Start the Output
-$countManufacturers = count($this->manufacturers);
-$countFilling = $manufacturerPerRow - $countManufacturers % $manufacturerPerRow;
-$endManufacturer = end($this->manufacturers);
 	foreach ( $this->manufacturers as $manufacturer ) {
 
 		// Show the horizontal seperator
@@ -81,11 +78,6 @@ $endManufacturer = end($this->manufacturers);
 		$iManufacturer ++;
 
 		// Do we need to close the current row now?
-if($manufacturer===$endManufacturer) :
-	for($i = 1; $i <= $countFilling; $i++) :
-		echo   "".'<div class="s-1-' . $manufacturerPerRow . '"></div>';
-	endfor;
-endif;
 		if ($iColumn == $manufacturerPerRow) {
 			//echo '<div class="clear"></div></div>';
 			echo '</div>';
@@ -96,8 +88,12 @@ endif;
 	}
 
 	// Do we need a final closing row tag?
-	if ($iColumn != 1) { ?>
-		<div class="clear"></div>
+	if ($iColumn != 1) {
+for($i = 1; $i <= ($manufacturerPerRow - $iColumn); $i++) :
+	echo   "".'<div class="s-1-' . $manufacturerPerRow . '"></div>';
+endfor;
+?>
+		<?php //div class="clear"></div ?>
 	</div>
 	<?php } ?>
 

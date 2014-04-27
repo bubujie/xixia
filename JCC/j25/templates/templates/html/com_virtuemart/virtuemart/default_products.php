@@ -23,9 +23,6 @@ $productTitle = JText::_('COM_VIRTUEMART_'.$type.'_PRODUCT')
 
 <?php // Start the Output
 
-$countProducts = count($productList);
-$countFilling = $products_per_row - $countProducts % $products_per_row;
-$endProduct = end($productList);
 foreach ( $productList as $product ) {
 
 	// Show the horizontal seperator
@@ -106,11 +103,6 @@ foreach ( $productList as $product ) {
 	$nb ++;
 
 	// Do we need to close the current row now?
-if($product===$endProduct) :
-	for($i = 1; $i <= $countFilling; $i++) :
-		echo   "".'<div class="s-1-' . $products_per_row . '"></div>';
-	endfor;
-endif;
 	if ($col == $products_per_row) { ?>
 	<?php //div class="clear"></div ?>
 	</div>
@@ -122,8 +114,12 @@ endif;
 	
 }
 // Do we need a final closing row tag?
-if ($col != 1) { ?>
-	<div class="clear"></div>
+if ($col != 1) {
+for($i = 0; $i <= ($products_per_row - $col); $i++) :
+		echo   "".'<div class="s-1-' . $products_per_row . '"></div>';
+endfor;
+?>
+	<?php //div class="clear"></div ?>
 	</div>
 <?php
 }
