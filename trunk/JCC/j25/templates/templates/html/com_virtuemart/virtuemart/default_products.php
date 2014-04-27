@@ -35,7 +35,7 @@ foreach ( $productList as $product ) {
 
 	// this is an indicator wether a row needs to be opened or not
 	if ($col == 1) { ?>
-	<div class="row slipt">
+	<div class="row split">
 	<?php }
 
 	// Show the vertical seperator
