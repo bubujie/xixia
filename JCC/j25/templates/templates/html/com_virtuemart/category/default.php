@@ -330,7 +330,7 @@ if (!empty($this->products)) {
 		<?php
 
 		// Do we need to close the current row now?
-		if ($iBrowseCol == $BrowseProducts_per_row || $iBrowseProduct == $BrowseTotalProducts) {
+		if ($iBrowseCol == $BrowseProducts_per_row) {
 			?>
 			<?php //div class="clear"></div ?>
    </div> <!-- end of row -->
