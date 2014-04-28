@@ -63,7 +63,7 @@ else :
 			$child_module_options = array('style' => $moduleStyle,);
 			$innerContent = JModuleHelper::renderModule($child_module, $child_module_options);
 			//echo $child_module->content;
-			echo   "".'<li class="s-' . $split['s'.$split1][$i] . ' ' . $key . '">';
+			echo   "".'<li class="s-' . $split['s'.$split1][$i] . '">';
 			echo   "".'<div>';
 			//echo $child_module->title;
 			echo $innerContent;
@@ -71,6 +71,9 @@ else :
 			echo   "".'</li>';
 			$i++;
 		endforeach;
+		for ($i; $i < count($split['s'.$split1]); $i++) { 
+			echo   "".'<li class="s-' . $split['s'.$split1][$i] . '"></li>';
+		}
 		echo   "".'</ul>';
 	endif;
 	if (!empty($group2_items)) :
@@ -80,7 +83,7 @@ else :
 			$child_module_options = array('style' => $moduleStyle);
 			$innerContent = JModuleHelper::renderModule($child_module, $child_module_options);
 			//echo $child_module->content;
-			echo   "".'<li class="s-' . $split['s'.$split2][$i] . ' ' . $key . '">';
+			echo   "".'<li class="s-' . $split['s'.$split2][$i] . '">';
 			echo   "".'<div>';
 			//echo $child_module->title;
 			echo $innerContent;
@@ -88,6 +91,9 @@ else :
 			echo   "".'</li>';
 			$i++;
 		endforeach;
+		for ($i; $i < count($split['s'.$split2]); $i++) { 
+			echo   "".'<li class="s-' . $split['s'.$split2][$i] . '"></li>';
+		}
 		echo   "".'</ul>';
 	endif;
 	if (!empty($group3_items)) :
@@ -97,7 +103,7 @@ else :
 			$child_module_options = array('style' => $moduleStyle);
 			$innerContent = JModuleHelper::renderModule($child_module, $child_module_options);
 			//echo $child_module->content;
-			echo   "".'<li class="s-' . $split['s'.$split3][$i] . ' ' . $key . '">';
+			echo   "".'<li class="s-' . $split['s'.$split3][$i] . '">';
 			echo   "".'<div>';
 			//echo $child_module->title;
 			echo $innerContent;
@@ -105,6 +111,9 @@ else :
 			echo   "".'</li>';
 			$i++;
 		endforeach;
+		for ($i; $i < count($split['s'.$split3]); $i++) { 
+			echo   "".'<li class="s-' . $split['s'.$split3][$i] . '"></li>';
+		}
 		echo   "".'</ul>';
 	endif;
 endif;

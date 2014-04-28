@@ -1,4 +1,21 @@
-.horizontal-separator{@extend %clearfix;}
-.orderby-displaynumber{@extend %clearfix;}
-.split .spacer{border:1px solid #EEE;background:#FFF;@extend %clearfix;}
-.category-view,.featured-view,.latest-view,.topten-view,.recent-view{clear:both;}
+@charset "utf-8";
+@import "E:/tuding/css/layout";
+.horizontal-separator {
+	@extend %clearfix;
+}
+.orderby-displaynumber {
+	@extend %clearfix;
+}
+.split .spacer {
+	border:1px solid #EEE;
+	background:#FFF;
+	@extend %clearfix;
+}
+.category-view,
+.featured-view,
+.latest-view,
+.topten-view,
+.recent-view,
+.customer-reviews {
+	clear:both;
+}
