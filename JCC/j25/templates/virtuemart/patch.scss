@@ -1,3 +1,4 @@
-.horizontal-separator{clear:both;}
-.orderby-displaynumber{clear:both;}
-.split .spacer{border:1px solid #EEE;}
+.horizontal-separator{@extend %clearfix;}
+.orderby-displaynumber{@extend %clearfix;}
+.split .spacer{border:1px solid #EEE;background:#FFF;@extend %clearfix;}
+.category-view,.featured-view,.latest-view,.topten-view,.recent-view{clear:both;}
