@@ -11,8 +11,10 @@
 	<description>PLG_THUMBTACK_XML_DESCRIPTION</description>
 	<files>
 		<filename plugin="thumbtack">thumbtack.php</filename>
+		<filename>index.html</filename>
 		<folder>class</folder>
 		<folder>forms</folder>
+		<folder>assets</folder>
 		<folder>language</folder>
 	</files>
 	<languages>
