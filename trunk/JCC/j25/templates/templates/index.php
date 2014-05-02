@@ -69,8 +69,7 @@ if($isHome) :
 else :
 	$doc->setTitle($doc->getTitle() . ' | ' . $siteTitle);
 endif;
-$jVersion = new JVersion;
-if(!version_compare($jVersion->getShortVersion(), '3.0', 'ge')) :
+if(!version_compare(JVERSION, '3.0', 'ge')) :
 	$doc->addScript($this->baseurl.'/media/jui/js/jquery.min.js');
 	$doc->addScript($this->baseurl.'/media/jui/js/jquery-noconflict.js');
 endif;
@@ -138,6 +137,12 @@ endif;
   <div id="bhead-btm">
     <div class="rowo">
       <div class="fillo">
+<?php
+$module = JModuleHelper::getModule( 'mod_menu', '步步街工作室');
+$attribs = array('style' => 'rounded');
+$module->params = "menutype=mainmenu\nshowAllChildren=1\nmoduleclass_sfx=_menu";
+echo   "".''.JModuleHelper::renderModule($module, $attribs).'';
+?>
 <jdoc:include type="modules" name="bhead-btm" style="stroke" headerLevel="3" />
       </div>
     </div>
