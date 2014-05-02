@@ -1,15 +1,15 @@
 @charset "utf-8";
-//编码保持
-@import "E:/tuding/css/layout";
-@import "E:/tuding/css/split";
-@import "E:/tuding/css/table";
-@import "E:/tuding/css/blueprint";
-@import "E:/tuding/css/emmet";
-@import "E:/tuding/css/base/product/listmain_1";
+/* 步步街工作室 copyright(c)bubujie.net */
+@import "F:/bubujie/css/layout";
+@import "F:/bubujie/css/split";
+@import "F:/bubujie/css/table";
+@import "F:/bubujie/css/blueprint";
+@import "F:/bubujie/css/emmet";
+@import "F:/bubujie/css/base/product/listmain_1";
 @import "./system_site";
 @import "./general";
 /* ######### ######### ######### 注释 ######### ######### ######### */
-@include tuding($layout:'h',$row:88%,$n1:200px,$n2:200px,$space:10px,$incInner:0,$v1:200px,$v2:200px);
+@include layout($layout:'h',$row:88%,$n1:200px,$n2:200px,$space:10px,$incInner:0,$v1:200px,$v2:200px);
 @include split();
 .items-more{clear:both;}
 .button2-left .article, .button2-left .blank {
@@ -115,33 +115,30 @@ margin: 0;
 .crumbs a:active{}
 #home .crumbs{display:none;}
 #bfoot .quick{position:relative;float:right;}
-.colophon{@extend %ding;clear:both;}
+.colophon{@extend %nail;clear:both;}
 @media screen and (max-width:1100px) {
-	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,null,0,2);
-	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,'',0,-1);
-	//@include tuding_1col('',1);
-	//@include tuding_1col('',0);
+	//@include layout_h_2cols($wrapping,$v1,$v2,$space,null,0,2);
+	//@include layout_h_2cols($wrapping,$v1,$v2,$space,'',0,-1);
+	//@include layout_1col('',1);
+	//@include layout_1col('',0);
 }
 
 @media screen and (max-width:900px) {
-	@include tuding_h_2cols($row:96%,$n1:200px,$n2:null,$space:10px,$selector:'',$isInner:0,$cols:2);
-	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,'',0,-1);
-	//@include tuding_1col('',1);
-	//@include tuding_1col('',0);
+	@include layout_h_2cols($row:96%,$n1:200px,$n2:null,$space:10px,$selector:'',$isInner:0,$cols:2);
+	//@include layout_h_2cols($wrapping,$v1,$v2,$space,'',0,-1);
+	//@include layout_1col('',1);
+	//@include layout_1col('',0);
 }
 
 @media screen and (max-width:700px) {
-	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,null,1,-1);
-	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,'',0,-1);
-	//@include tuding_1col('',1);
-	//@include tuding_1col('',0);
+	//@include layout_h_2cols($wrapping,$v1,$v2,$space,null,1,-1);
+	//@include layout_h_2cols($wrapping,$v1,$v2,$space,'',0,-1);
+	//@include layout_1col('',1);
+	//@include layout_1col('',0);
 }
 
 @media screen and (max-width:500px) {
-	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,null,1,-1);
-	//@include tuding_h_2cols($wrapping,$v1,$v2,$space,'',0,-1);
-	//@include tuding_1col('',1);
-	@include tuding_1col('',0);
-	@include tuding_width_1col();
-	@include split_1col();
+	@include layout_1col('',0);
+	@include layout_width_1col();
+	@include split_span_1col();
 }
