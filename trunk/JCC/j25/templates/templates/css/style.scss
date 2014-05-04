@@ -8,6 +8,7 @@
 @import "F:/bubujie/css/base/product/listmain_1";
 @import "./system_site";
 @import "./general";
+@import "./template";
 /* ######### ######### ######### 注释 ######### ######### ######### */
 @include layout($layout:'h',$row:88%,$n1:200px,$n2:200px,$space:10px,$incInner:0,$v1:200px,$v2:200px);
 @include split();

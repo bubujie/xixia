@@ -76,7 +76,6 @@ endif;
 /* ######### ######### ######### 注释 ######### ######### ######### */
 //$doc->addStyleSheet($this->baseurl.'/templates/system/css/system.css');
 $doc->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/style.css', $type = 'text/css', $media = 'screen,projection');
-$doc->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/template.css', $type = 'text/css', $media = 'screen,projection');
 $doc->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/prettify.css', $type = 'text/css', $media = 'screen,projection');
 $doc->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/print.css', $type = 'text/css', $media = 'print');
 if ($this->direction == 'rtl') :
