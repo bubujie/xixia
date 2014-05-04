@@ -112,7 +112,7 @@ endif;
 <?php endif; ?>
         </div>
 <?php endif; ?>
-<div class="ming">
+<div id="ming" class="ming">
 
 
 
