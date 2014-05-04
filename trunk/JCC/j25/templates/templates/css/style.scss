@@ -1,15 +1,18 @@
 @charset "utf-8";
 /* 步步街工作室 copyright(c)bubujie.net */
-@import "F:/bubujie/css/layout";
-@import "F:/bubujie/css/split";
-@import "F:/bubujie/css/table";
-@import "F:/bubujie/css/blueprint";
-@import "F:/bubujie/css/emmet";
-@import "F:/bubujie/css/base/product/listmain_1";
+@import "F:/thumbtack/css/layout";
+@import "F:/thumbtack/css/split";
+@import "F:/thumbtack/css/table";
+@import "F:/thumbtack/css/blueprint";
+@import "F:/thumbtack/css/emmet";
+@import "F:/thumbtack/css/base/product/listmain_1";
 @import "./system_site";
 @import "./general";
 @import "./template";
 /* ######### ######### ######### 注释 ######### ######### ######### */
+#SOHUCS #SOHU_MAIN .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul {
+	margin: 0 0px 0 0;
+}
 @include layout($layout:'h',$row:88%,$n1:200px,$n2:200px,$space:10px,$incInner:0,$v1:200px,$v2:200px);
 @include split();
 .items-more{clear:both;}
@@ -116,7 +119,7 @@ margin: 0;
 .crumbs a:active{}
 #home .crumbs{display:none;}
 #bfoot .quick{position:relative;float:right;}
-.colophon{@extend %nail;clear:both;}
+.colophon{@extend %ting;clear:both;}
 @media screen and (max-width:1100px) {
 	//@include layout_h_2cols($wrapping,$v1,$v2,$space,null,0,2);
 	//@include layout_h_2cols($wrapping,$v1,$v2,$space,'',0,-1);
@@ -140,6 +143,5 @@ margin: 0;
 
 @media screen and (max-width:500px) {
 	@include layout_1col('',0);
-	@include layout_width_1col();
-	@include split_span_1col();
+	@include split_s_1col();
 }
