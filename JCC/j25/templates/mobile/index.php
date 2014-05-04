@@ -69,10 +69,9 @@ if($isHome) :
 else :
 	$doc->setTitle($doc->getTitle() . ' | ' . $siteTitle);
 endif;
-$jVersion = new JVersion;
-if(!version_compare($jVersion->getShortVersion(), '3.0', 'ge')) :
-	$doc->addScript($this->baseurl.'/media/jui/js/jquery.min.js');
-	$doc->addScript($this->baseurl.'/media/jui/js/jquery-noconflict.js');
+if(!version_compare(JVERSION, '3.0', 'ge')) :
+	//$doc->addScript($this->baseurl.'/media/jui/js/jquery.min.js');
+	//$doc->addScript($this->baseurl.'/media/jui/js/jquery-noconflict.js');
 endif;
 /* ######### ######### ######### 注释 ######### ######### ######### */
 //$doc->addStyleSheet($this->baseurl.'/templates/system/css/system.css');
@@ -85,30 +84,53 @@ if ($this->direction == 'rtl') :
 endif;
 ?>
 <!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
+<html xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
 <jdoc:include type="head" />
-  <!--[if lt IE 9]>
+  <!--[if lte IE 8]>
   <script src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/html5shiv.js"></script>
+  <![endif]-->
+  <!--[if IE 8]>
   <script src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/respond.min.js"></script>
   <![endif]-->
 </head>
 <body<?php echo $isHome ? ' id="home"' : ''; ?> class="bg-<?php if($showSide1){ echo 'n'; } ?>m<?php if($showSide2){ echo 'n'; } ?>">
+    <div class="rowo">
+      <div class="fillo <?php if($showSide1){ echo 'n'; } ?>m<?php if($showSide2){ echo 'n'; } ?>">
+<?php if ($showSide1) : ?>
+        <div id="side1" class="n1"><a name="side1"></a>
+<?php if ($showSide1Top) : ?>
+          <div id="side1-top" class="ting">
+<jdoc:include type="modules" name="side1-top" style="division" headerLevel="3" />
+          </div>
+<?php endif; ?>
+<jdoc:include type="modules" name="side1" style="division" headerLevel="3" />
+<?php if ($showSide1Btm) : ?>
+          <div id="side1-btm" class="ting">
+<jdoc:include type="modules" name="side1-btm" style="division" headerLevel="3" />
+          </div>
+<?php endif; ?>
+        </div>
+<?php endif; ?>
+<div class="ming">
+
+
+
 <div id="bhead">
 <?php if ($showBheadTop) : ?>
   <div id="bhead-top">
-    <div class="rowo">
-      <div class="fillo">
+    <div class="rowi">
+      <div class="filli">
 <jdoc:include type="modules" name="bhead-top" style="stroke" headerLevel="3" />
       </div>
     </div>
   </div>
 <?php endif; ?>
   <div id="bhead-mid">
-    <div class="rowo">
-      <div class="fillo nm">
-        <div class="n1">
+    <div class="rowi">
+      <div class="filli vw">
+        <div class="v1">
 <?php
 	$headingTag = $isHome ? 'h1' : 'div';
 	printf("          ".'<%s class="logo">' , $headingTag);
@@ -125,7 +147,7 @@ endif;
 	printf("".'</%s>'."\n" , $headingTag);
 ?>
         </div>
-        <div class="ming">
+        <div class="wing">
 <jdoc:include type="modules" name="bhead" style="division" headerLevel="3" />
 <jdoc:include type="modules" name="search" style="division" headerLevel="3" />
         </div>
@@ -134,8 +156,8 @@ endif;
   </div>
 <?php if ($showBheadBtm) : ?>
   <div id="bhead-btm">
-    <div class="rowo">
-      <div class="fillo">
+    <div class="rowi">
+      <div class="filli">
 <jdoc:include type="modules" name="bhead-btm" style="stroke" headerLevel="3" />
       </div>
     </div>
@@ -145,35 +167,21 @@ endif;
 <div id="bbody" class="bg-<?php if($showContentSide1){ echo 'v'; } ?>w<?php if($showContentSide2){ echo 'v'; } ?>">
 <?php if ($showBbodyTop) : ?>
   <div id="bbody-top">
-    <div class="rowo">
-      <div class="fillo">
+    <div class="rowi">
+      <div class="filli">
 <jdoc:include type="modules" name="bbody-top" style="stroke" headerLevel="3" />
       </div>
     </div>
   </div>
 <?php endif; ?>
   <div id="bbody-mid">
-    <div class="rowo">
-      <div class="fillo <?php if($showSide1){ echo 'n'; } ?>m<?php if($showSide2){ echo 'n'; } ?>">
-<?php if ($showSide1) : ?>
-        <div id="side1" class="n1"><a name="side1"></a>
-<?php if ($showSide1Top) : ?>
-          <div id="side1-top" class="ding">
-<jdoc:include type="modules" name="side1-top" style="division" headerLevel="3" />
-          </div>
-<?php endif; ?>
-<jdoc:include type="modules" name="side1" style="division" headerLevel="3" />
-<?php if ($showSide1Btm) : ?>
-          <div id="side1-btm" class="ding">
-<jdoc:include type="modules" name="side1-btm" style="division" headerLevel="3" />
-          </div>
-<?php endif; ?>
-        </div>
-<?php endif; ?>
-        <div id="main" class="ming"><a name="main"></a>
+
+
+
+        <div id="main" class="ting"><a name="main"></a>
 <jdoc:include type="modules" name="breadcrumbs" style="division" headerLevel="3" />
 <?php if ($showMainTop) : ?>
-          <div id="main-top" class="ding">
+          <div id="main-top" class="ting">
 <jdoc:include type="modules" name="main-top" style="stroke" headerLevel="3" />
           </div>
 <?php endif; ?>
@@ -187,7 +195,7 @@ endif;
 <?php endif; ?>
     <div class="wing">
 <?php if ($showContentTop) : ?>
-      <div id="content-top" class="ding">
+      <div id="content-top" class="ting">
 <jdoc:include type="modules" name="content-top" style="stroke" headerLevel="3" />
       </div>
 <?php endif; ?>
@@ -198,7 +206,7 @@ endif;
 <jdoc:include type="modules" name="home" style="division" headerLevel="3" />
 <?php endif; ?>
 <?php if ($showContentBtm) : ?>
-      <div id="content-btm" class="ding">
+      <div id="content-btm" class="ting">
 <jdoc:include type="modules" name="content-btm" style="stroke" headerLevel="3" />
       </div>
 <?php endif; ?>
@@ -212,33 +220,19 @@ endif;
 </div>
 
 <?php if ($showMainBtm) : ?>
-          <div id="main-btm" class="ding">
+          <div id="main-btm" class="ting">
 <jdoc:include type="modules" name="main-btm" style="stroke" headerLevel="3" />
           </div>
 <?php endif; ?>
         </div>
-<?php if ($showSide2) : ?>
-        <div id="side2" class="n2"><a name="side2"></a>
-<?php if ($showSide2Top) : ?>
-          <div id="side2-top" class="ding">
-<jdoc:include type="modules" name="side2-top" style="division" headerLevel="3" />
-          </div>
-<?php endif; ?>
-<jdoc:include type="modules" name="side2" style="division" headerLevel="3" />
-<?php if ($showSide2Btm) : ?>
-          <div id="side2-btm" class="ding">
-<jdoc:include type="modules" name="side2-btm" style="division" headerLevel="3" />
-          </div>
-<?php endif; ?>
-        </div>
-<?php endif; ?>
-      </div>
-    </div>
+
+
+
   </div>
 <?php if ($showBbodyBtm) : ?>
   <div id="bbody-btm">
-    <div class="rowo">
-      <div class="fillo">
+    <div class="rowi">
+      <div class="filli">
 <jdoc:include type="modules" name="bbody-btm" style="stroke" headerLevel="3" />
       </div>
     </div>
@@ -248,17 +242,17 @@ endif;
 <div id="bfoot">
 <?php if ($showBfootTop) : ?>
   <div id="bfoot-top">
-    <div class="rowo">
-      <div class="fillo">
+    <div class="rowi">
+      <div class="filli">
 <jdoc:include type="modules" name="bfoot-top" style="stroke" headerLevel="3" />
       </div>
     </div>
   </div>
 <?php endif; ?>
   <div id="bfoot-mid">
-    <div class="rowo">
-      <div class="fillo <?php if($bfootLogo){ echo 'n'; } ?>m">
-        <div class="ming">
+    <div class="rowi">
+      <div class="filli <?php if($bfootLogo){ echo 'v'; } ?>w">
+        <div class="wing">
           <div class="quick">
             <a href="<?php echo $this->baseurl; ?>"><img src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template;?>/img/btn_home.gif" alt="<?php echo JText::_('HOME'); ?>" /></a>
             <a href="javascript:history.back();"><img src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template;?>/img/btn_back.gif" alt="<?php echo JText::_('BACK'); ?>" /></a>
@@ -282,14 +276,35 @@ endif; ?>
   </div>
 <?php if ($showBfootBtm) : ?>
   <div id="bfoot-btm">
-    <div class="rowo">
-      <div class="fillo">
+    <div class="rowi">
+      <div class="filli">
 <jdoc:include type="modules" name="bfoot-btm" style="stroke" headerLevel="3" />
       </div>
     </div>
   </div>
 <?php endif; ?>
 </div>
+
+
+
+</div>
+<?php if ($showSide2) : ?>
+        <div id="side2" class="n2"><a name="side2"></a>
+<?php if ($showSide2Top) : ?>
+          <div id="side2-top" class="ting">
+<jdoc:include type="modules" name="side2-top" style="division" headerLevel="3" />
+          </div>
+<?php endif; ?>
+<jdoc:include type="modules" name="side2" style="division" headerLevel="3" />
+<?php if ($showSide2Btm) : ?>
+          <div id="side2-btm" class="ting">
+<jdoc:include type="modules" name="side2-btm" style="division" headerLevel="3" />
+          </div>
+<?php endif; ?>
+        </div>
+<?php endif; ?>
+      </div>
+    </div>
 <jdoc:include type="modules" name="debug" />
 <script type="text/javascript">
 var online= new Array();
