@@ -166,13 +166,13 @@ echo   "".''.JModuleHelper::renderModule($module, $attribs).'';
 <?php if ($showSide1) : ?>
         <div id="side1" class="n1"><a name="side1"></a>
 <?php if ($showSide1Top) : ?>
-          <div id="side1-top" class="ding">
+          <div id="side1-top" class="ting">
 <jdoc:include type="modules" name="side1-top" style="division" headerLevel="3" />
           </div>
 <?php endif; ?>
 <jdoc:include type="modules" name="side1" style="division" headerLevel="3" />
 <?php if ($showSide1Btm) : ?>
-          <div id="side1-btm" class="ding">
+          <div id="side1-btm" class="ting">
 <jdoc:include type="modules" name="side1-btm" style="division" headerLevel="3" />
           </div>
 <?php endif; ?>
@@ -181,7 +181,7 @@ echo   "".''.JModuleHelper::renderModule($module, $attribs).'';
         <div id="main" class="ming"><a name="main"></a>
 <jdoc:include type="modules" name="breadcrumbs" style="division" headerLevel="3" />
 <?php if ($showMainTop) : ?>
-          <div id="main-top" class="ding">
+          <div id="main-top" class="ting">
 <jdoc:include type="modules" name="main-top" style="stroke" headerLevel="3" />
           </div>
 <?php endif; ?>
@@ -195,7 +195,7 @@ echo   "".''.JModuleHelper::renderModule($module, $attribs).'';
 <?php endif; ?>
     <div class="wing">
 <?php if ($showContentTop) : ?>
-      <div id="content-top" class="ding">
+      <div id="content-top" class="ting">
 <jdoc:include type="modules" name="content-top" style="stroke" headerLevel="3" />
       </div>
 <?php endif; ?>
@@ -206,7 +206,7 @@ echo   "".''.JModuleHelper::renderModule($module, $attribs).'';
 <jdoc:include type="modules" name="home" style="division" headerLevel="3" />
 <?php endif; ?>
 <?php if ($showContentBtm) : ?>
-      <div id="content-btm" class="ding">
+      <div id="content-btm" class="ting">
 <jdoc:include type="modules" name="content-btm" style="stroke" headerLevel="3" />
       </div>
 <?php endif; ?>
@@ -220,7 +220,7 @@ echo   "".''.JModuleHelper::renderModule($module, $attribs).'';
 </div>
 
 <?php if ($showMainBtm) : ?>
-          <div id="main-btm" class="ding">
+          <div id="main-btm" class="ting">
 <jdoc:include type="modules" name="main-btm" style="stroke" headerLevel="3" />
           </div>
 <?php endif; ?>
@@ -228,13 +228,13 @@ echo   "".''.JModuleHelper::renderModule($module, $attribs).'';
 <?php if ($showSide2) : ?>
         <div id="side2" class="n2"><a name="side2"></a>
 <?php if ($showSide2Top) : ?>
-          <div id="side2-top" class="ding">
+          <div id="side2-top" class="ting">
 <jdoc:include type="modules" name="side2-top" style="division" headerLevel="3" />
           </div>
 <?php endif; ?>
 <jdoc:include type="modules" name="side2" style="division" headerLevel="3" />
 <?php if ($showSide2Btm) : ?>
-          <div id="side2-btm" class="ding">
+          <div id="side2-btm" class="ting">
 <jdoc:include type="modules" name="side2-btm" style="division" headerLevel="3" />
           </div>
 <?php endif; ?>
