@@ -178,10 +178,12 @@ echo   "".''.JModuleHelper::renderModule($module, $attribs).'';
         </div>
 <?php endif; ?>
         <div id="main" class="ming"><a name="main"></a>
-<jdoc:include type="modules" name="breadcrumbs" style="division" headerLevel="3" />
 <?php if ($showMainTop) : ?>
-          <div id="main-top" class="ting">
+          <div id="main-top" class="rowi">
+            <div class="filli">
+<jdoc:include type="modules" name="breadcrumbs" style="division" headerLevel="3" />
 <jdoc:include type="modules" name="main-top" style="stroke" headerLevel="3" />
+            </div>
           </div>
 <?php endif; ?>
 
@@ -219,8 +221,10 @@ echo   "".''.JModuleHelper::renderModule($module, $attribs).'';
 </div>
 
 <?php if ($showMainBtm) : ?>
-          <div id="main-btm" class="ting">
+          <div id="main-btm" class="rowi">
+            <div class="filli">
 <jdoc:include type="modules" name="main-btm" style="stroke" headerLevel="3" />
+            </div>
           </div>
 <?php endif; ?>
         </div>
