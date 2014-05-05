@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {//or jQuery(function($) {
 	var $n2=280;
 	var $space=20;
 	$('<div id="frame_switch1" class="bgc8"><span class="opened d_b">Side1 Toggle</span></div>').prependTo('#bbody-mid .wing');
-	$side1_switcher = $('#frame_switch1 span');
+	$side1_switcher = $('#frame_switch1>span');
 	$side1_switcher.click(function(){
 	$switch_item1 = $('.rowo>.nm,.rowo>.nmn');
 		if($side1_switcher.hasClass('opened')){
@@ -19,23 +19,25 @@ jQuery(document).ready(function($) {//or jQuery(function($) {
 			$side1_switcher.removeClass('closed');
 		}
 	});
-	/*
+
+
+
 	$('<div id="frame_switch2" class="bgc8"><span class="opened d_b">Side2 Toggle</span></div>').prependTo('#bbody-mid .wing');
-	$side2_switcher = $('#frame_switch2 span');
+	$side2_switcher = $('#frame_switch2>span');
 	$side2_switcher.click(function(){
+	$switch_item2 = $('.rowo>.mn,.rowo>.nmn');
 		if($side2_switcher.hasClass('opened')){
-			$('.rowo .mn,.rowo .nmn').animate({'marginLeft':'-='+($n2+$space)+'px','marginRight':'+='+($n2+$space)+'px'}, 'normal',function(){
+			$switch_item2.animate({'marginLeft':'-='+($n2+$space)+'px','marginRight':'+='+($n2+$space)+'px'}, 'normal',function(){
 				$side2_switcher.addClass('closed');
-			}),
-			$side2_switcher.removeClass('opened');
+			}).parent().animate({'backgroundPosition':'-='+($n2+$space)+'px'}, 'normal'),
+			$side2_switcher.removeClass('opened').parent();
 		}else if($side2_switcher.hasClass('closed')){
-			$('.rowo .mn,.rowo .nmn').animate({'marginLeft':'+='+($n2+$space)+'px','marginRight':'-='+($n2+$space)+'px'}, 'normal',function(){
+			$switch_item2.animate({'marginLeft':'+='+($n2+$space)+'px','marginRight':'-='+($n2+$space)+'px'}, 'normal',function(){
 				$side2_switcher.addClass('opened');
-			});
+			}).parent().animate({'backgroundPosition':'+='+($n2+$space)+'px'}, 'normal');
 			$side2_switcher.removeClass('closed');
 		}
 	});
-	*/
 });
 /*
 var category = $('category_box');
