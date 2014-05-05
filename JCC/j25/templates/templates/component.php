@@ -14,10 +14,11 @@ defined('_JEXEC') or die;
 <head>
 <jdoc:include type="head" />
 <?php
+$doc = JFactory::getDocument();
 $doc->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/template.css', $type = 'text/css', $media = 'screen,projection');
 $doc->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/prettify.css', $type = 'text/css', $media = 'screen,projection');
 $doc->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/print.css', $type = 'text/css', $media = 'print');
-if ($this->direction == 'rtl') : ?>
+if ($this->direction == 'rtl') :
 	$doc->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/template_rtl.css', $type = 'text/css', $media = 'screen,projection');
 endif;
 ?>
