@@ -1,0 +1,155 @@
+@charset "utf-8";
+/* 步步街工作室 copyright(c)bubujie.net */
+@import "F:/thumbtack/css/layout";
+@import "F:/thumbtack/css/split";
+@import "F:/thumbtack/css/table";
+@import "F:/thumbtack/css/blueprint";
+@import "F:/thumbtack/css/emmet";
+@import "F:/thumbtack/css/base/product/listmain_1";
+@import "./system_site";
+@import "./general";
+@import "./template";
+//* ######### ######### ######### BOF::旧布局标准形式 ######### ######### ######### */
+//* 对应的jQuery代码中也需要使用此处的参数 */
+$n1:280px;
+$n2:280px;
+$space:20px;
+//body{overflow-x:hidden;}
+#page{overflow:hidden;}
+.bg-nm .rowo,.bg-nmn .rowo{margin-left:-$n1 -$space !important;}
+.bg-mn .rowo,.bg-nmn .rowo{margin-right:-$n2 -$space !important;}
+.rowo{background:url(../img/bg_bbody.gif) -1710px;}
+.rowi{padding-left:10px;padding-right:10px;}
+@include layout($layout:'h',$row:auto,$n1:$n1,$n2:$n2,$space:$space,$incInner:1,$v1:200px,$v2:200px);
+@include split();
+@media screen and (max-width:1100px) {
+	//@include layout_h_2cols($row:auto,$n1:200px,$n2:null,$space:10px,$selector:'',$isInner:1,$cols:2);
+	//@include layout_1col($selector:'',$isInner:1);
+}
+
+
+
+@media screen and (max-width:900px) {
+	//@include layout_h_2cols($row:auto,$n1:200px,$n2:null,$space:10px,$selector:'',$isInner:1,$cols:2);
+	//@include layout_1col($selector:'',$isInner:1);
+}
+
+
+
+@media screen and (max-width:700px) {
+	//@include layout_h_2cols($row:auto,$n1:200px,$n2:null,$space:10px,$selector:'',$isInner:1,$cols:-1);
+	//@include layout_1col($selector:'',$isInner:1);
+}
+
+
+
+@media screen and (max-width:500px) {
+	//@include layout_1col($selector:'',$isInner:0);
+	@include layout_1col($selector:'',$isInner:1);
+	@include split_w_1col();
+	@include split_s_1col();
+}
+//* ######### ######### ######### EOF::旧布局标准形式 ######### ######### ######### */
+
+
+#SOHUCS #SOHU_MAIN .section-cbox-w .cbox-block-w .block-post-w .post-login-w ul {
+	margin: 0 0px 0 0;
+}
+.items-more{clear:both;}
+.button2-left .article, .button2-left .blank {
+	background: url(../images_general/j_button2_blank.png) 100% 0 no-repeat;
+}
+#editor-xtd-buttons,.toggle-editor {
+	padding: 5px;
+	float:left;
+}
+/* Tooltips */
+div.tip {
+	float: left;
+	background: #ffc;
+	border: 1px solid #D4D5AA;
+	padding: 5px;
+	max-width: 200px;
+}
+
+div.tip .tip-title {
+	padding: 0;
+	margin: 0;
+	font-size: 95%;
+	font-weight: bold;
+	margin-top: -15px;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	background: url(../images_general/selector-arrow.png) no-repeat;
+}
+
+div.tip .tip-text {
+	font-size: 90%;
+	margin: 0;
+}
+/* System Warning Messages */
+#system-message dt.warning { display: none; }
+#system-message dd.warning {  }
+#system-message dd.warning ul { color: #93246F; background: #F2E3ED; border-top: 3px solid #93246F; border-bottom: 3px solid #93246F;}
+/* ######### ######### ######### 注释 ######### ######### ######### */
+body{@extend .ff_kr;}
+/* LoVe/HAte(爱恨原则) */
+a{text-decoration:none;color:#369;}
+a:link, a:visited, a:hover, a:active{}
+a:link{}
+a:visited{}
+a:hover{text-decoration:underline;}
+a:active{}
+table.category{
+	@include table_wang(0.5em,silver);
+	th{
+		white-space:nowrap;
+	}
+	#categorylist_header_title, .list-title, .item-num{
+		border-left:none;
+	}
+	.list-title,.item-title{
+		width:100%;
+	}
+	.list-author, .list-hits, .list-edit{
+		white-space:nowrap;
+	}
+}
+table.tbl{
+	@include table_tian(0.2em,silver);
+	border-width:1px;
+	tbody tr:nth-child(even) td, tbody tr.even td {background-color:#FDFDFD;}
+}
+
+/* ######### ######### ######### Pagination ######### ######### ######### */
+.pagenav, .pagination .counter, .pagination ul{@extend %btnArea;}
+.pagenavcounter, .pagenav, .pagination ul{margin:1em 0;padding:0;list-style:none;}
+.pagenav .pagenav-prev{float:left;}
+.pagenav .pagenav-next{float:right;}
+.pagination .counter{float:right;}
+.pagination ul li{display:inline-block;}
+/* ######### ######### ######### Article index ######### ######### ######### */
+#article-index { float:right; margin-left:1em; padding:1em 2em;border:1px solid #F2E2A1; background:#FFFCF0; font-size:1em; }/* 深橙色线条，浅橙色背景， 字号*/
+#article-index ul { margin-left:0; padding-left:1em; } /* 去除列表左侧重排 */
+#article-index ul li { list-style-image:url(../img/li_off.png); } /* 列表项图标 */
+#article-index ul li a { font-weight:normal; color:#585858; } /*列表项字号颜色*/
+#article-index ul li a.active { font-weight:bold; } /* 列表项当前项高亮 */
+/* ######### ######### ######### 注释 ######### ######### ######### */
+.categories-list li,.category-list li{overflow:hidden;}
+#main ul.actions {
+text-align: right;
+padding: 0;
+width: 100%;
+margin: 0;
+}
+
+
+
+/* ######### ######### ######### bizdemo13302 ######### ######### ######### */
+//bizdemo13302
+#bfoot .quick{position:relative;float:right;}
+.colophon{@extend %ting;clear:both;}
+
+
+
+
