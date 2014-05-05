@@ -12,21 +12,37 @@ body { overflow:hidden; }
 
 // JavaScript Document
 jQuery(document).ready(function($) {//or jQuery(function($) {
-	var $n1=20;
-	var $space=280;
-	$('<div id="frame_switch" class="bgc8"><span class="opened d_b">Toggle</span></div>').prependTo('#bbody-mid .wing');
-	$sidebar_switcher = $('#frame_switch span');
-	$sidebar_switcher.click(function(){
-		if($sidebar_switcher.hasClass('opened')){
-			$('.rowo .nm,.rowo .nmn').animate({'marginLeft':'+='+($n1 + $space)+'px','marginRight':'-='+($n1 + $space)+'px'}, 'normal',function(){
-				$sidebar_switcher.addClass('closed');
+	var $n1=280;
+	var $n2=280;
+	var $space=20;
+	$('<div id="frame_switch1" class="bgc8"><span class="opened d_b">Side1 Toggle</span></div>').prependTo('#bbody-mid .wing');
+	$side1_switcher = $('#frame_switch1 span');
+	$side1_switcher.click(function(){
+		if($side1_switcher.hasClass('opened')){
+			$('.rowo .nm,.rowo .nmn').animate({'marginLeft':'+='+($n1+$space)+'px','marginRight':'-='+($n1+$space)+'px'}, 'normal',function(){
+				$side1_switcher.addClass('closed');
 			}),
-			$sidebar_switcher.removeClass('opened');
-		}else if($sidebar_switcher.hasClass('closed')){
-			$('.rowo .nm,.rowo .nmn').animate({'marginLeft':'-='+($n1 + $space)+'px','marginRight':'+='+($n1 + $space)+'px'}, 'normal',function(){
-				$sidebar_switcher.addClass('opened');
+			$side1_switcher.removeClass('opened');
+		}else if($side1_switcher.hasClass('closed')){
+			$('.rowo .nm,.rowo .nmn').animate({'marginLeft':'-='+($n1+$space)+'px','marginRight':'+='+($n1+$space)+'px'}, 'normal',function(){
+				$side1_switcher.addClass('opened');
 			});
-			$sidebar_switcher.removeClass('closed');
+			$side1_switcher.removeClass('closed');
+		}
+	});
+	$('<div id="frame_switch2" class="bgc8"><span class="opened d_b">Side2 Toggle</span></div>').prependTo('#bbody-mid .wing');
+	$side2_switcher = $('#frame_switch2 span');
+	$side2_switcher.click(function(){
+		if($side2_switcher.hasClass('opened')){
+			$('.rowo .mn,.rowo .nmn').animate({'marginLeft':'-='+($n2+$space)+'px','marginRight':'+='+($n2+$space)+'px'}, 'normal',function(){
+				$side2_switcher.addClass('closed');
+			}),
+			$side2_switcher.removeClass('opened');
+		}else if($side2_switcher.hasClass('closed')){
+			$('.rowo .mn,.rowo .nmn').animate({'marginLeft':'+='+($n2+$space)+'px','marginRight':'-='+($n2+$space)+'px'}, 'normal',function(){
+				$side2_switcher.addClass('opened');
+			});
+			$side2_switcher.removeClass('closed');
 		}
 	});
 });
