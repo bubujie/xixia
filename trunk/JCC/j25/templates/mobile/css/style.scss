@@ -10,6 +10,7 @@
 @import "./general";
 @import "./template";
 //* ######### ######### ######### BOF::旧布局标准形式 ######### ######### ######### */
+html{*overflow:visible;}
 //* 对应的jQuery代码中也需要使用此处的参数 */
 $n1:280px;
 $n2:280px;
@@ -46,8 +47,8 @@ $space:20px;
 @media screen and (max-width:500px) {
 	//@include layout_1col($selector:'',$isInner:0);
 	@include layout_1col($selector:'',$isInner:1);
-	@include split_w_1col();
-	@include split_s_1col();
+	//@include split_w_1col();
+	//@include split_s_1col();
 }
 //* ######### ######### ######### EOF::旧布局标准形式 ######### ######### ######### */
 
