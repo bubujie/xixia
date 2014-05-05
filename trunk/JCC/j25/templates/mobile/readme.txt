@@ -10,6 +10,8 @@ body { overflow:hidden; }
 
 
 
+//IE和Firefox不支持backgroundPositionX和backgroundPositionY，可以通过backgroundPosition实现backgroundPositionX效果，而backgroundPositionY无解
+// JavaScript Document
 // JavaScript Document
 jQuery(document).ready(function($) {//or jQuery(function($) {
 	var $n1=280;
@@ -21,15 +23,16 @@ jQuery(document).ready(function($) {//or jQuery(function($) {
 		if($side1_switcher.hasClass('opened')){
 			$('.rowo .nm,.rowo .nmn').animate({'marginLeft':'+='+($n1+$space)+'px','marginRight':'-='+($n1+$space)+'px'}, 'normal',function(){
 				$side1_switcher.addClass('closed');
-			}),
-			$side1_switcher.removeClass('opened');
+			}).parent().animate({'backgroundPosition':'+=300px'}, 'normal'),
+			$side1_switcher.removeClass('opened').parent();
 		}else if($side1_switcher.hasClass('closed')){
 			$('.rowo .nm,.rowo .nmn').animate({'marginLeft':'-='+($n1+$space)+'px','marginRight':'+='+($n1+$space)+'px'}, 'normal',function(){
 				$side1_switcher.addClass('opened');
-			});
+			}).parent().animate({'backgroundPosition':'-=300px'}, 'normal');
 			$side1_switcher.removeClass('closed');
 		}
 	});
+	/*
 	$('<div id="frame_switch2" class="bgc8"><span class="opened d_b">Side2 Toggle</span></div>').prependTo('#bbody-mid .wing');
 	$side2_switcher = $('#frame_switch2 span');
 	$side2_switcher.click(function(){
@@ -45,4 +48,5 @@ jQuery(document).ready(function($) {//or jQuery(function($) {
 			$side2_switcher.removeClass('closed');
 		}
 	});
+	*/
 });
