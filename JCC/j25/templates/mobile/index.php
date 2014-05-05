@@ -62,19 +62,27 @@ if ($menu->getActive() == $menu->getDefault()) :
 endif;
 /* ######### ######### setTitle ######### ######### */
 $doc = JFactory::getDocument();
-//$doc->addScript($this->baseurl.'/templates/'.$this->template.'/js/jstools.js');
-//$doc->addScript($this->baseurl.'/templates/'.$this->template.'/js/switchable.js');
 if($isHome) :
 	$doc->setTitle($siteTitle);
 else :
 	$doc->setTitle($doc->getTitle() . ' | ' . $siteTitle);
 endif;
 if(!version_compare(JVERSION, '3.0', 'ge')) :
-	//$doc->addScript($this->baseurl.'/media/jui/js/jquery.min.js');
-	//$doc->addScript($this->baseurl.'/media/jui/js/jquery-noconflict.js');
+	$db = JFactory::getDbo();
+	$db->setQuery("SELECT enabled FROM #__extensions WHERE name = 'virtuemart' AND type = 'component'");
+	$isEnabled = $db->loadResult();
+	if(!$isEnabled) :
+		$doc->addScript(JURI::base(true).'/plugins/system/thumbtack/assets/js/jquery-1.8.3.min.js');
+		$doc->addScript(JURI::base(true).'/plugins/system/thumbtack/assets/js/jquery-noconflict.js');
+	else :
+		if(!class_exists('VmConfig')) :
+			require(JPATH_ADMINISTRATOR . DS . 'components' . DS . 'com_virtuemart'.DS.'helpers'.DS.'config.php');
+		endif;
+		VmConfig::loadConfig();
+		vmJsApi::jQuery();
+	endif;
 endif;
 /* ######### ######### ######### 注释 ######### ######### ######### */
-//$doc->addStyleSheet($this->baseurl.'/templates/system/css/system.css');
 $doc->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/style.css', $type = 'text/css', $media = 'screen,projection');
 $doc->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/prettify.css', $type = 'text/css', $media = 'screen,projection');
 $doc->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/print.css', $type = 'text/css', $media = 'print');
@@ -95,6 +103,7 @@ endif;
   <![endif]-->
 </head>
 <body<?php echo $isHome ? ' id="home"' : ''; ?> class="bg-<?php if($showSide1){ echo 'n'; } ?>m<?php if($showSide2){ echo 'n'; } ?> layout-lft">
+<div id="page">
     <div class="rowo">
       <div class="fillo <?php if($showSide1){ echo 'n'; } ?>m<?php if($showSide2){ echo 'n'; } ?>">
 <?php if ($showSide1) : ?>
@@ -308,6 +317,7 @@ endif; ?>
 <?php endif; ?>
       </div>
     </div>
+</div>
 <jdoc:include type="modules" name="debug" />
 <script type="text/javascript">
 var online= new Array();

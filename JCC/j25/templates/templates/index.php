@@ -62,19 +62,27 @@ if ($menu->getActive() == $menu->getDefault()) :
 endif;
 /* ######### ######### setTitle ######### ######### */
 $doc = JFactory::getDocument();
-//$doc->addScript($this->baseurl.'/templates/'.$this->template.'/js/jstools.js');
-//$doc->addScript($this->baseurl.'/templates/'.$this->template.'/js/switchable.js');
 if($isHome) :
 	$doc->setTitle($siteTitle);
 else :
 	$doc->setTitle($doc->getTitle() . ' | ' . $siteTitle);
 endif;
 if(!version_compare(JVERSION, '3.0', 'ge')) :
-	//$doc->addScript($this->baseurl.'/media/jui/js/jquery.min.js');
-	//$doc->addScript($this->baseurl.'/media/jui/js/jquery-noconflict.js');
+	$db = JFactory::getDbo();
+	$db->setQuery("SELECT enabled FROM #__extensions WHERE name = 'virtuemart' AND type = 'component'");
+	$isEnabled = $db->loadResult();
+	if(!$isEnabled) :
+		$doc->addScript(JURI::base(true).'/plugins/system/thumbtack/assets/js/jquery-1.8.3.min.js');
+		$doc->addScript(JURI::base(true).'/plugins/system/thumbtack/assets/js/jquery-noconflict.js');
+	else :
+		if(!class_exists('VmConfig')) :
+			require(JPATH_ADMINISTRATOR . DS . 'components' . DS . 'com_virtuemart'.DS.'helpers'.DS.'config.php');
+		endif;
+		VmConfig::loadConfig();
+		vmJsApi::jQuery();
+	endif;
 endif;
 /* ######### ######### ######### 注释 ######### ######### ######### */
-//$doc->addStyleSheet($this->baseurl.'/templates/system/css/system.css');
 $doc->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/style.css', $type = 'text/css', $media = 'screen,projection');
 $doc->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/prettify.css', $type = 'text/css', $media = 'screen,projection');
 $doc->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/print.css', $type = 'text/css', $media = 'print');
